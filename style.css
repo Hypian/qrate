@@ -107,9 +107,9 @@ nav.scrolled {
 }
 @media (max-width: 900px) {
   nav {
-    background: rgba(13,13,12,0.85);
-    backdrop-filter: blur(15px);
+    background: #0d0d0c;
     border-bottom: 1px solid var(--border-soft);
+    z-index: 2000;
   }
 }
 .nav-logo {
