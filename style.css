@@ -3,6 +3,7 @@
   --cream: #f4f0e6;
   --white: #ffffff;
   --gold: #c9a96e;
+  --neon: #6fff97; /* Hyperframe Neon Green */
   --muted: #666666;
   --border: rgba(255, 255, 255, 0.08);
   --border-glow: rgba(255, 255, 255, 0.15);
@@ -92,7 +93,14 @@ header.scrolled {
 .btn-text:hover { opacity: 1; }
 
 /* ── HERO ── */
-#hero { padding: 12rem 2rem 6rem; max-width: 1200px; margin: 0 auto; text-align: center; }
+#hero { 
+  padding: 12rem 2rem 10rem; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  text-align: center; 
+  position: relative;
+  z-index: 50;
+}
 .hero-headline { font-family: var(--serif); font-size: clamp(2.5rem, 7vw, 4.8rem); line-height: 1.1; margin-bottom: 2rem; font-weight: 400; }
 .hero-sub { color: var(--muted); font-size: 1.2rem; max-width: 640px; margin: 0 auto 3.5rem; }
 .hero-ctas { display: flex; justify-content: center; gap: 1.25rem; margin-bottom: 6rem; }
@@ -164,26 +172,276 @@ header.scrolled {
   .mockup-settings, .mockup-preview { position: static; width: 100%; transform: none !important; }
 }
 
-/* ── MOMENT ── */
-.moment-section { padding: 12rem 2rem; background: #000; text-align: center; }
-.moment-text { font-family: var(--serif); font-size: clamp(1.8rem, 4.5vw, 3.2rem); line-height: 1.4; color: var(--muted); max-width: 1000px; margin: 0 auto; }
-.moment-text strong { color: var(--white); font-weight: 400; font-style: italic; }
+/* ── THE MOMENT (Pinned Animation) ── */
+.moment-pin-wrapper {
+  height: 400vh; /* Scroll duration */
+  position: relative;
+  background: var(--ink);
+  margin-top: clamp(6rem, 10vh, 10rem); /* Space from Hero */
+  z-index: 100;
+  /* Ensure anchor jumps don’t hide content behind fixed header */
+  scroll-margin-top: calc(var(--nav-h, 96px) + 24px);
+}
+.moment-sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Reserve space for the fixed header so the first line isn't obscured */
+  padding-top: calc(var(--nav-h, 96px) + 24px);
+  box-sizing: border-box;
+}
+.gap-progress {
+  position: absolute;
+  right: clamp(1rem, 2.5vw, 2rem);
+  top: 50%;
+  translate: 0 -50%;
+  width: 2.25rem;
+  height: min(52vh, 380px);
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(14px);
+  pointer-events: none;
+  opacity: 0.9;
+  overflow: hidden;
+}
+.gap-progress__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+.gap-progress::before {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border-radius: 999px;
+  background: linear-gradient(
+    180deg,
+    rgba(111, 255, 151, 0.9),
+    rgba(255, 255, 255, 0.75)
+  );
+  transform-origin: 50% 100%;
+  transform: scaleY(0);
+  filter: drop-shadow(0 0 24px rgba(111, 255, 151, 0.18));
+}
+.gap-progress::after {
+  content: var(--gap-progress-text, "");
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  translate: -50% 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: color-mix(in hsl, var(--white), transparent 35%);
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+@media (max-width: 900px) {
+  .gap-progress {
+    display: none;
+  }
+}
+.moment-lines {
+  max-width: 1200px;
+  width: 100%;
+  padding: clamp(6rem, 14vh, 11rem) 5% 0;
+  position: relative;
+}
+.moment-title {
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1.2;
+  text-wrap: balance;
+  margin: 0;
+  padding: 0;
+}
+.moment-line {
+  margin-bottom: 0.2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  display: block;
+  transition: all 0.8s var(--ease);
+}
+.moment-line:not(.active) {
+  display: none;
+}
+.moment-line.active { 
+  opacity: 1; 
+  transform: translateY(0); 
+}
+.moment-line { vertical-align: middle; }
+
+.moment-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neon);
+  margin-left: 1rem;
+  font-size: 1.2em;
+  vertical-align: middle;
+  transform: scale(0.5);
+  transition: transform 0.8s var(--ease);
+}
+.moment-icon svg {
+  color: var(--neon);
+}
+.moment-line.active .moment-icon { transform: scale(1); }
+.moment-line.highlight { color: var(--neon); margin-top: 0; }
+.moment-line.highlight.active { margin-top: 3rem; }
+
+/* ── GAP (Scroll-linked “fill” effect) ──
+   Scoped to #problem only and guarded by @supports so it never breaks older browsers.
+*/
+@supports (animation-timeline: scroll()) {
+  .moment-pin-wrapper {
+    /* Use the section itself as the timeline source */
+    view-timeline-name: --gap;
+    view-timeline-axis: block;
+  }
+
+  /* Text fill: stroke + animated background-clip */
+  .moment-line {
+    background-image: linear-gradient(90deg, var(--white) 0 0),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.12) 0 0);
+    background-size: 220% 1lh, 100% 100%;
+    background-repeat: no-repeat, repeat;
+    background-position-x: 200%, 0;
+    background-position-y: 100%;
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+    animation: gap-fill both linear;
+    animation-timeline: --gap;
+    /* Fill over the middle of the section’s scroll */
+    animation-range: entry 10% exit 70%;
+  }
+
+  .moment-line.highlight {
+    background-image: linear-gradient(90deg, var(--neon) 0 0),
+      linear-gradient(90deg, rgba(111, 255, 151, 0.14) 0 0);
+    -webkit-text-stroke: 1px rgba(111, 255, 151, 0.35);
+  }
+
+  @keyframes gap-fill {
+    to {
+      background-position-x: 100%, 0;
+    }
+  }
+
+  /* Progress pill on the right */
+  @property --gap-progress {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+  }
+
+  .moment-pin-wrapper {
+    --gap-progress: 0;
+    animation: gap-progress both linear;
+    animation-timeline: --gap;
+    animation-range: entry 0% exit 100%;
+  }
+  @keyframes gap-progress {
+    to {
+      --gap-progress: 1;
+    }
+  }
+
+  .gap-progress::before {
+    transform: scaleY(var(--gap-progress));
+  }
+
+  /* Optional label (kept subtle); set as text only via var for zero layout thrash */
+  .moment-pin-wrapper {
+    --gap-progress-text: "GAP";
+  }
+}
 
 /* ── FEATURES ── */
-.features-section { padding: 10rem 2rem; max-width: 1200px; margin: 0 auto; }
-.section-header { text-align: center; margin-bottom: 8rem; }
-.section-title { font-family: var(--serif); font-size: 3.5rem; margin-bottom: 1.5rem; }
-.section-sub { color: var(--muted); max-width: 600px; margin: 0 auto; }
-.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; }
-.feature-card {
-  padding: 4rem 3rem; border: 1px solid var(--border); border-radius: 16px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.02), transparent);
-  transition: all 0.5s var(--ease);
+/* ── FEATURES STACK (Cinematic Scroll) ── */
+.features-stack { padding: 10rem 0; background: var(--ink); }
+.stack-header { max-width: 1200px; margin: 0 auto 8rem; padding: 0 2rem; }
+.stack-title { font-family: var(--serif); font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1.1; margin-bottom: 2rem; }
+.stack-sub { color: var(--muted); max-width: 600px; font-size: 1.1rem; }
+
+.stack-container {
+  max-width: 1200px; margin: 0 auto; padding: 0 2rem;
+  position: relative;
 }
-.feature-card:hover { border-color: var(--border-glow); transform: translateY(-10px); }
-.feature-icon { font-size: 2.5rem; margin-bottom: 2rem; color: var(--white); }
-.feature-title { font-family: var(--serif); font-size: 1.8rem; margin-bottom: 1.5rem; }
-.feature-desc { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+
+.stack-card {
+  position: sticky;
+  top: 10vh;
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: #050505; /* Force solid background */
+  border: 1px solid var(--border);
+  border-radius: 32px;
+  overflow: hidden;
+  margin-bottom: 20vh; /* Increased spacing */
+  transform-origin: center top;
+  box-shadow: 0 -20px 60px rgba(0,0,0,0.8);
+  transition: transform 0.5s var(--ease);
+}
+
+/* Ensure stacking order */
+.stack-card:nth-child(1) { z-index: 10; }
+.stack-card:nth-child(2) { z-index: 20; }
+.stack-card:nth-child(3) { z-index: 30; }
+.stack-card:nth-child(4) { z-index: 40; }
+.stack-card:nth-child(5) { z-index: 50; }
+
+.stack-text {
+  padding: 4rem;
+}
+.stack-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.03); border: 1px solid var(--border);
+  padding: 0.5rem 1.25rem; border-radius: 100px; margin-bottom: 2rem;
+  font-size: 0.75rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em;
+}
+.stack-text h3 { font-family: var(--serif); font-size: clamp(1.8rem, 3.5vw, 3rem); line-height: 1.1; margin-bottom: 1.5rem; }
+.stack-text p { color: var(--muted); font-size: 1rem; line-height: 1.6; max-width: 480px; }
+
+.stack-visual {
+  position: relative;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+.visual-wrap {
+  width: 100%; height: 100%;
+  padding: 2rem;
+}
+.visual-wrap video, .visual-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  border-radius: 20px; border: 1px solid var(--border);
+}
+
+.stack-card:nth-child(even) .stack-text { order: 2; }
+.stack-card:nth-child(even) .stack-visual { order: 1; }
+
+@media (max-width: 900px) {
+  .stack-card { grid-template-columns: 1fr; min-height: auto; position: relative; top: 0; margin-bottom: 2rem; border-radius: 20px; }
+  .stack-text { padding: 3rem 2rem; }
+  .stack-visual { height: 300px; }
+  .stack-card:nth-child(even) .stack-text { order: 1; }
+  .stack-card:nth-child(even) .stack-visual { order: 2; }
+}
 
 /* ── CASE STUDY ── */
 .case-section { padding: 8rem 2rem; max-width: 1200px; margin: 0 auto; }

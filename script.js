@@ -109,6 +109,52 @@ function initApp() {
     );
   });
 
+  // 1.5 Sticky Card Stacking Effect
+  gsap.utils.toArray('.stack-card').forEach((card, i) => {
+    const isLast = i === document.querySelectorAll('.stack-card').length - 1;
+    if (!isLast) {
+      gsap.to(card, {
+        scale: 0.95,
+        opacity: 0.5,
+        scrollTrigger: {
+          trigger: card,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: true
+        }
+      });
+    }
+  });
+
+  // 1.6 Pinned Moment Lines Reveal
+  const momentLines = gsap.utils.toArray('.moment-line');
+  // Show all lines as soon as the section is reached
+  ScrollTrigger.create({
+    trigger: '.moment-pin-wrapper',
+    start: 'top 80%',
+    onEnter: () => {
+      momentLines.forEach((line) => line.classList.add('active'));
+      gsap.to(momentLines, {
+        opacity: 1,
+        y: 0,
+        duration: 0.6,
+        ease: 'power3.out',
+        stagger: 0.06,
+        overwrite: true
+      });
+    },
+    onEnterBack: () => {
+      momentLines.forEach((line) => line.classList.add('active'));
+      gsap.to(momentLines, {
+        opacity: 1,
+        y: 0,
+        duration: 0.4,
+        ease: 'power3.out',
+        overwrite: true
+      });
+    }
+  });
+
   // 2. Magnetic Buttons
   document.querySelectorAll('.btn-primary, .btn-secondary, .nav-logo').forEach(btn => {
     btn.addEventListener('mousemove', (e) => {
@@ -215,6 +261,15 @@ const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav?.classList.toggle('scrolled', window.scrollY > 50);
 });
+
+// Keep a CSS var with the live header height so fixed-nav sections can offset correctly
+function syncNavHeightVar() {
+  if (!nav) return;
+  const h = Math.ceil(nav.getBoundingClientRect().height);
+  document.documentElement.style.setProperty('--nav-h', `${h}px`);
+}
+syncNavHeightVar();
+window.addEventListener('resize', syncNavHeightVar);
 
 const navToggle = document.getElementById('nav-toggle');
 const navLinks = document.getElementById('nav-links');
