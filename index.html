@@ -1,361 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QRATE. — Communication that wins, made by your mission</title>
-    <meta name="description" content="Strategic communications and storytelling studio for mission-driven organisations.">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-    
-    <!-- Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
-    
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Qrate. — Communication that moves missions forward</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700;800;900&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- CURSOR -->
-    <div id="cursor-dot"></div>
-    <div id="cursor-ring"></div>
+  <div class="cursor-blob" id="cursorBlob"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
 
-    <!-- CINEMATIC OVERLAY -->
-    <div class="grain-overlay"></div>
-    <div class="parallax-wrap">
-        <div class="depth-layer layer-1"></div>
-        <div class="depth-layer layer-2"></div>
+  <nav class="reveal reveal-1" id="mainNav">
+    <div class="nav-left">
+      <span class="logo-mark">QRATE<span class="dot">.</span></span>
+      <span class="logo-tag">EST. 2024</span>
     </div>
-
-    <!-- LOADER -->
-    <div id="loader">
-        <span id="loader-logo">QRATE.</span>
-        <div id="loader-bar-wrap"><div id="loader-bar"></div></div>
-        <span id="loader-sub">Kigali · Est. 2024</span>
+    <div class="nav-right">
+      <a href="#services" data-cursor="hover">Services</a>
+      <a href="#work" data-cursor="hover">Work</a>
+      <a href="#approach" data-cursor="hover">Approach</a>
+      <a href="#contact" class="nav-cta" data-cursor="hover">Start a brief →</a>
     </div>
+  </nav>
 
-    <!-- HEADER -->
-    <header id="nav">
-        <div class="header-inner">
-            <a href="#" class="nav-logo">QRATE.</a>
-            <nav class="desktop-nav">
-                <a href="#problem">The Gap</a>
-                <a href="#features">Services</a>
-                <a href="#examples">Impact</a>
-            </nav>
-            <div class="header-ctas">
-                <a href="#" class="btn-text" id="open-login">Log in</a>
-                <a href="#contact" class="btn-primary">Get started</a>
-            </div>
-            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-map"></div>
+
+    <span class="dot-deco" style="top: 20%; left: 6%; width: 8px; height: 8px; background: var(--coral);"></span>
+    <span class="dot-deco" style="top: 60%; left: 4%; width: 6px; height: 6px; background: var(--teal);"></span>
+    <span class="dot-deco" style="top: 16%; right: 4%; width: 10px; height: 10px; background: var(--gold);"></span>
+    <span class="dot-deco" style="bottom: 14%; right: 8%; width: 8px; height: 8px; background: var(--sky);"></span>
+
+    <div class="container">
+      <div class="hero-grid">
+
+        <div class="hero-text reveal reveal-2">
+          <div class="hero-eyebrow">Communication for the missions that matter</div>
+          <h1>
+            We help <span class="underline">good work</span><br>
+            become <em>good news.</em>
+          </h1>
+          <p class="hero-sub">
+            A creative and communications partner for the schools, foundations, NGOs and forums building a better world — translating real impact into stories that fund it, grow it, and carry it forward.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn-primary" data-cursor="hover">
+              Start a brief →
+            </a>
+            <a href="#work" class="btn-secondary" data-cursor="hover">
+              <span class="play">▶</span> See our work
+            </a>
+          </div>
         </div>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#problem">The Gap</a></li>
-            <li><a href="#features">Services</a></li>
-            <li><a href="#examples">Impact</a></li>
-            <li><a href="#" class="nav-login">Log in</a></li>
-            <li><a href="#contact" class="nav-login">Get started</a></li>
-            <li class="mobile-socials">
-                <a href="#" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
-                <a href="#" aria-label="Twitter"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
-                <a href="#" aria-label="Threads"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M12 7v5"></path></svg></a>
-                <a href="#" aria-label="WhatsApp"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-14h.8A8.38 8.38 0 0 1 21 11.5Z"></path></svg></a>
-            </li>
+
+        <div class="hero-image-wrap reveal reveal-3" data-cursor="hover">
+          <span class="dot-deco dot-1"></span>
+          <span class="dot-deco dot-2"></span>
+          <span class="dot-deco dot-3"></span>
+          <span class="dot-deco dot-4"></span>
+          <span class="dot-deco dot-5"></span>
+
+          <div class="hero-image">
+            <img src="https://images.pexels.com/photos/34162714/pexels-photo-34162714.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="">
+          </div>
+
+          <div class="hero-badge">
+            <div class="badge-icon">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <div class="badge-text">
+              <strong>Trusted partner</strong>
+              6+ mission-driven organisations
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DIFFERENTIATORS SECTION -->
+  <section class="differentiators" id="services">
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-eyebrow">What we do</div>
+        <h2 class="section-title">We help missions <em>make a difference</em></h2>
+        <p class="section-sub">
+          Four ways we turn meaningful work into communication that reaches funders, delegates, and the publics you serve.
+        </p>
+      </div>
+
+      <div class="diff-grid">
+        <div class="diff-card fade-in d1" data-cursor="hover">
+          <div class="diff-icon-wrap c1">
+            <svg viewBox="0 0 36 36">
+              <circle cx="10" cy="12" r="2"/>
+              <circle cx="26" cy="12" r="2"/>
+              <circle cx="18" cy="26" r="2"/>
+              <line x1="10" y1="12" x2="26" y2="12"/>
+              <line x1="10" y1="12" x2="18" y2="26"/>
+              <line x1="26" y1="12" x2="18" y2="26"/>
+            </svg>
+          </div>
+          <h3 class="diff-name">Strategy</h3>
+          <p class="diff-desc">Positioning, narrative and messaging built to win funders, partners, and policy attention.</p>
+        </div>
+
+        <div class="diff-card fade-in d2" data-cursor="hover">
+          <div class="diff-icon-wrap c2">
+            <svg viewBox="0 0 36 36">
+              <rect x="5" y="10" width="20" height="16" rx="2"/>
+              <path d="M25 16 L32 12 L32 24 L25 20 Z"/>
+              <circle cx="13" cy="18" r="3"/>
+            </svg>
+          </div>
+          <h3 class="diff-name">Film</h3>
+          <p class="diff-desc">Documentary, event and campaign films capturing real people, real change, and real outcomes.</p>
+        </div>
+
+        <div class="diff-card fade-in d3" data-cursor="hover">
+          <div class="diff-icon-wrap c3">
+            <svg viewBox="0 0 36 36">
+              <rect x="5" y="9" width="26" height="20" rx="2"/>
+              <circle cx="18" cy="19" r="5.5"/>
+              <circle cx="18" cy="19" r="2.5"/>
+              <path d="M12 9 L14 5 L22 5 L24 9"/>
+            </svg>
+          </div>
+          <h3 class="diff-name">Photography</h3>
+          <p class="diff-desc">Editorial photography that treats your work — and the people in it — with dignity.</p>
+        </div>
+
+        <div class="diff-card fade-in d4" data-cursor="hover">
+          <div class="diff-icon-wrap c4">
+            <svg viewBox="0 0 36 36">
+              <path d="M6 18 Q6 6 18 6 Q30 6 30 18 Q30 30 18 30 Q6 30 6 18 Z"/>
+              <line x1="6" y1="18" x2="30" y2="18"/>
+              <path d="M18 6 Q24 12 24 18 Q24 24 18 30"/>
+              <path d="M18 6 Q12 12 12 18 Q12 24 18 30"/>
+            </svg>
+          </div>
+          <h3 class="diff-name">Campaigns</h3>
+          <p class="diff-desc">Full digital campaigns engineered to put your work in the rooms where decisions get made.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="approach">
+    <span class="dot-deco" style="top: 14%; left: 6%; width: 10px; height: 10px; background: var(--coral);"></span>
+    <span class="dot-deco" style="bottom: 18%; right: 8%; width: 8px; height: 8px; background: var(--teal);"></span>
+
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="about-photos fade-in" data-cursor="hover">
+          <span class="dot-deco dot-a1"></span>
+          <span class="dot-deco dot-a2"></span>
+          <span class="dot-deco dot-a3"></span>
+          <div class="photo-circle main">
+            <img src="https://images.pexels.com/photos/30620673/pexels-photo-30620673.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
+          </div>
+          <div class="photo-circle small1">
+            <img src="https://images.pexels.com/photos/28593055/pexels-photo-28593055.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+          </div>
+          <div class="photo-circle small2">
+            <img src="https://images.pexels.com/photos/33749805/pexels-photo-33749805.jpeg?auto=compress&cs=tinysrgb&w=600" alt="">
+          </div>
+        </div>
+
+        <div class="about-text fade-in d1">
+          <div class="section-eyebrow">How we work</div>
+          <h2 class="section-title">Partners <em>not providers.</em></h2>
+          <p class="section-sub">
+            We work with a small number of mission-driven organisations deeply — not many thinly. Every brief has our principals on it from kick-off to final cut, because the work you do is too important to be handed off.
+          </p>
+          <p class="about-quote">
+            The people in your programmes are not characters in your story. They are the authors of theirs — and our work gives them the frame they deserve.
+          </p>
+          <div class="about-buttons">
+            <a href="#contact" class="btn-primary" data-cursor="hover">Get to know us →</a>
+            <a href="#work" class="btn-secondary" data-cursor="hover"><span class="play">▶</span> Our process</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED WORK SECTION -->
+  <section class="featured" id="work">
+    <span class="dot-deco" style="top: 8%; left: 4%; width: 10px; height: 10px; background: var(--gold);"></span>
+    <span class="dot-deco" style="bottom: 20%; right: 5%; width: 8px; height: 8px; background: var(--sky);"></span>
+
+    <div class="container">
+      <div class="fade-in">
+        <div class="section-eyebrow">Selected partnerships</div>
+        <h2 class="section-title">The missions <em>we serve</em></h2>
+        <p class="section-sub">
+          A handful of the organisations we partner with — schools, forums, foundations doing the work that matters.
+        </p>
+      </div>
+
+      <div class="featured-grid">
+
+        <div class="work-card fade-in d1" data-cursor="hover">
+          <div class="work-card-image">
+            <span class="work-card-tag">Forum</span>
+            <img src="https://images.pexels.com/photos/30620673/pexels-photo-30620673.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
+          </div>
+          <div class="work-card-body">
+            <div class="work-card-meta">
+              <div>
+                <div class="meta-stat-label">Engagement</div>
+                <div class="meta-stat-value big">2,400+</div>
+              </div>
+              <div style="text-align: right;">
+                <div class="meta-stat-label">Year</div>
+                <div class="meta-stat-value">2026</div>
+              </div>
+            </div>
+            <h3 class="work-card-name">Inclusive FinTech Forum</h3>
+            <p class="work-card-desc">Campaign, film and live capture for Africa's leading convening on financial inclusion.</p>
+            <div class="work-card-foot">
+              <a href="#" class="work-card-link">View case study</a>
+              <span class="work-card-arrow">→</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-card fade-in d2" data-cursor="hover">
+          <div class="work-card-image">
+            <span class="work-card-tag">Education</span>
+            <img src="https://images.pexels.com/photos/34162714/pexels-photo-34162714.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
+          </div>
+          <div class="work-card-body">
+            <div class="work-card-meta">
+              <div>
+                <div class="meta-stat-label">Reach</div>
+                <div class="meta-stat-value big">10k+</div>
+              </div>
+              <div style="text-align: right;">
+                <div class="meta-stat-label">Year</div>
+                <div class="meta-stat-value">Ongoing</div>
+              </div>
+            </div>
+            <h3 class="work-card-name">iDebate Rwanda</h3>
+            <p class="work-card-desc">Film and brand work for the organisation training a generation of Rwandan civic leaders.</p>
+            <div class="work-card-foot">
+              <a href="#" class="work-card-link">View case study</a>
+              <span class="work-card-arrow">→</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="work-card fade-in d3" data-cursor="hover">
+          <div class="work-card-image">
+            <span class="work-card-tag">School</span>
+            <img src="https://images.pexels.com/photos/28593055/pexels-photo-28593055.jpeg?auto=compress&cs=tinysrgb&w=900" alt="">
+          </div>
+          <div class="work-card-body">
+            <div class="work-card-meta">
+              <div>
+                <div class="meta-stat-label">Enrolment</div>
+                <div class="meta-stat-value big">↑ 35%</div>
+              </div>
+              <div style="text-align: right;">
+                <div class="meta-stat-label">Year</div>
+                <div class="meta-stat-value">Ongoing</div>
+              </div>
+            </div>
+            <h3 class="work-card-name">Hope Haven Christian School</h3>
+            <p class="work-card-desc">Enrolment campaigns, photography and film for a Kigali school built on values.</p>
+            <div class="work-card-foot">
+              <a href="#" class="work-card-link">View case study</a>
+              <span class="work-card-arrow">→</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT STATS SECTION -->
+  <section class="impact">
+    <div class="container">
+      <div class="impact-grid">
+
+        <div class="impact-text fade-in">
+          <div class="section-eyebrow">What we deliver</div>
+          <h2 class="section-title">Built for the moments <em>that matter.</em></h2>
+          <p>Every brief is shaped by the outcome it has to deliver — funding rounds, enrolment seasons, policy windows, donor moments.</p>
+        </div>
+
+        <div class="impact-stats">
+          <div class="impact-stat fade-in d1" data-cursor="hover">
+            <div class="impact-icon i1">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3"/><path d="M5 21 C5 16, 8 14, 12 14 C16 14, 19 16, 19 21"/></svg>
+            </div>
+            <div class="impact-num"><em>6+</em></div>
+            <div class="impact-label">Mission-driven partners</div>
+          </div>
+
+          <div class="impact-stat fade-in d2" data-cursor="hover">
+            <div class="impact-icon i2">
+              <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M21 10 L17 8 L17 18 L21 16"/></svg>
+            </div>
+            <div class="impact-num">50+</div>
+            <div class="impact-label">Films, campaigns, productions</div>
+          </div>
+
+          <div class="impact-stat fade-in d3" data-cursor="hover">
+            <div class="impact-icon i3">
+              <svg viewBox="0 0 24 24"><path d="M3 12 L21 12"/><path d="M12 3 L21 12 L12 21"/></svg>
+            </div>
+            <div class="impact-num"><em>360°</em></div>
+            <div class="impact-label">Strategy through delivery</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL SECTION -->
+  <section class="testimonial">
+    <div class="container">
+      <div class="fade-in">
+        <div class="testimonial-mark">"</div>
+        <p class="testimonial-quote">
+          They didn't just make us look good — they helped us <em>be understood.</em>
+        </p>
+        <div class="testimonial-attr">
+          <strong>A long-term partner</strong> &nbsp;·&nbsp; Education sector
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta" id="contact">
+    <div class="cta-card fade-in">
+      <div class="cta-inner">
+        <div class="cta-eyebrow">— Let's get to work</div>
+        <h2 class="cta-headline">Some missions can't <em>afford</em> to be misunderstood.</h2>
+        <p class="cta-sub">
+          Tell us about the work you do, who it's for, and the moment you're trying to meet. We'll come back with a view on how to make it impossible to ignore.
+        </p>
+        <div class="cta-buttons">
+          <a href="mailto:hello@qrate.rw" class="cta-btn-1" data-cursor="hover">Start a brief →</a>
+          <a href="#work" class="cta-btn-2" data-cursor="hover">See our work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">QRATE<span class="dot">.</span></div>
+        <p class="footer-tagline">A communications partner for the missions that change lives. Kigali, Rwanda — working across East Africa and beyond.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Strategy</a></li>
+          <li><a href="#services">Film & motion</a></li>
+          <li><a href="#services">Photography</a></li>
+          <li><a href="#services">Campaigns</a></li>
         </ul>
-    </header>
-
-    <!-- HERO -->
-    <section id="hero">
-        <div class="hero-content">
-            <h1 class="hero-headline reveal">Communication that wins,<br>made by your mission</h1>
-            <p class="hero-sub reveal">QRATE helps mission-driven organisations create compelling narratives in minutes. Replace agency overhead with strategic storytelling that wins partners.</p>
-            <div class="hero-ctas reveal">
-                <a href="#contact" class="btn-primary">Try for free</a>
-                <a href="#contact" class="btn-secondary">Request a demo</a>
-            </div>
-        </div>
-        <div class="hero-visual reveal-scale">
-            <div class="mockup-layers">
-                <!-- Settings Panel (Background) -->
-                <div class="mockup-settings">
-                    <div class="settings-header">
-                        <h3 class="settings-title">Make it your own!</h3>
-                        <p class="settings-sub">Customise your video's look by adding your brand colour and logo.</p>
-                    </div>
-                    <div class="settings-body">
-                        <div class="settings-row">
-                            <label>Select your style</label>
-                            <div class="custom-select">
-                                <span id="dynamic-style">Cinematic Abstract</span>
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
-                            </div>
-                        </div>
-                        <div class="settings-row">
-                            <label>Select a primary colour</label>
-                            <div class="color-picker">
-                                <div class="color-swatch"></div>
-                                <span>#FFFFFF</span>
-                            </div>
-                        </div>
-                        <div class="settings-row">
-                            <label>Upload your logo</label>
-                            <div class="drop-zone">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
-                                <span>Drop your logo here</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="settings-footer">
-                        <div class="btn-next">Next →</div>
-                    </div>
-                </div>
-
-                <!-- Video Preview (Foreground) -->
-                <div class="mockup-preview">
-                    <div class="preview-screen">
-                        <img src="3d_cinematic_process_isometric_1778242666615.png" alt="3D Process Preview" class="preview-img">
-                        <div class="preview-overlay">
-                            <div class="status-badge">
-                                <div class="pulse"></div>
-                                <span id="dynamic-status">Rendering Scene...</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="preview-controls">
-                        <div class="control-icons">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/></svg>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/></svg>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/></svg>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Floating Accents -->
-                <div class="floating-ui ui-tag-float">Processing 4K</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- THE MOMENT (Pinned Animation) -->
-    <section id="problem" class="moment-pin-wrapper">
-        <div class="moment-sticky">
-            <div class="gap-progress" aria-hidden="true">
-                <span class="gap-progress__sr">Scroll progress</span>
-            </div>
-            <div class="section-inner">
-                <div class="moment-lines">
-                    <h2 class="moment-title">
-                        <div class="moment-line">
-                            There's a moment when everything clicks
-                            <span class="moment-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"><path d="M220.49,190.83a12,12,0,0,1,0,17L207.8,220.49a12,12,0,0,1-17,0l-56.56-56.57L115,214.09c0,.1-.08.21-.13.32a15.83,15.83,0,0,1-14.6,9.59l-.79,0a15.83,15.83,0,0,1-14.41-11L32.8,52.92A16,16,0,0,1,52.92,32.8L213,85.07a16,16,0,0,1,1.41,29.8l-.32.13-50.17,19.27ZM96,32a8,8,0,0,0,8-8V16a8,8,0,0,0-16,0v8A8,8,0,0,0,96,32ZM16,104h8a8,8,0,0,0,0-16H16a8,8,0,0,0,0,16ZM124.42,39.16a8,8,0,0,0,10.74-3.58l8-16a8,8,0,0,0-14.31-7.16l-8,16A8,8,0,0,0,124.42,39.16Zm-96,81.69-16,8a8,8,0,0,0,7.16,14.31l16-8a8,8,0,1,0-7.16-14.31Z"></path></svg>
-                            </span>
-                        </div>
-                        <div class="moment-line">
-                            When the client understands your value
-                            <span class="moment-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"><path d="M176,232a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,232Zm40-128a87.55,87.55,0,0,1-33.64,69.21A16.24,16.24,0,0,0,176,186v6a16,16,0,0,1-16,16H96a16,16,0,0,1-16-16v-6a16,16,0,0,0-6.23-12.66A87.59,87.59,0,0,1,40,104.49C39.74,56.83,78.26,17.14,125.88,16A88,88,0,0,1,216,104Zm-50.34,2.34a8,8,0,0,0-11.32,0L128,132.69l-26.34-26.35a8,8,0,0,0-11.32,11.32L120,147.31V184a8,8,0,0,0,16,0V147.31l29.66-29.65A8,8,0,0,0,165.66,106.34Z"></path></svg>
-                            </span>
-                        </div>
-                        <div class="moment-line">
-                            Where trust is built
-                            <span class="moment-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"><path d="M208,40H48A16,16,0,0,0,32,56v56c0,52.72,25.52,84.67,46.93,102.19,23.06,18.86,46,25.26,47,25.53a8,8,0,0,0,4.2,0c1-.27,23.91-6.67,47-25.53C198.48,196.67,224,164.72,224,112V56A16,16,0,0,0,208,40Zm-34.32,69.66-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35a8,8,0,0,1,11.32,11.32Z"></path></svg>
-                            </span>
-                        </div>
-                        <div class="moment-line">
-                            And the deal moves forward
-                            <span class="moment-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"><path d="M111.49,52.63a15.8,15.8,0,0,0-26,5.77L33,202.78A15.83,15.83,0,0,0,47.76,224a16,16,0,0,0,5.46-1l144.37-52.5a15.8,15.8,0,0,0,5.78-26ZM65.14,161.13l19.2-52.79,63.32,63.32-52.8,19.2ZM160,72a37.8,37.8,0,0,1,3.84-15.58C169.14,45.83,179.14,40,192,40c6.7,0,11-2.29,13.65-7.21A22,22,0,0,0,208,23.94,8,8,0,0,1,224,24c0,12.86-8.52,32-32,32-6.7,0-11,2.29-13.65,7.21A22,22,0,0,0,176,72.06,8,8,0,0,1,160,72ZM136,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm101.66,82.34a8,8,0,1,1-11.32,11.31l-16-16a8,8,0,0,1,11.32-11.32Zm4.87-42.75-24,8a8,8,0,0,1-5.06-15.18l24-8a8,8,0,0,1,5.06,15.18Z"></path></svg>
-                            </span>
-                        </div>
-                        <div class="moment-line highlight">
-                            QRATE helps you own that moment
-                        </div>
-                    </h2>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURES STACK (Hyperframe Style) -->
-    <section id="features" class="features-stack">
-        <div class="section-inner">
-            <div class="stack-header reveal">
-                <h2 class="stack-title">Everything you need to<br>close more deals</h2>
-                <p class="stack-sub">Professional tools purpose-built to help you create compelling stories, measure engagement, and win more business.</p>
-            </div>
-            
-            <div class="stack-container">
-                <!-- Card 1: AI Storytelling -->
-                <div class="stack-card reveal-scale">
-                    <div class="stack-text">
-                        <div class="stack-badge">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
-                            AI Storytelling
-                        </div>
-                        <h3>Turn expertise into stories that sell</h3>
-                        <p>Writing clear explanations takes hours. QRATE's AI instantly transforms your documents and notes into compelling sales-focused scripts so your team spends less time explaining and more time winning.</p>
-                    </div>
-                    <div class="stack-visual">
-                        <div class="visual-wrap">
-                            <img src="3d_cinematic_process_isometric_1778242666615.png" alt="AI Storytelling">
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2: Narration -->
-                <div class="stack-card reveal-scale">
-                    <div class="stack-text">
-                        <div class="stack-badge">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-                            Narration
-                        </div>
-                        <h3>Your voice or AI-perfected</h3>
-                        <p>Explainers fall flat without personality. Add your own voice or choose a professional AI narrator for a consistent, polished finish, no recording studio needed.</p>
-                    </div>
-                    <div class="stack-visual">
-                        <div class="visual-wrap">
-                            <div class="image-placeholder"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Brand Matching -->
-                <div class="stack-card reveal-scale">
-                    <div class="stack-text">
-                        <div class="stack-badge">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                            Brand Matching
-                        </div>
-                        <h3>Always on-brand, automatically</h3>
-                        <p>Design sign-offs and brand checks slow teams down. Upload your colours, fonts and logo once, every video stays perfectly on-brand, automatically.</p>
-                    </div>
-                    <div class="stack-visual">
-                        <div class="visual-wrap">
-                            <div class="image-placeholder"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 4: Analytics -->
-                <div class="stack-card reveal-scale">
-                    <div class="stack-text">
-                        <div class="stack-badge">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
-                            Analytics
-                        </div>
-                        <h3>See exactly who's engaged</h3>
-                        <p>Traditional presentations disappear into inboxes. QRATE shows who watched, for how long, and when, so you know when interest is high and when to follow up.</p>
-                    </div>
-                    <div class="stack-visual">
-                        <div class="visual-wrap">
-                            <div class="image-placeholder"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CASE STUDY -->
-    <section id="examples" class="case-section">
-        <div class="section-inner">
-            <div class="case-card reveal">
-                <div class="case-content">
-                    <p class="case-tag">Case Study</p>
-                    <h2 class="case-title">A flagship convening achieving real impact with QRATE.</h2>
-                    <p class="case-desc">A major mission-driven partner realised their impact reports couldn't capture the value of their regional services. They turned to QRATE to transform their pitch into an interactive story, creating moments of clarity that built trust.</p>
-                    <div class="case-meta">
-                        <span class="case-author">Senior Partner in HR Transformation</span>
-                        <div class="case-metric">
-                            <span class="metric-val">£1.1m+</span>
-                            <span class="metric-label">Project value won within 3 months</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="case-image">
-                    <div class="image-placeholder"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
-    <section id="contact" class="cta-section">
-        <div class="section-inner">
-            <h2 class="cta-title reveal">Ready to create stories that sell?</h2>
-            <p class="cta-sub reveal">Join other mission-driven organisations who are creating that crucial moment of clarity and winning more business with QRATE.</p>
-            <div class="cta-btns reveal">
-                <a href="mailto:hello@qrate.rw" class="btn-primary">Try for free</a>
-                <a href="mailto:hello@qrate.rw" class="btn-secondary">Request a demo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-top">
-                <span class="footer-logo">QRATE.</span>
-                <div class="footer-links">
-                    <a href="#">FAQs</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Terms</a>
-                    <a href="#">Sign up</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-copy">© 2026 QRATE. Kigali · Rwanda · Worldwide</p>
-                <div class="footer-social">
-                    <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
-                    <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg></a>
-                    <a href="#" aria-label="Threads"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path><path d="M12 7v5"></path></svg></a>
-                    <a href="#" aria-label="WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-14h.8A8.38 8.38 0 0 1 21 11.5Z"></path></svg></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- LOGIN MODAL -->
-    <div id="login-overlay">
-        <div class="login-modal">
-            <button id="close-login" class="login-close">✕</button>
-            <div class="login-badge">Partner Portal</div>
-            <h2 class="login-title">Welcome back.</h2>
-            <p class="login-sub">Access your dedicated project workspace and metrics.</p>
-            <form class="login-form">
-                <div class="form-row">
-                    <label class="form-label">Email Address</label>
-                    <input type="email" class="form-input" placeholder="name@organisation.org">
-                </div>
-                <div class="form-row">
-                    <label class="form-label">Password</label>
-                    <input type="password" class="form-input" placeholder="••••••••">
-                </div>
-                <button type="submit" class="btn-login">Enter Workspace →</button>
-            </form>
-        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Studio</h4>
+        <ul>
+          <li><a href="#approach">Approach</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Reach us</h4>
+        <ul>
+          <li><a href="mailto:hello@qrate.rw">hello@qrate.rw</a></li>
+          <li><a href="#">Kigali, Rwanda</a></li>
+          <li><a href="#">@qrate</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="footer-bottom">
+      <span>© MMXXVI Qrate Production Company</span>
+      <span>Est. 2024 · Kigali · Rwanda</span>
+    </div>
+  </footer>
 
-    <!-- FLOATING WHATSAPP -->
-    <a href="https://wa.me/yournumber" class="floating-whatsapp" target="_blank" aria-label="Contact on WhatsApp">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 1 1-7.6-14h.8A8.38 8.38 0 0 1 21 11.5Z"></path></svg>
-        <span>Chat with us</span>
-    </a>
-
-    <script src="script.js"></script>
-    <script type="module" src="motion-enhancements.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
