@@ -28,6 +28,8 @@
 <link rel="preload" as="image" href="photos/hero-1.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<!-- EmailJS SDK -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/emailjs-com.min.js"></script>
 </head>
 <body>
 <div id="progress"></div>
@@ -150,19 +152,28 @@
     </div>
     <div class="serve">
       <div class="serve-card rv">
-        <svg class="icon" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
-        <h3>NGOs &amp; Nonprofits</h3>
-        <p>Donor communications, programme storytelling, and impact narratives that earn continued support — funding cycle after funding cycle.</p>
+        <div class="blob"></div>
+        <div class="bg">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
+          <h3>NGOs &amp; Nonprofits</h3>
+          <p>Donor communications, programme storytelling, and impact narratives that earn continued support — funding cycle after funding cycle.</p>
+        </div>
       </div>
       <div class="serve-card rv rv-d1">
-        <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        <h3>Foundations &amp; Funded Programmes</h3>
-        <p>Field documentation, grantee spotlights, and reporting that shows funders exactly where their investment lands — and what it changed.</p>
+        <div class="blob"></div>
+        <div class="bg">
+          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <h3>Foundations &amp; Funded Programmes</h3>
+          <p>Field documentation, grantee spotlights, and reporting that shows funders exactly where their investment lands — and what it changed.</p>
+        </div>
       </div>
       <div class="serve-card rv rv-d2">
-        <svg class="icon" viewBox="0 0 24 24"><path d="M7 20h10M12 20v-8M12 12a5 5 0 0 0 5-5V4a8.5 8.5 0 0 1-5 2 8.5 8.5 0 0 1-5-2v3a5 5 0 0 0 5 5z"/></svg>
-        <h3>Social Enterprises &amp; Advocates</h3>
-        <p>Communications that speak to investors and communities simultaneously — proving both social value and organisational viability in one voice.</p>
+        <div class="blob"></div>
+        <div class="bg">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M7 20h10M12 20v-8M12 12a5 5 0 0 0 5-5V4a8.5 8.5 0 0 1-5 2 8.5 8.5 0 0 1-5-2v3a5 5 0 0 0 5 5z"/></svg>
+          <h3>Social Enterprises &amp; Advocates</h3>
+          <p>Communications that speak to investors and communities simultaneously — proving both social value and organisational viability in one voice.</p>
+        </div>
       </div>
     </div>
     <p class="serve-note rv">If your work changes lives, communities, or systems — you're who we're here for.</p>
@@ -578,6 +589,47 @@
   </div>
 </section>
 
+<!-- ====== CONTACT ====== -->
+<section id="contact" style="background:var(--surface);">
+  <div class="wrap">
+    <div class="rv" style="text-align:center; max-width:600px; margin:0 auto 40px;">
+      <span class="eyebrow" style="justify-content:center;"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>Get in Touch</span>
+      <h2 class="sec-title">Ready to tell a better story?</h2>
+      <p style="color:var(--ink-dim); font-size:16px;">Send us a message and we'll get back to you within 24 hours.</p>
+    </div>
+    
+    <div class="contact-box rv">
+      <form id="contact-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="user_name">Name *</label>
+            <input type="text" id="user_name" name="user_name" required placeholder="Jane Doe">
+          </div>
+          <div class="form-group">
+            <label for="user_email">Email *</label>
+            <input type="email" id="user_email" name="user_email" required placeholder="jane@organisation.org">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="user_org">Organisation</label>
+          <input type="text" id="user_org" name="user_org" placeholder="Organisation Name (Optional)">
+        </div>
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" required placeholder="How can we help?" rows="4"></textarea>
+        </div>
+        
+        <button type="submit" id="submit-btn" class="btn btn-hero-fill" style="width:100%; justify-content:center; margin-top:10px;">
+          Send Message
+          <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        </button>
+        
+        <div id="form-status" class="form-status"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- ====== FOOTER ====== -->
 <footer>
   <div class="wrap">
@@ -613,6 +665,9 @@
     </div>
   </div>
 </footer>
+<!-- ====== CUSTOM CURSOR ====== -->
+<div class="unlumen-cursor"></div>
+<div class="unlumen-cursor-follow"></div>
 
 <script src="script.js" defer></script>
 </body>
