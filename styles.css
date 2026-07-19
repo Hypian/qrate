@@ -55,185 +55,150 @@ nav{max-width:1140px;margin:0 auto;padding:14px 28px;display:flex;align-items:ce
 .btn-dark{background:rgba(255,255,255,0.85);color:#1A1A18;border:1px solid rgba(26,26,24,0.15);backdrop-filter:blur(10px);}
 .btn-dark:hover{background:#fff;transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.1);}
 
-/* hero — premium light theme */
-.hero{
-  position:relative;
-  height:100vh;
-  min-height:700px;
-  padding:0;
-  overflow:hidden;
-  background:linear-gradient(168deg,#FAFAF8 0%,#F5F3EE 40%,#EDEBE6 100%);
-}
-/* Geometric accent bar — thin horizontal burnt-orange rule */
-.hero-accent-bar{
-  position:absolute;
-  top:0;left:0;right:0;
-  height:3px;
-  background:linear-gradient(90deg,transparent 0%,#c85a17 20%,#c85a17 80%,transparent 100%);
-  z-index:20;
-}
-.hero-track{display:flex;height:100%;transition:transform 1.05s var(--ease);will-change:transform;}
-.hslide{
-  min-width:100%;height:100%;position:relative;overflow:hidden;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-}
-/* Photo panel — right side */
-.hslide .scene{
-  position:relative;
-  height:100%;
-  background-size:cover;
-  background-position:center;
-  order:2;
-}
-/* Soft light overlay on photos — luxury washed look */
-.hslide .scene::after{
-  content:"";
-  position:absolute;inset:0;
-  background:linear-gradient(135deg,rgba(250,250,248,0.25) 0%,rgba(250,250,248,0.08) 50%,rgba(237,235,230,0.15) 100%);
-  mix-blend-mode:normal;
-}
-/* Left edge fade for seamless blending into text area */
-.hslide .scene::before{
-  content:"";
-  position:absolute;
-  top:0;left:0;bottom:0;
-  width:120px;
-  background:linear-gradient(to right,#F5F3EE,transparent);
-  z-index:2;
-}
-/* Remove individual slide background colors — light theme */
-.s1 .scene,.s2 .scene,.s3 .scene,.s4 .scene,.s5 .scene{background-color:#E8E6E0;}
-
-/* Text panel — left side */
-.hs-body{
-  position:relative;z-index:5;
-  order:1;
-  padding:0 64px 0 80px;
-  max-width:620px;
-}
-/* Eyebrow tag — refined for light theme */
-.hs-tag{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:10px;font-weight:700;
-  letter-spacing:.22em;text-transform:uppercase;
-  color:#c85a17;
-  background:rgba(200,90,23,0.06);
-  border:1px solid rgba(200,90,23,0.18);
-  padding:8px 18px;border-radius:100px;
-  margin-bottom:28px;
-}
-.hs-tag svg{width:12px;height:12px;stroke:#c85a17;fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round;}
-
-/* Headline — Cormorant Garamond serif for luxury presence */
-.hslide h1{
-  font-family:'Cormorant Garamond','Georgia',serif;
-  font-weight:600;
-  font-size:clamp(2.8rem,4.8vw,4.2rem);
-  line-height:1.08;
-  letter-spacing:-0.025em;
-  color:#1A1A18;
-  max-width:560px;
-}
-.hslide h1 em{
-  font-style:italic;
-  color:#c85a17;
+/* hero — fan layout */
+.hero-fan {
+  position: relative;
+  min-height: 100vh;
+  padding: 90px 20px 40px;
+  background: linear-gradient(168deg, #FAFAF8 0%, #F5F3EE 40%, #EDEBE6 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-/* Subline */
-.hs-sub{
-  margin-top:20px;
-  font-size:15.5px;
-  line-height:1.7;
-  max-width:440px;
-  color:#5A5850;
-  font-weight:400;
+/* Fan Container */
+.fan-container {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  height: 380px;
+  margin: 0 auto 10px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-/* CTA buttons — premium restraint */
-.hs-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap;}
-
-.btn-hero-fill{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;
-  letter-spacing:.06em;text-transform:uppercase;
-  padding:14px 30px;border-radius:100px;
-  background:#c85a17;color:#fff;
-  border:none;cursor:pointer;
-  transition:transform .4s var(--ease),box-shadow .4s var(--ease),background .3s;
-}
-.btn-hero-fill svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .35s var(--ease);}
-.btn-hero-fill:hover{
-  transform:translateY(-2px);
-  background:#B04E14;
-  box-shadow:0 8px 30px rgba(200,90,23,0.22),0 2px 8px rgba(200,90,23,0.12);
-}
-.btn-hero-fill:hover svg{transform:translateX(3px);}
-
-.btn-hero-outline{
-  display:inline-flex;align-items:center;gap:8px;
-  font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;
-  letter-spacing:.06em;text-transform:uppercase;
-  padding:14px 30px;border-radius:100px;
-  background:transparent;color:#1A1A18;
-  border:1.5px solid rgba(26,26,24,0.2);
-  cursor:pointer;
-  transition:transform .4s var(--ease),border-color .3s,background .3s,color .3s;
-}
-.btn-hero-outline:hover{
-  transform:translateY(-2px);
-  border-color:#c85a17;
-  color:#c85a17;
-  background:rgba(200,90,23,0.04);
+/* The Cards */
+.fan-cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
-/* Staggered entrance — choreographed fade-in */
-.hs-body>*{
-  opacity:0;transform:translateY(24px);
-  transition:opacity .9s var(--ease),transform .9s var(--ease);
-}
-.hslide.active .hs-body>*:nth-child(1){opacity:1;transform:none;transition-delay:.2s;}
-.hslide.active .hs-body>*:nth-child(2){opacity:1;transform:none;transition-delay:.35s;}
-.hslide.active .hs-body>*:nth-child(3){opacity:1;transform:none;transition-delay:.5s;}
-.hslide.active .hs-body>*:nth-child(4){opacity:1;transform:none;transition-delay:.65s;}
-
-/* Photo panel entrance — subtle scale */
-.hslide .scene{
-  transform:scale(1.04);
-  transition:transform 1.4s var(--ease);
-}
-.hslide.active .scene{
-  transform:scale(1);
+.fan-card {
+  position: absolute;
+  width: 220px;
+  height: 300px;
+  background: #fff;
+  border: 6px solid #fff;
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
+  overflow: hidden;
+  transform-origin: bottom center;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  /* default animation */
+  animation: float 6s ease-in-out infinite alternate;
 }
 
-/* Carousel controls — adapted for light theme */
-.hero-ui{position:absolute;right:28px;bottom:44px;z-index:10;display:flex;align-items:center;gap:14px;}
-.harrow{
-  width:44px;height:44px;border-radius:50%;
-  background:rgba(26,26,24,0.06);
-  border:1px solid rgba(26,26,24,0.12);
-  backdrop-filter:blur(8px);
-  color:#1A1A18;cursor:pointer;
-  display:flex;align-items:center;justify-content:center;
-  transition:background .3s,transform .3s var(--ease),box-shadow .3s,border-color .3s;
+.fan-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
-.harrow:hover{
-  background:#c85a17;border-color:#c85a17;color:#fff;
-  transform:scale(1.08);
-  box-shadow:0 4px 20px rgba(200,90,23,0.2);
-}
-.harrow svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
 
-/* Progress bars — light theme */
-.hbar-wrap{position:absolute;left:80px;bottom:58px;z-index:10;display:flex;align-items:center;gap:14px;}
-.hcount{font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:.14em;color:rgba(26,26,24,0.35);}
-.hbars{display:flex;gap:8px;}
-.hbar{width:34px;height:2px;border-radius:2px;background:rgba(26,26,24,0.12);border:none;padding:0;cursor:pointer;position:relative;overflow:hidden;}
-.hbar i{position:absolute;inset:0;background:#c85a17;transform:scaleX(0);transform-origin:left;display:block;}
-.hbar.active i{animation:fill 5.6s linear forwards;}
-.hbar.done i{transform:scaleX(1);}
-@keyframes fill{to{transform:scaleX(1);}}
+.fan-label {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: var(--ink);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 9px;
+  letter-spacing: .12em;
+  padding: 8px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Specific Card Positioning & Angles */
+.fan-card.c1 { transform: translateX(-400px) translateY(40px) rotate(-12deg); animation-delay: 0s; z-index: 1; }
+.fan-card.c2 { transform: translateX(-200px) translateY(10px) rotate(-6deg); animation-delay: -1s; z-index: 2; }
+.fan-card.c3 { transform: translateX(0) translateY(0) rotate(0deg); animation-delay: -2s; z-index: 3; }
+.fan-card.c4 { transform: translateX(200px) translateY(10px) rotate(6deg); animation-delay: -3s; z-index: 2; }
+.fan-card.c5 { transform: translateX(400px) translateY(40px) rotate(12deg); animation-delay: -4s; z-index: 1; }
+
+.fan-card.c1:hover { transform: translateX(-400px) translateY(20px) rotate(-8deg) scale(1.05); z-index: 10; }
+.fan-card.c2:hover { transform: translateX(-200px) translateY(-10px) rotate(-2deg) scale(1.05); z-index: 10; }
+.fan-card.c3:hover { transform: translateX(0) translateY(-20px) rotate(0deg) scale(1.05); z-index: 10; }
+.fan-card.c4:hover { transform: translateX(200px) translateY(-10px) rotate(2deg) scale(1.05); z-index: 10; }
+.fan-card.c5:hover { transform: translateX(400px) translateY(20px) rotate(8deg) scale(1.05); z-index: 10; }
+
+@keyframes float {
+  0% { margin-top: 0; }
+  100% { margin-top: -15px; }
+}
+
+/* Fan Text */
+.fan-text {
+  text-align: center;
+  max-width: 800px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 5;
+}
+
+.fan-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .15em;
+  color: var(--coral);
+  margin-bottom: 16px;
+}
+.fan-eyebrow .dot {
+  width: 6px;
+  height: 6px;
+  background: var(--coral);
+  border-radius: 50%;
+}
+
+.fan-text h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+  margin-bottom: 16px;
+}
+.fan-text h1 .coral { color: var(--coral); }
+
+.fan-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--ink-dim);
+  max-width: 600px;
+  margin: 0 auto 24px;
+}
+
+.fan-cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
 
 /* Nav — light theme throughout */
 header{
@@ -243,31 +208,18 @@ header{
 }
 header.scrolled{background:rgba(250,250,248,0.92);backdrop-filter:blur(22px);box-shadow:0 1px 0 rgba(26,26,24,0.08);}
 
-/* Responsive — mobile */
+@media(max-width:1100px){
+  .fan-container { transform: scale(0.85); transform-origin: top center; margin-bottom: -20px; }
+}
 @media(max-width:900px){
-  .hslide{
-    grid-template-columns:1fr;
-    grid-template-rows:45% 1fr;
-  }
-  .hslide .scene{order:1;height:100%;}
-  .hslide .scene::before{display:none;}
-  .hslide .scene::after{
-    background:linear-gradient(to top,#F5F3EE 0%,rgba(245,243,238,0.6) 40%,transparent 70%);
-  }
-  .hs-body{
-    order:2;
-    padding:28px 28px 110px;
-    max-width:100%;
-  }
-  .hslide h1{font-size:clamp(2rem,6vw,2.8rem);}
-  .hbar-wrap{left:28px;bottom:36px;}
-  .hero-ui{right:28px;bottom:36px;}
+  .hero-fan { padding-top: 100px; }
+  .fan-container { transform: scale(0.65); height: 320px; margin-bottom: 0px; }
 }
 @media(max-width:560px){
-  .hslide{grid-template-rows:38% 1fr;}
-  .hs-body{padding:20px 20px 100px;}
-  .hs-cta{flex-direction:column;}
-  .btn-hero-fill,.btn-hero-outline{width:100%;justify-content:center;}
+  .hero-fan { padding-top: 80px; }
+  .fan-container { transform: scale(0.45); height: 200px; margin-bottom: -10px; }
+  .fan-text h1 { font-size: 2.2rem; }
+  .fan-cta { flex-direction: column; }
 }
 
 
