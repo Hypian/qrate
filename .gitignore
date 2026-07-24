@@ -1,8 +1,16 @@
-# Agent and Skill folders
+# Agent and System Configs
 .agents/
+.gemini/
 ui-ux-pro-max-skill-main/
 
-# OS generated files
+# Environment & Secret Files
+.env
+.env.*
+*.env
+*.pem
+*.key
+
+# OS Generated Files
 .DS_Store
 .DS_Store?
 ._*
@@ -12,7 +20,7 @@ ehthumbs.db
 Thumbs.db
 desktop.ini
 
-# Editor / IDE
+# Editor & IDE Files
 .vscode/
 .idea/
 *.suo
@@ -20,6 +28,11 @@ desktop.ini
 *.njsproj
 *.sln
 *.sw?
+*.swo
+*.swp
 
-# Misc
+# Temporary & Log Files
+*.log
+*.tmp
+scratch/
 .hintrc

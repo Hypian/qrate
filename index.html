@@ -1,628 +1,316 @@
 <!DOCTYPE html>
-<!-- ============================================================
-     QRATE. — Creative Communications
-     index.html
-     
-     File structure:
-       index.html   ← this file
-       styles.css   ← all styles
-       script.js    ← all JavaScript
-       /photos/     ← add your image files here
-         hero-1.jpg ... hero-5.jpg
-         bts-1.jpg  ... bts-6.jpg
-     ============================================================ -->
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Qrate is the creative communications team behind mission-driven organisations across Africa.">
+<meta name="theme-color" content="#FFFFFF"><meta name="robots" content="index,follow"><link rel="canonical" href="https://qrate.rw/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Qrate Creative Communications"><meta property="og:title" content="Qrate — The creative team behind your mission"><meta property="og:description" content="Strategy, storytelling, design and production for mission-driven organisations across Africa."><meta property="og:url" content="https://qrate.rw/"><meta property="og:image" content="https://qrate.rw/og-image.png"><meta name="twitter:card" content="summary_large_image">
 <title>Qrate — Creative Communications for Mission-Driven Organisations</title>
-<meta name="description" content="Qrate builds fundraising communications, impact storytelling, and donor engagement for NGOs, foundations, and social enterprises across Africa.">
-<meta name="theme-color" content="#FAFAF8">
-<meta property="og:title" content="Qrate — Creative Communications for Mission-Driven Organisations">
-<meta property="og:description" content="Turn your impact into a fundraising asset. Creative communications for mission-driven organisations.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en_GB">
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="preload" href="photos/hero-3.webp" as="image" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="image" href="photos/hero-1.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<!-- EmailJS SDK -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/emailjs-com.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=20260724-20">
 </head>
 <body>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Qrate Creative Communications","url":"https://qrate.rw/","email":"comms@qrate.rw","description":"The creative communications team behind mission-driven organisations across Africa.","address":{"@type":"PostalAddress","addressLocality":"Kigali","addressCountry":"RW"},"areaServed":["Rwanda","Tanzania","Uganda","Kenya"]}</script>
 <div id="progress"></div>
-
-<!-- ====== NAV ====== -->
 <header id="hd">
   <nav>
-    <a class="logo" href="#top">QRATE.</a>
+    <a class="logo" href="index.html">QRATE.</a>
     <div class="navlinks">
-      <a href="#serve">Who we serve</a>
-      <a href="#clients">Clients</a>
-      <a href="#services">Services</a>
-      <a href="#bts">Our Work</a>
-      <a href="#philosophy">Philosophy</a>
-      <a href="#team">Team</a>
-      <a href="#tools">Tools</a>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="work.html">Our Work</a>
+      <a href="about.html">About</a>
+      <a href="plans.html">Plans</a>
+      <a href="resources.html">Resources</a>
+      <a href="contact.html">Contact</a>
     </div>
-    <a href="#contact" class="btn btn-fill">Start a project
-      <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </a>
+    <div class="nav-actions">
+      <a href="https://calendly.com/qrate-stu/30min?month=2026-07" target="_blank" rel="noopener" class="btn btn-line" style="font-size:12px;padding:10px 16px;">Book a call</a>
+      <a href="contact.html" class="btn btn-fill">Start a project <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
   </nav>
 </header>
 
-<!-- ====== HERO — 5 value slides · Premium Light ====== -->
-<section class="hero-fan" id="top">
-  <!-- Top: Floating Cards Fan -->
-  <div class="fan-container">
-    <div class="fan-cards" id="fanCards">
-      <div class="fan-card c1">
-        <img src="photos/hero-1.jpg" alt="Milestone Stories">
-        <div class="fan-label">MILESTONE STORIES</div>
-      </div>
-      <div class="fan-card c2">
-        <img src="photos/hero-2.jpg" alt="Field Evidence">
-        <div class="fan-label">FIELD EVIDENCE</div>
-      </div>
-      <div class="fan-card c3">
-        <img src="photos/hero-3.jpg" alt="Education Impact">
-        <div class="fan-label">EDUCATION IMPACT</div>
-      </div>
-      <div class="fan-card c4">
-        <img src="photos/hero-4.jpg" alt="Community Voice">
-        <div class="fan-label">COMMUNITY VOICE</div>
-      </div>
-      <div class="fan-card c5">
-        <img src="photos/hero-5.jpg" alt="Ideas In Action">
-        <div class="fan-label">IDEAS IN ACTION</div>
+<!-- HERO -->
+<section class="showcase-hero" id="top">
+  <div class="showcase-shell">
+    <div class="showcase-copy">
+      <span class="showcase-kicker">Creative communications · Kigali, Rwanda</span>
+      <h1>The creative team behind <em>your mission.</em></h1>
+      <p>Strategy, storytelling, design and production—working as an extension of your team from first idea to final delivery.</p>
+      <div class="showcase-actions">
+        <a href="contact.html" class="btn btn-fill">Start a project <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="work.html" class="btn btn-line">Explore our work</a>
       </div>
     </div>
-  </div>
-
-  <!-- Bottom: Centered Hero Text -->
-  <div class="fan-text">
-    <div class="fan-eyebrow">
-      <span class="dot"></span> CREATIVE COMMUNICATIONS · KIGALI, RWANDA
-    </div>
-    <h1>Turn evidence of impact into <span class="coral">continued support.</span></h1>
-    <p>Strategy, storytelling, design and reporting for mission-driven organisations whose work depends on donor trust.</p>
-    <div class="fan-cta">
-      <a href="#contact" class="btn btn-hero-fill">Start a project &rarr;</a>
-      <a href="#bts" class="btn btn-hero-outline" style="border:none; color:var(--ink);">Explore our work</a>
+    <div class="photo-fan" aria-label="A selection of Qrate field and programme photography">
+      <figure class="fan-card fan-one"><picture><source srcset="photos/hero-1.webp" type="image/webp"><img src="photos/hero-1.jpg" alt="Graduates celebrating together" width="1920" height="1280"></picture><figcaption>Impact reporting</figcaption></figure>
+      <figure class="fan-card fan-two"><picture><source srcset="photos/hero-2.webp" type="image/webp"><img src="photos/hero-2.jpg" alt="Programme work documented in the field" width="1920" height="1280"></picture><figcaption>Field production</figcaption></figure>
+      <figure class="fan-card fan-three"><picture><source srcset="photos/hero-3.webp" type="image/webp"><img src="photos/hero-3.jpg" alt="Learners participating in a classroom" width="1920" height="1280" data-eager="true"></picture><figcaption>Programme stories</figcaption></figure>
+      <figure class="fan-card fan-four"><picture><source srcset="photos/hero-4.webp" type="image/webp"><img src="photos/hero-4.jpg" alt="A community member photographed with dignity" width="1920" height="1280"></picture><figcaption>Dignified storytelling</figcaption></figure>
+      <figure class="fan-card fan-five"><picture><source srcset="photos/hero-5.webp" type="image/webp"><img src="photos/hero-5.jpg" alt="Young people collaborating around a laptop" width="1920" height="1280"></picture><figcaption>Campaign content</figcaption></figure>
+      <button class="fan-toggle" type="button" aria-pressed="false" aria-label="Pause photo animation">Pause motion</button>
     </div>
   </div>
 </section>
 
-
-
-<!-- ====== WHO WE SERVE ====== -->
-<section id="serve">
-  <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>Who we serve</span>
-      <h2 class="sec-title">Our partners measure success in impact, not margin.</h2>
-    </div>
-    <div class="serve">
-      <div class="serve-card rv">
-        <div class="blob"></div>
-        <div class="bg">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-6h6v6"/></svg>
-          <h3>NGOs &amp; Nonprofits</h3>
-          <p>Donor communications, programme storytelling, and impact narratives that earn continued support — funding cycle after funding cycle.</p>
-        </div>
-      </div>
-      <div class="serve-card rv rv-d1">
-        <div class="blob"></div>
-        <div class="bg">
-          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          <h3>Foundations &amp; Funded Programmes</h3>
-          <p>Field documentation, grantee spotlights, and reporting that shows funders exactly where their investment lands — and what it changed.</p>
-        </div>
-      </div>
-      <div class="serve-card rv rv-d2">
-        <div class="blob"></div>
-        <div class="bg">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M7 20h10M12 20v-8M12 12a5 5 0 0 0 5-5V4a8.5 8.5 0 0 1-5 2 8.5 8.5 0 0 1-5-2v3a5 5 0 0 0 5 5z"/></svg>
-          <h3>Social Enterprises &amp; Advocates</h3>
-          <p>Communications that speak to investors and communities simultaneously — proving both social value and organisational viability in one voice.</p>
-        </div>
-      </div>
-    </div>
-    <p class="serve-note rv">If your work changes lives, communities, or systems — you're who we're here for.</p>
+<!-- PROOF -->
+<section class="proof-section" aria-labelledby="proofTitle"><div class="wrap">
+  <div class="proof-top rv">
+    <div><span class="proof-kicker">One connected team</span><h2 id="proofTitle">Your story shouldn&rsquo;t change hands at every stage.</h2></div>
+    <p class="proof-copy">Qrate keeps strategy, field production, design and reporting connected—so the story stays clear from the first brief to final delivery.</p>
   </div>
-</section>
-
-<!-- ====== CLIENTS ====== -->
-<section id="clients" style="padding-top:0;">
-  <div class="wrap">
-    <div class="rv" style="text-align:center;">
-      <span class="eyebrow" style="justify-content:center;"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>Organisations we've partnered with</span>
-      <h2 class="sec-title" style="margin:0 auto;">Trusted by mission-driven organisations across the continent.</h2>
-    </div>
-    <div class="client-logos rv">
-
-      <div class="clogo">
-        <div class="clogo-icon">
-          <img src="logos/i debate.png" alt="iDebate Rwanda Logo">
-        </div>
-        <div class="clogo-name">iDebate Rwanda</div>
-        <div class="clogo-type">Youth & Education</div>
-      </div>
-
-      <div class="clogo">
-        <div class="clogo-icon">
-          <img src="logos/starlight afrio.webp" alt="Starlight Africa Logo">
-        </div>
-        <div class="clogo-name">Starlight Africa</div>
-        <div class="clogo-type">STEM & Clean Energy</div>
-      </div>
-
-      <div class="clogo">
-        <div class="clogo-icon">
-          <img src="logos/Hope-Haven.jpg" alt="Hope Haven Rwanda Logo">
-        </div>
-        <div class="clogo-name">Hope Haven Rwanda</div>
-        <div class="clogo-type">Education & Care</div>
-      </div>
-
-      <div class="clogo">
-        <div class="clogo-icon">
-          <img src="logos/new vision.webp" alt="New Vision Vet Hospital Logo">
-        </div>
-        <div class="clogo-name">New Vision Vet Hospital</div>
-        <div class="clogo-type">Animal & Community Health</div>
-      </div>
-
-      <div class="clogo">
-        <div class="clogo-icon">
-          <img src="logos/ntare loousinlunf.webp" alt="Ntare Louisenlund School Logo">
-        </div>
-        <div class="clogo-name">Ntare Louisenlund School</div>
-        <div class="clogo-type">Education</div>
-      </div>
-
-      <div class="clogo">
-        <div class="clogo-icon">
-          <img src="logos/let there be light.webp" alt="Let There Be Light Int'l Logo">
-        </div>
-        <div class="clogo-name">Let There Be Light Int'l</div>
-        <div class="clogo-type">Energy & Access</div>
-      </div>
-
-      <div class="clogo">
-        <div class="clogo-icon">
-          <img src="logos/shine on.webp" alt="Shine on Rwanda Logo">
-        </div>
-        <div class="clogo-name">Shine on Rwanda</div>
-        <div class="clogo-type">Community Empowerment</div>
-      </div>
-
-      <div class="clogo">
-        <div class="clogo-icon">
-          <img src="logos/soma salama.png" alt="Soma Salama Logo">
-        </div>
-        <div class="clogo-name">Soma Salama</div>
-        <div class="clogo-type">Education · Tanzania</div>
-      </div>
-
-    </div>
+  <div class="proof-metrics rv">
+    <article class="proof-metric proof-coral"><span class="proof-index">01</span><div class="proof-number"><span class="count" data-to="8">0</span><sup>+</sup></div><h3>Mission-driven partnerships</h3><p>NGOs, schools and social enterprises.</p></article>
+    <article class="proof-metric proof-teal"><span class="proof-index">02</span><div class="proof-number"><span class="count" data-to="10">0</span><sup>+</sup></div><h3>Creative campaigns</h3><p>Strategy, stories and assets brought together.</p></article>
+    <article class="proof-metric proof-gold"><span class="proof-index">03</span><div class="proof-number"><span class="count" data-to="5">0</span><sup>+</sup></div><h3>Years of combined experience</h3><p>Strategy, production, design and reporting.</p></article>
+    <article class="proof-metric proof-ink"><span class="proof-index">04</span><div class="proof-number"><span class="count" data-to="4">0</span></div><h3>Countries reached</h3><p>Rwanda, Tanzania, Uganda and Kenya.</p></article>
   </div>
-</section>
+</div></section>
 
-<!-- ====== SERVICES ====== -->
-<section id="services" style="padding-top:0;">
-  <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"/></svg>What we deliver</span>
-      <h2 class="sec-title">Every service your mission needs to get funded and stay funded.</h2>
-    </div>
-    <div class="svc-grid">
-      <div class="svc rv">
-        <div class="svc-ic"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/></svg></div>
-        <h3>Branding &amp; Strategy</h3>
-        <p>Visual identity, messaging architecture, and positioning that makes your organisation immediately credible to the funders, partners, and communities that matter.</p>
-      </div>
-      <div class="svc rv rv-d1">
-        <div class="svc-ic"><svg class="icon" viewBox="0 0 24 24"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg></div>
-        <h3>Impact Storytelling</h3>
-        <p>Documentary-style film and editorial content that captures real conditions, real people, and real change — the kind of evidence that moves donors from interest to action.</p>
-      </div>
-      <div class="svc rv rv-d2">
-        <div class="svc-ic"><svg class="icon" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
-        <h3>Donor Engagement &amp; Fundraising Support</h3>
-        <p>Campaign assets, donor appeals, stewardship content, and the communications that move a supporter from awareness through to a committed gift.</p>
-      </div>
-      <div class="svc rv">
-        <div class="svc-ic"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
-        <h3>Impact Design</h3>
-        <p>Infographics, data visualisations, report layouts, and campaign artwork that make your evidence scannable, shareable, and impossible to ignore in a donor's inbox.</p>
-      </div>
-      <div class="svc rv rv-d1">
-        <div class="svc-ic"><svg class="icon" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
-        <h3>Social Media Management</h3>
-        <p>Content strategy, scheduling, and community management across every channel your supporters and donors use — consistent, on-brand, and built to grow your base.</p>
-      </div>
-      <div class="svc rv rv-d2">
-        <div class="svc-ic"><svg class="icon" viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
-        <h3>Impact Reporting</h3>
-        <p>Annual reports, mid-term reviews, and donor updates that weave evidence, story, and data into documents funders actually read — and quote in their own reporting.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== BTS ====== -->
-<section id="bts" style="padding-top:0;">
-  <div class="wrap">
-    <div class="bts-head rv">
-      <div>
-        <span class="eyebrow">
-          <svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-          Behind the Work
-        </span>
-        <h2 class="sec-title">On the ground, before the grading suite.</h2>
-      </div>
-      <p>A raw look at what production actually looks like — the shoots, the setups, and the moments between.</p>
-    </div>
-
-    <div class="bts-grid">
-
-      <!-- tall portrait — woman in courtyard -->
-      <div class="bts-card bts-tall rv" data-bts="5">
-        <div class="bts-label"><span><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Field Portrait</span></div>
-      </div>
-
-      <!-- wide landscape — three women farming hilltop -->
-      <div class="bts-card bts-wide rv rv-d1" data-bts="0">
-        <div class="bts-label"><span><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Community, Rwanda</span></div>
-      </div>
-
-      <!-- square — woman planting solo -->
-      <div class="bts-card rv rv-d2" data-bts="3">
-        <div class="bts-label"><span><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Field Production</span></div>
-      </div>
-
-      <!-- square — family group in courtyard -->
-      <div class="bts-card rv rv-d3" data-bts="1">
-        <div class="bts-label"><span><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Community Portraits</span></div>
-      </div>
-
-      <!-- wide — classroom, teacher + child -->
-      <div class="bts-card bts-wide rv rv-d1" data-bts="2">
-        <div class="bts-label"><span><svg viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>Education Coverage</span></div>
-      </div>
-
-      <!-- square — two people laptop -->
-      <div class="bts-card rv rv-d2" data-bts="4">
-        <div class="bts-label"><span><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Behind the Edit</span></div>
-      </div>
-
-      <!-- placeholder — add more -->
-      <div class="bts-add bts-wide rv rv-d3" onclick="alert('Upload your BTS photos to this section')">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
-        <p>Add more BTS photos<br>More field stories coming</p>
-      </div>
-
-    </div>
-
-    <div class="bts-footer rv">
-      <p class="bts-count"><span id="btsCount">6</span> shots in the archive</p>
-      <a href="#contact" class="btn btn-line" style="font-size:12px;padding:10px 18px;">Shoot with us →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ====== PHILOSOPHY ====== -->
-<section id="philosophy" style="padding-top:0;">
-  <div class="wrap">
-    <div class="philo rv">
-      <span class="eyebrow"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>Why we work this way</span>
-      <h2 class="sec-title">The standards mission-driven communications demands — and rarely gets.</h2>
-      <div class="philo-grid">
-        <div class="ph-item rv">
-          <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/></svg>
-          <h4>Your community deserves accuracy</h4>
-          <p>We translate your work without distorting it. The people behind your mission — not a flattened version of them — are always at the centre.</p>
-        </div>
-        <div class="ph-item rv rv-d1">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
-          <h4>Dignity is the brief</h4>
-          <p>In development communications, how a story is told is as important as what it says. Consent, context, and honesty shape every frame we produce.</p>
-        </div>
-        <div class="ph-item rv rv-d2">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
-          <h4>Donors need evidence, not emotion alone</h4>
-          <p>Funders have seen every story. What earns sustained trust is proof: real outcomes, named results, and dated deliverables that hold up to scrutiny.</p>
-        </div>
-        <div class="ph-item rv rv-d3">
-          <svg class="icon" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.9 2.9M16.2 16.2l2.9 2.9M2 12h4M18 12h4M4.9 19.1l2.9-2.9M16.2 7.8l2.9-2.9"/></svg>
-          <h4>The work outlasts the campaign</h4>
-          <p>We build communications systems — not just deliverables. So your organisation keeps communicating consistently long after a project closes.</p>
+<!-- SERVICES -->
+<section class="service-scroll-section" id="servicesHome" data-service-scroll>
+  <div class="service-scroll-sticky">
+    <div class="wrap service-scroll-inner">
+      <div class="service-scroll-head">
+        <span class="eyebrow">What we do</span>
+        <div class="service-scroll-meta">
+          <span class="service-scroll-count" data-service-count aria-live="polite">01 / 06</span>
+          <a href="services.html">View all services <span aria-hidden="true">→</span></a>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== PROCESS ====== -->
-<section id="process" style="padding-top:0;">
-  <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>How we work</span>
-      <h2 class="sec-title">Built around your funding cycle, not ours.</h2>
-    </div>
-    <div class="proc">
-      <div class="step rv">
-        <div class="step-n">01</div>
-        <h4>Understand your mission</h4>
-        <p>We start with your theory of change, your funding landscape, and the communities you serve — not a content calendar.</p>
-      </div>
-      <div class="step rv rv-d1">
-        <div class="step-n">02</div>
-        <h4>Build your case for giving</h4>
-        <p>A unified narrative that works in a donor meeting, an annual report, and a social post — all saying the same true thing.</p>
-      </div>
-      <div class="step rv rv-d2">
-        <div class="step-n">03</div>
-        <h4>Produce with purpose</h4>
-        <p>Film, design, photography, and content — executed with the accuracy and dignity your community and your funders both expect.</p>
-      </div>
-      <div class="step rv rv-d3">
-        <div class="step-n">04</div>
-        <h4>Sustain and measure</h4>
-        <p>Systems, calendars, and reporting that keep your communications working between campaigns — and ready for the next funding push.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ====== TEAM ====== -->
-<section id="team" style="padding-top:0;">
-  <div class="wrap">
-    <div class="team-hd rv">
-      <div>
-        <span class="eyebrow"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>The team</span>
-        <h2 class="sec-title">Eight specialists. One focus.</h2>
-      </div>
-      <p>Every person at Qrate brings experience from inside development communications, editorial production, or social impact organisations. We didn't pivot to this — this is what we were built for.</p>
-    </div>
-    <div class="team-grid">
-      <div class="member rv">
-        <div class="avatar">OB</div>
-        <h4>Ollson Babu</h4>
-        <span class="role">Founder &amp; Creative Director</span>
-        <p>Sets narrative and creative direction across every account and partnership.</p>
-      </div>
-      <div class="member rv rv-d1">
-        <div class="avatar">I</div>
-        <h4>Imelda</h4>
-        <span class="role">Communications Manager</span>
-        <p>Owns client relationships, content strategy, and approval across all accounts.</p>
-      </div>
-      <div class="member rv rv-d2">
-        <div class="avatar">W</div>
-        <h4>Wesley</h4>
-        <span class="role">Lead Editor &amp; Videographer</span>
-        <p>Leads post-production and field shoots across all client work.</p>
-      </div>
-      <div class="member rv rv-d3">
-        <div class="avatar">B</div>
-        <h4>Brian</h4>
-        <span class="role">Videographer &amp; Editor</span>
-        <p>Works across field production, motion design, and edit.</p>
-      </div>
-      <div class="member rv">
-        <div class="avatar">H</div>
-        <h4>Hervé</h4>
-        <span class="role">Videographer</span>
-        <p>Field production and second-camera on major shoots and events.</p>
-      </div>
-      <div class="member rv rv-d1">
-        <div class="avatar">P</div>
-        <h4>Parfait</h4>
-        <span class="role">Lead Photographer</span>
-        <p>Editorial portraiture, programme documentation, and event coverage.</p>
-      </div>
-      <div class="member rv rv-d2">
-        <div class="avatar">E</div>
-        <h4>Eji</h4>
-        <span class="role">Impact Design Lead</span>
-        <p>Leads infographics, report design, and campaign artwork across all accounts.</p>
-      </div>
-      <div class="member rv rv-d3">
-        <div class="avatar">L</div>
-        <h4>Laura</h4>
-        <span class="role">Junior Comms Executive</span>
-        <p>Supports content operations, social calendars, community engagement, and delivery.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== TOOLS ====== -->
-<section id="tools" style="padding-top:0;">
-  <div class="wrap">
-    <div class="rv">
-      <span class="eyebrow"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Our toolkit</span>
-      <h2 class="sec-title">We know the tools your funders and partners already use.</h2>
-      <p style="margin-top:10px;max-width:560px;font-size:15px;">From donor management platforms to impact analytics, we work fluently across the systems that drive the development sector.</p>
-    </div>
-    <div class="tools-grid rv">
-      <div class="tools-cat">
-        <h5>Production &amp; Creative</h5>
-        <div class="tools-chips">
-          <div class="tool-chip"><div class="tbadge" style="background:#CC4444;">DR</div><span class="tname">DaVinci Resolve</span></div>
-          <div class="tool-chip"><div class="tbadge" style="background:#9999EE;">Pr</div><span class="tname">Adobe Premiere Pro</span></div>
-          <div class="tool-chip"><div class="tbadge" style="background:#9966DD;">Ae</div><span class="tname">Adobe After Effects</span></div>
-          <div class="tool-chip"><div class="tbadge" style="background:#FF7700;">Ai</div><span class="tname">Adobe Illustrator</span></div>
-          <div class="tool-chip"><div class="tbadge" style="background:#00C4CC;">Cv</div><span class="tname">Canva</span></div>
-          <div class="tool-chip"><div class="tbadge" style="background:#F24E1E;">Fg</div><span class="tname">Figma</span></div>
-        </div>
-      </div>
-      <div class="tools-cat">
-        <h5>Fundraising &amp; Donor</h5>
-        <div class="tools-chips">
-          <div class="tool-chip"><div class="tbadge" style="background:#0D9488;">Ev</div><span class="tname">Every.org</span></div>
-          <div class="tool-chip"><div class="tbadge" style="background:#00A1E0;">SF</div><span class="tname">Salesforce NPSP</span></div>
-          <div class="tool-chip"><div class="tbadge" style="background:#5C2D6E;">Bl</div><span class="tname">Bloomerang</span></div>
-          <div class="tool-chip"><div class="tbadge" style="background:#FFE01B;color:#221F1F;">Mc</div><span class="tname">Mailchimp</span></div>
-        </div>
-      </div>
-      <div class="tools-cat">
-        <h5>Communications &amp; Distribution</h5>
-        <div class="tools-chips">
-          <div class="tool-chip"><div class="tbadge" style="background:#FF7A59;">Hs</div><span class="tname">HubSpot</span></div>
-          <div class="tool-chip"><div class="tbadge" style="background:#168EEA;">Bf</div><span class="tname">Buffer</span></div>
-        </div>
-      </div>
-      <div class="tools-cat">
-        <h5>Analytics &amp; Measurement</h5>
-        <div class="tools-chips">
-          <div class="tool-chip"><div class="tbadge" style="background:#E37400;">GA</div><span class="tname">Google Analytics</span></div>
-          <div class="tool-chip"><div class="tbadge" style="background:#4285F4;">AG</div><span class="tname">Google Ad Grants</span></div>
-          <div class="tool-chip"><div class="tbadge" style="background:#34A853;">AS</div><span class="tname">Google AdSense</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ====== CTA ====== -->
-<section id="contact" style="padding-top:0;">
-  <div class="wrap">
-    <div class="cta rv">
-      <h2>Five things happen before a donor says yes.</h2>
-      <p class="cta-sub">We build what happens at every one of those moments.</p>
-
-      <div class="cta-journey">
-        <div class="jstep">
-          <div class="jn">01</div>
-          <div class="jic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></div>
-          <strong>Discovery</strong>
-          <p>They find you.</p>
-        </div>
-        <div class="jarr">→</div>
-        <div class="jstep">
-          <div class="jn">02</div>
-          <div class="jic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <strong>Credibility</strong>
-          <p>Your story holds up.</p>
-        </div>
-        <div class="jarr">→</div>
-        <div class="jstep">
-          <div class="jn">03</div>
-          <div class="jic"><svg viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
-          <strong>Evidence</strong>
-          <p>Impact is clear and real.</p>
-        </div>
-        <div class="jarr">→</div>
-        <div class="jstep">
-          <div class="jn">04</div>
-          <div class="jic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
-          <strong>Trust</strong>
-          <p>They believe in your team.</p>
-        </div>
-        <div class="jarr">→</div>
-        <div class="jstep">
-          <div class="jn">05</div>
-          <div class="jic"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></div>
-          <strong>Commitment</strong>
-          <p>They give — and give again.</p>
-        </div>
-      </div>
-
-      <p class="cta-close">We build all five. So when you make the ask, the answer is <em>already forming</em>.</p>
-      <a href="mailto:hello@qratecc.com" class="btn btn-dark">Build your case for giving
-        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- ====== CONTACT ====== -->
-<section id="contact" style="background:var(--surface);">
-  <div class="wrap">
-    <div class="rv" style="text-align:center; max-width:600px; margin:0 auto 40px;">
-      <span class="eyebrow" style="justify-content:center;"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>Get in Touch</span>
-      <h2 class="sec-title">Ready to tell a better story?</h2>
-      <p style="color:var(--ink-dim); font-size:16px;">Send us a message and we'll get back to you within 24 hours.</p>
-    </div>
-    
-    <div class="contact-box rv">
-      <form id="contact-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="user_name">Name *</label>
-            <input type="text" id="user_name" name="user_name" required placeholder="Jane Doe">
+      <div class="service-deck" aria-label="Qrate's six creative services">
+        <article class="service-slide service-slide-coral is-active" data-service-card aria-hidden="false">
+          <span class="service-slide-number">01</span>
+          <div class="service-visual service-visual-brand" aria-hidden="true">
+            <span class="brand-ring"></span><span class="brand-ring ring-two"></span>
+            <span class="brand-core">Q</span><i class="brand-node node-a"></i><i class="brand-node node-b"></i><i class="brand-node node-c"></i>
           </div>
-          <div class="form-group">
-            <label for="user_email">Email *</label>
-            <input type="email" id="user_email" name="user_email" required placeholder="jane@organisation.org">
+          <div class="service-slide-copy">
+            <span class="service-slide-kicker">Direction</span>
+            <h3>Brand Strategy</h3>
+            <p>Clear identities, messages and creative direction that help your organisation show up consistently.</p>
+            <div class="service-slide-tags"><span>Identity</span><span>Messaging</span><span>Creative direction</span></div>
+            <a class="service-slide-link" href="services.html#brand-strategy">Explore service <span aria-hidden="true">→</span></a>
           </div>
-        </div>
-        <div class="form-group">
-          <label for="user_org">Organisation</label>
-          <input type="text" id="user_org" name="user_org" placeholder="Organisation Name (Optional)">
-        </div>
-        <div class="form-group">
-          <label for="message">Message *</label>
-          <textarea id="message" name="message" required placeholder="How can we help?" rows="4"></textarea>
-        </div>
-        
-        <button type="submit" id="submit-btn" class="btn btn-hero-fill" style="width:100%; justify-content:center; margin-top:10px;">
-          Send Message
-          <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-        </button>
-        
-        <div id="form-status" class="form-status"></div>
-      </form>
+        </article>
+        <article class="service-slide service-slide-teal is-next" data-service-card aria-hidden="true">
+          <span class="service-slide-number">02</span>
+          <div class="service-visual service-visual-film" aria-hidden="true">
+            <span class="film-frame"></span><i class="film-play"></i>
+            <span class="film-strip strip-top"></span><span class="film-strip strip-bottom"></span>
+          </div>
+          <div class="service-slide-copy">
+            <span class="service-slide-kicker">Production</span>
+            <h3>Film, Photography &amp; Storytelling</h3>
+            <p>Human stories captured with context, care and the production quality your mission deserves.</p>
+            <div class="service-slide-tags"><span>Film</span><span>Photography</span><span>Editorial stories</span></div>
+            <a class="service-slide-link" href="services.html#film-photography">Explore service <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="service-slide service-slide-ink is-far" data-service-card aria-hidden="true">
+          <span class="service-slide-number">03</span>
+          <div class="service-visual service-visual-design" aria-hidden="true">
+            <span class="design-a"></span><span class="design-b"></span><span class="design-c"></span><span class="design-d"></span>
+          </div>
+          <div class="service-slide-copy">
+            <span class="service-slide-kicker">Clarity</span>
+            <h3>Design &amp; Visual Communication</h3>
+            <p>Reports, infographics and campaign artwork that make complex ideas clear and engaging.</p>
+            <div class="service-slide-tags"><span>Editorial design</span><span>Infographics</span><span>Campaign artwork</span></div>
+            <a class="service-slide-link" href="services.html#visual-communication">Explore service <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="service-slide service-slide-gold is-far" data-service-card aria-hidden="true">
+          <span class="service-slide-number">04</span>
+          <div class="service-visual service-visual-campaign" aria-hidden="true">
+            <span class="campaign-bubble bubble-a"></span><span class="campaign-bubble bubble-b"></span>
+            <span class="bubble-line line-a"></span><span class="bubble-line line-b"></span><span class="campaign-pulse"></span>
+          </div>
+          <div class="service-slide-copy">
+            <span class="service-slide-kicker">Connection</span>
+            <h3>Campaign &amp; Social Content</h3>
+            <p>Creative campaigns, content planning and everyday communication across the channels your community uses.</p>
+            <div class="service-slide-tags"><span>Campaigns</span><span>Social content</span><span>Channel planning</span></div>
+            <a class="service-slide-link" href="services.html#campaign-content">Explore service <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="service-slide service-slide-paper is-far" data-service-card aria-hidden="true">
+          <span class="service-slide-number">05</span>
+          <div class="service-visual service-visual-reports" aria-hidden="true">
+            <span class="report-page page-back"></span><span class="report-page page-front"></span>
+            <i class="report-title"></i><i class="report-copy"></i><i class="report-chart"></i>
+          </div>
+          <div class="service-slide-copy">
+            <span class="service-slide-kicker">Evidence</span>
+            <h3>Reports &amp; Publications</h3>
+            <p>Annual reports, programme updates and publications that bring story, evidence and design together.</p>
+            <div class="service-slide-tags"><span>Annual reports</span><span>Publications</span><span>Data stories</span></div>
+            <a class="service-slide-link" href="services.html#reports-publications">Explore service <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="service-slide service-slide-mint is-far" data-service-card aria-hidden="true">
+          <span class="service-slide-number">06</span>
+          <div class="service-visual service-visual-web" aria-hidden="true">
+            <span class="web-bar"></span><i class="web-dots"></i><span class="web-nav"></span><span class="web-hero"></span><span class="web-card card-a"></span><span class="web-card card-b"></span>
+          </div>
+          <div class="service-slide-copy">
+            <span class="service-slide-kicker">Digital</span>
+            <h3>Web &amp; Digital Support</h3>
+            <p>Websites, landing pages, maintenance and practical technical support for your digital presence.</p>
+            <div class="service-slide-tags"><span>Websites</span><span>Landing pages</span><span>Technical support</span></div>
+            <a class="service-slide-link" href="services.html#web-digital">Explore service <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+      </div>
+      <div class="service-scroll-footer" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <div class="service-scroll-track"><i class="is-current"></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ====== FOOTER ====== -->
+<!-- HOW WE WORK -->
+<section class="process-section process-chapters" id="engage"><div class="wrap">
+  <div class="process-shell">
+    <div class="process-head rv">
+      <div>
+        <span class="eyebrow">How we work</span>
+        <h2>One clear creative path.<br><em>Three focused steps.</em></h2>
+      </div>
+      <p>Every engagement has a clear beginning, a considered middle and a useful finish—with your team involved at the moments that matter.</p>
+    </div>
+    <ol class="process-timeline" data-process-timeline aria-label="Qrate's three-stage creative process">
+      <li class="process-step">
+        <div class="process-marker"><span>1</span><small>Listen</small></div>
+        <div class="process-step-copy">
+          <span class="process-phase">Understand</span>
+          <h3>Start with the mission.</h3>
+          <p>We listen closely, map the audience and define what the creative work needs to make possible.</p>
+        </div>
+        <div class="process-outcome"><small>You leave with</small><strong>A shared brief</strong></div>
+      </li>
+      <li class="process-step">
+        <div class="process-marker"><span>2</span><small>Shape</small></div>
+        <div class="process-step-copy">
+          <span class="process-phase">Direct</span>
+          <h3>Set the creative direction.</h3>
+          <p>We bring the message, format, team and production rhythm into one practical creative plan.</p>
+        </div>
+        <div class="process-outcome"><small>You leave with</small><strong>A clear creative plan</strong></div>
+      </li>
+      <li class="process-step">
+        <div class="process-marker"><span>3</span><small>Create</small></div>
+        <div class="process-step-copy">
+          <span class="process-phase">Deliver</span>
+          <h3>Make, refine and finish.</h3>
+          <p>We produce the work, share clear review points and deliver every asset ready for your team to use.</p>
+        </div>
+        <div class="process-outcome"><small>You leave with</small><strong>Finished creative work</strong></div>
+      </li>
+    </ol>
+    <div class="process-action rv">
+      <span>Clear check-ins at every stage.</span>
+      <a href="plans.html" class="btn btn-line">View engagement models →</a>
+    </div>
+  </div>
+</div></section>
+
+<!-- SELECTED WORK -->
+<section class="home-work" id="selectedWork"><div class="wrap">
+  <div class="home-work-head rv">
+    <div><span class="eyebrow">Selected work</span><h2>A closer look at our work.</h2></div>
+    <a href="work.html" class="btn btn-fill">See all our work →</a>
+  </div>
+  <div class="home-work-grid">
+    <a href="work.html" class="home-work-item work-a rv"><div class="work-image"><picture><source srcset="photos/bts-1.webp" type="image/webp"><img src="photos/bts-1.jpg" alt="Qrate field documentation photography" width="1920" height="1280"></picture></div><h3>Field Documentation</h3><p>Photography · Field production</p></a>
+    <a href="work.html" class="home-work-item work-b rv"><div class="work-image"><picture><source srcset="photos/bts-2.webp" type="image/webp"><img src="photos/bts-2.jpg" alt="A programme story captured by Qrate" width="1920" height="1280"></picture></div><h3>Programme Storytelling</h3><p>Film · Editorial development</p></a>
+    <a href="work.html" class="home-work-item work-c rv"><div class="work-image"><picture><source srcset="photos/bts-3.webp" type="image/webp"><img src="photos/bts-3.jpg" alt="Communications content produced for a mission-driven programme" width="1920" height="1280"></picture></div><h3>Campaign Creative</h3><p>Campaign design · Social content</p></a>
+    <a href="work.html" class="home-work-item work-d rv"><div class="work-image"><picture><source srcset="photos/bts-4.webp" type="image/webp"><img src="photos/bts-4.jpg" alt="Reports and publications created by Qrate" width="1920" height="1280"></picture></div><h3>Reports &amp; Publications</h3><p>Editorial design · Data storytelling</p></a>
+    <a href="work.html" class="home-work-item work-e rv"><div class="work-image"><picture><source srcset="photos/bts-5.webp" type="image/webp"><img src="photos/bts-5.jpg" alt="A community portrait produced with dignity" width="1920" height="1280"></picture></div><h3>Community Portraits</h3><p>Portraiture · Story development</p></a>
+    <a href="work.html" class="home-work-item work-f rv"><div class="work-image"><picture><source srcset="photos/bts-6.webp" type="image/webp"><img src="photos/bts-6.jpg" alt="Qrate post-production and editorial work" width="1920" height="1280"></picture></div><h3>Post-production</h3><p>Editing · Content delivery</p></a>
+  </div>
+</div></section>
+
+<!-- CLIENTS + TESTIMONIALS -->
+<section id="clients" style="padding-top:0;"><div class="wrap">
+  <div class="rv" style="text-align:center;"><span class="eyebrow" style="justify-content:center;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>Trusted by</span>
+  <h2 class="sec-title" style="margin:0 auto;">Organisations we&rsquo;ve partnered with.</h2></div>
+  <div class="ticker-wrap rv"><div class="ticker-track">
+    <div class="ticker-item"><img src="logos/idebate-rwanda.png" alt="iDebate"><span>iDebate Rwanda</span></div>
+    <div class="ticker-item"><img src="logos/starlight-africa.webp" alt="Starlight"><span>Starlight Africa</span></div>
+    <div class="ticker-item"><img src="logos/Hope-Haven.jpg" alt="Hope Haven"><span>Hope Haven Rwanda</span></div>
+    <div class="ticker-item"><img src="logos/new-vision.webp" alt="NVVH"><span>New Vision Vet Hospital</span></div>
+    <div class="ticker-item"><img src="logos/ntare-louisenlund.webp" alt="NLS"><span>Ntare Louisenlund School</span></div>
+    <div class="ticker-item"><img src="logos/let-there-be-light.webp" alt="LTBHI"><span>Let There Be Light Int&rsquo;l</span></div>
+    <div class="ticker-item"><img src="logos/shine-on.webp" alt="Shine on Rwanda"><span>Shine on Rwanda</span></div>
+    <div class="ticker-item"><img src="logos/soma-salama.png" alt="Soma Salama"><span>Soma Salama</span></div>
+    <div class="ticker-item"><img src="logos/idebate-rwanda.png" alt="iDebate"><span>iDebate Rwanda</span></div>
+    <div class="ticker-item"><img src="logos/starlight-africa.webp" alt="Starlight"><span>Starlight Africa</span></div>
+    <div class="ticker-item"><img src="logos/Hope-Haven.jpg" alt="Hope Haven"><span>Hope Haven Rwanda</span></div>
+    <div class="ticker-item"><img src="logos/new-vision.webp" alt="NVVH"><span>New Vision Vet Hospital</span></div>
+    <div class="ticker-item"><img src="logos/ntare-louisenlund.webp" alt="NLS"><span>Ntare Louisenlund School</span></div>
+    <div class="ticker-item"><img src="logos/let-there-be-light.webp" alt="LTBHI"><span>Let There Be Light Int&rsquo;l</span></div>
+    <div class="ticker-item"><img src="logos/shine-on.webp" alt="Shine on Rwanda"><span>Shine on Rwanda</span></div>
+    <div class="ticker-item"><img src="logos/soma-salama.png" alt="Soma Salama"><span>Soma Salama</span></div>
+  </div></div>
+  <div class="testi-grid" style="margin-top:48px;">
+    <div class="testi rv"><div class="testi-q">&ldquo;</div><p class="testi-text">Qrate understands our donor audience. Every piece is built around what actually moves supporters to give.</p><div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#E4603F,#F09070);">A</div><div><strong>Alice</strong><span>Partnerships Lead, Starlight Africa</span></div></div></div>
+    <div class="testi rv rv-d1"><div class="testi-q">&ldquo;</div><p class="testi-text">Same-day turnaround changed how we communicate with parents and partners. Non-negotiable now.</p><div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#1F8A74,#3D9B86);">K</div><div><strong>Katharina</strong><span>NLS Communications</span></div></div></div>
+    <div class="testi rv rv-d2"><div class="testi-q">&ldquo;</div><p class="testi-text">They hold dignity as a standard, not a talking point. Our stories are handled with real respect.</p><div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#D9A441,#E8C070);">J</div><div><strong>Jean Michel</strong><span>CEO, iDebate Rwanda</span></div></div></div>
+  </div>
+</div></section>
+
+<!-- MISSION TEAM CTA -->
+<section class="mission-team"><div class="wrap"><div class="mission-team-panel rv">
+  <span class="mission-team-kicker">Ready when you are</span>
+  <h2>Bring us the mission. <em>We&rsquo;ll help bring it to life.</em></h2>
+  <p>Strategy, storytelling, design and production—working alongside your team from first idea to final delivery.</p>
+  <div class="mission-team-actions">
+    <a href="contact.html" class="btn btn-fill">Start a project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <a href="#engage" class="btn mission-team-link">See how we work →</a>
+  </div>
+</div></div></section>
+
 <footer>
   <div class="wrap">
     <div class="f-top">
       <div>
         <div class="f-brand">QRATE.<span class="f-tag">For mission-driven work across Africa</span></div>
-        <p class="f-desc">Creative communications that help mission-driven organisations communicate their impact and earn the support they need.</p>
+        <p class="f-desc">The creative communications team behind mission-driven organisations across Africa.</p>
       </div>
       <div class="f-cols">
         <div class="f-col">
-          <h5>Navigate</h5>
-          <a href="#serve">Who we serve</a>
-          <a href="#services">Services</a>
-          <a href="#team">Team</a>
-          <a href="#tools">Tools</a>
-          <a href="#clients">Clients</a>
+          <h5>Pages</h5>
+          <a href="services.html">Services</a>
+          <a href="work.html">Our Work</a>
+          <a href="about.html">About</a>
+          <a href="plans.html">Plans</a>
+          <a href="resources.html">Resources</a>
         </div>
         <div class="f-col">
           <h5>Contact</h5>
-          <a href="mailto:hello@qratecc.com"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>hello@qratecc.com</a>
-          <a href="#"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Kigali, Rwanda</a>
+          <a href="mailto:comms@qrate.rw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>comms@qrate.rw</a>
+          <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Kigali, Rwanda</a>
         </div>
         <div class="f-col">
           <h5>Follow</h5>
-          <a href="#"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>Instagram</a>
-          <a href="#"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
         </div>
       </div>
     </div>
     <div class="f-bot">
-      <p>© 2026 Qrate Creative Communications. All rights reserved.</p>
+      <p>&copy; 2026 Qrate Creative Communications. All rights reserved.</p>
       <p>Kigali, Rwanda</p>
     </div>
   </div>
 </footer>
-<!-- ====== CUSTOM CURSOR ====== -->
-<div class="unlumen-cursor"></div>
-<div class="unlumen-cursor-follow"></div>
-
-<script src="script.js" defer></script>
+<script src="script.js?v=20260724-19"></script>
 </body>
 </html>
