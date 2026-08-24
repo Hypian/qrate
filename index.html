@@ -73,18 +73,22 @@
 </div></section>
 
 <!-- SERVICES -->
-<section class="service-scroll-section" id="servicesHome" data-service-scroll>
-  <div class="service-scroll-sticky">
-    <div class="wrap service-scroll-inner">
-      <div class="service-scroll-head">
+<section class="service-deck-section" id="servicesHome" data-service-deck aria-label="Creative Services">
+  <div class="wrap service-deck-inner">
+    <div class="service-deck-head rv">
+      <div>
         <span class="eyebrow">What we do</span>
-        <div class="service-scroll-meta">
-          <span class="service-scroll-count" data-service-count aria-live="polite">01 / 06</span>
-          <a href="services.html">View all services <span aria-hidden="true">→</span></a>
-        </div>
+        <h2 class="service-deck-title">Creative services built for impact.</h2>
       </div>
-      <div class="service-deck" aria-label="Qrate's six creative services">
-        <article class="service-slide service-slide-coral is-active" data-service-card aria-hidden="false">
+      <div class="service-deck-meta">
+        <span class="service-deck-count" data-service-count aria-live="polite">01 / 06</span>
+        <a href="services.html" class="service-deck-all">View all services <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+
+    <div class="service-deck-stage" aria-roledescription="carousel" aria-label="Services carousel">
+      <div class="service-deck-track" data-service-track tabindex="0" role="region" aria-label="Service cards deck">
+        <article class="service-slide service-slide-coral is-active" data-service-card data-index="0" aria-hidden="false">
           <span class="service-slide-number">01</span>
           <div class="service-visual service-visual-brand" aria-hidden="true">
             <span class="brand-ring"></span><span class="brand-ring ring-two"></span>
@@ -98,7 +102,7 @@
             <a class="service-slide-link" href="services.html#brand-strategy">Explore service <span aria-hidden="true">→</span></a>
           </div>
         </article>
-        <article class="service-slide service-slide-teal is-next" data-service-card aria-hidden="true">
+        <article class="service-slide service-slide-teal is-next" data-service-card data-index="1" aria-hidden="true">
           <span class="service-slide-number">02</span>
           <div class="service-visual service-visual-film" aria-hidden="true">
             <span class="film-frame"></span><i class="film-play"></i>
@@ -112,7 +116,7 @@
             <a class="service-slide-link" href="services.html#film-photography">Explore service <span aria-hidden="true">→</span></a>
           </div>
         </article>
-        <article class="service-slide service-slide-ink is-far" data-service-card aria-hidden="true">
+        <article class="service-slide service-slide-ink is-far-right" data-service-card data-index="2" aria-hidden="true">
           <span class="service-slide-number">03</span>
           <div class="service-visual service-visual-design" aria-hidden="true">
             <span class="design-a"></span><span class="design-b"></span><span class="design-c"></span><span class="design-d"></span>
@@ -125,7 +129,7 @@
             <a class="service-slide-link" href="services.html#visual-communication">Explore service <span aria-hidden="true">→</span></a>
           </div>
         </article>
-        <article class="service-slide service-slide-gold is-far" data-service-card aria-hidden="true">
+        <article class="service-slide service-slide-gold is-far-right" data-service-card data-index="3" aria-hidden="true">
           <span class="service-slide-number">04</span>
           <div class="service-visual service-visual-campaign" aria-hidden="true">
             <span class="campaign-bubble bubble-a"></span><span class="campaign-bubble bubble-b"></span>
@@ -139,7 +143,7 @@
             <a class="service-slide-link" href="services.html#campaign-content">Explore service <span aria-hidden="true">→</span></a>
           </div>
         </article>
-        <article class="service-slide service-slide-paper is-far" data-service-card aria-hidden="true">
+        <article class="service-slide service-slide-paper is-far-right" data-service-card data-index="4" aria-hidden="true">
           <span class="service-slide-number">05</span>
           <div class="service-visual service-visual-reports" aria-hidden="true">
             <span class="report-page page-back"></span><span class="report-page page-front"></span>
@@ -153,7 +157,7 @@
             <a class="service-slide-link" href="services.html#reports-publications">Explore service <span aria-hidden="true">→</span></a>
           </div>
         </article>
-        <article class="service-slide service-slide-mint is-far" data-service-card aria-hidden="true">
+        <article class="service-slide service-slide-mint is-far-right" data-service-card data-index="5" aria-hidden="true">
           <span class="service-slide-number">06</span>
           <div class="service-visual service-visual-web" aria-hidden="true">
             <span class="web-bar"></span><i class="web-dots"></i><span class="web-nav"></span><span class="web-hero"></span><span class="web-card card-a"></span><span class="web-card card-b"></span>
@@ -167,9 +171,16 @@
           </div>
         </article>
       </div>
-      <div class="service-scroll-footer" aria-hidden="true">
-        <span>Scroll to explore</span>
-        <div class="service-scroll-track"><i class="is-current"></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+
+    <div class="service-deck-footer">
+      <div class="service-deck-dots" data-service-dots aria-label="Select service slide">
+        <button type="button" class="service-dot is-current" data-dot-index="0" aria-label="Service 1: Brand Strategy" aria-current="true"></button>
+        <button type="button" class="service-dot" data-dot-index="1" aria-label="Service 2: Film, Photography & Storytelling" aria-current="false"></button>
+        <button type="button" class="service-dot" data-dot-index="2" aria-label="Service 3: Design & Visual Communication" aria-current="false"></button>
+        <button type="button" class="service-dot" data-dot-index="3" aria-label="Service 4: Campaign & Social Content" aria-current="false"></button>
+        <button type="button" class="service-dot" data-dot-index="4" aria-label="Service 5: Reports & Publications" aria-current="false"></button>
+        <button type="button" class="service-dot" data-dot-index="5" aria-label="Service 6: Web & Digital Support" aria-current="false"></button>
       </div>
     </div>
   </div>

@@ -146,49 +146,207 @@ document.addEventListener('DOMContentLoaded', () => {
     window.setTimeout(() => { photoFan.classList.add('fan-motion-ready'); start(); }, 1300);
   }
 
-  /* Scroll-led service deck + progressive process line. */
-  const serviceScroll = document.querySelector('[data-service-scroll]');
-  const serviceCards = serviceScroll ? [...serviceScroll.querySelectorAll('[data-service-card]')] : [];
-  const serviceCount = serviceScroll?.querySelector('[data-service-count]');
-  const serviceDots = serviceScroll ? [...serviceScroll.querySelectorAll('.service-scroll-track i')] : [];
-  const processTimeline = document.querySelector('[data-process-timeline]');
-  const processSteps = processTimeline ? [...processTimeline.querySelectorAll('.process-step')] : [];
-  let serviceIndex = -1;
-  let scrollMotionQueued = false;
+  /* 3D Rotating Services Deck Carousel */
+  const serviceDeck = document.querySelector('[data-service-deck]');
+  if(serviceDeck){
+    const serviceCards = [...serviceDeck.querySelectorAll('[data-service-card]')];
+    const serviceCount = serviceDeck.querySelector('[data-service-count]');
+    const serviceDots = [...serviceDeck.querySelectorAll('.service-dot')];
+    const track = serviceDeck.querySelector('[data-service-track]');
 
-  const setServiceIndex = nextIndex => {
-    if(!serviceCards.length || nextIndex === serviceIndex) return;
-    serviceIndex = nextIndex;
-    serviceCards.forEach((card, index) => {
-      const distance = index - nextIndex;
-      card.classList.remove('is-active','is-prev','is-next','is-far','is-far-left','is-far-right');
-      if(distance === 0) card.classList.add('is-active');
-      else if(distance === -1) card.classList.add('is-prev');
-      else if(distance === 1) card.classList.add('is-next');
-      else card.classList.add(distance < 0 ? 'is-far-left' : 'is-far-right');
+    let currentIndex = 0;
+    const total = serviceCards.length;
+    let autoplayTimer = null;
+    let isHovered = false;
 
-      const inactive = distance !== 0;
-      card.setAttribute('aria-hidden', String(inactive));
-      card.querySelectorAll('a').forEach(link => {
-        if(inactive) link.setAttribute('tabindex','-1');
-        else link.removeAttribute('tabindex');
+    const updateDeck = nextIndex => {
+      currentIndex = (nextIndex + total) % total;
+
+      serviceCards.forEach((card, index) => {
+        let diff = index - currentIndex;
+        if(diff > total / 2) diff -= total;
+        if(diff < -total / 2) diff += total;
+
+        card.classList.remove('is-active','is-prev','is-next','is-far-left','is-far-right');
+
+        if(diff === 0){
+          card.classList.add('is-active');
+          card.setAttribute('aria-hidden','false');
+          card.querySelectorAll('a').forEach(a => a.removeAttribute('tabindex'));
+        } else if(diff === -1){
+          card.classList.add('is-prev');
+          card.setAttribute('aria-hidden','true');
+          card.querySelectorAll('a').forEach(a => a.setAttribute('tabindex','-1'));
+        } else if(diff === 1){
+          card.classList.add('is-next');
+          card.setAttribute('aria-hidden','true');
+          card.querySelectorAll('a').forEach(a => a.setAttribute('tabindex','-1'));
+        } else if(diff < -1){
+          card.classList.add('is-far-left');
+          card.setAttribute('aria-hidden','true');
+          card.querySelectorAll('a').forEach(a => a.setAttribute('tabindex','-1'));
+        } else {
+          card.classList.add('is-far-right');
+          card.setAttribute('aria-hidden','true');
+          card.querySelectorAll('a').forEach(a => a.setAttribute('tabindex','-1'));
+        }
+      });
+
+      if(serviceCount){
+        serviceCount.textContent = `${String(currentIndex + 1).padStart(2,'0')} / ${String(total).padStart(2,'0')}`;
+      }
+
+      serviceDots.forEach((dot, idx) => {
+        const isActive = idx === currentIndex;
+        dot.classList.toggle('is-current', isActive);
+        dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+      });
+    };
+
+    const nextCard = () => updateDeck(currentIndex + 1);
+    const prevCard = () => updateDeck(currentIndex - 1);
+    const goToCard = idx => updateDeck(idx);
+
+    let hoverCooldown = false;
+
+    serviceCards.forEach(card => {
+      // Hovering over a card pauses autoplay; hovering on side cards brings them to center
+      card.addEventListener('mouseenter', () => {
+        isHovered = true;
+        stopAutoplay();
+
+        if(hoverCooldown) return;
+
+        if(card.classList.contains('is-prev')){
+          hoverCooldown = true;
+          prevCard();
+          setTimeout(() => { hoverCooldown = false; }, 380);
+        } else if(card.classList.contains('is-next')){
+          hoverCooldown = true;
+          nextCard();
+          setTimeout(() => { hoverCooldown = false; }, 380);
+        }
+      });
+
+      // When pointer leaves the card outline, auto-resume after 2s
+      card.addEventListener('mouseleave', e => {
+        const nextTarget = e.relatedTarget;
+        if(!nextTarget || !nextTarget.closest('[data-service-card]')){
+          isHovered = false;
+          resetAutoplay();
+        }
+      });
+
+      // Click to select side cards or navigate
+      card.addEventListener('click', e => {
+        if(e.target.closest('a')) return;
+        if(card.classList.contains('is-prev')){
+          e.preventDefault();
+          prevCard();
+          resetAutoplay();
+        } else if(card.classList.contains('is-next')){
+          e.preventDefault();
+          nextCard();
+          resetAutoplay();
+        }
       });
     });
-    if(serviceCount){
-      serviceCount.textContent = `${String(nextIndex + 1).padStart(2,'0')} / ${String(serviceCards.length).padStart(2,'0')}`;
-    }
-    serviceDots.forEach((dot,index) => dot.classList.toggle('is-current', index === nextIndex));
-  };
 
-  const updateScrollMotion = () => {
-    scrollMotionQueued = false;
-    if(serviceScroll && serviceCards.length && !reduceMotion){
-      const box = serviceScroll.getBoundingClientRect();
-      const travel = Math.max(1, box.height - window.innerHeight);
-      const progress = Math.max(0, Math.min(1, (72 - box.top) / travel));
-      const nextIndex = Math.min(serviceCards.length - 1, Math.round(progress * (serviceCards.length - 1)));
-      setServiceIndex(nextIndex);
+    serviceDots.forEach((dot, idx) => {
+      dot.addEventListener('click', () => {
+        goToCard(idx);
+        resetAutoplay();
+      });
+      dot.addEventListener('mouseenter', () => { isHovered = true; stopAutoplay(); });
+      dot.addEventListener('mouseleave', () => { isHovered = false; resetAutoplay(); });
+    });
+
+    track?.addEventListener('keydown', e => {
+      if(e.key === 'ArrowLeft'){ prevCard(); resetAutoplay(); }
+      else if(e.key === 'ArrowRight'){ nextCard(); resetAutoplay(); }
+    });
+
+    // Touch and mouse drag swipe gestures
+    let startX = 0;
+    let startY = 0;
+    let isDragging = false;
+
+    const onPointerDown = e => {
+      startX = e.clientX ?? e.touches?.[0]?.clientX ?? 0;
+      startY = e.clientY ?? e.touches?.[0]?.clientY ?? 0;
+      isDragging = true;
+    };
+
+    const onPointerUp = e => {
+      if(!isDragging) return;
+      isDragging = false;
+      const endX = e.clientX ?? e.changedTouches?.[0]?.clientX ?? 0;
+      const endY = e.clientY ?? e.changedTouches?.[0]?.clientY ?? 0;
+      const diffX = endX - startX;
+      const diffY = endY - startY;
+
+      if(Math.abs(diffX) > 35 && Math.abs(diffX) > Math.abs(diffY)){
+        if(diffX < 0) nextCard();
+        else prevCard();
+        resetAutoplay();
+      }
+    };
+
+    track?.addEventListener('touchstart', onPointerDown, {passive:true});
+    track?.addEventListener('touchend', onPointerUp, {passive:true});
+    track?.addEventListener('mousedown', onPointerDown);
+    window.addEventListener('mouseup', onPointerUp);
+
+    const startAutoplay = () => {
+      if(reduceMotion) return;
+      stopAutoplay();
+      autoplayTimer = setInterval(() => {
+        if(!isHovered && document.visibilityState === 'visible'){
+          nextCard();
+        }
+      }, 2000);
+    };
+
+    const stopAutoplay = () => {
+      if(autoplayTimer) clearInterval(autoplayTimer);
+    };
+
+    const resetAutoplay = () => {
+      stopAutoplay();
+      startAutoplay();
+    };
+
+    serviceDeck.addEventListener('focusin', () => { isHovered = true; stopAutoplay(); });
+    serviceDeck.addEventListener('focusout', e => {
+      if(!serviceDeck.contains(e.relatedTarget)){
+        isHovered = false;
+        resetAutoplay();
+      }
+    });
+
+    document.addEventListener('visibilitychange', () => {
+      if(document.hidden) stopAutoplay();
+      else startAutoplay();
+    });
+
+    if(reduceMotion){
+      serviceCards.forEach(card => {
+        card.setAttribute('aria-hidden','false');
+        card.querySelectorAll('a').forEach(link => link.removeAttribute('tabindex'));
+      });
+    } else {
+      updateDeck(0);
+      startAutoplay();
     }
+  }
+
+  /* Progressive process line on scroll */
+  const processTimeline = document.querySelector('[data-process-timeline]');
+  const processSteps = processTimeline ? [...processTimeline.querySelectorAll('.process-step')] : [];
+  let scrollMotionQueued = false;
+
+  const updateProcessScroll = () => {
+    scrollMotionQueued = false;
     if(processTimeline && processSteps.length && !reduceMotion){
       const box = processTimeline.getBoundingClientRect();
       const progress = Math.max(0, Math.min(1, (window.innerHeight * .76 - box.top) / Math.max(1, box.height * .9)));
@@ -198,24 +356,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const scheduleScrollMotion = () => {
+  const scheduleProcessScroll = () => {
     if(scrollMotionQueued) return;
     scrollMotionQueued = true;
-    requestAnimationFrame(updateScrollMotion);
+    requestAnimationFrame(updateProcessScroll);
   };
 
   if(reduceMotion){
-    serviceCards.forEach(card => {
-      card.setAttribute('aria-hidden','false');
-      card.querySelectorAll('a').forEach(link => link.removeAttribute('tabindex'));
-    });
     processTimeline?.style.setProperty('--process-progress','1');
     processSteps.forEach(step => step.classList.add('is-reached'));
-  } else if(serviceScroll || processTimeline){
-    setServiceIndex(0);
-    window.addEventListener('scroll', scheduleScrollMotion, {passive:true});
-    window.addEventListener('resize', scheduleScrollMotion, {passive:true});
-    updateScrollMotion();
+  } else if(processTimeline){
+    window.addEventListener('scroll', scheduleProcessScroll, {passive:true});
+    window.addEventListener('resize', scheduleProcessScroll, {passive:true});
+    updateProcessScroll();
   }
 
   /* ── Scroll reveal ────────────────────────────────────── */
