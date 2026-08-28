@@ -22,29 +22,31 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 
-  // 2. Mobile Menu Toggle
+  // 2. Mobile Menu Toggle with Body Scroll Lock
   const mobileToggle = document.querySelector('.mobile-nav-toggle');
   const mobileDrawer = document.querySelector('.mobile-nav-drawer');
   if (mobileToggle && mobileDrawer) {
-    mobileToggle.addEventListener('click', () => {
-      const isOpen = mobileDrawer.classList.toggle('open');
+    const toggleMenu = (forceState) => {
+      const isOpen = forceState !== undefined ? forceState : !mobileDrawer.classList.contains('open');
+      mobileDrawer.classList.toggle('open', isOpen);
       mobileToggle.classList.toggle('open', isOpen);
       mobileToggle.setAttribute('aria-expanded', String(isOpen));
-    });
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    };
+
+    mobileToggle.addEventListener('click', () => toggleMenu());
 
     mobileDrawer.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileDrawer.classList.remove('open');
-        mobileToggle.classList.remove('open');
-        mobileToggle.setAttribute('aria-expanded', 'false');
-      });
+      link.addEventListener('click', () => toggleMenu(false));
     });
 
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
-        mobileDrawer.classList.remove('open');
-        mobileToggle.classList.remove('open');
-        mobileToggle.setAttribute('aria-expanded', 'false');
+        toggleMenu(false);
       }
     });
   }
