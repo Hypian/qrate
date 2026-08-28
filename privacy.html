@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy &amp; Cookie Policy | Qrate Creative Communications</title>
+  <meta name="description" content="Qrate's Privacy and Cookie Policy. Learn how we safeguard participant integrity, donor confidentiality, and digital privacy under Law N° 058/2021 and GDPR.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://qrate.rw/privacy.html">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://qrate.rw/privacy.html">
+  <meta property="og:title" content="Privacy &amp; Cookie Policy | Qrate Creative Communications">
+  <meta property="og:description" content="Institutional safeguarding standards, field consent frameworks, and digital data protection policies.">
+  <meta property="og:image" content="https://qrate.rw/og-image.png">
+
+  <!-- Favicons & Fonts -->
+  <link rel="icon" type="image/png" href="logos/qrate-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+  <!-- Tailwind CDN & Styles -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'surface': 'var(--surface)',
+            'surface-low': 'var(--surface-low)',
+            'surface-high': 'var(--surface-high)',
+            'on-surface': 'var(--on-surface)',
+            'on-surface-variant': 'var(--on-surface-variant)',
+            'primary-fixed': 'var(--primary-fixed)',
+            'rust': 'var(--rust)',
+            'clay': 'var(--clay)',
+            'outline-variant': 'var(--outline-variant)'
+          },
+          fontFamily: {
+            display: 'var(--font-display)',
+            serif: 'var(--font-serif)',
+            body: 'var(--font-body)',
+            mono: 'var(--font-mono)'
+          },
+          padding: {
+            'gutter-desktop': 'var(--gutter-desktop)',
+            'gutter-mobile': 'var(--gutter-mobile)'
+          },
+          maxWidth: {
+            'container-max': 'var(--container-max)'
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex flex-col bg-surface text-on-surface antialiased selection:bg-rust/20 selection:text-primary-fixed">
+
+  <!-- Fixed Dynamic Navbar with Anti-Collision Protection -->
+  <header class="header-dynamic fixed top-0 left-0 w-full z-50 h-20 px-gutter-mobile md:px-gutter-desktop flex items-center justify-between pointer-events-none" id="main-header">
+    
+    <!-- Left: Brand Logo -->
+    <div class="flex items-center pointer-events-auto">
+      <a class="brand-logo font-sans font-semibold tracking-[0.2em] text-xl sm:text-2xl focus-ring drop-shadow-sm transition-colors duration-300" href="index.html">
+        QRATE
+      </a>
+    </div>
+
+    <!-- Center: Navigation Links -->
+    <div class="nav-center-links hidden md:flex items-center space-x-8 lg:space-x-10 pointer-events-auto absolute left-1/2 -translate-x-1/2">
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="index.html">Home</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="work.html">Work</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="services.html">Services</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="about.html">About</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="philosophy.html">Philosophy</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="plans.html">Plans</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="resources.html">Resources</a>
+    </div>
+    
+    <!-- Right: Desktop Action Button + Mobile-Only 2-Bar Toggle -->
+    <div class="flex items-center pointer-events-auto space-x-4">
+      <a class="nav-action-flip action-btn hidden md:inline-flex" href="contact.html" aria-label="Start Project">
+        <div class="flip-inner">
+          <div class="flip-slide flip-default">
+            <span class="flip-label">Start Project</span>
+            <svg class="w-3.5 h-3.5 text-[#1a1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="flip-slide flip-hover">
+            <span class="flip-label">Good choice</span>
+            <svg class="w-3.5 h-3.5 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+      
+      <button class="mobile-nav-toggle md:hidden flex flex-col justify-center items-center w-10 h-10 p-2 focus-ring" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="w-6 h-0.5 my-1 transition-transform duration-300"></span>
+        <span class="w-6 h-0.5 my-1 transition-transform duration-300"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer md:hidden">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="work.html">Work</a>
+    <a class="nav-link" href="services.html">Services</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="philosophy.html">Philosophy</a>
+    <a class="nav-link" href="plans.html">Plans</a>
+    <a class="nav-link" href="resources.html">Resources</a>
+    <a class="btn-flip btn-flip-primary w-full mt-4" href="contact.html" aria-label="Start Project">
+      <div class="flip-inner">
+        <div class="flip-slide flip-default">
+          <span class="flip-label">Start Project</span>
+          <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+        <div class="flip-slide flip-hover">
+          <span class="flip-label">Begin journey</span>
+          <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/></svg>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <main class="flex-grow -mt-20">
+    
+    <!-- Golden Page Hero Banner -->
+    <section class="hero-kraft min-h-[50vh] flex flex-col justify-center pt-32 pb-16 md:pt-36 md:pb-20 px-gutter-mobile md:px-gutter-desktop relative">
+      <div class="hero-kraft-glow"></div>
+      <div class="max-w-container-max mx-auto w-full relative z-10">
+        <div class="max-w-3xl">
+          <span class="text-xs uppercase tracking-[0.24em] font-mono text-amber-200/90 font-semibold mb-4 block drop-shadow-sm">
+            [ INSTITUTIONAL COMPLIANCE &amp; SAFEGUARDING ]
+          </span>
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-white font-normal leading-[1.08] tracking-tight mb-6 drop-shadow-sm">
+            Privacy &amp; Cookie Policy
+          </h1>
+          <p class="text-base sm:text-lg text-amber-50/95 font-body leading-relaxed font-light drop-shadow-sm max-w-2xl">
+            Our binding commitment to participant dignity, institutional confidentiality, and digital privacy under Law N° 058/2021 of Rwanda and global GDPR benchmarks.
+          </p>
+          <div class="mt-6 flex items-center gap-4 text-xs font-mono text-amber-200/80">
+            <span>Effective: January 1, 2026</span>
+            <span>·</span>
+            <span>Version: 3.2</span>
+            <span>·</span>
+            <span>Data Controller: Qrate Creative Communications</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Policy Container -->
+    <section class="py-16 md:py-24 px-gutter-mobile md:px-gutter-desktop bg-surface">
+      <div class="max-w-4xl mx-auto space-y-16">
+
+        <!-- 1. Institutional Safeguarding & Consent Framework -->
+        <article class="bg-white border border-outline-variant p-8 md:p-12 rounded-lg shadow-sm">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-8 h-8 rounded-full bg-surface-low text-rust font-mono font-bold flex items-center justify-center text-sm border border-outline-variant">01</span>
+            <h2 class="font-serif text-2xl md:text-3xl text-primary-fixed font-normal">Documentary Field Safeguarding &amp; Participant Rights</h2>
+          </div>
+          <p class="body-base text-on-surface-variant leading-relaxed mb-6">
+            At Qrate, privacy is not simply a legal compliance metric—it is the foundation of ethical storytelling. When documenting communities, beneficiaries, clinicians, educators, and field personnel, we operate under our strict <strong>Ethical Field Consent Framework</strong>:
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
+            <div class="p-6 bg-surface-low border border-outline-variant/60 rounded-md">
+              <h3 class="font-sans font-semibold text-primary-fixed text-base mb-2">Multi-Lingual Informed Consent</h3>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                Prior to any filming or photography, participants receive full verbal and written briefings in their native language (Kinyarwanda, English, French, Swahili) outlining exact broadcast channels, duration, and intent.
+              </p>
+            </div>
+            <div class="p-6 bg-surface-low border border-outline-variant/60 rounded-md">
+              <h3 class="font-sans font-semibold text-primary-fixed text-base mb-2">Child &amp; Vulnerable Group Protection</h3>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                Minors require dual-verified parental or legal guardian consent alongside institutional safeguarding officer sign-off. We strictly prohibit exploitative, distress-inducing, or undignified depictions.
+              </p>
+            </div>
+            <div class="p-6 bg-surface-low border border-outline-variant/60 rounded-md">
+              <h3 class="font-sans font-semibold text-primary-fixed text-base mb-2">Perpetual Right of Revocation</h3>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                Documentary participants maintain the right to withdraw consent at any stage of production without prejudice, penalty, or disruption to their relationship with partner NGOs.
+              </p>
+            </div>
+            <div class="p-6 bg-surface-low border border-outline-variant/60 rounded-md">
+              <h3 class="font-sans font-semibold text-primary-fixed text-base mb-2">Non-Commercialization of Field Assets</h3>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                Raw photographic, audio, or cinematic material captured during partner engagements is never sold, licensed to stock agencies, or used for third-party commercial exploitation.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. Digital Data Collection & Legal Bases -->
+        <article class="bg-white border border-outline-variant p-8 md:p-12 rounded-lg shadow-sm">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-8 h-8 rounded-full bg-surface-low text-rust font-mono font-bold flex items-center justify-center text-sm border border-outline-variant">02</span>
+            <h2 class="font-serif text-2xl md:text-3xl text-primary-fixed font-normal">Digital Data Collection &amp; Legal Bases</h2>
+          </div>
+          <p class="body-base text-on-surface-variant leading-relaxed mb-6">
+            We process digital information solely for clear, legitimate institutional communications and client partnerships under <strong>Law N° 058/2021 (Rwanda)</strong> and the <strong>EU General Data Protection Regulation (GDPR)</strong>:
+          </p>
+          <div class="space-y-4">
+            <div class="border-b border-outline-variant/40 pb-4">
+              <h4 class="font-sans font-semibold text-primary-fixed text-sm mb-1">A. Consultation &amp; Inquiry Data</h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                When you submit an inquiry via our contact form or schedule a director session via Calendly, we collect your name, institutional email address, organization name, country, and project brief. This is processed under the legal basis of <em>contractual necessity</em> and <em>legitimate interest</em> to respond to your request.
+              </p>
+            </div>
+            <div class="border-b border-outline-variant/40 pb-4">
+              <h4 class="font-sans font-semibold text-primary-fixed text-sm mb-1">B. Strategic Intel &amp; Framework Downloads</h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                Access to our open-source playbooks, budget calculators, and field checklists requires minimal institutional identification to prevent automated scraping and understand resource utility.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-sans font-semibold text-primary-fixed text-sm mb-1">C. Technical &amp; Aggregate Analytics</h4>
+              <p class="text-xs text-on-surface-variant leading-relaxed">
+                We collect aggregated, anonymized technical telemetry (browser type, operating system, approximate geographic country, time spent per case study) without collecting personal fingerprinting identifiers.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Cookie Policy & Tracking Technologies -->
+        <article id="cookies" class="bg-white border border-outline-variant p-8 md:p-12 rounded-lg shadow-sm">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-8 h-8 rounded-full bg-surface-low text-rust font-mono font-bold flex items-center justify-center text-sm border border-outline-variant">03</span>
+            <h2 class="font-serif text-2xl md:text-3xl text-primary-fixed font-normal">Cookie Policy &amp; Tracking Technologies</h2>
+          </div>
+          <p class="body-base text-on-surface-variant leading-relaxed mb-6">
+            Cookies are small cryptographic tokens placed on your device to ensure interface stability and remember your accessibility preferences. We categorize our cookie usage into two transparent tiers:
+          </p>
+          
+          <div class="overflow-x-auto my-6">
+            <table class="w-full text-left border-collapse text-xs">
+              <thead>
+                <tr class="border-b-2 border-outline-variant bg-surface-low">
+                  <th class="py-3 px-4 font-mono uppercase tracking-wider text-primary-fixed">Category</th>
+                  <th class="py-3 px-4 font-mono uppercase tracking-wider text-primary-fixed">Purpose</th>
+                  <th class="py-3 px-4 font-mono uppercase tracking-wider text-primary-fixed">Duration</th>
+                  <th class="py-3 px-4 font-mono uppercase tracking-wider text-primary-fixed">Default State</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-outline-variant/50 text-on-surface-variant">
+                <tr>
+                  <td class="py-3.5 px-4 font-semibold text-primary-fixed">Strictly Essential</td>
+                  <td class="py-3.5 px-4">Session persistence, security headers, form anti-CSRF token verification, and cookie preference storage.</td>
+                  <td class="py-3.5 px-4 font-mono">1 Year</td>
+                  <td class="py-3.5 px-4"><span class="px-2 py-0.5 bg-emerald-50 text-emerald-800 rounded font-semibold">Active (Mandatory)</span></td>
+                </tr>
+                <tr>
+                  <td class="py-3.5 px-4 font-semibold text-primary-fixed">Performance &amp; Analytics</td>
+                  <td class="py-3.5 px-4">Anonymized traffic metrics, reading depth evaluation, and performance monitoring. No cross-site advertising tracking.</td>
+                  <td class="py-3.5 px-4 font-mono">90 Days</td>
+                  <td class="py-3.5 px-4"><span class="px-2 py-0.5 bg-amber-50 text-amber-800 rounded font-semibold">Consent Required</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="mt-6 p-5 bg-surface-low border border-outline-variant/60 rounded-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <h4 class="font-sans font-semibold text-primary-fixed text-sm">Manage Your Cookie Preferences</h4>
+              <p class="text-xs text-on-surface-variant">You can update or withdraw your consent preferences at any time.</p>
+            </div>
+            <button id="cookie-settings-btn" class="open-cookie-settings btn-flip btn-flip-secondary" style="height: 40px;">
+              <div class="flip-inner">
+                <div class="flip-slide flip-default" style="height: 40px; min-height: 40px; padding: 0 16px;">
+                  <span class="flip-label text-xs">Adjust Preferences</span>
+                </div>
+                <div class="flip-slide flip-hover" style="height: 40px; min-height: 40px; padding: 0 16px;">
+                  <span class="flip-label text-xs">Open Settings ✦</span>
+                </div>
+              </div>
+            </button>
+          </div>
+        </article>
+
+        <!-- 4. Data Security, Third-Party Processors & Zero Sale -->
+        <article class="bg-white border border-outline-variant p-8 md:p-12 rounded-lg shadow-sm">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-8 h-8 rounded-full bg-surface-low text-rust font-mono font-bold flex items-center justify-center text-sm border border-outline-variant">04</span>
+            <h2 class="font-serif text-2xl md:text-3xl text-primary-fixed font-normal">Data Security, Storage &amp; Sub-Processors</h2>
+          </div>
+          <p class="body-base text-on-surface-variant leading-relaxed mb-4">
+            All data in transit is encrypted using industry-standard TLS 1.3 cryptographic protocols. We retain client and participant records only for the period necessary to deliver contracted creative deliverables or fulfill statutory auditing requirements.
+          </p>
+          <div class="p-4 bg-amber-50/60 border border-amber-200/70 rounded-md mb-6 text-xs text-amber-900 leading-relaxed font-body">
+            <strong>Absolute Guarantee:</strong> Qrate never sells, rents, monetizes, or distributes personal or institutional data to advertising networks, data brokers, or AI training marketplaces.
+          </div>
+          <h4 class="font-sans font-semibold text-primary-fixed text-sm mb-3">Vetted Sub-Processors</h4>
+          <ul class="space-y-2 text-xs text-on-surface-variant font-body">
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-rust"></span>
+              <strong>GitHub Pages &amp; CDN Infrastructure:</strong> Secure, encrypted static hosting and global asset delivery.
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-rust"></span>
+              <strong>Calendly LLC:</strong> Direct director consultation scheduling (SOC 2 Type II certified).
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="w-1.5 h-1.5 rounded-full bg-rust"></span>
+              <strong>EmailJS / Google Workspace:</strong> Encrypted inquiry routing with multi-factor authentication.
+            </li>
+          </ul>
+        </article>
+
+        <!-- 5. Your Legal Rights & Data Protection Officer -->
+        <article class="bg-white border border-outline-variant p-8 md:p-12 rounded-lg shadow-sm">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-8 h-8 rounded-full bg-surface-low text-rust font-mono font-bold flex items-center justify-center text-sm border border-outline-variant">05</span>
+            <h2 class="font-serif text-2xl md:text-3xl text-primary-fixed font-normal">Your Rights &amp; DPO Inquiries</h2>
+          </div>
+          <p class="body-base text-on-surface-variant leading-relaxed mb-6">
+            Under Rwandan Law N° 058/2021 and international privacy regulations, data subjects possess enforceable rights:
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-on-surface-variant mb-8">
+            <div class="p-4 bg-surface-low border border-outline-variant/40 rounded">
+              <strong class="text-primary-fixed block mb-1">Right to Access &amp; Portability</strong>
+              Request a certified copy of any personal or organizational data stored by Qrate.
+            </div>
+            <div class="p-4 bg-surface-low border border-outline-variant/40 rounded">
+              <strong class="text-primary-fixed block mb-1">Right to Rectification</strong>
+              Promptly correct inaccurate, outdated, or incomplete records.
+            </div>
+            <div class="p-4 bg-surface-low border border-outline-variant/40 rounded">
+              <strong class="text-primary-fixed block mb-1">Right to Erasure ("To Be Forgotten")</strong>
+              Request permanent deletion of your records from our active communications database.
+            </div>
+            <div class="p-4 bg-surface-low border border-outline-variant/40 rounded">
+              <strong class="text-primary-fixed block mb-1">Right to Object &amp; Restrict</strong>
+              Restrict the processing of specific documentary archives or communications.
+            </div>
+          </div>
+
+          <div class="p-6 bg-surface-high border border-outline-variant rounded-md">
+            <h3 class="font-sans font-semibold text-primary-fixed text-base mb-2">Direct Privacy &amp; Safeguarding Contact</h3>
+            <p class="text-xs text-on-surface-variant leading-relaxed mb-4">
+              To exercise your data rights, request media archives, or report a safeguarding inquiry, please contact our institutional Data Protection Officer directly:
+            </p>
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 text-xs font-mono text-primary-fixed">
+              <a class="hover:text-rust transition-colors font-semibold" href="mailto:comms@qrate.rw">✉ comms@qrate.rw</a>
+              <span class="hidden sm:inline">·</span>
+              <span>📍 Kigali, Rwanda</span>
+              <span class="hidden sm:inline">·</span>
+              <span>Response SLA: Within 48 Hours</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" class="cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie &amp; Privacy Consent">
+    <div class="cookie-banner-title">
+      <svg class="w-4 h-4 text-rust" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <span>Privacy &amp; Cookie Preferences</span>
+    </div>
+    <p class="cookie-banner-text">
+      We use essential cookies for system security and anonymized analytics to measure engagement in accordance with Rwandan Data Protection Law (Law N° 058/2021) and GDPR.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept-all" class="cookie-btn-accept" type="button">Accept All</button>
+      <button id="cookie-essential-only" class="cookie-btn-essential" type="button">Essential Only</button>
+      <a class="cookie-policy-link" href="privacy.html#cookies">Read Policy</a>
+    </div>
+  </div>
+
+  <!-- Institutional Footer -->
+  <footer class="institutional-footer">
+    <div class="grid-container grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div>
+        <a class="font-serif text-2xl font-normal text-primary-fixed inline-block mb-3" href="index.html">
+          <span class="font-semibold tracking-tighter">QRATE.</span>
+        </a>
+        <p class="body-base text-on-surface-variant text-sm leading-relaxed">
+          Strategic communications, documentary film, and brand design for mission-driven organizations.
+        </p>
+        <p class="label-sm text-on-surface-variant mt-6 text-xs">© 2026 Qrate Creative Communications.</p>
+      </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Navigation</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="work.html">Our Work</a></li>
+          <li><a class="hover:text-rust transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-rust transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-rust transition-colors" href="philosophy.html">Philosophy</a></li>
+          <li><a class="hover:text-rust transition-colors" href="plans.html">Engagement Models</a></li>
+          <li><a class="hover:text-rust transition-colors" href="resources.html">Resources &amp; Intel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="contact.html">Get in Touch</a></li>
+          <li><a class="hover:text-rust transition-colors" href="mailto:comms@qrate.rw">comms@qrate.rw</a></li>
+          <li><span>Kigali, Rwanda</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Connect</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a class="hover:text-rust transition-colors" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a class="hover:text-rust transition-colors" href="https://calendly.com/qrate-stu/30min" target="_blank" rel="noopener noreferrer">Book Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Institutional Legal Bar -->
+    <div class="grid-container border-t border-outline-variant/30 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+      <p>© 2026 Qrate Creative Communications. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-rust transition-colors" href="privacy.html">Privacy &amp; Data Protection</a>
+        <a class="hover:text-rust transition-colors" href="privacy.html#cookies">Cookie Policy</a>
+        <button class="open-cookie-settings hover:text-rust transition-colors cursor-pointer bg-transparent border-0 p-0 text-xs text-on-surface-variant font-inherit">Cookie Settings</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

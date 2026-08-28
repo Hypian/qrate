@@ -1,327 +1,761 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Qrate is the creative communications team behind mission-driven organisations across Africa.">
-<meta name="theme-color" content="#FFFFFF"><meta name="robots" content="index,follow"><link rel="canonical" href="https://qrate.rw/">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Qrate Creative Communications"><meta property="og:title" content="Qrate — The creative team behind your mission"><meta property="og:description" content="Strategy, storytelling, design and production for mission-driven organisations across Africa."><meta property="og:url" content="https://qrate.rw/"><meta property="og:image" content="https://qrate.rw/og-image.png"><meta name="twitter:card" content="summary_large_image">
-<title>Qrate — Creative Communications for Mission-Driven Organisations</title>
-<link rel="preload" href="photos/hero-3.webp" as="image" type="image/webp">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260724-20">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Qrate | The creative team behind your mission.</title>
+  <meta name="description" content="Qrate is a strategic communications consultancy based in Kigali, Rwanda. We build institutional credibility through intentional design, authentic 4K documentary storytelling, and strategic narrative clarity for global funders and visionary NGOs."/>
+  <meta name="keywords" content="strategic communications, NGO branding, documentary filmmaking, African storytelling, institutional design, Kigali creative agency, donor reporting, annual reports Rwanda"/>
+  <meta name="author" content="Qrate Creative Communications"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <link rel="canonical" href="https://qrate.rw/"/>
+  <meta name="theme-color" content="#7d5e43"/>
+
+  <!-- Geo & Regional Meta -->
+  <meta name="geo.region" content="RW-01"/>
+  <meta name="geo.placename" content="Kigali, Rwanda"/>
+  <meta name="geo.position" content="-1.9441;30.0619"/>
+  <meta name="ICBM" content="-1.9441, 30.0619"/>
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://qrate.rw/"/>
+  <meta property="og:site_name" content="Qrate Creative Communications"/>
+  <meta property="og:title" content="Qrate | The creative team behind your mission"/>
+  <meta property="og:description" content="We build institutional credibility through intentional design, 4K documentary storytelling, and strategic communications for visionary NGOs and global funders."/>
+  <meta property="og:image" content="https://qrate.rw/og-image.jpg"/>
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+  <meta property="og:locale" content="en_US"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:url" content="https://qrate.rw/"/>
+  <meta name="twitter:title" content="Qrate | The creative team behind your mission"/>
+  <meta name="twitter:description" content="Strategic communications, documentary film, and brand design for mission-driven leaders across Africa."/>
+  <meta name="twitter:image" content="https://qrate.rw/og-image.jpg"/>
+
+  <!-- Performance Preconnect & DNS-Prefetch -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- JSON-LD Structured Data for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Qrate Creative Communications",
+    "url": "https://qrate.rw/",
+    "logo": "https://qrate.rw/og-image.png",
+    "image": "https://qrate.rw/og-image.jpg",
+    "description": "Strategic communications, documentary film, and brand design consultancy for visionary NGOs, global funders, and African changemakers.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kigali",
+      "addressCountry": "RW"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -1.9441,
+      "longitude": 30.0619
+    },
+    "email": "comms@qrate.rw",
+    "sameAs": [
+      "https://www.linkedin.com",
+      "https://www.instagram.com"
+    ],
+    "priceRange": "$$$",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Strategic Communications & Media Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Brand Systems & Institutional Positioning",
+            "description": "Institutional brand architectures, donor pitch decks, and cohesive identity frameworks."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "4K On-Location Documentary Cinematography",
+            "description": "Ethical field cinematography, safeguarding protocols, and human-first storytelling across East Africa."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Annual Reports, Policy Briefs & Publications",
+            "description": "High-density stakeholder publications, data structuring, and narrative clarity for global boards."
+          }
+        }
+      ]
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#faf9f5",
+            "surface": "#faf9f5",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f4f2eb",
+            "surface-container": "#ece8df",
+            "surface-container-high": "#e3ded3",
+            "surface-container-highest": "#d9d3c5",
+            "surface-variant": "#e6e1d6",
+            "on-surface": "#141716",
+            "on-surface-variant": "#4e5352",
+            "primary": "#1e2221",
+            "primary-fixed": "#0d100f",
+            "kraft": "#7d5e43",
+            "kraft-dark": "#5a412c",
+            "forest": "#1a382a",
+            "forest-dark": "#12281e",
+            "rust": "#8a6e50",
+            "rust-dark": "#5c4328",
+            "rust-hover": "#755a3d",
+            "secondary": "#8a6e50",
+            "tertiary": "#2a5845",
+            "sage-light": "#3b745c",
+            "ochre-gold": "#8a6e50",
+            "outline": "#777d7c",
+            "outline-variant": "#ded9cf"
+          },
+          fontFamily: {
+            "serif": ["Newsreader", "Georgia", "serif"],
+            "display-serif": ["Newsreader", "Georgia", "serif"],
+            "display-xl": ["Newsreader", "Space Grotesk", "serif"],
+            "headline-lg": ["Newsreader", "Space Grotesk", "serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
+            "body-lg": ["Geist", "sans-serif"],
+            "body-base": ["Geist", "sans-serif"],
+            "label-md": ["Geist", "sans-serif"],
+            "label-sm": ["Geist", "sans-serif"],
+            "mono": ["Geist", "monospace"]
+          },
+          spacing: {
+            "gutter-desktop": "64px",
+            "gutter-tablet": "32px",
+            "gutter-mobile": "16px",
+            "container-max": "1440px"
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Qrate Creative Communications","url":"https://qrate.rw/","email":"comms@qrate.rw","description":"The creative communications team behind mission-driven organisations across Africa.","address":{"@type":"PostalAddress","addressLocality":"Kigali","addressCountry":"RW"},"areaServed":["Rwanda","Tanzania","Uganda","Kenya"]}</script>
-<div id="progress"></div>
-<header id="hd">
-  <nav>
-    <a class="logo" href="index.html">QRATE.</a>
-    <div class="navlinks">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="work.html">Our Work</a>
-      <a href="about.html">About</a>
-      <a href="plans.html">Plans</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
+<body class="bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
+  <div id="progress"></div>
+
+  <!-- TopNavBar (Dynamic Transparent-to-Frosted Header with Centered Links) -->
+  <nav id="main-header" class="header-dynamic fixed top-0 w-full z-50 flex justify-between items-center px-gutter-mobile md:px-gutter-desktop h-20 transition-all duration-300 pointer-events-none">
+    
+    <!-- Left: Brand Logo -->
+    <div class="flex items-center pointer-events-auto">
+      <a class="brand-logo font-sans font-semibold tracking-[0.2em] text-xl sm:text-2xl focus-ring drop-shadow-sm transition-colors duration-300" href="index.html">
+        QRATE
+      </a>
     </div>
-    <div class="nav-actions">
-      <a href="https://calendly.com/qrate-stu/30min?month=2026-07" target="_blank" rel="noopener" class="btn btn-line" style="font-size:12px;padding:10px 16px;">Book a call</a>
-      <a href="contact.html" class="btn btn-fill">Start a project <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+    <!-- Center: Navigation Links centered in the exact middle -->
+    <div class="nav-center-links hidden md:flex items-center space-x-8 lg:space-x-10 pointer-events-auto absolute left-1/2 -translate-x-1/2">
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="work.html">Work</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="services.html">Services</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="about.html">About</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="philosophy.html">Philosophy</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="plans.html">Plans</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="resources.html">Resources</a>
+    </div>
+    
+    <!-- Right: Desktop Action Button + Mobile-Only 2-Bar Toggle (md:hidden) -->
+    <div class="flex items-center pointer-events-auto space-x-4">
+      <a class="nav-action-flip action-btn hidden md:inline-flex" href="contact.html" aria-label="Start Project">
+        <div class="flip-inner">
+          <div class="flip-slide flip-default">
+            <span class="flip-label">Start Project</span>
+            <svg class="w-3.5 h-3.5 text-[#1a1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="flip-slide flip-hover">
+            <span class="flip-label">Good choice</span>
+            <svg class="w-3.5 h-3.5 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+      <button class="mobile-nav-toggle md:hidden flex flex-col justify-center gap-1.5 w-9 h-9 p-1 rounded focus-ring" aria-label="Toggle Menu">
+        <span class="w-6 h-[1.5px] rounded-full transition-all"></span>
+        <span class="w-6 h-[1.5px] rounded-full transition-all"></span>
+      </button>
     </div>
   </nav>
-</header>
 
-<!-- HERO -->
-<section class="showcase-hero" id="top">
-  <div class="showcase-shell">
-    <div class="showcase-copy">
-      <span class="showcase-kicker">Creative communications · Kigali, Rwanda</span>
-      <h1>The creative team behind <em>your mission.</em></h1>
-      <p>Strategy, storytelling, design and production—working as an extension of your team from first idea to final delivery.</p>
-      <div class="showcase-actions">
-        <a href="contact.html" class="btn btn-fill">Start a project <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a href="work.html" class="btn btn-line">Explore our work</a>
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer md:hidden">
+    <a class="nav-link" href="work.html">Work</a>
+    <a class="nav-link" href="services.html">Services</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="philosophy.html">Philosophy</a>
+    <a class="nav-link" href="plans.html">Plans</a>
+    <a class="nav-link" href="resources.html">Resources</a>
+    <a class="btn-flip btn-flip-primary w-full mt-4" href="contact.html" aria-label="Start Project">
+      <div class="flip-inner">
+        <div class="flip-slide flip-default">
+          <span class="flip-label">Start Project</span>
+          <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+        <div class="flip-slide flip-hover">
+          <span class="flip-label">Begin journey</span>
+          <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/></svg>
+        </div>
       </div>
-    </div>
-    <div class="photo-fan" aria-label="A selection of Qrate field and programme photography">
-      <figure class="fan-card fan-one"><picture><source srcset="photos/hero-1.webp" type="image/webp"><img src="photos/hero-1.jpg" alt="Graduates celebrating together" width="1920" height="1280"></picture><figcaption>Impact reporting</figcaption></figure>
-      <figure class="fan-card fan-two"><picture><source srcset="photos/hero-2.webp" type="image/webp"><img src="photos/hero-2.jpg" alt="Programme work documented in the field" width="1920" height="1280"></picture><figcaption>Field production</figcaption></figure>
-      <figure class="fan-card fan-three"><picture><source srcset="photos/hero-3.webp" type="image/webp"><img src="photos/hero-3.jpg" alt="Learners participating in a classroom" width="1920" height="1280" data-eager="true"></picture><figcaption>Programme stories</figcaption></figure>
-      <figure class="fan-card fan-four"><picture><source srcset="photos/hero-4.webp" type="image/webp"><img src="photos/hero-4.jpg" alt="A community member photographed with dignity" width="1920" height="1280"></picture><figcaption>Dignified storytelling</figcaption></figure>
-      <figure class="fan-card fan-five"><picture><source srcset="photos/hero-5.webp" type="image/webp"><img src="photos/hero-5.jpg" alt="Young people collaborating around a laptop" width="1920" height="1280"></picture><figcaption>Campaign content</figcaption></figure>
-      <button class="fan-toggle" type="button" aria-pressed="false" aria-label="Pause photo animation">Pause motion</button>
-    </div>
+    </a>
   </div>
-</section>
 
-<!-- PROOF -->
-<section class="proof-section" aria-labelledby="proofTitle"><div class="wrap">
-  <div class="proof-top rv">
-    <div><span class="proof-kicker">One connected team</span><h2 id="proofTitle">Your story shouldn&rsquo;t change hands at every stage.</h2></div>
-    <p class="proof-copy">Qrate keeps strategy, field production, design and reporting connected—so the story stays clear from the first brief to final delivery.</p>
-  </div>
-  <div class="proof-metrics rv">
-    <article class="proof-metric proof-coral"><span class="proof-index">01</span><div class="proof-number"><span class="count" data-to="8">0</span><sup>+</sup></div><h3>Mission-driven partnerships</h3><p>NGOs, schools and social enterprises.</p></article>
-    <article class="proof-metric proof-teal"><span class="proof-index">02</span><div class="proof-number"><span class="count" data-to="10">0</span><sup>+</sup></div><h3>Creative campaigns</h3><p>Strategy, stories and assets brought together.</p></article>
-    <article class="proof-metric proof-gold"><span class="proof-index">03</span><div class="proof-number"><span class="count" data-to="5">0</span><sup>+</sup></div><h3>Years of combined experience</h3><p>Strategy, production, design and reporting.</p></article>
-    <article class="proof-metric proof-ink"><span class="proof-index">04</span><div class="proof-number"><span class="count" data-to="4">0</span></div><h3>Countries reached</h3><p>Rwanda, Tanzania, Uganda and Kenya.</p></article>
-  </div>
-</div></section>
+  <main class="flex-grow -mt-20">
+    
+    <!-- 1. HERO SECTION (Golden Kraft Canvas Faithful to Reference) -->
+    <section class="hero-kraft min-h-screen flex flex-col justify-between pt-28 pb-10 sm:pb-12 px-gutter-mobile md:px-gutter-desktop relative">
+      <div class="hero-kraft-glow"></div>
 
-<!-- SERVICES -->
-<section class="service-deck-section" id="servicesHome" data-service-deck aria-label="Creative Services">
-  <div class="wrap service-deck-inner">
-    <div class="service-deck-head rv">
+      <!-- Main Left Hero Content -->
+      <div class="w-full max-w-container-max mx-auto my-auto relative z-10 py-12 lg:py-16">
+        <div class="max-w-2xl">
+          <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[76px] text-white font-normal leading-[1.04] tracking-tight mb-6 text-balance drop-shadow-sm">
+            Outsource to Qrate
+          </h1>
+          <p class="text-base sm:text-lg md:text-xl text-amber-50/95 font-body max-w-lg mb-8 leading-relaxed font-light drop-shadow-sm">
+            The strategic brand &amp; storytelling partner for visionary NGOs, global funders, and African changemakers.
+          </p>
+          <div>
+            <a class="btn-consultation-flip group" href="contact.html" aria-label="Request a consultation">
+              <div class="flip-inner">
+                <div class="flip-slide flip-default">
+                  <span class="flip-label">Request a consultation</span>
+                  <svg class="w-4 h-4 text-[#1a1714] transform group-hover:translate-x-0.5 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+                <div class="flip-slide flip-hover">
+                  <span class="flip-label">Excellent choice</span>
+                  <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar: Left Top 4 Partners -->
+      <div class="w-full max-w-container-max mx-auto relative z-10 pt-8 flex flex-col lg:flex-row items-start lg:items-end justify-between gap-8">
+        
+        <!-- Bottom-Left: "TRUSTED BY INDUSTRY LEADERS" + 4 Wordmarks -->
+        <div>
+          <p class="text-[11px] font-mono uppercase tracking-[0.22em] text-amber-100/90 font-semibold mb-4 drop-shadow-sm">
+            TRUSTED BY INDUSTRY LEADERS
+          </p>
+          <div class="flex flex-wrap items-center gap-7 sm:gap-10 md:gap-14">
+            
+            <!-- 1. Hope Haven -->
+            <a class="partner-wordmark-item" href="https://www.hopehavenrwanda.org/" target="_blank" rel="noopener noreferrer" title="Hope Haven Rwanda">
+              <span class="font-serif text-xl sm:text-2xl tracking-tight text-white font-medium drop-shadow-sm">Hope Haven</span>
+            </a>
+
+            <!-- 2. Ntare Louisenlund School -->
+            <a class="partner-wordmark-item" href="https://ntare-louisenlund.org/" target="_blank" rel="noopener noreferrer" title="Ntare Louisenlund School">
+              <div class="flex items-center gap-2.5">
+                <svg class="w-5 h-5 text-white/95" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                  <path d="M4 21V8a4 4 0 0 1 8 0v13M12 12a4 4 0 0 1 8 0v9M2 21h20"/>
+                </svg>
+                <span class="text-xs sm:text-sm font-sans tracking-wider uppercase font-semibold text-white drop-shadow-sm">Ntare Louisenlund School</span>
+              </div>
+            </a>
+
+            <!-- 3. New Vision -->
+            <a class="partner-wordmark-item" href="https://nvvh.rw/" target="_blank" rel="noopener noreferrer" title="New Vision">
+              <span class="font-mono text-xs sm:text-sm uppercase tracking-[0.24em] font-bold text-white drop-shadow-sm">NEW VISION</span>
+            </a>
+
+            <!-- 4. iDebate Rwanda -->
+            <a class="partner-wordmark-item" href="https://debaterwanda.org/" target="_blank" rel="noopener noreferrer" title="iDebate Rwanda">
+              <span class="font-serif italic text-base sm:text-lg tracking-wider text-amber-100 font-medium drop-shadow-sm">iDebate</span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- 2. SECTION 2: CENTERED STATEMENT BANNER (Light Linen Canvas) -->
+    <section class="py-24 md:py-32 bg-background border-b border-outline-variant/30">
+      <div class="grid-container max-w-4xl mx-auto text-center">
+        <span class="text-xs font-mono uppercase tracking-[0.2em] text-rust mb-6 block font-semibold">
+          [ OVERVIEW ]
+        </span>
+        <h2 class="statement-serif text-primary-fixed text-balance">
+          Qrate brings together the speed and precision of strategic design with the authentic power of African documentary storytelling.
+        </h2>
+      </div>
+    </section>
+
+    <!-- 3. SECTION 3: THREE-COLUMN PILLARS (Strategy · Production · Scale) -->
+    <section class="py-24 md:py-32 bg-surface-container-low border-b border-outline-variant/30">
+      <div class="grid-container">
+        
+        <div class="mb-16 max-w-3xl">
+          <span class="text-xs font-mono uppercase tracking-[0.2em] text-on-surface-variant mb-3 block font-semibold">
+            STRATEGY · PRODUCTION · SCALE
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-primary-fixed leading-tight font-normal">
+            Combine strategic narrative clarity with best-in-class creative execution.
+          </h2>
+        </div>
+
+        <!-- 3-Column Minimalist Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Pillar 1: Brand & Visual Identity -->
+          <div class="p-8 sm:p-10 bg-white border border-outline-variant rounded-lg flex flex-col justify-between transition-all hover:shadow-lg hover:-translate-y-1">
+            <div>
+              <p class="text-xs font-mono uppercase tracking-widest text-rust font-semibold mb-6">01 / BRAND SYSTEMS</p>
+              <h3 class="font-serif text-2xl text-primary-fixed mb-4 font-medium">Brand &amp; Visual Identity</h3>
+              <p class="text-on-surface-variant body-base leading-relaxed">
+                Institutional brand architectures, donor pitch decks, and cohesive identity frameworks engineered for global authority and enduring funder trust.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-outline-variant/40 flex items-center justify-between text-xs font-mono text-on-surface-variant">
+              <span>Positioning &amp; Systems</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Documentary & Field Media -->
+          <div class="p-8 sm:p-10 bg-white border border-outline-variant rounded-lg flex flex-col justify-between transition-all hover:shadow-lg hover:-translate-y-1">
+            <div>
+              <p class="text-xs font-mono uppercase tracking-widest text-rust font-semibold mb-6">02 / FIELD MEDIA</p>
+              <h3 class="font-serif text-2xl text-primary-fixed mb-4 font-medium">Documentary &amp; Film</h3>
+              <p class="text-on-surface-variant body-base leading-relaxed">
+                High-precision 4K on-location cinematography, authentic community photography, and human-first storytelling adhering to strict ethical safeguarding.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-outline-variant/40 flex items-center justify-between text-xs font-mono text-on-surface-variant">
+              <span>4K Cine &amp; Field Audio</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </div>
+          </div>
+
+          <!-- Pillar 3: Publications & Reports -->
+          <div class="p-8 sm:p-10 bg-white border border-outline-variant rounded-lg flex flex-col justify-between transition-all hover:shadow-lg hover:-translate-y-1">
+            <div>
+              <p class="text-xs font-mono uppercase tracking-widest text-rust font-semibold mb-6">03 / PUBLICATIONS</p>
+              <h3 class="font-serif text-2xl text-primary-fixed mb-4 font-medium">Annual &amp; Impact Reports</h3>
+              <p class="text-on-surface-variant body-base leading-relaxed">
+                High-density stakeholder publications, policy briefs, and annual reviews structured with narrative clarity for global boards and institutional donors.
+              </p>
+            </div>
+            <div class="mt-8 pt-6 border-t border-outline-variant/40 flex items-center justify-between text-xs font-mono text-on-surface-variant">
+              <span>Editorial &amp; Data Structuring</span>
+              <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SECTION 4: INTERACTIVE DEEP FOREST GREEN FEATURE STAGE -->
+    <section class="py-24 md:py-32 bg-background border-b border-outline-variant/30">
+      <div class="grid-container">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Column: Interactive Tab Workflow -->
+          <div class="lg:col-span-5">
+            <span class="text-xs font-mono uppercase tracking-[0.2em] text-rust mb-3 block font-semibold">
+              FIELD CAPABILITIES
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-primary-fixed font-normal mb-8 leading-tight">
+              Our specialists can handle any field assignment.
+            </h2>
+
+            <div class="space-y-4" id="forestTabs">
+              
+              <!-- Tab 1 -->
+              <button class="forest-tab-btn active w-full" data-target="0">
+                <p class="phase-tag text-xs font-mono uppercase tracking-wider text-rust font-semibold mb-1">Phase 01</p>
+                <h4 class="font-serif text-xl text-primary-fixed font-medium">Ethical Consent &amp; Briefing</h4>
+                <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">
+                  Community-first protocols, safeguarding agreements, and localized language briefings in Kinyarwanda, Swahili, and English.
+                </p>
+              </button>
+
+              <!-- Tab 2 -->
+              <button class="forest-tab-btn w-full" data-target="1">
+                <p class="phase-tag text-xs font-mono uppercase tracking-wider text-on-surface-variant font-semibold mb-1">Phase 02</p>
+                <h4 class="font-serif text-xl text-primary-fixed font-medium">High-Precision 4K Field Production</h4>
+                <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">
+                  Dual-operator cine rigs, multi-point wireless audio, and natural lighting setups designed for minimal classroom/field disruption.
+                </p>
+              </button>
+
+              <!-- Tab 3 -->
+              <button class="forest-tab-btn w-full" data-target="2">
+                <p class="phase-tag text-xs font-mono uppercase tracking-wider text-on-surface-variant font-semibold mb-1">Phase 03</p>
+                <h4 class="font-serif text-xl text-primary-fixed font-medium">Editorial Post &amp; Sound Mastering</h4>
+                <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">
+                  DaVinci Resolve color grading, custom original score, motion graphics, and multi-format delivery for donor pitches and social campaigns.
+                </p>
+              </button>
+
+            </div>
+          </div>
+
+          <!-- Right Column: Golden Frame Media Stage -->
+          <div class="lg:col-span-7">
+            <div class="forest-stage p-2 sm:p-2.5 shadow-lg">
+              
+              <!-- Media Frame -->
+              <div class="relative w-full aspect-[16/10] bg-black/40 rounded-md overflow-hidden border border-white/20">
+                <!-- Media Slide 0 (Phase 01) -->
+                <div class="stage-slide active absolute inset-0 transition-opacity duration-500" id="stageSlide0">
+                  <img src="photos/hero-1.webp" alt="Ethical Consent and Community Engagement" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Media Slide 1 (Phase 02) -->
+                <div class="stage-slide opacity-0 absolute inset-0 transition-opacity duration-500 pointer-events-none" id="stageSlide1">
+                  <img src="photos/hero-2.webp" alt="High-Precision 4K Field Production" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Media Slide 2 (Phase 03) -->
+                <div class="stage-slide opacity-0 absolute inset-0 transition-opacity duration-500 pointer-events-none" id="stageSlide2">
+                  <img src="photos/hero-3.webp" alt="Editorial Review and Post-Production" class="w-full h-full object-cover">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. SECTION 5: TECH STACK & INTEGRATIONS GRID -->
+    <section class="py-24 md:py-32 bg-surface-container-low border-b border-outline-variant/30">
+      <div class="grid-container">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <!-- Left Headline -->
+          <div class="lg:col-span-5">
+            <span class="text-xs font-mono uppercase tracking-[0.2em] text-rust mb-3 block font-semibold">
+              SYSTEMS &amp; TOOLS
+            </span>
+            <h2 class="font-serif text-3xl sm:text-4xl text-primary-fixed font-normal mb-6 leading-tight">
+              Qrate works with all the systems you use.
+            </h2>
+            <p class="text-on-surface-variant body-base leading-relaxed">
+              No workflow friction. Our specialists seamlessly plug into your existing donor databases, design workspaces, and digital marketing ecosystems.
+            </p>
+          </div>
+
+          <!-- Right Grid of Clean White Integration Tiles -->
+          <div class="lg:col-span-7">
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 sm:gap-4">
+              
+              <div class="integration-tile">
+                <span class="material-symbols-outlined text-rust text-2xl">movie</span>
+                <div>
+                  <h4 class="text-sm font-semibold text-primary-fixed">DaVinci Resolve</h4>
+                  <p class="text-[11px] text-on-surface-variant font-mono">Color &amp; Sound</p>
+                </div>
+              </div>
+
+              <div class="integration-tile">
+                <span class="material-symbols-outlined text-rust text-2xl">palette</span>
+                <div>
+                  <h4 class="text-sm font-semibold text-primary-fixed">Adobe Suite</h4>
+                  <p class="text-[11px] text-on-surface-variant font-mono">Editorial Design</p>
+                </div>
+              </div>
+
+              <div class="integration-tile">
+                <span class="material-symbols-outlined text-rust text-2xl">draw</span>
+                <div>
+                  <h4 class="text-sm font-semibold text-primary-fixed">Figma</h4>
+                  <p class="text-[11px] text-on-surface-variant font-mono">Design Systems</p>
+                </div>
+              </div>
+
+              <div class="integration-tile">
+                <span class="material-symbols-outlined text-rust text-2xl">brush</span>
+                <div>
+                  <h4 class="text-sm font-semibold text-primary-fixed">Canva Teams</h4>
+                  <p class="text-[11px] text-on-surface-variant font-mono">Brand Kits</p>
+                </div>
+              </div>
+
+              <div class="integration-tile">
+                <span class="material-symbols-outlined text-rust text-2xl">hub</span>
+                <div>
+                  <h4 class="text-sm font-semibold text-primary-fixed">HubSpot</h4>
+                  <p class="text-[11px] text-on-surface-variant font-mono">Donor Comms</p>
+                </div>
+              </div>
+
+              <div class="integration-tile">
+                <span class="material-symbols-outlined text-rust text-2xl">mail</span>
+                <div>
+                  <h4 class="text-sm font-semibold text-primary-fixed">Mailchimp</h4>
+                  <p class="text-[11px] text-on-surface-variant font-mono">Newsletters</p>
+                </div>
+              </div>
+
+              <div class="integration-tile">
+                <span class="material-symbols-outlined text-rust text-2xl">volunteer_activism</span>
+                <div>
+                  <h4 class="text-sm font-semibold text-primary-fixed">Every.org</h4>
+                  <p class="text-[11px] text-on-surface-variant font-mono">Giving Platforms</p>
+                </div>
+              </div>
+
+              <div class="integration-tile">
+                <span class="material-symbols-outlined text-rust text-2xl">cloud_sync</span>
+                <div>
+                  <h4 class="text-sm font-semibold text-primary-fixed">Salesforce NPSP</h4>
+                  <p class="text-[11px] text-on-surface-variant font-mono">Nonprofit Cloud</p>
+                </div>
+              </div>
+
+              <div class="integration-tile">
+                <span class="material-symbols-outlined text-rust text-2xl">query_stats</span>
+                <div>
+                  <h4 class="text-sm font-semibold text-primary-fixed">Google Grants</h4>
+                  <p class="text-[11px] text-on-surface-variant font-mono">Analytics &amp; Ads</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. SECTION 6: SPECIFICATION & COMPARISON MATRIX -->
+    <section class="py-24 md:py-32 bg-background border-b border-outline-variant/30">
+      <div class="grid-container">
+        
+        <div class="mb-16 max-w-3xl">
+          <span class="text-xs font-mono uppercase tracking-[0.2em] text-rust mb-3 block font-semibold">
+            THE QRATE ADVANTAGE
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-primary-fixed font-normal leading-tight">
+            Infinite scale, expert validation, proven impact.
+          </h2>
+        </div>
+
+        <!-- Spec Comparison Rows -->
+        <div class="border-t border-outline-variant">
+          
+          <!-- Row 1 -->
+          <div class="spec-matrix-row">
+            <div>
+              <h4 class="font-mono text-xs uppercase tracking-widest text-on-surface-variant mb-2">Traditional Agencies / Freelancers</h4>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Fragmented individual contractors with high turnover, generic stock photography, and lack of deep African development context.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-mono text-xs uppercase tracking-widest text-rust font-semibold mb-2">Qrate Dedicated Impact Team</h4>
+              <p class="text-sm font-medium text-primary-fixed leading-relaxed">
+                A dedicated 10-specialist creative collective under seasoned creative direction. 100% on-location authentic footage with zero generic stock.
+              </p>
+            </div>
+          </div>
+
+          <!-- Row 2 -->
+          <div class="spec-matrix-row">
+            <div>
+              <h4 class="font-mono text-xs uppercase tracking-widest text-on-surface-variant mb-2">Traditional Agencies / Freelancers</h4>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Informal safeguarding, questionable consent practices, and risk of donor backlash due to unverified community representation.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-mono text-xs uppercase tracking-widest text-rust font-semibold mb-2">Qrate Dedicated Impact Team</h4>
+              <p class="text-sm font-medium text-primary-fixed leading-relaxed">
+                Institutional-grade safeguarding protocols, written multilingual consent for all participants, and dignified, ethical storytelling.
+              </p>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="spec-matrix-row">
+            <div>
+              <h4 class="font-mono text-xs uppercase tracking-widest text-on-surface-variant mb-2">Traditional Agencies / Freelancers</h4>
+              <p class="text-sm text-on-surface-variant leading-relaxed">
+                Unpredictable hourly billing, hidden markup for equipment, and complex change orders that inflate project budgets.
+              </p>
+            </div>
+            <div>
+              <h4 class="font-mono text-xs uppercase tracking-widest text-rust font-semibold mb-2">Qrate Dedicated Impact Team</h4>
+              <p class="text-sm font-medium text-primary-fixed leading-relaxed">
+                Transparent fixed monthly retainers or scoped per-assignment pricing with complete equipment and crew inclusions.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 7. SECTION 7: EDITORIAL PULL-QUOTE / TESTIMONIAL -->
+    <section class="py-24 md:py-32 bg-surface-container-low border-b border-outline-variant/30">
+      <div class="grid-container max-w-4xl mx-auto">
+        <div class="pull-quote-box">
+          <div class="flex items-center gap-4 mb-8">
+            <span class="text-xs font-mono uppercase tracking-[0.16em] text-rust font-semibold">Institutional Partner Testimony</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+            <span class="text-xs font-mono text-on-surface-variant">Hope Haven Rwanda</span>
+          </div>
+
+          <blockquote class="font-serif italic text-2xl sm:text-3xl md:text-4xl text-primary-fixed leading-snug font-normal mb-8">
+            "We needed a creative team that truly understood the nuances of institutional funding. Qrate redefined our visual identity and annual report, leading to our most successful fundraising cycle to date."
+          </blockquote>
+
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-outline-variant/60">
+            <div>
+              <p class="font-body font-semibold text-sm text-primary-fixed">Executive Leadership</p>
+              <p class="text-xs text-on-surface-variant">Hope Haven Christian School &amp; Community Initiative</p>
+            </div>
+            <div class="flex items-center gap-2">
+              <a href="case-study.html" class="text-xs font-mono text-rust hover:underline flex items-center gap-1 font-semibold">
+                Read full case study <span class="material-symbols-outlined text-xs">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. SECTION 8: MINIMALIST CENTERED FOOTER CTA -->
+    <section class="py-28 md:py-36 bg-background">
+      <div class="grid-container text-center max-w-2xl mx-auto">
+        <h2 class="font-serif text-4xl sm:text-5xl md:text-6xl text-primary-fixed font-normal mb-4 tracking-tight">
+          Let's tell your story.
+        </h2>
+        <p class="text-on-surface-variant body-lg mb-8 leading-relaxed">
+          Join over 10+ visionary NGOs and funders elevating their communications across Africa.
+        </p>
+        <div>
+          <a class="btn-pill-dark" href="contact.html">
+            <span>Start a project</span>
+            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" class="cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie &amp; Privacy Consent">
+    <div class="cookie-banner-title">
+      <svg class="w-4 h-4 text-rust" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <span>Privacy &amp; Cookie Preferences</span>
+    </div>
+    <p class="cookie-banner-text">
+      We use essential cookies for system security and anonymized analytics to measure engagement in accordance with Rwandan Data Protection Law (Law N° 058/2021) and GDPR.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept-all" class="cookie-btn-accept" type="button">Accept All</button>
+      <button id="cookie-essential-only" class="cookie-btn-essential" type="button">Essential Only</button>
+      <a class="cookie-policy-link" href="privacy.html#cookies">Read Policy</a>
+    </div>
+  </div>
+
+  <!-- Institutional Footer -->
+  <footer class="institutional-footer">
+    <div class="grid-container grid grid-cols-1 md:grid-cols-4 gap-12">
       <div>
-        <span class="eyebrow">What we do</span>
-        <h2 class="service-deck-title">Creative services built for impact.</h2>
+        <a class="font-serif text-2xl font-normal text-primary-fixed inline-block mb-3" href="index.html">
+          <span class="font-semibold tracking-tighter">QRATE.</span>
+        </a>
+        <p class="body-base text-on-surface-variant text-sm leading-relaxed">
+          Strategic communications, documentary film, and brand design for mission-driven organizations.
+        </p>
+        <p class="label-sm text-on-surface-variant mt-6 text-xs">© 2026 Qrate Creative Communications.</p>
       </div>
-      <div class="service-deck-meta">
-        <span class="service-deck-count" data-service-count aria-live="polite">01 / 06</span>
-        <a href="services.html" class="service-deck-all">View all services <span aria-hidden="true">→</span></a>
-      </div>
-    </div>
-
-    <div class="service-deck-stage" aria-roledescription="carousel" aria-label="Services carousel">
-      <div class="service-deck-track" data-service-track tabindex="0" role="region" aria-label="Service cards deck">
-        <article class="service-slide service-slide-coral is-active" data-service-card data-index="0" aria-hidden="false">
-          <span class="service-slide-number">01</span>
-          <div class="service-visual service-visual-brand" aria-hidden="true">
-            <span class="brand-ring"></span><span class="brand-ring ring-two"></span>
-            <span class="brand-core">Q</span><i class="brand-node node-a"></i><i class="brand-node node-b"></i><i class="brand-node node-c"></i>
-          </div>
-          <div class="service-slide-copy">
-            <span class="service-slide-kicker">Direction</span>
-            <h3>Brand Strategy</h3>
-            <p>Clear identities, messages and creative direction that help your organisation show up consistently.</p>
-            <div class="service-slide-tags"><span>Identity</span><span>Messaging</span><span>Creative direction</span></div>
-            <a class="service-slide-link" href="services.html#brand-strategy">Explore service <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-        <article class="service-slide service-slide-teal is-next" data-service-card data-index="1" aria-hidden="true">
-          <span class="service-slide-number">02</span>
-          <div class="service-visual service-visual-film" aria-hidden="true">
-            <span class="film-frame"></span><i class="film-play"></i>
-            <span class="film-strip strip-top"></span><span class="film-strip strip-bottom"></span>
-          </div>
-          <div class="service-slide-copy">
-            <span class="service-slide-kicker">Production</span>
-            <h3>Film, Photography &amp; Storytelling</h3>
-            <p>Human stories captured with context, care and the production quality your mission deserves.</p>
-            <div class="service-slide-tags"><span>Film</span><span>Photography</span><span>Editorial stories</span></div>
-            <a class="service-slide-link" href="services.html#film-photography">Explore service <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-        <article class="service-slide service-slide-ink is-far-right" data-service-card data-index="2" aria-hidden="true">
-          <span class="service-slide-number">03</span>
-          <div class="service-visual service-visual-design" aria-hidden="true">
-            <span class="design-a"></span><span class="design-b"></span><span class="design-c"></span><span class="design-d"></span>
-          </div>
-          <div class="service-slide-copy">
-            <span class="service-slide-kicker">Clarity</span>
-            <h3>Design &amp; Visual Communication</h3>
-            <p>Reports, infographics and campaign artwork that make complex ideas clear and engaging.</p>
-            <div class="service-slide-tags"><span>Editorial design</span><span>Infographics</span><span>Campaign artwork</span></div>
-            <a class="service-slide-link" href="services.html#visual-communication">Explore service <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-        <article class="service-slide service-slide-gold is-far-right" data-service-card data-index="3" aria-hidden="true">
-          <span class="service-slide-number">04</span>
-          <div class="service-visual service-visual-campaign" aria-hidden="true">
-            <span class="campaign-bubble bubble-a"></span><span class="campaign-bubble bubble-b"></span>
-            <span class="bubble-line line-a"></span><span class="bubble-line line-b"></span><span class="campaign-pulse"></span>
-          </div>
-          <div class="service-slide-copy">
-            <span class="service-slide-kicker">Connection</span>
-            <h3>Campaign &amp; Social Content</h3>
-            <p>Creative campaigns, content planning and everyday communication across the channels your community uses.</p>
-            <div class="service-slide-tags"><span>Campaigns</span><span>Social content</span><span>Channel planning</span></div>
-            <a class="service-slide-link" href="services.html#campaign-content">Explore service <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-        <article class="service-slide service-slide-paper is-far-right" data-service-card data-index="4" aria-hidden="true">
-          <span class="service-slide-number">05</span>
-          <div class="service-visual service-visual-reports" aria-hidden="true">
-            <span class="report-page page-back"></span><span class="report-page page-front"></span>
-            <i class="report-title"></i><i class="report-copy"></i><i class="report-chart"></i>
-          </div>
-          <div class="service-slide-copy">
-            <span class="service-slide-kicker">Evidence</span>
-            <h3>Reports &amp; Publications</h3>
-            <p>Annual reports, programme updates and publications that bring story, evidence and design together.</p>
-            <div class="service-slide-tags"><span>Annual reports</span><span>Publications</span><span>Data stories</span></div>
-            <a class="service-slide-link" href="services.html#reports-publications">Explore service <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-        <article class="service-slide service-slide-mint is-far-right" data-service-card data-index="5" aria-hidden="true">
-          <span class="service-slide-number">06</span>
-          <div class="service-visual service-visual-web" aria-hidden="true">
-            <span class="web-bar"></span><i class="web-dots"></i><span class="web-nav"></span><span class="web-hero"></span><span class="web-card card-a"></span><span class="web-card card-b"></span>
-          </div>
-          <div class="service-slide-copy">
-            <span class="service-slide-kicker">Digital</span>
-            <h3>Web &amp; Digital Support</h3>
-            <p>Websites, landing pages, maintenance and practical technical support for your digital presence.</p>
-            <div class="service-slide-tags"><span>Websites</span><span>Landing pages</span><span>Technical support</span></div>
-            <a class="service-slide-link" href="services.html#web-digital">Explore service <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-      </div>
-    </div>
-
-    <div class="service-deck-footer">
-      <div class="service-deck-dots" data-service-dots aria-label="Select service slide">
-        <button type="button" class="service-dot is-current" data-dot-index="0" aria-label="Service 1: Brand Strategy" aria-current="true"></button>
-        <button type="button" class="service-dot" data-dot-index="1" aria-label="Service 2: Film, Photography & Storytelling" aria-current="false"></button>
-        <button type="button" class="service-dot" data-dot-index="2" aria-label="Service 3: Design & Visual Communication" aria-current="false"></button>
-        <button type="button" class="service-dot" data-dot-index="3" aria-label="Service 4: Campaign & Social Content" aria-current="false"></button>
-        <button type="button" class="service-dot" data-dot-index="4" aria-label="Service 5: Reports & Publications" aria-current="false"></button>
-        <button type="button" class="service-dot" data-dot-index="5" aria-label="Service 6: Web & Digital Support" aria-current="false"></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW WE WORK -->
-<section class="process-section process-chapters" id="engage"><div class="wrap">
-  <div class="process-shell">
-    <div class="process-head rv">
       <div>
-        <span class="eyebrow">How we work</span>
-        <h2>One clear creative path.<br><em>Three focused steps.</em></h2>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Navigation</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="work.html">Our Work</a></li>
+          <li><a class="hover:text-rust transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-rust transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-rust transition-colors" href="philosophy.html">Philosophy</a></li>
+          <li><a class="hover:text-rust transition-colors" href="plans.html">Engagement Models</a></li>
+          <li><a class="hover:text-rust transition-colors" href="resources.html">Resources &amp; Intel</a></li>
+        </ul>
       </div>
-      <p>Every engagement has a clear beginning, a considered middle and a useful finish—with your team involved at the moments that matter.</p>
-    </div>
-    <ol class="process-timeline" data-process-timeline aria-label="Qrate's three-stage creative process">
-      <li class="process-step">
-        <div class="process-marker"><span>1</span><small>Listen</small></div>
-        <div class="process-step-copy">
-          <span class="process-phase">Understand</span>
-          <h3>Start with the mission.</h3>
-          <p>We listen closely, map the audience and define what the creative work needs to make possible.</p>
-        </div>
-        <div class="process-outcome"><small>You leave with</small><strong>A shared brief</strong></div>
-      </li>
-      <li class="process-step">
-        <div class="process-marker"><span>2</span><small>Shape</small></div>
-        <div class="process-step-copy">
-          <span class="process-phase">Direct</span>
-          <h3>Set the creative direction.</h3>
-          <p>We bring the message, format, team and production rhythm into one practical creative plan.</p>
-        </div>
-        <div class="process-outcome"><small>You leave with</small><strong>A clear creative plan</strong></div>
-      </li>
-      <li class="process-step">
-        <div class="process-marker"><span>3</span><small>Create</small></div>
-        <div class="process-step-copy">
-          <span class="process-phase">Deliver</span>
-          <h3>Make, refine and finish.</h3>
-          <p>We produce the work, share clear review points and deliver every asset ready for your team to use.</p>
-        </div>
-        <div class="process-outcome"><small>You leave with</small><strong>Finished creative work</strong></div>
-      </li>
-    </ol>
-    <div class="process-action rv">
-      <span>Clear check-ins at every stage.</span>
-      <a href="plans.html" class="btn btn-line">View engagement models →</a>
-    </div>
-  </div>
-</div></section>
-
-<!-- SELECTED WORK -->
-<section class="home-work" id="selectedWork"><div class="wrap">
-  <div class="home-work-head rv">
-    <div><span class="eyebrow">Selected work</span><h2>A closer look at our work.</h2></div>
-    <a href="work.html" class="btn btn-fill">See all our work →</a>
-  </div>
-  <div class="home-work-grid">
-    <a href="work.html" class="home-work-item work-a rv"><div class="work-image"><picture><source srcset="photos/bts-1.webp" type="image/webp"><img src="photos/bts-1.jpg" alt="Qrate field documentation photography" width="1920" height="1280"></picture></div><h3>Field Documentation</h3><p>Photography · Field production</p></a>
-    <a href="work.html" class="home-work-item work-b rv"><div class="work-image"><picture><source srcset="photos/bts-2.webp" type="image/webp"><img src="photos/bts-2.jpg" alt="A programme story captured by Qrate" width="1920" height="1280"></picture></div><h3>Programme Storytelling</h3><p>Film · Editorial development</p></a>
-    <a href="work.html" class="home-work-item work-c rv"><div class="work-image"><picture><source srcset="photos/bts-3.webp" type="image/webp"><img src="photos/bts-3.jpg" alt="Communications content produced for a mission-driven programme" width="1920" height="1280"></picture></div><h3>Campaign Creative</h3><p>Campaign design · Social content</p></a>
-    <a href="work.html" class="home-work-item work-d rv"><div class="work-image"><picture><source srcset="photos/bts-4.webp" type="image/webp"><img src="photos/bts-4.jpg" alt="Reports and publications created by Qrate" width="1920" height="1280"></picture></div><h3>Reports &amp; Publications</h3><p>Editorial design · Data storytelling</p></a>
-    <a href="work.html" class="home-work-item work-e rv"><div class="work-image"><picture><source srcset="photos/bts-5.webp" type="image/webp"><img src="photos/bts-5.jpg" alt="A community portrait produced with dignity" width="1920" height="1280"></picture></div><h3>Community Portraits</h3><p>Portraiture · Story development</p></a>
-    <a href="work.html" class="home-work-item work-f rv"><div class="work-image"><picture><source srcset="photos/bts-6.webp" type="image/webp"><img src="photos/bts-6.jpg" alt="Qrate post-production and editorial work" width="1920" height="1280"></picture></div><h3>Post-production</h3><p>Editing · Content delivery</p></a>
-  </div>
-</div></section>
-
-<!-- CLIENTS + TESTIMONIALS -->
-<section id="clients" style="padding-top:0;"><div class="wrap">
-  <div class="rv" style="text-align:center;"><span class="eyebrow" style="justify-content:center;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>Trusted by</span>
-  <h2 class="sec-title" style="margin:0 auto;">Organisations we&rsquo;ve partnered with.</h2></div>
-  <div class="ticker-wrap rv"><div class="ticker-track">
-    <div class="ticker-item"><img src="logos/idebate-rwanda.png" alt="iDebate"><span>iDebate Rwanda</span></div>
-    <div class="ticker-item"><img src="logos/starlight-africa.webp" alt="Starlight"><span>Starlight Africa</span></div>
-    <div class="ticker-item"><img src="logos/Hope-Haven.jpg" alt="Hope Haven"><span>Hope Haven Rwanda</span></div>
-    <div class="ticker-item"><img src="logos/new-vision.webp" alt="NVVH"><span>New Vision Vet Hospital</span></div>
-    <div class="ticker-item"><img src="logos/ntare-louisenlund.webp" alt="NLS"><span>Ntare Louisenlund School</span></div>
-    <div class="ticker-item"><img src="logos/let-there-be-light.webp" alt="LTBHI"><span>Let There Be Light Int&rsquo;l</span></div>
-    <div class="ticker-item"><img src="logos/shine-on.webp" alt="Shine on Rwanda"><span>Shine on Rwanda</span></div>
-    <div class="ticker-item"><img src="logos/soma-salama.png" alt="Soma Salama"><span>Soma Salama</span></div>
-    <div class="ticker-item"><img src="logos/idebate-rwanda.png" alt="iDebate"><span>iDebate Rwanda</span></div>
-    <div class="ticker-item"><img src="logos/starlight-africa.webp" alt="Starlight"><span>Starlight Africa</span></div>
-    <div class="ticker-item"><img src="logos/Hope-Haven.jpg" alt="Hope Haven"><span>Hope Haven Rwanda</span></div>
-    <div class="ticker-item"><img src="logos/new-vision.webp" alt="NVVH"><span>New Vision Vet Hospital</span></div>
-    <div class="ticker-item"><img src="logos/ntare-louisenlund.webp" alt="NLS"><span>Ntare Louisenlund School</span></div>
-    <div class="ticker-item"><img src="logos/let-there-be-light.webp" alt="LTBHI"><span>Let There Be Light Int&rsquo;l</span></div>
-    <div class="ticker-item"><img src="logos/shine-on.webp" alt="Shine on Rwanda"><span>Shine on Rwanda</span></div>
-    <div class="ticker-item"><img src="logos/soma-salama.png" alt="Soma Salama"><span>Soma Salama</span></div>
-  </div></div>
-  <div class="testi-grid" style="margin-top:48px;">
-    <div class="testi rv"><div class="testi-q">&ldquo;</div><p class="testi-text">Qrate understands our donor audience. Every piece is built around what actually moves supporters to give.</p><div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#E4603F,#F09070);">A</div><div><strong>Alice</strong><span>Partnerships Lead, Starlight Africa</span></div></div></div>
-    <div class="testi rv rv-d1"><div class="testi-q">&ldquo;</div><p class="testi-text">Same-day turnaround changed how we communicate with parents and partners. Non-negotiable now.</p><div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#1F8A74,#3D9B86);">K</div><div><strong>Katharina</strong><span>NLS Communications</span></div></div></div>
-    <div class="testi rv rv-d2"><div class="testi-q">&ldquo;</div><p class="testi-text">They hold dignity as a standard, not a talking point. Our stories are handled with real respect.</p><div class="testi-author"><div class="testi-avatar" style="background:linear-gradient(135deg,#D9A441,#E8C070);">J</div><div><strong>Jean Michel</strong><span>CEO, iDebate Rwanda</span></div></div></div>
-  </div>
-</div></section>
-
-<!-- MISSION TEAM CTA -->
-<section class="mission-team"><div class="wrap"><div class="mission-team-panel rv">
-  <span class="mission-team-kicker">Ready when you are</span>
-  <h2>Bring us the mission. <em>We&rsquo;ll help bring it to life.</em></h2>
-  <p>Strategy, storytelling, design and production—working alongside your team from first idea to final delivery.</p>
-  <div class="mission-team-actions">
-    <a href="contact.html" class="btn btn-fill">Start a project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-    <a href="#engage" class="btn mission-team-link">See how we work →</a>
-  </div>
-</div></div></section>
-
-<footer>
-  <div class="wrap">
-    <div class="f-top">
       <div>
-        <div class="f-brand">QRATE.<span class="f-tag">For mission-driven work across Africa</span></div>
-        <p class="f-desc">The creative communications team behind mission-driven organisations across Africa.</p>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="contact.html">Get in Touch</a></li>
+          <li><a class="hover:text-rust transition-colors" href="mailto:comms@qrate.rw">comms@qrate.rw</a></li>
+          <li><span>Kigali, Rwanda</span></li>
+        </ul>
       </div>
-      <div class="f-cols">
-        <div class="f-col">
-          <h5>Pages</h5>
-          <a href="services.html">Services</a>
-          <a href="work.html">Our Work</a>
-          <a href="about.html">About</a>
-          <a href="plans.html">Plans</a>
-          <a href="resources.html">Resources</a>
-        </div>
-        <div class="f-col">
-          <h5>Contact</h5>
-          <a href="mailto:comms@qrate.rw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>comms@qrate.rw</a>
-          <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Kigali, Rwanda</a>
-        </div>
-        <div class="f-col">
-          <h5>Follow</h5>
-          <a href="#">Instagram</a>
-          <a href="#">LinkedIn</a>
-        </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Connect</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a class="hover:text-rust transition-colors" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a class="hover:text-rust transition-colors" href="https://calendly.com/qrate-stu/30min" target="_blank" rel="noopener noreferrer">Book Consultation</a></li>
+        </ul>
       </div>
     </div>
-    <div class="f-bot">
-      <p>&copy; 2026 Qrate Creative Communications. All rights reserved.</p>
-      <p>Kigali, Rwanda</p>
+
+    <!-- Institutional Legal Bar -->
+    <div class="grid-container border-t border-outline-variant/30 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+      <p>© 2026 Qrate Creative Communications. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-rust transition-colors" href="privacy.html">Privacy &amp; Data Protection</a>
+        <a class="hover:text-rust transition-colors" href="privacy.html#cookies">Cookie Policy</a>
+        <button class="open-cookie-settings hover:text-rust transition-colors cursor-pointer bg-transparent border-0 p-0 text-xs text-on-surface-variant font-inherit">Cookie Settings</button>
+      </div>
     </div>
-  </div>
-</footer>
-<script src="script.js?v=20260724-19"></script>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,71 +1,494 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Engagement models for mission-driven organisations">
-<meta name="theme-color" content="#FFFFFF"><link rel="canonical" href="https://qrate.rw/plans.html"><meta property="og:type" content="website"><meta property="og:title" content="Engagement Models — Qrate"><meta property="og:description" content="Choose project, campaign or ongoing communications support without published package pricing."><meta property="og:url" content="https://qrate.rw/plans.html"><meta property="og:image" content="https://qrate.rw/og-image.png"><meta name="twitter:card" content="summary_large_image">
-<title>Plans — Qrate Creative Communications</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260724-20">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Engagement Models & Pricing Plans | Qrate Creative Communications</title>
+  <meta name="description" content="Transparent, predictable retainer and sprint engagement models for NGOs, foundations, and impact enterprises. Choose from Foundation, Strategic Growth, or Comprehensive Retainer."/>
+  <meta name="keywords" content="NGO comms retainer, communications agency pricing Rwanda, fractional comms director Africa, foundation media retainers"/>
+  <meta name="author" content="Qrate Creative Communications"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <link rel="canonical" href="https://qrate.rw/plans.html"/>
+  <meta name="theme-color" content="#faf9f5"/>
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com"/>
+
+  <!-- Open Graph & Twitter -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://qrate.rw/plans.html"/>
+  <meta property="og:site_name" content="Qrate Creative Communications"/>
+  <meta property="og:title" content="Engagement Models & Pricing Plans | Qrate"/>
+  <meta property="og:description" content="Transparent, predictable retainer and sprint engagement models for NGOs and funders."/>
+  <meta property="og:image" content="https://qrate.rw/og-image.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:url" content="https://qrate.rw/plans.html"/>
+  <meta name="twitter:title" content="Engagement Models & Pricing Plans | Qrate"/>
+  <meta name="twitter:description" content="Transparent, predictable retainer and sprint engagement models for NGOs and funders."/>
+  <meta name="twitter:image" content="https://qrate.rw/og-image.jpg"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#faf9f5",
+            "surface": "#faf9f5",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f4f2eb",
+            "surface-container": "#ece8df",
+            "surface-container-high": "#e3ded3",
+            "surface-container-highest": "#d9d3c5",
+            "surface-variant": "#e6e1d6",
+            "on-surface": "#141716",
+            "on-surface-variant": "#4e5352",
+            "primary": "#1e2221",
+            "primary-fixed": "#0d100f",
+            "rust": "#8a6e50",
+            "rust-dark": "#5c4328",
+            "rust-hover": "#755a3d",
+            "secondary": "#8a6e50",
+            "tertiary": "#2a5845",
+            "sage-light": "#3b745c",
+            "ochre-gold": "#8a6e50",
+            "outline": "#777d7c",
+            "outline-variant": "#ded9cf"
+          },
+          fontFamily: {
+            "serif": ["Newsreader", "Georgia", "serif"],
+            "display-xl": ["Newsreader", "Space Grotesk", "serif"],
+            "headline-lg": ["Newsreader", "Space Grotesk", "serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
+            "body-lg": ["Geist", "sans-serif"],
+            "body-base": ["Geist", "sans-serif"],
+            "label-md": ["Geist", "sans-serif"],
+            "label-sm": ["Geist", "sans-serif"],
+            "mono": ["Geist", "monospace"]
+          },
+          spacing: {
+            "gutter-desktop": "64px",
+            "gutter-tablet": "32px",
+            "gutter-mobile": "16px",
+            "container-max": "1440px"
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-<div id="progress"></div>
-<header id="hd" class="solid">
-  <nav>
-    <a class="logo" href="index.html">QRATE.</a>
-    <div class="navlinks">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="work.html">Our Work</a>
-      <a href="about.html">About</a>
-      <a href="plans.html">Plans</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
+<body class="bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
+  <div id="progress"></div>
+
+  <!-- TopNavBar (Dynamic Transparent-to-Frosted Header with Centered Links) -->
+  <nav id="main-header" class="header-dynamic fixed top-0 w-full z-50 flex justify-between items-center px-gutter-mobile md:px-gutter-desktop h-20 transition-all duration-300 pointer-events-none">
+    <div class="flex items-center pointer-events-auto">
+      <a class="brand-logo font-sans font-semibold tracking-[0.2em] text-xl sm:text-2xl focus-ring drop-shadow-sm transition-colors duration-300" href="index.html">
+        QRATE
+      </a>
     </div>
-    <div class="nav-actions">
-      <a href="https://calendly.com/qrate-stu/30min?month=2026-07" target="_blank" rel="noopener" class="btn btn-line" style="font-size:12px;padding:10px 16px;">Book a call</a>
-      <a href="contact.html" class="btn btn-fill">Start a project <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="nav-center-links hidden md:flex items-center space-x-7 lg:space-x-9 pointer-events-auto absolute left-1/2 -translate-x-1/2">
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="index.html">Home</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="work.html">Work</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="services.html">Services</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="about.html">About</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="philosophy.html">Philosophy</a>
+      <a class="nav-link active font-label-md text-sm font-semibold transition-colors duration-200" href="plans.html">Plans</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="resources.html">Resources</a>
+    </div>
+    <div class="flex items-center pointer-events-auto space-x-4">
+      <a class="nav-action-flip action-btn hidden md:inline-flex" href="contact.html" aria-label="Start Project">
+        <div class="flip-inner">
+          <div class="flip-slide flip-default">
+            <span class="flip-label">Start Project</span>
+            <svg class="w-3.5 h-3.5 text-[#1a1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="flip-slide flip-hover">
+            <span class="flip-label">Good choice</span>
+            <svg class="w-3.5 h-3.5 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+      <button class="mobile-nav-toggle md:hidden flex flex-col justify-center gap-1.5 w-9 h-9 p-1 rounded focus-ring" aria-label="Toggle Menu">
+        <span class="w-6 h-[1.5px] rounded-full transition-all"></span>
+        <span class="w-6 h-[1.5px] rounded-full transition-all"></span>
+      </button>
     </div>
   </nav>
-</header>
-<section class="page-hero" style="text-align:center;"><div class="wrap">
-  <span class="eyebrow rv" style="justify-content:center;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"/></svg>Engagement models</span>
-  <h1 class="rv">Built for every stage of your mission.</h1>
-  <p class="rv" style="margin:16px auto 0;">From a single impact film to a year-round communications partnership.</p>
-  <div class="hero-actions rv" style="justify-content:center;"><a href="https://calendly.com/qrate-stu/30min?month=2026-07" target="_blank" rel="noopener" class="btn btn-fill">Book a free consultation <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-</div></section>
-<section id="plans" style="padding-top:0;"><div class="wrap">
-  <div class="plans-grid">
-    <div class="plan rv"><div class="plan-name">Standalone</div><h3>Impact Project</h3><p class="plan-desc">Document a programme, campaign, or milestone — one production from brief to delivery.</p><div class="plan-price"><span class="pp">Let's talk</span><span class="ps">Scoped per project</span></div><div class="plan-features"><h4>What's included</h4><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Field production</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Edited deliverables (3–5)</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>2 revision rounds</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Structured file delivery</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Consent documentation</span></div><div class="fi no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Strategy sessions</span></div><div class="fi no"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg><span>Social media management</span></div></div><a href="contact.html" class="btn btn-ghost">Book a consultation</a></div>
-    <div class="plan plan-featured rv rv-d1"><div class="plan-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><path d="M12 2l2.4 7.2H22l-6 4.6 2.3 7.2-6.3-4.5-6.3 4.5L8 13.8 2 9.2h7.6z"/></svg>Most requested</div><div class="plan-name">Partnership</div><h3>Campaign Partner</h3><p class="plan-desc">Preparing a campaign, report or major communications moment. A dedicated team for 4–12 weeks.</p><div class="plan-price"><span class="pp">Let's talk</span><span class="ps">Scoped per campaign</span></div><div class="plan-features"><h4>Everything in Project, plus</h4><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Campaign narrative & messaging</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Full campaign assets</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Social content (6–8 weeks)</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Impact documentation</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Dedicated project lead</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Weekly check-ins</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Creative campaign strategy</span></div></div><a href="contact.html" class="btn btn-fill" style="width:100%;justify-content:center;">Book a consultation <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-    <div class="plan rv rv-d2"><div class="plan-name">Retainer</div><h3>Full Partner</h3><p class="plan-desc">Year-round communications support across every channel, every programme.</p><div class="plan-price"><span class="pp">Let's talk</span><span class="ps">Monthly retainer</span></div><div class="plan-features"><h4>Everything in Campaign, plus</h4><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Monthly content calendar</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Ongoing social management</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Monthly production</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Priority delivery</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Quarterly reports & publications</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Dedicated account lead</span></div><div class="fi yes"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>Web & digital support</span></div></div><a href="contact.html" class="btn btn-ghost">Book a consultation</a></div>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer md:hidden">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="work.html">Work</a>
+    <a class="nav-link" href="services.html">Services</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="philosophy.html">Philosophy</a>
+    <a class="nav-link active" href="plans.html">Plans</a>
+    <a class="nav-link" href="resources.html">Resources</a>
+    <a class="btn-flip btn-flip-primary w-full mt-4" href="contact.html" aria-label="Start Project">
+      <div class="flip-inner">
+        <div class="flip-slide flip-default">
+          <span class="flip-label">Start Project</span>
+          <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+        <div class="flip-slide flip-hover">
+          <span class="flip-label">Begin journey</span>
+          <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/></svg>
+        </div>
+      </div>
+    </a>
   </div>
-  <div class="plan-custom rv"><div><h4>Custom — Foundations & Large Programmes</h4><p>Multi-country or multi-grantee? We build custom multi-year communications systems.</p></div><a href="contact.html" class="btn btn-fill" style="flex-shrink:0;">Talk to us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-</div></section>
-<section style="padding-top:0;"><div class="wrap"><div class="rv" style="text-align:center;"><span class="eyebrow" style="justify-content:center;"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg>FAQs</span><h2 style="font-size:clamp(26px,3.4vw,38px);">Questions we get asked.</h2></div>
-  <div class="faq-list rv">
-    <div class="faq-item"><button class="faq-q">Do you publish pricing?<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-inner">No. Every organisation's needs are different. We scope honestly, and nothing is quoted until we understand what you need.</div></div></div>
-    <div class="faq-item"><button class="faq-q">What's the minimum commitment?<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-inner">No minimum for standalone projects. Retainers require 3 months — the time needed to genuinely understand your brand and audience.</div></div></div>
-    <div class="faq-item"><button class="faq-q">Can we start with a project and move to a retainer?<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-inner">Yes — most retainer partners started this way. iDebate, Starlight, and Hope Haven all began with a single project.</div></div></div>
-    <div class="faq-item"><button class="faq-q">Do you work with international funders?<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-inner">Yes. We've supported clients funded by the Mastercard Foundation, BK Foundation, ILO, and Luxembourg Development.</div></div></div>
-    <div class="faq-item"><button class="faq-q">What about safeguarding?<svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button><div class="faq-a"><div class="faq-a-inner">Informed consent before any camera turns on. Written safeguarding protocol for all work involving children. Documentation available to funders on request.</div></div></div>
+
+  <main class="flex-grow -mt-20">
+    
+    <!-- Golden Page Hero Banner -->
+    <section class="hero-kraft min-h-[50vh] flex flex-col justify-center pt-32 pb-16 md:pt-36 md:pb-20 px-gutter-mobile md:px-gutter-desktop relative">
+      <div class="hero-kraft-glow"></div>
+      <div class="max-w-container-max mx-auto w-full relative z-10">
+        <div class="max-w-3xl">
+          <span class="text-xs uppercase tracking-[0.24em] font-mono text-amber-200/90 font-semibold mb-4 block drop-shadow-sm">
+            [ PRICING &amp; PARTNERSHIP MODELS ]
+          </span>
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-normal leading-[1.08] tracking-tight mb-6 drop-shadow-sm">
+            Engagement Models
+          </h1>
+          <p class="text-base sm:text-lg md:text-xl text-amber-50/95 font-body max-w-2xl leading-relaxed font-light drop-shadow-sm">
+            Transparent, predictable sprint and retainer models designed for institutional funders, visionary NGOs, and pan-African initiatives.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Container Below Golden Hero -->
+    <div class="max-w-container-max mx-auto px-gutter-mobile md:px-gutter-desktop py-16 md:py-24 w-full">
+
+    <!-- Pricing / Engagement Models Grid -->
+    <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+      <!-- Tier 1: Impact Project -->
+      <article class="border border-outline-variant/30 bg-surface-container-low p-8 card-hover flex flex-col justify-between">
+        <div>
+          <span class="label-sm text-secondary block mb-2">Discrete Deliverable</span>
+          <h3 class="headline-sm text-primary-fixed mb-2">Impact Project</h3>
+          <p class="body-base text-on-surface-variant mb-6 text-sm">For discrete, high-impact deliverables, annual reports, or rapid strategic interventions.</p>
+          <div class="mb-6 pb-6 border-b border-outline-variant/20">
+            <span class="font-display text-3xl font-bold text-primary-fixed">Scoped</span>
+            <span class="label-md text-on-surface-variant ml-2">per milestone</span>
+          </div>
+          <ul class="space-y-3 body-base text-on-surface text-sm mb-8">
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-sage-light text-lg mt-0.5">check</span>
+              <span>Dedicated strategic lead</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-sage-light text-lg mt-0.5">check</span>
+              <span>4–8 week delivery timeline</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-sage-light text-lg mt-0.5">check</span>
+              <span>Defined scope, KPIs, and deliverables</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-sage-light text-lg mt-0.5">check</span>
+              <span>2 full revision rounds included</span>
+            </li>
+          </ul>
+        </div>
+        <a class="btn-flip btn-flip-secondary w-full" href="contact.html" aria-label="Inquire Project">
+          <div class="flip-inner">
+            <div class="flip-slide flip-default">
+              <span class="flip-label">Inquire Project</span>
+              <svg class="w-4 h-4 text-[#1a1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+            <div class="flip-slide flip-hover">
+              <span class="flip-label">Let's talk scope</span>
+              <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/></svg>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Tier 2: Campaign Partner (Featured) -->
+      <article class="border-2 border-[#a4896a] bg-white rounded-md p-8 md:p-9 card-hover flex flex-col justify-between relative transform md:-translate-y-3 shadow-xl ring-4 ring-[#d5c0a4]/30 pt-10">
+        
+        <!-- High-Visibility Centered Golden Badge -->
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-[#d5c0a4] via-[#c4ab8c] to-[#a4896a] text-primary-fixed border border-[#8a6e50]/40 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-widest shadow-md flex items-center gap-1.5 z-20 whitespace-nowrap">
+          <span class="material-symbols-outlined text-xs text-primary-fixed">star</span>
+          <span class="font-bold tracking-wider">MOST REQUESTED</span>
+        </div>
+
+        <div>
+          <span class="label-sm text-[#8a6e50] font-semibold uppercase tracking-wider block mb-2">Focused Sprint</span>
+          <h3 class="headline-sm text-primary-fixed mb-2">Campaign Partner</h3>
+          <p class="body-base text-on-surface-variant mb-6 text-sm">Integrated multi-disciplinary support for major launches, policy shifts, or awareness campaigns.</p>
+          <div class="mb-6 pb-6 border-b border-outline-variant/20">
+            <span class="font-display text-3xl font-bold text-primary-fixed">Sustained</span>
+            <span class="label-md text-on-surface-variant ml-2">4–12 weeks</span>
+          </div>
+          <ul class="space-y-3 body-base text-on-surface text-sm mb-8">
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[#8a6e50] text-lg mt-0.5">check</span>
+              <span>Cross-functional creative &amp; production team</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[#8a6e50] text-lg mt-0.5">check</span>
+              <span>Priority multi-format asset production</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[#8a6e50] text-lg mt-0.5">check</span>
+              <span>Weekly narrative &amp; strategy syncs</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[#8a6e50] text-lg mt-0.5">check</span>
+              <span>6–8 weeks social content execution</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-[#8a6e50] text-lg mt-0.5">check</span>
+              <span>Analytics &amp; impact measurement</span>
+            </li>
+          </ul>
+        </div>
+        <a class="btn-flip btn-flip-primary w-full shadow-lg hover:shadow-xl transition-all" href="contact.html" aria-label="Become a Partner">
+          <div class="flip-inner">
+            <div class="flip-slide flip-default">
+              <span class="flip-label">Become a Partner</span>
+              <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+            <div class="flip-slide flip-hover">
+              <span class="flip-label">Transform your impact</span>
+              <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/></svg>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Tier 3: Full Partner -->
+      <article class="border border-outline-variant/30 bg-surface-container-low p-8 card-hover flex flex-col justify-between">
+        <div>
+          <span class="label-sm text-secondary block mb-2">Agency of Record</span>
+          <h3 class="headline-sm text-primary-fixed mb-2">Full Partner</h3>
+          <p class="body-base text-on-surface-variant mb-6 text-sm">Comprehensive, year-round communications partnership embedded seamlessly with your leadership.</p>
+          <div class="mb-6 pb-6 border-b border-outline-variant/20">
+            <span class="font-display text-3xl font-bold text-primary-fixed">Retainer</span>
+            <span class="label-md text-on-surface-variant ml-2">monthly partnership</span>
+          </div>
+          <ul class="space-y-3 body-base text-on-surface text-sm mb-8">
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-sage-light text-lg mt-0.5">check</span>
+              <span>Dedicated Agency Director &amp; Lead Crew</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-sage-light text-lg mt-0.5">check</span>
+              <span>Monthly content calendar &amp; field shoots</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-sage-light text-lg mt-0.5">check</span>
+              <span>Priority turnarounds &amp; ongoing revisions</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-sage-light text-lg mt-0.5">check</span>
+              <span>Quarterly executive &amp; donor briefings</span>
+            </li>
+            <li class="flex items-start gap-2">
+              <span class="material-symbols-outlined text-sage-light text-lg mt-0.5">check</span>
+              <span>Digital platform &amp; publication maintenance</span>
+            </li>
+          </ul>
+        </div>
+        <a class="btn-flip btn-flip-secondary w-full" href="contact.html" aria-label="Discuss Retainer">
+          <div class="flip-inner">
+            <div class="flip-slide flip-default">
+              <span class="flip-label">Discuss Retainer</span>
+              <svg class="w-4 h-4 text-[#1a1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+            <div class="flip-slide flip-hover">
+              <span class="flip-label">Scale your mission</span>
+              <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/></svg>
+            </div>
+          </div>
+        </a>
+      </article>
+    </section>
+
+    <!-- Custom Foundations Callout -->
+    <section class="p-8 md:p-10 border border-outline-variant/30 bg-surface-container-low flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-24">
+      <div>
+        <h3 class="headline-sm text-primary-fixed mb-1">Foundations &amp; Multi-Country Programmes</h3>
+        <p class="body-base text-on-surface-variant">Operating across multiple regional offices or funding consortia? We build tailored multi-year communications architectures.</p>
+      </div>
+      <a class="btn-flip btn-flip-primary flex-shrink-0" href="contact.html" aria-label="Consult with Director">
+        <div class="flip-inner">
+          <div class="flip-slide flip-default">
+            <span class="flip-label">Consult with Director</span>
+            <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </div>
+          <div class="flip-slide flip-hover">
+            <span class="flip-label">Schedule direct session</span>
+            <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/></svg>
+          </div>
+        </div>
+      </a>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="max-w-3xl mx-auto py-12">
+      <div class="text-center mb-12">
+        <span class="chip chip-sage mb-3">Clarifications</span>
+        <h2 class="headline-md text-primary-fixed">Frequently Asked Questions</h2>
+      </div>
+      <div class="border-t border-outline-variant/30">
+        <!-- FAQ 1 -->
+        <div class="accordion-item">
+          <button class="faq-toggle">
+            <span>How do you define scope and pricing for Impact Projects?</span>
+            <span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+          </button>
+          <div class="accordion-content" data-open="false">
+            <div class="accordion-inner">
+              <p>We begin every engagement with an alignment discovery workshop. We establish clear deliverable specs, stakeholder review cycles, and target KPIs before any production begins. Nothing is invoiced without full scope transparency.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="accordion-item">
+          <button class="faq-toggle">
+            <span>What is the minimum commitment for a Retainer?</span>
+            <span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+          </button>
+          <div class="accordion-content" data-open="false">
+            <div class="accordion-inner">
+              <p>Full Partner retainers typically start with a 3-month onboarding window. This gives us the necessary runway to deeply integrate with your team, align brand guidelines, and establish robust asset production rhythms.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="accordion-item">
+          <button class="faq-toggle">
+            <span>Can an engagement start with a single project and scale?</span>
+            <span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+          </button>
+          <div class="accordion-content" data-open="false">
+            <div class="accordion-inner">
+              <p>Yes. The majority of our ongoing retainer partners initially started with a single impact report, documentary film, or brand sprint before transitioning to sustained agency-of-record partnerships.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="accordion-item">
+          <button class="faq-toggle">
+            <span>How do you handle ethical consent and safeguarding in the field?</span>
+            <span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+          </button>
+          <div class="accordion-content" data-open="false">
+            <div class="accordion-inner">
+              <p>We maintain strict safeguarding protocols. Informed written and verbal consent is documented before cameras roll. For vulnerable populations or children, formal guardian authorization and child protection standards are enforced without exception.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="accordion-item">
+          <button class="faq-toggle">
+            <span>Do you collaborate with organizations outside Rwanda?</span>
+            <span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+          </button>
+          <div class="accordion-content" data-open="false">
+            <div class="accordion-inner">
+              <p>Yes. We regularly produce campaigns and reports across Rwanda, Uganda, Kenya, Tanzania, and coordinate asynchronously with global institutional headquarters in Europe and North America.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" class="cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie &amp; Privacy Consent">
+    <div class="cookie-banner-title">
+      <svg class="w-4 h-4 text-rust" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <span>Privacy &amp; Cookie Preferences</span>
+    </div>
+    <p class="cookie-banner-text">
+      We use essential cookies for system security and anonymized analytics to measure engagement in accordance with Rwandan Data Protection Law (Law N° 058/2021) and GDPR.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept-all" class="cookie-btn-accept" type="button">Accept All</button>
+      <button id="cookie-essential-only" class="cookie-btn-essential" type="button">Essential Only</button>
+      <a class="cookie-policy-link" href="privacy.html#cookies">Read Policy</a>
+    </div>
   </div>
-</div></section>
-<footer>
-  <div class="wrap">
-    <div class="f-top">
-      <div><div class="f-brand">QRATE.<span class="f-tag">For mission-driven work across Africa</span></div><p class="f-desc">The creative communications team behind mission-driven organisations across Africa.</p></div>
-      <div class="f-cols">
-        <div class="f-col"><h5>Pages</h5><a href="services.html">Services</a><a href="work.html">Our Work</a><a href="about.html">About</a><a href="plans.html">Plans</a><a href="resources.html">Resources</a></div>
-        <div class="f-col"><h5>Contact</h5><a href="mailto:comms@qrate.rw">comms@qrate.rw</a><a href="contact.html">Kigali, Rwanda</a></div>
-        <div class="f-col"><h5>Follow</h5><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
+
+  <!-- Institutional Footer -->
+  <footer class="institutional-footer">
+    <div class="grid-container grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div>
+        <a class="font-serif text-2xl font-normal text-primary-fixed inline-block mb-3" href="index.html">
+          <span class="font-semibold tracking-tighter">QRATE.</span>
+        </a>
+        <p class="body-base text-on-surface-variant text-sm leading-relaxed">
+          Strategic communications, documentary film, and brand design for mission-driven organizations.
+        </p>
+        <p class="label-sm text-on-surface-variant mt-6 text-xs">© 2026 Qrate Creative Communications.</p>
+      </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Navigation</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="work.html">Our Work</a></li>
+          <li><a class="hover:text-rust transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-rust transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-rust transition-colors" href="philosophy.html">Philosophy</a></li>
+          <li><a class="hover:text-rust transition-colors" href="plans.html">Engagement Models</a></li>
+          <li><a class="hover:text-rust transition-colors" href="resources.html">Resources &amp; Intel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="contact.html">Get in Touch</a></li>
+          <li><a class="hover:text-rust transition-colors" href="mailto:comms@qrate.rw">comms@qrate.rw</a></li>
+          <li><span>Kigali, Rwanda</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Connect</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a class="hover:text-rust transition-colors" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a class="hover:text-rust transition-colors" href="https://calendly.com/qrate-stu/30min" target="_blank" rel="noopener noreferrer">Book Consultation</a></li>
+        </ul>
       </div>
     </div>
-    <div class="f-bot"><p>&copy; 2026 Qrate Creative Communications.</p><p>Kigali, Rwanda</p></div>
-  </div>
-</footer>
-<script src="script.js?v=20260724-19"></script>
-</body></html>
+
+    <!-- Institutional Legal Bar -->
+    <div class="grid-container border-t border-outline-variant/30 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+      <p>© 2026 Qrate Creative Communications. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-rust transition-colors" href="privacy.html">Privacy &amp; Data Protection</a>
+        <a class="hover:text-rust transition-colors" href="privacy.html#cookies">Cookie Policy</a>
+        <button class="open-cookie-settings hover:text-rust transition-colors cursor-pointer bg-transparent border-0 p-0 text-xs text-on-surface-variant font-inherit">Cookie Settings</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

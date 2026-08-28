@@ -1,76 +1,383 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Tell Qrate about your mission and creative communications needs. Start a project or book a 30-minute call with our Kigali team.">
-<meta name="theme-color" content="#FFFFFF"><link rel="canonical" href="https://qrate.rw/contact.html"><meta property="og:type" content="website"><meta property="og:title" content="Start a Project — Qrate"><meta property="og:description" content="Discuss your organisation's communications needs with Qrate's Kigali team."><meta property="og:url" content="https://qrate.rw/contact.html"><meta property="og:image" content="https://qrate.rw/og-image.png"><meta name="twitter:card" content="summary_large_image">
-<title>Contact — Qrate Creative Communications</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260724-20">
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Contact & Project Inquiries | Qrate Creative Communications</title>
+  <meta name="description" content="Request a consultation, explore custom project scopes, or book a discovery session with Qrate's leadership in Kigali, Rwanda."/>
+  <meta name="keywords" content="contact Qrate, communications agency Kigali, book consultation NGO, comms RFP Rwanda, creative project inquiry"/>
+  <meta name="author" content="Qrate Creative Communications"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <link rel="canonical" href="https://qrate.rw/contact.html"/>
+  <meta name="theme-color" content="#faf9f5"/>
+
+  <!-- Geo & Regional Meta -->
+  <meta name="geo.region" content="RW-01"/>
+  <meta name="geo.placename" content="Kigali, Rwanda"/>
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com"/>
+
+  <!-- Open Graph & Twitter -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://qrate.rw/contact.html"/>
+  <meta property="og:site_name" content="Qrate Creative Communications"/>
+  <meta property="og:title" content="Contact & Project Inquiries | Qrate"/>
+  <meta property="og:description" content="Request a consultation or discuss a project scope with Qrate."/>
+  <meta property="og:image" content="https://qrate.rw/og-image.jpg"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:url" content="https://qrate.rw/contact.html"/>
+  <meta name="twitter:title" content="Contact & Project Inquiries | Qrate"/>
+  <meta name="twitter:description" content="Request a consultation or discuss a project scope with Qrate."/>
+  <meta name="twitter:image" content="https://qrate.rw/og-image.jpg"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Schema.org ContactPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Qrate Creative Communications",
+    "url": "https://qrate.rw/contact.html",
+    "description": "Request a consultation, explore custom project scopes, or book a discovery session with Qrate's leadership in Kigali, Rwanda.",
+    "mainEntity": {
+      "@type": "ProfessionalService",
+      "name": "Qrate Creative Communications",
+      "email": "comms@qrate.rw",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Kigali",
+        "addressCountry": "RW"
+      }
+    }
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#faf9f5",
+            "surface": "#faf9f5",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f4f2eb",
+            "surface-container": "#ece8df",
+            "surface-container-high": "#e3ded3",
+            "surface-container-highest": "#d9d3c5",
+            "surface-variant": "#e6e1d6",
+            "on-surface": "#141716",
+            "on-surface-variant": "#4e5352",
+            "primary": "#1e2221",
+            "primary-fixed": "#0d100f",
+            "rust": "#8a6e50",
+            "rust-dark": "#5c4328",
+            "rust-hover": "#755a3d",
+            "secondary": "#8a6e50",
+            "tertiary": "#2a5845",
+            "sage-light": "#3b745c",
+            "ochre-gold": "#8a6e50",
+            "outline": "#777d7c",
+            "outline-variant": "#ded9cf"
+          },
+          fontFamily: {
+            "serif": ["Newsreader", "Georgia", "serif"],
+            "display-xl": ["Newsreader", "Space Grotesk", "serif"],
+            "headline-lg": ["Newsreader", "Space Grotesk", "serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
+            "body-lg": ["Geist", "sans-serif"],
+            "body-base": ["Geist", "sans-serif"],
+            "label-md": ["Geist", "sans-serif"],
+            "label-sm": ["Geist", "sans-serif"],
+            "mono": ["Geist", "monospace"]
+          },
+          spacing: {
+            "gutter-desktop": "64px",
+            "gutter-tablet": "32px",
+            "gutter-mobile": "16px",
+            "container-max": "1440px"
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-<div id="progress"></div>
-<header id="hd" class="solid">
-  <nav>
-    <a class="logo" href="index.html">QRATE.</a>
-    <div class="navlinks">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="work.html">Our Work</a>
-      <a href="about.html">About</a>
-      <a href="plans.html">Plans</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
+<body class="bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
+  <div id="progress"></div>
+
+  <!-- TopNavBar (Dynamic Transparent-to-Frosted Header with Centered Links) -->
+  <nav id="main-header" class="header-dynamic fixed top-0 w-full z-50 flex justify-between items-center px-gutter-mobile md:px-gutter-desktop h-20 transition-all duration-300 pointer-events-none">
+    <div class="flex items-center pointer-events-auto">
+      <a class="brand-logo font-sans font-semibold tracking-[0.2em] text-xl sm:text-2xl focus-ring drop-shadow-sm transition-colors duration-300" href="index.html">
+        QRATE
+      </a>
     </div>
-    <div class="nav-actions">
-      <a href="https://calendly.com/qrate-stu/30min?month=2026-07" target="_blank" rel="noopener" class="btn btn-line" style="font-size:12px;padding:10px 16px;">Book a call</a>
-      <a href="contact.html" class="btn btn-fill">Start a project <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="nav-center-links hidden md:flex items-center space-x-7 lg:space-x-9 pointer-events-auto absolute left-1/2 -translate-x-1/2">
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="index.html">Home</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="work.html">Work</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="services.html">Services</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="about.html">About</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="philosophy.html">Philosophy</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="plans.html">Plans</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="resources.html">Resources</a>
+    </div>
+    <div class="flex items-center pointer-events-auto space-x-4">
+      <a class="nav-action-flip action-btn hidden md:inline-flex" href="contact.html" aria-label="Start Project">
+        <div class="flip-inner">
+          <div class="flip-slide flip-default">
+            <span class="flip-label">Start Project</span>
+            <svg class="w-3.5 h-3.5 text-[#1a1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="flip-slide flip-hover">
+            <span class="flip-label">Good choice</span>
+            <svg class="w-3.5 h-3.5 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+      <button class="mobile-nav-toggle md:hidden flex flex-col justify-center gap-1.5 w-9 h-9 p-1 rounded focus-ring" aria-label="Toggle Menu">
+        <span class="w-6 h-[1.5px] rounded-full transition-all"></span>
+        <span class="w-6 h-[1.5px] rounded-full transition-all"></span>
+      </button>
     </div>
   </nav>
-</header>
-<section class="page-hero"><div class="wrap">
-  <span class="eyebrow rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>Get in touch</span>
-  <h1 class="rv">Tell us about your mission.</h1>
-  <p class="rv">We reply within one working day.</p>
-</div></section>
-<section style="padding-top:0;"><div class="wrap">
-  <div class="contact-split rv">
-    <div class="contact-info">
-      <div class="ci-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg><div><strong>Email</strong><p>comms@qrate.rw</p></div></div>
-      <div class="ci-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg><div><strong>Location</strong><p>Kigali, Rwanda</p></div></div>
-      <div class="ci-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><div><strong>Response time</strong><p>Within one working day</p></div></div>
-      <div style="margin-top:16px;"><a href="https://calendly.com/qrate-stu/30min?month=2026-07" target="_blank" rel="noopener" class="btn btn-fill">Or book a call directly <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-    </div>
-    <div class="contact-form">
-      <form action="https://formsubmit.co/ajax/comms@qrate.rw" method="POST" data-contact-form>
-        <input type="hidden" name="_subject" value="New Qrate website project enquiry"><input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true">
-        <div class="form-group"><label for="name">Your name</label><input id="name" type="text" name="name" autocomplete="name" required></div>
-        <div class="form-group"><label for="org">Organisation</label><input id="org" type="text" name="organisation" autocomplete="organization"></div>
-        <div class="form-group"><label for="email">Email</label><input id="email" type="email" name="email" autocomplete="email" required></div>
-        <div class="form-group"><label for="service">Service interest</label><select id="service" name="service"><option value="">Select a service</option><option>Brand Strategy</option><option>Film, Photography & Storytelling</option><option>Design & Visual Communication</option><option>Campaign & Social Content</option><option>Reports & Publications</option><option>Web & Digital Support</option><option>Full Partnership (retainer)</option><option>Not sure yet</option></select></div>
-        <div class="form-group"><label for="message">Tell us about your project</label><textarea id="message" name="message" placeholder="What are you working on, and what outcome do you need?" required></textarea></div>
-        <button type="submit" class="btn btn-fill" style="width:100%;justify-content:center;">Send project note</button><div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
-      </form>
-    </div>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer md:hidden">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="work.html">Work</a>
+    <a class="nav-link" href="services.html">Services</a>
+    <a class="nav-link" href="about.html">About</a>
+    <a class="nav-link" href="philosophy.html">Philosophy</a>
+    <a class="nav-link" href="plans.html">Plans</a>
+    <a class="nav-link" href="resources.html">Resources</a>
+    <a class="btn-flip btn-flip-primary w-full mt-4" href="contact.html" aria-label="Start Project">
+      <div class="flip-inner">
+        <div class="flip-slide flip-default">
+          <span class="flip-label">Start Project</span>
+          <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+        <div class="flip-slide flip-hover">
+          <span class="flip-label">Begin journey</span>
+          <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/></svg>
+        </div>
+      </div>
+    </a>
   </div>
-</div></section>
-<section style="padding-top:0"><div class="wrap"><div class="rv" style="text-align:center"><span class="eyebrow" style="justify-content:center">Book a conversation</span><h2 class="sec-title" style="margin-inline:auto">Choose a time that works for you.</h2><p>A focused 30-minute conversation about your mission, ideas and communications needs.</p></div><div class="calendly-shell rv"><iframe src="https://calendly.com/qrate-stu/30min?month=2026-07&amp;embed_domain=qrate.rw&amp;embed_type=Inline&amp;hide_gdpr_banner=1&amp;background_color=ffffff&amp;text_color=16191c&amp;primary_color=e4603f" title="Book a meeting with Qrate" loading="lazy"></iframe></div></div></section>
-<footer>
-  <div class="wrap">
-    <div class="f-top">
-      <div><div class="f-brand">QRATE.<span class="f-tag">For mission-driven work across Africa</span></div><p class="f-desc">The creative communications team behind mission-driven organisations across Africa.</p></div>
-      <div class="f-cols">
-        <div class="f-col"><h5>Pages</h5><a href="services.html">Services</a><a href="work.html">Our Work</a><a href="about.html">About</a><a href="plans.html">Plans</a><a href="resources.html">Resources</a></div>
-        <div class="f-col"><h5>Contact</h5><a href="mailto:comms@qrate.rw">comms@qrate.rw</a><a href="contact.html">Kigali, Rwanda</a></div>
-        <div class="f-col"><h5>Follow</h5><a href="#">Instagram</a><a href="#">LinkedIn</a></div>
+
+  <main class="flex-grow -mt-20">
+    
+    <!-- Golden Page Hero Banner -->
+    <section class="hero-kraft min-h-[50vh] flex flex-col justify-center pt-32 pb-16 md:pt-36 md:pb-20 px-gutter-mobile md:px-gutter-desktop relative">
+      <div class="hero-kraft-glow"></div>
+      <div class="max-w-container-max mx-auto w-full relative z-10">
+        <div class="max-w-3xl">
+          <span class="text-xs uppercase tracking-[0.24em] font-mono text-amber-200/90 font-semibold mb-4 block drop-shadow-sm">
+            [ INQUIRIES &amp; CONSULTATIONS ]
+          </span>
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-normal leading-[1.08] tracking-tight mb-6 drop-shadow-sm">
+            Get in Touch
+          </h1>
+          <p class="text-base sm:text-lg md:text-xl text-amber-50/95 font-body max-w-2xl leading-relaxed font-light drop-shadow-sm">
+            We partner with forward-thinking organizations to craft authoritative institutional narratives. Reach out to discuss your next strategic initiative.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Container Below Golden Hero -->
+    <div class="max-w-container-max mx-auto px-gutter-mobile md:px-gutter-desktop py-16 md:py-24 w-full">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+      <!-- Left Column: Contact Form -->
+      <div class="md:col-span-7">
+        <div class="bg-surface-container-low border border-outline-variant/30 p-8 md:p-10">
+          <h2 class="headline-sm text-primary-fixed mb-6">Start a Project</h2>
+          <form action="https://formsubmit.co/ajax/comms@qrate.rw" method="POST" data-contact-form class="space-y-6">
+            <input type="hidden" name="_subject" value="New Qrate website project enquiry"/>
+            <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px" aria-hidden="true"/>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="name">Full Name *</label>
+                <input class="input-field" id="name" name="name" placeholder="Your Name" type="text" required/>
+              </div>
+              <div>
+                <label for="org">Organization</label>
+                <input class="input-field" id="org" name="organization" placeholder="Global Health Initiative" type="text"/>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="email">Email Address *</label>
+                <input class="input-field" id="email" name="email" placeholder="amina@organization.org" type="email" required/>
+              </div>
+              <div>
+                <label for="service">Service Interest</label>
+                <select class="input-field" id="service" name="service">
+                  <option value="">Select an area</option>
+                  <option>Brand Strategy</option>
+                  <option>Film &amp; Field Storytelling</option>
+                  <option>Design &amp; Visual Systems</option>
+                  <option>Campaigns &amp; Social</option>
+                  <option>Reports &amp; Publications</option>
+                  <option>Web &amp; Digital Infrastructure</option>
+                  <option>Full Retainer Partnership</option>
+                  <option>Other / Not Sure</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="message">Project Overview *</label>
+              <textarea class="input-field resize-none" id="message" name="message" placeholder="Detail your project objectives, timeline, and key stakeholders..." rows="5" required></textarea>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-4 border-t border-outline-variant/20">
+              <span class="label-sm text-tertiary flex items-center gap-2">
+                <span class="material-symbols-outlined text-sm">schedule</span>
+                We reply within one working day.
+              </span>
+              <button class="btn-flip btn-flip-primary border-0" type="submit" aria-label="Send Inquiry">
+                <div class="flip-inner">
+                  <div class="flip-slide flip-default">
+                    <span class="flip-label">Send Inquiry</span>
+                    <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                  </div>
+                  <div class="flip-slide flip-hover">
+                    <span class="flip-label">Ready to launch</span>
+                    <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/></svg>
+                  </div>
+                </div>
+              </button>
+            </div>
+            <div id="formStatus" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right Column: Info & Calendar Consultation -->
+      <div class="md:col-span-5 flex flex-col gap-8">
+        <!-- Direct Contact Card -->
+        <div class="bg-surface-container-lowest border border-outline-variant/30 p-8 flex flex-col gap-6">
+          <div>
+            <h3 class="headline-sm text-primary-fixed mb-1">Direct Contact</h3>
+            <p class="body-base text-on-surface-variant text-sm">For immediate institutional inquiries or press requests.</p>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-center gap-4">
+              <span class="material-symbols-outlined text-rust">mail</span>
+              <a class="font-mono text-sm text-on-surface hover:text-secondary transition-colors underline decoration-outline-variant underline-offset-4" href="mailto:comms@qrate.rw">comms@qrate.rw</a>
+            </div>
+            <div class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-rust mt-1">location_on</span>
+              <div class="body-base text-on-surface text-sm">
+                <strong>Regional Operations:</strong><br/>
+                Kigali, Rwanda
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Schedule a Consultation (Calendly Embed) -->
+        <div class="bg-surface-container-low border border-outline-variant/30 p-8 flex-grow flex flex-col">
+          <div class="mb-4">
+            <span class="material-symbols-outlined text-3xl text-rust mb-2 block">calendar_month</span>
+            <h3 class="headline-sm text-primary-fixed mb-1">Schedule a Consultation</h3>
+            <p class="body-base text-on-surface-variant text-sm">Select a convenient 30-minute window for an exploratory video call with our leadership team.</p>
+          </div>
+          <div class="w-full flex-grow mt-2 border border-outline-variant/30 overflow-hidden bg-surface-container min-h-[380px]">
+            <iframe src="https://calendly.com/qrate-stu/30min?month=2026-07&amp;embed_domain=qrate.rw&amp;embed_type=Inline&amp;hide_gdpr_banner=1&amp;background_color=121414&amp;text_color=e2e2e2&amp;primary_color=8a6e50" title="Book a consultation with Qrate" class="w-full h-full min-h-[380px] border-0" loading="lazy"></iframe>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="f-bot"><p>&copy; 2026 Qrate Creative Communications.</p><p>Kigali, Rwanda</p></div>
+    </div>
+  </main>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" class="cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie &amp; Privacy Consent">
+    <div class="cookie-banner-title">
+      <svg class="w-4 h-4 text-rust" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <span>Privacy &amp; Cookie Preferences</span>
+    </div>
+    <p class="cookie-banner-text">
+      We use essential cookies for system security and anonymized analytics to measure engagement in accordance with Rwandan Data Protection Law (Law N° 058/2021) and GDPR.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept-all" class="cookie-btn-accept" type="button">Accept All</button>
+      <button id="cookie-essential-only" class="cookie-btn-essential" type="button">Essential Only</button>
+      <a class="cookie-policy-link" href="privacy.html#cookies">Read Policy</a>
+    </div>
   </div>
-</footer>
-<script src="script.js?v=20260724-19"></script>
-</body></html>
+
+  <!-- Institutional Footer -->
+  <footer class="institutional-footer">
+    <div class="grid-container grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div>
+        <a class="font-serif text-2xl font-normal text-primary-fixed inline-block mb-3" href="index.html">
+          <span class="font-semibold tracking-tighter">QRATE.</span>
+        </a>
+        <p class="body-base text-on-surface-variant text-sm leading-relaxed">
+          Strategic communications, documentary film, and brand design for mission-driven organizations.
+        </p>
+        <p class="label-sm text-on-surface-variant mt-6 text-xs">© 2026 Qrate Creative Communications.</p>
+      </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Navigation</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="work.html">Our Work</a></li>
+          <li><a class="hover:text-rust transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-rust transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-rust transition-colors" href="philosophy.html">Philosophy</a></li>
+          <li><a class="hover:text-rust transition-colors" href="plans.html">Engagement Models</a></li>
+          <li><a class="hover:text-rust transition-colors" href="resources.html">Resources &amp; Intel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="contact.html">Get in Touch</a></li>
+          <li><a class="hover:text-rust transition-colors" href="mailto:comms@qrate.rw">comms@qrate.rw</a></li>
+          <li><span>Kigali, Rwanda</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Connect</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a class="hover:text-rust transition-colors" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a class="hover:text-rust transition-colors" href="https://calendly.com/qrate-stu/30min" target="_blank" rel="noopener noreferrer">Book Consultation</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Institutional Legal Bar -->
+    <div class="grid-container border-t border-outline-variant/30 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+      <p>© 2026 Qrate Creative Communications. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-rust transition-colors" href="privacy.html">Privacy &amp; Data Protection</a>
+        <a class="hover:text-rust transition-colors" href="privacy.html#cookies">Cookie Policy</a>
+        <button class="open-cookie-settings hover:text-rust transition-colors cursor-pointer bg-transparent border-0 p-0 text-xs text-on-surface-variant font-inherit">Cookie Settings</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

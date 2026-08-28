@@ -1,116 +1,500 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Meet the Qrate team and learn why we work the way we do">
-<meta name="theme-color" content="#FFFFFF"><link rel="canonical" href="https://qrate.rw/about.html"><meta property="og:type" content="website"><meta property="og:title" content="About Qrate — A Kigali Communications Partner"><meta property="og:description" content="Meet the team guided by accuracy, dignity, evidence and sustainable communications systems."><meta property="og:url" content="https://qrate.rw/about.html"><meta property="og:image" content="https://qrate.rw/og-image.png"><meta name="twitter:card" content="summary_large_image">
-<title>About — Qrate Creative Communications</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=20260724-20">
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>About Us | Qrate Creative Communications</title>
+  <meta name="description" content="Meet Qrate. We are an East African strategic communications consultancy building institutional credibility for visionary NGOs, global funders, and African changemakers."/>
+  <meta name="keywords" content="About Qrate, Kigali communications team, Africa NGO agency, ethical documentary storytelling, executive creative agency Rwanda"/>
+  <meta name="author" content="Qrate Creative Communications"/>
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+  <link rel="canonical" href="https://qrate.rw/about.html"/>
+  <meta name="theme-color" content="#faf9f5"/>
+
+  <!-- Geo & Regional Meta -->
+  <meta name="geo.region" content="RW-01"/>
+  <meta name="geo.placename" content="Kigali, Rwanda"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://qrate.rw/about.html"/>
+  <meta property="og:site_name" content="Qrate Creative Communications"/>
+  <meta property="og:title" content="About Us | Qrate Creative Communications"/>
+  <meta property="og:description" content="Qrate is a strategic communications consultancy designed for the post-hype era."/>
+  <meta property="og:image" content="https://qrate.rw/og-image.jpg"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:url" content="https://qrate.rw/about.html"/>
+  <meta name="twitter:title" content="About Us | Qrate Creative Communications"/>
+  <meta name="twitter:description" content="We build institutional credibility for visionary NGOs and global funders."/>
+  <meta name="twitter:image" content="https://qrate.rw/og-image.jpg"/>
+
+  <!-- Preconnects -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://cdn.tailwindcss.com"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+
+  <!-- Schema.org Breadcrumbs & AboutPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Qrate Creative Communications",
+    "url": "https://qrate.rw/about.html",
+    "description": "Meet Qrate. We build institutional credibility for mission-driven organizations through editorial permanence, strategic design, and human-centric clarity."
+  }
+  </script>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#faf9f5",
+            "surface": "#faf9f5",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f4f2eb",
+            "surface-container": "#ece8df",
+            "surface-container-high": "#e3ded3",
+            "surface-container-highest": "#d9d3c5",
+            "surface-variant": "#e6e1d6",
+            "on-surface": "#141716",
+            "on-surface-variant": "#4e5352",
+            "primary": "#1e2221",
+            "primary-fixed": "#0d100f",
+            "rust": "#8a6e50",
+            "rust-dark": "#5c4328",
+            "rust-hover": "#755a3d",
+            "secondary": "#8a6e50",
+            "tertiary": "#2a5845",
+            "sage-light": "#3b745c",
+            "ochre-gold": "#8a6e50",
+            "outline": "#777d7c",
+            "outline-variant": "#ded9cf"
+          },
+          fontFamily: {
+            "serif": ["Newsreader", "Georgia", "serif"],
+            "display-xl": ["Newsreader", "Space Grotesk", "serif"],
+            "headline-lg": ["Newsreader", "Space Grotesk", "serif"],
+            "headline-md": ["Space Grotesk", "sans-serif"],
+            "headline-sm": ["Space Grotesk", "sans-serif"],
+            "body-lg": ["Geist", "sans-serif"],
+            "body-base": ["Geist", "sans-serif"],
+            "label-md": ["Geist", "sans-serif"],
+            "label-sm": ["Geist", "sans-serif"],
+            "mono": ["Geist", "monospace"]
+          },
+          spacing: {
+            "gutter-desktop": "64px",
+            "gutter-tablet": "32px",
+            "gutter-mobile": "16px",
+            "container-max": "1440px"
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body>
-<div id="progress"></div>
-<header id="hd" class="solid">
-  <nav>
-    <a class="logo" href="index.html">QRATE.</a>
-    <div class="navlinks">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="work.html">Our Work</a>
-      <a href="about.html">About</a>
-      <a href="plans.html">Plans</a>
-      <a href="resources.html">Resources</a>
-      <a href="contact.html">Contact</a>
+<body class="bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
+  <div id="progress"></div>
+
+  <!-- TopNavBar (Dynamic Transparent-to-Frosted Header with Centered Links) -->
+  <nav id="main-header" class="header-dynamic fixed top-0 w-full z-50 flex justify-between items-center px-gutter-mobile md:px-gutter-desktop h-20 transition-all duration-300 pointer-events-none">
+    <div class="flex items-center pointer-events-auto">
+      <a class="brand-logo font-sans font-semibold tracking-[0.2em] text-xl sm:text-2xl focus-ring drop-shadow-sm transition-colors duration-300" href="index.html">
+        QRATE
+      </a>
     </div>
-    <div class="nav-actions">
-      <a href="https://calendly.com/qrate-stu/30min?month=2026-07" target="_blank" rel="noopener" class="btn btn-line" style="font-size:12px;padding:10px 16px;">Book a call</a>
-      <a href="contact.html" class="btn btn-fill">Start a project <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="nav-center-links hidden md:flex items-center space-x-7 lg:space-x-9 pointer-events-auto absolute left-1/2 -translate-x-1/2">
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="index.html">Home</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="work.html">Work</a>
+      <a class="nav-link active font-label-md text-sm font-semibold transition-colors duration-200" href="about.html">About</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="philosophy.html">Philosophy</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="plans.html">Plans</a>
+      <a class="nav-link font-label-md text-sm transition-colors duration-200" href="resources.html">Resources</a>
+    </div>
+    <div class="flex items-center pointer-events-auto space-x-4">
+      <a class="nav-action-flip action-btn hidden md:inline-flex" href="contact.html" aria-label="Start Project">
+        <div class="flip-inner">
+          <div class="flip-slide flip-default">
+            <span class="flip-label">Start Project</span>
+            <svg class="w-3.5 h-3.5 text-[#1a1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </div>
+          <div class="flip-slide flip-hover">
+            <span class="flip-label">Good choice</span>
+            <svg class="w-3.5 h-3.5 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/>
+            </svg>
+          </div>
+        </div>
+      </a>
+      <button class="mobile-nav-toggle md:hidden flex flex-col justify-center gap-1.5 w-9 h-9 p-1 rounded focus-ring" aria-label="Toggle Menu">
+        <span class="w-6 h-[1.5px] rounded-full transition-all"></span>
+        <span class="w-6 h-[1.5px] rounded-full transition-all"></span>
+      </button>
     </div>
   </nav>
-</header>
 
-<section class="page-hero"><div class="wrap">
-  <span class="eyebrow rv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>About Qrate</span>
-  <h1 class="rv">Ten specialists. One focus.</h1>
-  <p class="rv">Every person at Qrate brings experience from inside development communications, editorial production, or social impact organisations. We didn&rsquo;t pivot to this — this is what we were built for.</p>
-</div></section>
-
-<!-- PHILOSOPHY -->
-<section style="padding-top:0;"><div class="wrap">
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;" class="rv philosophy-grid">
-    <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px 18px;border-top:3px solid var(--coral);"><h4 style="font-size:14.5px;margin-bottom:6px;">Accuracy over speed</h4><p style="font-size:12.5px;">We translate your work without distorting it.</p></div>
-    <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px 18px;border-top:3px solid var(--teal);"><h4 style="font-size:14.5px;margin-bottom:6px;">Dignity is the brief</h4><p style="font-size:12.5px;">Consent, context, and honesty shape every frame.</p></div>
-    <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px 18px;border-top:3px solid var(--gold);"><h4 style="font-size:14.5px;margin-bottom:6px;">Evidence over emotion</h4><p style="font-size:12.5px;">Real outcomes funders can verify and quote.</p></div>
-    <div style="background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px 18px;border-top:3px solid var(--coral);"><h4 style="font-size:14.5px;margin-bottom:6px;">Systems outlast campaigns</h4><p style="font-size:12.5px;">We build infrastructure your team keeps running.</p></div>
-  </div>
-</div></section>
-
-<!-- TEAM -->
-<section style="padding-top:0;"><div class="wrap">
-  <div class="team-grid">
-    <div class="member rv"><div class="avatar">OB</div><h4>Ollson Babu</h4><span class="role">Founder &amp; Creative Director</span><p>Narrative and creative direction on every account.</p></div>
-    <div class="member rv rv-d1"><div class="avatar">I</div><h4>Imelda</h4><span class="role">Communications Manager</span><p>Client relationships, content strategy, and approvals.</p></div>
-    <div class="member rv rv-d2"><div class="avatar">W</div><h4>Wesley</h4><span class="role">Lead Editor &amp; Videographer</span><p>Post-production and field shoots across all work.</p></div>
-    <div class="member rv rv-d3"><div class="avatar">B</div><h4>Brian</h4><span class="role">Videographer &amp; Editor</span><p>Field production, motion design, and edit.</p></div>
-    <div class="member rv"><div class="avatar">H</div><h4>Herv&eacute;</h4><span class="role">Videographer</span><p>Field production and second-camera on events.</p></div>
-    <div class="member rv rv-d1"><div class="avatar">P</div><h4>Parfait</h4><span class="role">Lead Photographer</span><p>Editorial portraiture and event coverage.</p></div>
-    <div class="member rv rv-d2"><div class="avatar">E</div><h4>Eji</h4><span class="role">Impact Design Lead</span><p>Infographics, reports, and campaign artwork.</p></div>
-    <div class="member rv rv-d3"><div class="avatar">L</div><h4>Laura</h4><span class="role">Junior Comms Executive</span><p>Content operations, social calendars, and delivery.</p></div>
-    <div class="member rv"><div class="avatar">BK</div><h4>Brian K</h4><span class="role">Web Developer &amp; Tech Support</span><p>Website builds, technical maintenance, and digital support.</p></div>
-    <div class="member rv rv-d1"><div class="avatar">R</div><h4>Rodrigue</h4><span class="role">Motion Graphics Lead &amp; Animator</span><p>Motion systems, animated explainers, and campaign graphics.</p></div>
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-nav-drawer md:hidden">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="work.html">Work</a>
+    <a class="nav-link" href="services.html">Services</a>
+    <a class="nav-link active" href="about.html">About</a>
+    <a class="nav-link" href="philosophy.html">Philosophy</a>
+    <a class="nav-link" href="plans.html">Plans</a>
+    <a class="nav-link" href="resources.html">Resources</a>
+    <a class="btn-flip btn-flip-primary w-full mt-4" href="contact.html" aria-label="Start Project">
+      <div class="flip-inner">
+        <div class="flip-slide flip-default">
+          <span class="flip-label">Start Project</span>
+          <svg class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </div>
+        <div class="flip-slide flip-hover">
+          <span class="flip-label">Begin journey</span>
+          <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/></svg>
+        </div>
+      </div>
+    </a>
   </div>
 
-  <!-- Tools -->
-  <div class="rv" style="margin-top:56px;padding-top:40px;border-top:1px solid var(--line);text-align:center;">
-    <p style="font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:20px;">Tools we work with</p>
-    <div class="tools-strip">
-      <span class="tool-pill">DaVinci Resolve</span><span class="tool-pill">Adobe Suite</span><span class="tool-pill">Canva</span><span class="tool-pill">Figma</span><span class="tool-pill">HubSpot</span><span class="tool-pill">Buffer</span><span class="tool-pill">Mailchimp</span><span class="tool-pill">Every.org</span><span class="tool-pill">Salesforce NPSP</span><span class="tool-pill">Bloomerang</span><span class="tool-pill">Google Analytics</span><span class="tool-pill">Google Ad Grants</span>
+  <main class="flex-grow -mt-20">
+    
+    <!-- Golden Page Hero Banner -->
+    <section class="hero-kraft min-h-[50vh] flex flex-col justify-center pt-32 pb-16 md:pt-36 md:pb-20 px-gutter-mobile md:px-gutter-desktop relative">
+      <div class="hero-kraft-glow"></div>
+      <div class="max-w-container-max mx-auto w-full relative z-10">
+        <div class="max-w-3xl">
+          <span class="text-xs uppercase tracking-[0.24em] font-mono text-amber-200/90 font-semibold mb-4 block drop-shadow-sm">
+            [ INSTITUTIONAL ETHOS &amp; TEAM ]
+          </span>
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white font-normal leading-[1.08] tracking-tight mb-6 drop-shadow-sm">
+            About Qrate
+          </h1>
+          <p class="text-base sm:text-lg md:text-xl text-amber-50/95 font-body max-w-2xl leading-relaxed font-light drop-shadow-sm">
+            We build institutional credibility for organizations in the post-hype era, combining European editorial precision with an authentic East African soul.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content Container Below Golden Hero -->
+    <div class="w-full">
+
+    <!-- Team Section -->
+    <section class="w-full max-w-container-max mx-auto px-gutter-mobile md:px-gutter-desktop pb-24">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+        <div>
+          <span class="chip chip-rust mb-3">Team</span>
+          <h2 class="headline-lg text-primary-fixed">Ten specialists. One focus.</h2>
+        </div>
+        <p class="body-base text-on-surface-variant max-w-lg">
+          Every person at Qrate brings experience from inside development communications, editorial production, or social impact organisations. We didn't pivot to this — this is what we were built for.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+        <!-- Member 1 -->
+        <div class="border border-outline-variant/30 bg-surface-container-low p-6 card-hover flex flex-col justify-between">
+          <div>
+            <div class="avatar-monogram mb-4">OB</div>
+            <h3 class="headline-sm text-primary-fixed text-lg">Ollson Babu</h3>
+            <p class="label-sm text-secondary font-semibold mt-1">Founder &amp; Creative Director</p>
+            <p class="body-base text-on-surface-variant text-sm mt-3 leading-relaxed">Narrative and creative direction on every account.</p>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="border border-outline-variant/30 bg-surface-container-low p-6 card-hover flex flex-col justify-between">
+          <div>
+            <div class="avatar-monogram mb-4">I</div>
+            <h3 class="headline-sm text-primary-fixed text-lg">Imelda</h3>
+            <p class="label-sm text-secondary font-semibold mt-1">Communications Manager</p>
+            <p class="body-base text-on-surface-variant text-sm mt-3 leading-relaxed">Client relationships, content strategy, and approvals.</p>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="border border-outline-variant/30 bg-surface-container-low p-6 card-hover flex flex-col justify-between">
+          <div>
+            <div class="avatar-monogram mb-4">W</div>
+            <h3 class="headline-sm text-primary-fixed text-lg">Wesley</h3>
+            <p class="label-sm text-secondary font-semibold mt-1">Lead Editor &amp; Videographer</p>
+            <p class="body-base text-on-surface-variant text-sm mt-3 leading-relaxed">Post-production and field shoots across all work.</p>
+          </div>
+        </div>
+
+        <!-- Member 4 -->
+        <div class="border border-outline-variant/30 bg-surface-container-low p-6 card-hover flex flex-col justify-between">
+          <div>
+            <div class="avatar-monogram mb-4">B</div>
+            <h3 class="headline-sm text-primary-fixed text-lg">Brian</h3>
+            <p class="label-sm text-secondary font-semibold mt-1">Videographer &amp; Editor</p>
+            <p class="body-base text-on-surface-variant text-sm mt-3 leading-relaxed">Field production, motion design, and edit.</p>
+          </div>
+        </div>
+
+        <!-- Member 5 -->
+        <div class="border border-outline-variant/30 bg-surface-container-low p-6 card-hover flex flex-col justify-between">
+          <div>
+            <div class="avatar-monogram mb-4">H</div>
+            <h3 class="headline-sm text-primary-fixed text-lg">Hervé</h3>
+            <p class="label-sm text-secondary font-semibold mt-1">Videographer</p>
+            <p class="body-base text-on-surface-variant text-sm mt-3 leading-relaxed">Field production and second-camera on events.</p>
+          </div>
+        </div>
+
+        <!-- Member 6 -->
+        <div class="border border-outline-variant/30 bg-surface-container-low p-6 card-hover flex flex-col justify-between">
+          <div>
+            <div class="avatar-monogram mb-4">P</div>
+            <h3 class="headline-sm text-primary-fixed text-lg">Parfait</h3>
+            <p class="label-sm text-secondary font-semibold mt-1">Lead Photographer</p>
+            <p class="body-base text-on-surface-variant text-sm mt-3 leading-relaxed">Editorial portraiture and event coverage.</p>
+          </div>
+        </div>
+
+        <!-- Member 7 -->
+        <div class="border border-outline-variant/30 bg-surface-container-low p-6 card-hover flex flex-col justify-between">
+          <div>
+            <div class="avatar-monogram mb-4">E</div>
+            <h3 class="headline-sm text-primary-fixed text-lg">Eji</h3>
+            <p class="label-sm text-secondary font-semibold mt-1">Impact Design Lead</p>
+            <p class="body-base text-on-surface-variant text-sm mt-3 leading-relaxed">Infographics, reports, and campaign artwork.</p>
+          </div>
+        </div>
+
+        <!-- Member 8 -->
+        <div class="border border-outline-variant/30 bg-surface-container-low p-6 card-hover flex flex-col justify-between">
+          <div>
+            <div class="avatar-monogram mb-4">L</div>
+            <h3 class="headline-sm text-primary-fixed text-lg">Laura</h3>
+            <p class="label-sm text-secondary font-semibold mt-1">Junior Comms Executive</p>
+            <p class="body-base text-on-surface-variant text-sm mt-3 leading-relaxed">Content operations, social calendars, and delivery.</p>
+          </div>
+        </div>
+
+        <!-- Member 9 -->
+        <div class="border border-outline-variant/30 bg-surface-container-low p-6 card-hover flex flex-col justify-between">
+          <div>
+            <div class="avatar-monogram mb-4">BK</div>
+            <h3 class="headline-sm text-primary-fixed text-lg">Brian K</h3>
+            <p class="label-sm text-secondary font-semibold mt-1">Web Developer &amp; Tech Support</p>
+            <p class="body-base text-on-surface-variant text-sm mt-3 leading-relaxed">Website builds, technical maintenance, and digital support.</p>
+          </div>
+        </div>
+
+        <!-- Member 10 -->
+        <div class="border border-outline-variant/30 bg-surface-container-low p-6 card-hover flex flex-col justify-between">
+          <div>
+            <div class="avatar-monogram mb-4">R</div>
+            <h3 class="headline-sm text-primary-fixed text-lg">Rodrigue</h3>
+            <p class="label-sm text-secondary font-semibold mt-1">Motion Graphics Lead &amp; Animator</p>
+            <p class="body-base text-on-surface-variant text-sm mt-3 leading-relaxed">Motion systems, animated explainers, and campaign graphics.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools We Work With -->
+      <div class="mt-16 pt-12 border-t border-outline-variant/20 text-center">
+        <span class="label-sm text-secondary uppercase tracking-wider block mb-6">Tools We Work With</span>
+        <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+          <span class="tool-pill">DaVinci Resolve</span>
+          <span class="tool-pill">Adobe Suite</span>
+          <span class="tool-pill">Canva</span>
+          <span class="tool-pill">Figma</span>
+          <span class="tool-pill">HubSpot</span>
+          <span class="tool-pill">Buffer</span>
+          <span class="tool-pill">Mailchimp</span>
+          <span class="tool-pill">Every.org</span>
+          <span class="tool-pill">Salesforce NPSP</span>
+          <span class="tool-pill">Bloomerang</span>
+          <span class="tool-pill">Google Analytics</span>
+          <span class="tool-pill">Google Ad Grants</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Partners -->
+    <section class="py-16 bg-surface-container-lowest border-t border-b border-outline-variant/20 overflow-hidden">
+      <div class="w-full max-w-container-max mx-auto px-gutter-mobile md:px-gutter-desktop mb-8">
+        <span class="chip chip-sage mb-2">Our Clients</span>
+        <h3 class="headline-sm text-primary-fixed">Organizations We Have Partnered With</h3>
+      </div>
+
+      <!-- Horizontal Marquee Animation (Full Color & Clickable) -->
+      <div class="logo-marquee-wrapper">
+        <div class="logo-marquee-track">
+          <!-- Set 1 -->
+          <a class="logo-marquee-item" href="https://www.hopehavenrwanda.org/" target="_blank" rel="noopener noreferrer" title="Hope Haven Rwanda">
+            <img src="logos/Hope-Haven.jpg" alt="Hope Haven Rwanda" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://debaterwanda.org/" target="_blank" rel="noopener noreferrer" title="iDebate Rwanda">
+            <img src="logos/i debate.png" alt="iDebate Rwanda" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://lettherebelightinternational.org/" target="_blank" rel="noopener noreferrer" title="Let There Be Light">
+            <img src="logos/let there be light.webp" alt="Let There Be Light" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://nvvh.rw/" target="_blank" rel="noopener noreferrer" title="New Vision">
+            <img src="logos/new vision.webp" alt="New Vision" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://ntare-louisenlund.org/" target="_blank" rel="noopener noreferrer" title="Ntare Louisenlund School">
+            <img src="logos/ntare loousinlunf.webp" alt="Ntare Louisenlund School" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://shineonrwanda.org/" target="_blank" rel="noopener noreferrer" title="Shine On">
+            <img src="logos/shine on.webp" alt="Shine On" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://soma-salama.org/" target="_blank" rel="noopener noreferrer" title="Soma Salama">
+            <img src="logos/soma salama.png" alt="Soma Salama" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://starlight.org/" target="_blank" rel="noopener noreferrer" title="Starlight Africa">
+            <img src="logos/starlight afrio.webp" alt="Starlight Africa" class="logo-marquee-img" loading="lazy">
+          </a>
+
+          <!-- Set 2 (Seamless loop duplicate) -->
+          <a class="logo-marquee-item" href="https://www.hopehavenrwanda.org/" target="_blank" rel="noopener noreferrer" title="Hope Haven Rwanda">
+            <img src="logos/Hope-Haven.jpg" alt="Hope Haven Rwanda" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://debaterwanda.org/" target="_blank" rel="noopener noreferrer" title="iDebate Rwanda">
+            <img src="logos/i debate.png" alt="iDebate Rwanda" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://lettherebelightinternational.org/" target="_blank" rel="noopener noreferrer" title="Let There Be Light">
+            <img src="logos/let there be light.webp" alt="Let There Be Light" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://nvvh.rw/" target="_blank" rel="noopener noreferrer" title="New Vision">
+            <img src="logos/new vision.webp" alt="New Vision" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://ntare-louisenlund.org/" target="_blank" rel="noopener noreferrer" title="Ntare Louisenlund School">
+            <img src="logos/ntare loousinlunf.webp" alt="Ntare Louisenlund School" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://shineonrwanda.org/" target="_blank" rel="noopener noreferrer" title="Shine On">
+            <img src="logos/shine on.webp" alt="Shine On" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://soma-salama.org/" target="_blank" rel="noopener noreferrer" title="Soma Salama">
+            <img src="logos/soma salama.png" alt="Soma Salama" class="logo-marquee-img" loading="lazy">
+          </a>
+          <a class="logo-marquee-item" href="https://starlight.org/" target="_blank" rel="noopener noreferrer" title="Starlight Africa">
+            <img src="logos/starlight afrio.webp" alt="Starlight Africa" class="logo-marquee-img" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Operational Safeguards & Pillars -->
+    <section class="py-24 bg-surface-container-low border-t border-outline-variant/20">
+      <div class="grid-container">
+        <div class="mb-16 max-w-3xl">
+          <span class="chip chip-sage mb-4">Core Safeguards</span>
+          <h2 class="headline-md text-primary-fixed mb-4">How we protect your credibility</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="p-6 border border-outline-variant/30 bg-surface-container">
+            <span class="font-display text-2xl font-bold text-rust-dark mb-2 block">01</span>
+            <h3 class="headline-sm text-on-surface mb-2">Accuracy First</h3>
+            <p class="body-base text-on-surface-variant text-sm">We translate complex programme metrics without sensationalism or distortion.</p>
+          </div>
+          <div class="p-6 border border-outline-variant/30 bg-surface-container">
+            <span class="font-display text-2xl font-bold text-rust-dark mb-2 block">02</span>
+            <h3 class="headline-sm text-on-surface mb-2">Dignity is the Brief</h3>
+            <p class="body-base text-on-surface-variant text-sm">Informed consent, cultural context, and safeguarding shape every frame.</p>
+          </div>
+          <div class="p-6 border border-outline-variant/30 bg-surface-container">
+            <span class="font-display text-2xl font-bold text-rust-dark mb-2 block">03</span>
+            <h3 class="headline-sm text-on-surface mb-2">Evidence Over Hype</h3>
+            <p class="body-base text-on-surface-variant text-sm">Real, verifiable outcomes that international institutional funders quote.</p>
+          </div>
+          <div class="p-6 border border-outline-variant/30 bg-surface-container">
+            <span class="font-display text-2xl font-bold text-rust-dark mb-2 block">04</span>
+            <h3 class="headline-sm text-on-surface mb-2">Sustained Systems</h3>
+            <p class="body-base text-on-surface-variant text-sm">We build infrastructure, brand assets, and style guides your team owns forever.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </main>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent-banner" class="cookie-banner" role="dialog" aria-modal="true" aria-label="Cookie &amp; Privacy Consent">
+    <div class="cookie-banner-title">
+      <svg class="w-4 h-4 text-rust" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      </svg>
+      <span>Privacy &amp; Cookie Preferences</span>
+    </div>
+    <p class="cookie-banner-text">
+      We use essential cookies for system security and anonymized analytics to measure engagement in accordance with Rwandan Data Protection Law (Law N° 058/2021) and GDPR.
+    </p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept-all" class="cookie-btn-accept" type="button">Accept All</button>
+      <button id="cookie-essential-only" class="cookie-btn-essential" type="button">Essential Only</button>
+      <a class="cookie-policy-link" href="privacy.html#cookies">Read Policy</a>
     </div>
   </div>
-</div></section>
 
-<section style="padding-top:0;"><div class="wrap"><div class="cta rv">
-  <h2>Want to work with us?</h2>
-  <div class="cta-btns"><a href="contact.html" class="btn btn-dark">Start a project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-</div></div></section>
-
-<footer>
-  <div class="wrap">
-    <div class="f-top">
+  <!-- Institutional Footer -->
+  <footer class="institutional-footer">
+    <div class="grid-container grid grid-cols-1 md:grid-cols-4 gap-12">
       <div>
-        <div class="f-brand">QRATE.<span class="f-tag">For mission-driven work across Africa</span></div>
-        <p class="f-desc">The creative communications team behind mission-driven organisations across Africa.</p>
+        <a class="font-serif text-2xl font-normal text-primary-fixed inline-block mb-3" href="index.html">
+          <span class="font-semibold tracking-tighter">QRATE.</span>
+        </a>
+        <p class="body-base text-on-surface-variant text-sm leading-relaxed">
+          Strategic communications, documentary film, and brand design for mission-driven organizations.
+        </p>
+        <p class="label-sm text-on-surface-variant mt-6 text-xs">© 2026 Qrate Creative Communications.</p>
       </div>
-      <div class="f-cols">
-        <div class="f-col">
-          <h5>Pages</h5>
-          <a href="services.html">Services</a>
-          <a href="work.html">Our Work</a>
-          <a href="about.html">About</a>
-          <a href="plans.html">Plans</a>
-          <a href="resources.html">Resources</a>
-        </div>
-        <div class="f-col">
-          <h5>Contact</h5>
-          <a href="mailto:comms@qrate.rw"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>comms@qrate.rw</a>
-          <a href="contact.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Kigali, Rwanda</a>
-        </div>
-        <div class="f-col">
-          <h5>Follow</h5>
-          <a href="#">Instagram</a>
-          <a href="#">LinkedIn</a>
-        </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Navigation</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="work.html">Our Work</a></li>
+          <li><a class="hover:text-rust transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-rust transition-colors" href="about.html">About Us</a></li>
+          <li><a class="hover:text-rust transition-colors" href="philosophy.html">Philosophy</a></li>
+          <li><a class="hover:text-rust transition-colors" href="plans.html">Engagement Models</a></li>
+          <li><a class="hover:text-rust transition-colors" href="resources.html">Resources &amp; Intel</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Contact</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="contact.html">Get in Touch</a></li>
+          <li><a class="hover:text-rust transition-colors" href="mailto:comms@qrate.rw">comms@qrate.rw</a></li>
+          <li><span>Kigali, Rwanda</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="label-sm text-primary-fixed font-semibold mb-4 text-xs font-mono uppercase tracking-wider">Connect</h4>
+        <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
+          <li><a class="hover:text-rust transition-colors" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a class="hover:text-rust transition-colors" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a class="hover:text-rust transition-colors" href="https://calendly.com/qrate-stu/30min" target="_blank" rel="noopener noreferrer">Book Consultation</a></li>
+        </ul>
       </div>
     </div>
-    <div class="f-bot">
-      <p>&copy; 2026 Qrate Creative Communications. All rights reserved.</p>
-      <p>Kigali, Rwanda</p>
+
+    <!-- Institutional Legal Bar -->
+    <div class="grid-container border-t border-outline-variant/30 mt-12 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-on-surface-variant">
+      <p>© 2026 Qrate Creative Communications. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a class="hover:text-rust transition-colors" href="privacy.html">Privacy &amp; Data Protection</a>
+        <a class="hover:text-rust transition-colors" href="privacy.html#cookies">Cookie Policy</a>
+        <button class="open-cookie-settings hover:text-rust transition-colors cursor-pointer bg-transparent border-0 p-0 text-xs text-on-surface-variant font-inherit">Cookie Settings</button>
+      </div>
     </div>
-  </div>
-</footer>
-<script src="script.js?v=20260724-19"></script>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
