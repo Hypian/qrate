@@ -316,7 +316,18 @@
       <div class="grid-container">
         <div class="flex justify-between items-end mb-10">
           <h2 class="headline-lg text-primary-fixed">Related Engagements</h2>
-          <a class="btn-tertiary" href="work.html">View All Work</a>
+          <a class="btn-flip btn-flip-secondary" href="work.html" aria-label="View All Work">
+            <div class="flip-inner">
+              <div class="flip-slide flip-default">
+                <span class="flip-label">View All Work</span>
+                <svg class="w-4 h-4 text-[#1a1714]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+              <div class="flip-slide flip-hover">
+                <span class="flip-label">Explore Portfolio</span>
+                <svg class="w-4 h-4 text-[#1a140b]" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.2h7.6l-6.1 4.5 2.3 7.3-6.2-4.6-6.2 4.6 2.3-7.3-6.1-4.5h7.6z"/></svg>
+              </div>
+            </div>
+          </a>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
           <a href="case-study.html" class="group block border border-outline-variant/30 bg-surface-container card-hover p-6">
