@@ -734,6 +734,87 @@ label {
   color: var(--on-surface);
 }
 
+#formStatus {
+  margin-top: 1rem;
+}
+
+.form-status-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 1rem 1.1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(160, 162, 157, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(244, 243, 239, 0.96));
+  box-shadow: 0 14px 32px rgba(15, 19, 22, 0.06);
+  animation: form-status-in 0.26s ease;
+}
+
+.form-status-panel.success {
+  border-color: rgba(51, 120, 93, 0.28);
+  background: linear-gradient(135deg, rgba(64, 120, 96, 0.08), rgba(255, 255, 255, 0.98));
+}
+
+.form-status-panel.error {
+  border-color: rgba(176, 71, 51, 0.25);
+  background: linear-gradient(135deg, rgba(176, 71, 51, 0.06), rgba(255, 255, 255, 0.98));
+}
+
+.form-status-icon {
+  width: 2.2rem;
+  height: 2.2rem;
+  min-width: 2.2rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--brand-green), var(--brand-navy));
+  color: #ffffff;
+  box-shadow: 0 10px 24px rgba(28, 44, 36, 0.16);
+}
+
+.error-icon {
+  background: linear-gradient(135deg, var(--brand-orange), #c64f38);
+}
+
+.form-status-copy {
+  flex: 1;
+  min-width: 0;
+}
+
+.form-status-copy strong {
+  display: block;
+  margin: 0 0 0.25rem;
+  color: var(--on-surface);
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  letter-spacing: -0.02em;
+}
+
+.form-status-copy p {
+  margin: 0;
+  color: var(--on-surface-variant);
+  line-height: 1.55;
+  font-size: 0.95rem;
+}
+
+.form-status-copy a {
+  color: var(--brand-orange);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+}
+
+@keyframes form-status-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Footer (Matching Golden Kraft Hero) */
 footer.institutional-footer {
   width: 100%;
@@ -830,6 +911,53 @@ footer.institutional-footer a:hover {
   position: relative;
   overflow: hidden;
   min-height: 100vh;
+  min-height: 100dvh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .hero-kraft {
+    padding-top: 5.5rem;
+    padding-bottom: 1.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-kraft {
+    min-height: 100vh;
+    min-height: 100dvh;
+    min-height: 100svh;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-kraft .max-w-2xl {
+    max-width: 100%;
+  }
+
+  .hero-kraft h1 {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+    line-height: 0.98;
+    letter-spacing: -0.04em;
+    margin-bottom: 1rem;
+  }
+
+  .hero-kraft p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-kraft .btn-consultation-flip {
+    min-width: 100%;
+    width: 100%;
+  }
 }
 
 .hero-kraft::before {

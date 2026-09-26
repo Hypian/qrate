@@ -165,13 +165,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // 5. Contact Form Ajax Handling
+  // 5. Contact Form EmailJS Handling
   const contactForm = document.querySelector('[data-contact-form]');
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const statusBox = document.getElementById('formStatus');
       const originalText = submitBtn ? submitBtn.innerHTML : '';
+      const emailConfig = window.qrateEmailJs || {};
+      const publicKey = emailConfig.publicKey || 'YOUR_PUBLIC_KEY';
+      const serviceId = emailConfig.serviceId || 'YOUR_SERVICE_ID';
+      const templateId = emailConfig.templateId || 'YOUR_TEMPLATE_ID';
 
       if (submitBtn) {
         submitBtn.disabled = true;
@@ -179,24 +185,58 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       try {
+        if (!window.emailjs || !window.emailjs.send) {
+          throw new Error('EmailJS library not loaded');
+        }
+
+        if (
+          publicKey.includes('YOUR_') ||
+          serviceId.includes('YOUR_') ||
+          templateId.includes('YOUR_')
+        ) {
+          throw new Error('EmailJS config missing');
+        }
+
         const formData = new FormData(contactForm);
-        const response = await fetch(contactForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
+        const templateParams = {
+          name: formData.get('name') || '',
+          email: formData.get('email') || '',
+          organisation: formData.get('organization') || 'Not provided',
+          service: formData.get('service') || 'Not specified',
+          message: formData.get('message') || ''
+        };
+
+        await emailjs.send(serviceId, templateId, templateParams, {
+          publicKey: publicKey,
         });
 
-        if (response.ok) {
-          if (statusBox) {
-            statusBox.innerHTML = '<p style="color: var(--sage); margin-top: 12px;">Thank you. Your inquiry has been received. We will respond within one working day.</p>';
-          }
-          contactForm.reset();
-        } else {
-          throw new Error('Submission failed');
+        if (statusBox) {
+          statusBox.innerHTML = `
+            <div class="form-status-panel success" role="alert" aria-live="polite">
+              <div class="form-status-icon">
+                <span class="material-symbols-outlined">check</span>
+              </div>
+              <div class="form-status-copy">
+                <strong>Message sent</strong>
+                <p>Thank you. Your inquiry has been received. We will respond within one working day.</p>
+              </div>
+            </div>
+          `;
         }
+        contactForm.reset();
       } catch (err) {
         if (statusBox) {
-          statusBox.innerHTML = '<p style="color: var(--error); margin-top: 12px;">Notice: Could not send automatically. Please email us directly at <a href="mailto:comms@qrate.rw" style="text-decoration:underline;">comms@qrate.rw</a>.</p>';
+          statusBox.innerHTML = `
+            <div class="form-status-panel error" role="alert" aria-live="assertive">
+              <div class="form-status-icon error-icon">
+                <span class="material-symbols-outlined">error</span>
+              </div>
+              <div class="form-status-copy">
+                <strong>Could not send</strong>
+                <p>Please email us directly at <a href="mailto:comms@qrate.rw">comms@qrate.rw</a>.</p>
+              </div>
+            </div>
+          `;
         }
       } finally {
         if (submitBtn) {
