@@ -63,18 +63,36 @@ document.addEventListener('DOMContentLoaded', () => {
           const threshold = heroSection ? Math.max(heroSection.offsetHeight - 90, 80) : 80;
           if (window.scrollY > threshold) {
             dynamicHeader.classList.add('scrolled');
+            document.body.classList.remove('orange-brand-mode');
           } else {
             dynamicHeader.classList.remove('scrolled');
+            document.body.classList.add('orange-brand-mode');
           }
           isHeaderScheduled = false;
         });
       }
     };
     window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+    window.addEventListener('resize', handleHeaderScroll, { passive: true });
     handleHeaderScroll();
   }
 
-  // 4. FAQ Accordion Logic
+  // 4. Scroll-triggered one-time accent animation for logo + CTA
+  const scrollAnimatedEls = document.querySelectorAll('[data-scroll-animate]');
+  if (scrollAnimatedEls.length) {
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-animated');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    scrollAnimatedEls.forEach(el => revealObserver.observe(el));
+  }
+
+  // 5. FAQ Accordion Logic
   const faqToggles = document.querySelectorAll('.faq-toggle, .accordion-toggle');
   faqToggles.forEach(button => {
     button.addEventListener('click', () => {

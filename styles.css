@@ -6,44 +6,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&family=Space+Grotesk:wght@400;500;600;700&family=Geist:wght@300;400;500;600;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 
 :root {
-  /* Surface & Base (Warm Editorial Linen / Porcelain) */
-  --bg: #faf9f5;
+  /* Qrate Brand System */
+  --bg: #f7f7f5;
   --surface-lowest: #ffffff;
-  --surface-low: #f4f2eb;
-  --surface: #ece8df;
-  --surface-high: #e3ded3;
-  --surface-highest: #d9d3c5;
-  --surface-variant: #e6e1d6;
+  --surface-low: #f2f2ef;
+  --surface: #ecece7;
+  --surface-high: #e2e5e1;
+  --surface-highest: #d6d9d4;
+  --surface-variant: #e9eaeb;
   --surface-bright: #ffffff;
 
   /* Neutrals & Text */
-  --on-surface: #141716;
-  --on-surface-variant: #4e5352;
-  --primary: #1e2221;
-  --primary-fixed: #0d100f;
-  --primary-container: #ede8df;
-  --inverse-surface: #141716;
-  --inverse-on-surface: #faf9f5;
+  --on-surface: #09131f;
+  --on-surface-variant: #4b5058;
+  --primary: #09131f;
+  --primary-fixed: #09131f;
+  --primary-container: #f7f7f5;
+  --inverse-surface: #09131f;
+  --inverse-on-surface: #f7f7f5;
 
-  /* Accents */
-  --kraft: #7d5e44;
-  --kraft-dark: #5a412c;
-  --forest: #1a382a;
-  --forest-dark: #12281e;
-  --rust: #8a6e50;
-  --rust-hover: #755a3d;
-  --rust-dark: #5c4328;
-  --secondary: #8a6e50;
-  --secondary-container: #f5eedf;
-  --sage: #2a5845;
-  --sage-light: #3b745c;
-  --tertiary-container: #e6f0eb;
-  --ochre: #8a6e50;
+  /* Brand Colours */
+  --brand-navy: #09131f;
+  --brand-orange: #ff6b35;
+  --brand-yellow: #ffdc50;
+  --brand-slate: #4b5058;
+  --brand-white: #f7f7f5;
+
+  --kraft: #ff6b35;
+  --kraft-dark: #e55d2d;
+  --forest: #09131f;
+  --forest-dark: #071018;
+  --rust: #ff6b35;
+  --rust-hover: #e85f2e;
+  --rust-dark: #d45426;
+  --secondary: #ff6b35;
+  --secondary-container: #fff1e8;
+  --sage: #4b5058;
+  --sage-light: #6d7681;
+  --tertiary-container: #fff7d8;
+  --ochre: #ffdc50;
 
   /* Outlines & Borders */
-  --outline: #777d7c;
-  --outline-variant: #ded9cf;
-  --border-subtle: rgba(0, 0, 0, 0.08);
+  --outline: #a2a9b0;
+  --outline-variant: #d9dbd7;
+  --border-subtle: rgba(9, 19, 31, 0.08);
 
   /* Feedback */
   --success: #1b683b;
@@ -248,7 +254,44 @@ img {
   }
 }
 
-/* Header & TopNavBar */
+/* Header & TopNavBar — Clean Editorial Brand Logo */
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.brand-logo:hover,
+.brand-logo:focus-visible {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.brand-logo-img,
+.brand-logo-svg {
+  display: block;
+  height: 30px;
+  width: auto;
+  max-width: 180px;
+}
+
+.brand-logo-svg .brand-mark {
+  fill: var(--brand-orange);
+  transition: fill 0.2s ease;
+}
+
+.brand-logo-svg .brand-wordmark {
+  fill: #ffffff;
+  transition: fill 0.2s ease;
+}
+
+.header-dynamic .brand-logo-svg .brand-mark,
+.header-dynamic.scrolled .brand-logo-svg .brand-mark,
+body.orange-brand-mode .brand-logo-svg .brand-mark {
+  fill: var(--brand-orange) !important;
+}
+
 #topNav,
 .top-nav {
   position: fixed;
@@ -365,7 +408,7 @@ img {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at 65% 35%, rgba(213, 192, 164, 0.98) 0%, rgba(196, 171, 140, 0.98) 38%, rgba(164, 137, 106, 0.98) 75%, rgba(138, 110, 80, 0.98) 100%);
+    background: linear-gradient(135deg, rgba(9, 19, 31, 0.98) 0%, rgba(9, 19, 31, 0.96) 45%, rgba(255, 107, 53, 0.88) 100%);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -390,6 +433,12 @@ img {
     padding: var(--space-sm) 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     color: #ffffff;
+    transition: color 0.2s ease, opacity 0.2s ease;
+  }
+  .mobile-nav-drawer .nav-link:hover,
+  .mobile-nav-drawer .nav-link.active {
+    color: #ffffff;
+    opacity: 1;
   }
   .mobile-nav-drawer .btn-pill-dark {
     background-color: #ffffff !important;
@@ -407,25 +456,25 @@ img {
   align-items: center;
   justify-content: center;
   gap: var(--space-sm);
-  background: radial-gradient(ellipse at 65% 35%, #d5c0a4 0%, #c4ab8c 38%, #a4896a 75%, #8a6e50 100%);
+  background: var(--brand-orange);
   color: #ffffff;
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 600;
   padding: 12px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--brand-orange);
   border-radius: 4px;
   cursor: pointer;
   transition: all var(--transition-fast);
   white-space: nowrap;
-  box-shadow: 0 4px 14px rgba(138, 110, 80, 0.22);
+  box-shadow: 0 4px 14px rgba(9, 19, 31, 0.18);
   text-decoration: none;
 }
 
 .btn-primary:hover {
-  background: radial-gradient(ellipse at 65% 35%, #dec8a7 0%, #b89c7c 38%, #967a58 75%, #755a3d 100%);
+  background: linear-gradient(90deg, var(--brand-orange) 0%, var(--brand-orange) 50%, var(--brand-yellow) 50%, var(--brand-yellow) 100%);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(138, 110, 80, 0.32);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.25);
   color: #ffffff;
 }
 
@@ -688,7 +737,11 @@ label {
 /* Footer (Matching Golden Kraft Hero) */
 footer.institutional-footer {
   width: 100%;
-  background: radial-gradient(ellipse at 65% 35%, #d5c0a4 0%, #c4ab8c 38%, #a4896a 75%, #8a6e50 100%);
+  background: linear-gradient(135deg,
+    var(--brand-navy) 0%,
+    var(--brand-navy) 35%,
+    var(--brand-orange) 65%,
+    var(--brand-yellow) 100%);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   padding: var(--space-5xl) var(--gutter-desktop);
   margin-top: auto;
@@ -743,7 +796,7 @@ footer.institutional-footer a:hover {
   left: 0;
   height: 2px;
   width: 0%;
-  background: linear-gradient(90deg, var(--rust), var(--ochre));
+  background: linear-gradient(90deg, var(--brand-orange), var(--brand-yellow));
   z-index: 200;
   transition: width 0.1s linear;
 }
@@ -768,9 +821,11 @@ footer.institutional-footer a:hover {
   font-weight: 400;
 }
 
-/* Luxury Pale Gold Hero Canvas (Faithful to Reference Mockup) */
+/* Luxury Qrate Hero Canvas with subtle motion */
 .hero-kraft {
-  background: radial-gradient(ellipse at 65% 35%, #d5c0a4 0%, #c4ab8c 38%, #a4896a 75%, #8a6e50 100%);
+  background: radial-gradient(circle at 85% 25%, rgba(255, 107, 53, 0.32) 0%, transparent 55%),
+              radial-gradient(circle at 15% 75%, rgba(255, 220, 80, 0.16) 0%, transparent 45%),
+              linear-gradient(145deg, #09131f 0%, #0d1b2a 45%, #08111c 100%);
   color: #ffffff;
   position: relative;
   overflow: hidden;
@@ -786,6 +841,51 @@ footer.institutional-footer a:hover {
   opacity: 0.35;
   pointer-events: none;
   z-index: 2;
+}
+
+.hero-kraft::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--brand-navy) 0%, var(--brand-navy) 100%);
+  transform: translateX(-101%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.hero-kraft.is-animated::after {
+  animation: hero-swipe-dark 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.12s;
+}
+
+.hero-kraft.is-animated::before {
+  animation: hero-grid-settle 1.5s ease-out forwards;
+}
+
+@keyframes hero-swipe-dark {
+  0% {
+    transform: translateX(-101%);
+    opacity: 1;
+  }
+  35% {
+    transform: translateX(-28%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes hero-grid-settle {
+  0% {
+    transform: translateX(10px) scale(1.02);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 0.12;
+  }
 }
 
 /* Dynamic Navbar Scroll Transition for Hero */
@@ -805,8 +905,11 @@ footer.institutional-footer a:hover {
 }
 
 .header-dynamic .nav-center-links a {
-  color: rgba(255, 255, 255, 0.9);
-  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  position: relative;
+  transition: color 0.2s ease;
 }
 
 .header-dynamic .nav-center-links a:hover {
@@ -825,13 +928,13 @@ footer.institutional-footer a:hover {
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Scrolled State: Golden navbar matching hero section */
+/* Scrolled State: Qrate navy/orange brand navbar */
 .header-dynamic.scrolled {
-  background: radial-gradient(ellipse at 65% 35%, rgba(213, 192, 164, 0.96) 0%, rgba(196, 171, 140, 0.96) 38%, rgba(164, 137, 106, 0.96) 75%, rgba(138, 110, 80, 0.96) 100%);
+  background: linear-gradient(90deg, rgba(9, 19, 31, 0.96) 0%, rgba(9, 19, 31, 0.96) 40%, rgba(255, 107, 53, 0.94) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.14);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 28px rgba(9, 19, 31, 0.18);
 }
 
 .header-dynamic.scrolled .brand-logo {
@@ -839,7 +942,7 @@ footer.institutional-footer a:hover {
 }
 
 .header-dynamic.scrolled .nav-center-links a {
-  color: rgba(255, 255, 255, 0.92) !important;
+  color: rgba(255, 255, 255, 0.9) !important;
 }
 
 .header-dynamic.scrolled .nav-center-links a:hover {
@@ -855,12 +958,40 @@ footer.institutional-footer a:hover {
 .header-dynamic .nav-center-links a.active,
 .header-dynamic.scrolled .nav-center-links a.active {
   color: #ffffff !important;
-  border-bottom: 2px solid #ffffff !important;
+  border-bottom: 2px solid var(--brand-yellow) !important;
   padding-bottom: 2px;
 }
 
 .header-dynamic.scrolled .mobile-nav-toggle span {
   background-color: #ffffff !important;
+}
+
+html {
+  scrollbar-color: var(--brand-orange) var(--brand-white);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--brand-orange) var(--brand-white);
+}
+
+*::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--brand-white);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--brand-orange) 0%, var(--brand-yellow) 100%);
+  border-radius: 999px;
+  border: 2px solid var(--brand-white);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--brand-navy) 0%, var(--brand-orange) 100%);
 }
 
 /* Animated Flip Nav Action Button (Start Project -> Good choice) */
@@ -905,20 +1036,43 @@ footer.institutional-footer a:hover {
 }
 
 .nav-action-flip .flip-default {
-  background-color: #ffffff;
-  color: #1a1714;
+  background: var(--brand-orange);
+  color: #ffffff;
+}
+
+.nav-action-flip.is-animated .flip-default,
+.btn-consultation-flip.is-animated .flip-default {
+  animation: cta-slide-brand 1.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 0.2s;
+}
+
+.nav-action-flip.is-animated .flip-default .flip-label,
+.btn-consultation-flip.is-animated .flip-default .flip-label {
+  color: #ffffff;
 }
 
 .nav-action-flip .flip-default .flip-label {
   font-family: var(--font-body);
   font-size: 12.5px;
   font-weight: 600;
-  color: #1a1714;
+  color: #ffffff;
   letter-spacing: -0.01em;
 }
 
+@keyframes cta-slide-brand {
+  0% {
+    background: var(--brand-orange);
+  }
+  35% {
+    background: linear-gradient(90deg, var(--brand-orange) 0%, var(--brand-yellow) 100%);
+  }
+  100% {
+    background: var(--brand-orange);
+  }
+}
+
 .nav-action-flip .flip-hover {
-  background: linear-gradient(135deg, #f5ecd9 0%, #dec8a7 45%, #b2936c 100%);
+  background: linear-gradient(135deg, var(--brand-yellow) 0%, var(--brand-orange) 55%, var(--brand-navy) 100%);
   color: #1a140b;
 }
 
@@ -1003,7 +1157,7 @@ footer.institutional-footer a:hover {
 
 /* 1. Default Slide States */
 .btn-flip.btn-flip-primary .flip-default {
-  background: radial-gradient(ellipse at 65% 35%, #d5c0a4 0%, #c4ab8c 38%, #a4896a 75%, #8a6e50 100%);
+  background: var(--brand-orange);
   color: #ffffff;
 }
 
@@ -1015,19 +1169,19 @@ footer.institutional-footer a:hover {
 }
 
 .btn-flip.btn-flip-secondary .flip-default {
-  background-color: #ffffff;
-  color: #1a1714;
+  background: var(--brand-orange);
+  color: #ffffff;
 }
 
 .btn-flip.btn-flip-secondary .flip-default .flip-label {
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 600;
-  color: #1a1714;
+  color: #ffffff;
 }
 
 .btn-flip.btn-flip-dark .flip-default {
-  background-color: #141716;
+  background: var(--brand-orange);
   color: #ffffff;
 }
 
@@ -1038,10 +1192,10 @@ footer.institutional-footer a:hover {
   color: #ffffff;
 }
 
-/* 2. Hover Slide: Luminous Gold Gradient */
+/* 2. Hover Slide: Brand Accent Gradient */
 .btn-flip .flip-hover {
-  background: linear-gradient(135deg, #f5ecd9 0%, #dec8a7 45%, #b2936c 100%);
-  color: #1a140b;
+  background: linear-gradient(135deg, var(--brand-yellow) 0%, var(--brand-orange) 55%, var(--brand-navy) 100%);
+  color: var(--brand-navy);
 }
 
 .btn-flip .flip-hover .flip-label {
@@ -1112,21 +1266,21 @@ footer.institutional-footer a:hover {
 
 /* 1. Default Slide: Crisp White */
 .btn-consultation-flip .flip-default {
-  background-color: #ffffff;
-  color: #1a1714;
+  background: var(--brand-orange);
+  color: #ffffff;
 }
 
 .btn-consultation-flip .flip-default .flip-label {
   font-family: var(--font-body);
   font-size: 14.5px;
   font-weight: 600;
-  color: #1a1714;
+  color: #ffffff;
   letter-spacing: -0.01em;
 }
 
-/* 2. Hover Slide: Rich Golden Gradient with "Excellent choice" */
+/* 2. Hover Slide: Brand Accent Gradient with high contrast */
 .btn-consultation-flip .flip-hover {
-  background: linear-gradient(135deg, #f5ecd9 0%, #dec8a7 45%, #b2936c 100%);
+  background: linear-gradient(135deg, var(--brand-yellow) 0%, var(--brand-orange) 55%, var(--brand-navy) 100%);
   color: #1a140b;
 }
 
@@ -1165,14 +1319,14 @@ footer.institutional-footer a:hover {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: #ffffff;
-  color: #1a1714;
+  background: var(--brand-orange);
+  color: #ffffff;
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 500;
   padding: 13px 26px;
   border-radius: 4px;
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--brand-orange);
   cursor: pointer;
   transition: all var(--transition-fast);
   text-decoration: none;
@@ -1180,10 +1334,10 @@ footer.institutional-footer a:hover {
 }
 
 .btn-reference-white:hover {
-  background-color: #f7f5ef;
+  background: linear-gradient(135deg, var(--brand-orange) 0%, #ff8c42 55%, var(--brand-yellow) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
-  color: #000000;
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.25);
+  color: #ffffff;
 }
 
 /* Partner Wordmarks in Bottom Left */
@@ -1203,10 +1357,11 @@ footer.institutional-footer a:hover {
 
 /* Golden Interactive Feature Stage & Tab Workflow */
 .forest-stage {
-  background: radial-gradient(ellipse at 65% 35%, #d5c0a4 0%, #c4ab8c 38%, #a4896a 75%, #8a6e50 100%);
+  background: radial-gradient(circle at 80% 20%, rgba(255, 107, 53, 0.22) 0%, transparent 60%),
+              linear-gradient(145deg, #09131f 0%, #112033 60%, #0d1b2a 100%);
   border-radius: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 16px 40px rgba(138, 110, 80, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 16px 40px rgba(9, 19, 31, 0.12);
   position: relative;
   overflow: hidden;
 }
@@ -1227,9 +1382,9 @@ footer.institutional-footer a:hover {
 }
 
 .forest-tab-btn.active {
-  border-left-color: #8a6e50;
+  border-left-color: var(--brand-orange);
   background: #ffffff;
-  box-shadow: 0 6px 24px rgba(138, 110, 80, 0.12), 0 0 0 1px rgba(164, 137, 106, 0.15);
+  box-shadow: 0 6px 24px rgba(255, 107, 53, 0.12), 0 0 0 1px rgba(255, 107, 53, 0.12);
 }
 
 .forest-tab-btn .phase-tag {
@@ -1237,7 +1392,7 @@ footer.institutional-footer a:hover {
 }
 
 .forest-tab-btn.active .phase-tag {
-  color: #8a6e50 !important;
+  color: var(--brand-orange) !important;
 }
 
 .stage-slide {
@@ -1259,14 +1414,14 @@ footer.institutional-footer a:hover {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: #ffffff;
-  color: #141716;
+  background: var(--brand-orange);
+  color: #ffffff;
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 600;
   padding: 13px 28px;
   border-radius: 9999px;
-  border: 1px solid transparent;
+  border: 1px solid var(--brand-orange);
   cursor: pointer;
   transition: all var(--transition-fast);
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
@@ -1274,10 +1429,10 @@ footer.institutional-footer a:hover {
 }
 
 .btn-pill-white:hover {
-  background-color: #f4f2eb;
+  background: linear-gradient(135deg, var(--brand-orange) 0%, #ff8c42 55%, var(--brand-yellow) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
-  color: #000000;
+  box-shadow: 0 8px 22px rgba(255, 107, 53, 0.25);
+  color: #ffffff;
 }
 
 .btn-pill-dark {
@@ -1285,14 +1440,14 @@ footer.institutional-footer a:hover {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background-color: #141716;
+  background: var(--brand-orange);
   color: #ffffff;
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 500;
   padding: 14px 32px;
   border-radius: 9999px;
-  border: 1px solid transparent;
+  border: 1px solid var(--brand-orange);
   cursor: pointer;
   transition: all var(--transition-fast);
   text-decoration: none;
@@ -1300,9 +1455,9 @@ footer.institutional-footer a:hover {
 }
 
 .btn-pill-dark:hover {
-  background-color: #2b2e2d;
+  background: linear-gradient(135deg, var(--brand-orange) 0%, #ff8c42 55%, var(--brand-yellow) 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 22px rgba(255, 107, 53, 0.25);
   color: #ffffff;
 }
 
@@ -1311,24 +1466,24 @@ footer.institutional-footer a:hover {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: radial-gradient(ellipse at 65% 35%, #d5c0a4 0%, #c4ab8c 38%, #a4896a 75%, #8a6e50 100%);
+  background: var(--brand-orange);
   color: #ffffff;
   font-family: var(--font-body);
   font-size: 14px;
   font-weight: 600;
   padding: 13px 28px;
   border-radius: 9999px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--brand-orange);
   cursor: pointer;
   transition: all var(--transition-fast);
   text-decoration: none;
-  box-shadow: 0 4px 14px rgba(138, 110, 80, 0.22);
+  box-shadow: 0 4px 14px rgba(9, 19, 31, 0.18);
 }
 
 .btn-pill-rust:hover {
-  background: radial-gradient(ellipse at 65% 35%, #dec8a7 0%, #b89c7c 38%, #967a58 75%, #755a3d 100%);
+  background: linear-gradient(135deg, var(--brand-orange) 0%, #ff8c42 55%, var(--brand-yellow) 100%);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(138, 110, 80, 0.32);
+  box-shadow: 0 6px 20px rgba(255, 107, 53, 0.25);
   color: #ffffff;
 }
 
@@ -1499,7 +1654,7 @@ footer.institutional-footer a:hover {
   background: #ffffff;
   border: 1px solid rgba(138, 110, 80, 0.35);
   border-radius: 10px;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(213, 192, 164, 0.3);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(255, 107, 53, 0.28);
   padding: 22px 24px;
   z-index: 99999;
   transform: translateY(140%);
@@ -1541,23 +1696,24 @@ footer.institutional-footer a:hover {
 }
 
 .cookie-btn-accept {
-  background: radial-gradient(ellipse at 65% 35%, #d5c0a4 0%, #c4ab8c 38%, #a4896a 75%, #8a6e50 100%);
+  background: var(--brand-orange);
   color: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--brand-orange);
   font-family: var(--font-body);
   font-size: 12.5px;
   font-weight: 600;
   padding: 8px 18px;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(138, 110, 80, 0.25);
-  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.18);
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .cookie-btn-accept:hover {
-  background: radial-gradient(ellipse at 65% 35%, #dec8a7 0%, #b89c7c 38%, #967a58 75%, #755a3d 100%);
+  background: var(--brand-navy);
+  border-color: var(--brand-navy);
   transform: translateY(-1px);
-  box-shadow: 0 4px 14px rgba(138, 110, 80, 0.35);
+  box-shadow: 0 4px 14px rgba(9, 19, 31, 0.18);
 }
 
 .cookie-btn-essential {
@@ -1581,7 +1737,7 @@ footer.institutional-footer a:hover {
 .cookie-policy-link {
   font-family: var(--font-body);
   font-size: 12px;
-  color: #8a6e50;
+  color: var(--brand-orange);
   text-decoration: underline;
   text-underline-offset: 3px;
   margin-left: auto;
@@ -1589,7 +1745,7 @@ footer.institutional-footer a:hover {
 }
 
 .cookie-policy-link:hover {
-  color: #5c4328;
+  color: var(--brand-navy);
 }
 
 @media (max-width: 640px) {
