@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const statusBox = document.getElementById('formStatus');
-      const originalText = submitBtn ? submitBtn.innerHTML : '';
+      const originalMarkup = submitBtn ? submitBtn.innerHTML : '';
       const emailConfig = window.qrateEmailJs || {};
       const publicKey = emailConfig.publicKey || 'YOUR_PUBLIC_KEY';
       const serviceId = emailConfig.serviceId || 'YOUR_SERVICE_ID';
@@ -181,7 +181,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (submitBtn) {
         submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Sending...';
+        submitBtn.setAttribute('aria-busy', 'true');
+        submitBtn.classList.add('is-sending');
+        submitBtn.innerHTML = '<span class="sending-label">Sending...</span>';
       }
 
       try {
@@ -241,7 +243,9 @@ document.addEventListener('DOMContentLoaded', () => {
       } finally {
         if (submitBtn) {
           submitBtn.disabled = false;
-          submitBtn.innerHTML = originalText;
+          submitBtn.removeAttribute('aria-busy');
+          submitBtn.classList.remove('is-sending');
+          submitBtn.innerHTML = originalMarkup;
         }
       }
     });
