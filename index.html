@@ -244,9 +244,9 @@
     <section class="hero-kraft min-h-screen flex flex-col justify-between pt-28 pb-10 sm:pb-12 px-gutter-mobile md:px-gutter-desktop relative" data-scroll-animate>
       <div class="hero-kraft-glow"></div>
 
-      <!-- Main Left Hero Content -->
-      <div class="w-full max-w-container-max mx-auto my-auto relative z-10 py-12 lg:py-16">
-        <div class="max-w-2xl">
+      <div class="hero-main-grid w-full max-w-container-max mx-auto my-auto relative z-10 py-10 lg:py-14">
+        <!-- Main Left Hero Content -->
+        <div class="hero-copy max-w-2xl">
           <img src="photos/ui%20and%20brand/Qrate%20Logo%20Png%20Gradient%20VS%20White%20Color.svg" alt="Qrate logo" class="mb-6 h-14 sm:h-16 md:h-20 w-auto" />
           <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[76px] text-white font-normal leading-[1.04] tracking-tight mb-6 text-balance drop-shadow-sm">
             Outsource to Qrate
@@ -273,6 +273,15 @@
               </div>
             </a>
           </div>
+        </div>
+
+        <!-- Documentary image collage -->
+        <div class="hero-collage" aria-label="A selection of Qrate documentary work">
+          <figure class="hero-collage-tile hero-collage-tile-tall"><img src="photos/hero-4.webp" alt="Community leader standing outdoors" loading="eager"></figure>
+          <figure class="hero-collage-tile hero-collage-tile-wide"><img src="photos/hero-1.webp" alt="Students celebrating together" loading="eager"></figure>
+          <figure class="hero-collage-tile"><img src="photos/hero-2.webp" alt="Construction worker on site" loading="eager"></figure>
+          <figure class="hero-collage-tile hero-collage-tile-accent"><img src="photos/hero-5.webp" alt="A joyful creative team" loading="eager"></figure>
+          <figure class="hero-collage-tile"><img src="photos/hero-3.webp" alt="Students learning in a classroom" loading="eager"></figure>
         </div>
       </div>
 
@@ -331,148 +340,57 @@
     </section>
 
     <!-- 3. SECTION 3: THREE-COLUMN PILLARS (Strategy · Production · Scale) -->
-    <section class="py-24 md:py-32 bg-surface-container-low border-b border-outline-variant/30">
+    <section class="capabilities-section" aria-labelledby="capabilities-title">
       <div class="grid-container">
-        
-        <div class="mb-16 max-w-3xl">
-          <span class="text-xs font-mono uppercase tracking-[0.2em] text-on-surface-variant mb-3 block font-semibold">
-            STRATEGY · PRODUCTION · SCALE
-          </span>
-          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-primary-fixed leading-tight font-normal">
-            Combine strategic narrative clarity with best-in-class creative execution.
-          </h2>
+        <div class="capabilities-intro">
+          <div class="capabilities-index" aria-hidden="true">03</div>
+          <div>
+            <span class="capabilities-kicker">Strategy · Production · Scale</span>
+            <h2 id="capabilities-title">Combine strategic narrative clarity with <em>best-in-class</em> creative execution.</h2>
+          </div>
         </div>
 
-        <!-- 3-Column Minimalist Cards -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- Pillar 1: Brand & Visual Identity -->
-          <div class="p-8 sm:p-10 bg-white border border-outline-variant rounded-lg flex flex-col justify-between transition-all hover:shadow-lg hover:-translate-y-1">
+        <div class="capabilities-grid">
+          <article class="capability-card">
+            <div class="capability-card-top">
+              <span class="capability-number">01</span>
+              <span class="capability-label">Brand systems</span>
+            </div>
             <div>
-              <p class="text-xs font-mono uppercase tracking-widest text-rust font-semibold mb-6">01 / BRAND SYSTEMS</p>
-              <h3 class="font-serif text-2xl text-primary-fixed mb-4 font-medium">Brand &amp; Visual Identity</h3>
-              <p class="text-on-surface-variant body-base leading-relaxed">
-                Institutional brand architectures, donor pitch decks, and cohesive identity frameworks engineered for global authority and enduring funder trust.
-              </p>
+              <h3>Brand &amp; Visual Identity</h3>
+              <p>Institutional brand architectures, donor pitch decks, and cohesive identity frameworks engineered for global authority and enduring funder trust.</p>
             </div>
-            <div class="mt-8 pt-6 border-t border-outline-variant/40 flex items-center justify-between text-xs font-mono text-on-surface-variant">
-              <span>Positioning &amp; Systems</span>
-              <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </div>
-          </div>
+            <div class="capability-card-footer"><span>Positioning &amp; Systems</span><span class="material-symbols-outlined">arrow_outward</span></div>
+          </article>
 
-          <!-- Pillar 2: Documentary & Field Media -->
-          <div class="p-8 sm:p-10 bg-white border border-outline-variant rounded-lg flex flex-col justify-between transition-all hover:shadow-lg hover:-translate-y-1">
+          <article class="capability-card capability-card-offset">
+            <div class="capability-card-top">
+              <span class="capability-number">02</span>
+              <span class="capability-label">Field media</span>
+            </div>
             <div>
-              <p class="text-xs font-mono uppercase tracking-widest text-rust font-semibold mb-6">02 / FIELD MEDIA</p>
-              <h3 class="font-serif text-2xl text-primary-fixed mb-4 font-medium">Documentary &amp; Film</h3>
-              <p class="text-on-surface-variant body-base leading-relaxed">
-                High-precision 4K on-location cinematography, authentic community photography, and human-first storytelling adhering to strict ethical safeguarding.
-              </p>
+              <h3>Documentary &amp; Film</h3>
+              <p>High-precision 4K on-location cinematography, authentic community photography, and human-first storytelling adhering to strict ethical safeguarding.</p>
             </div>
-            <div class="mt-8 pt-6 border-t border-outline-variant/40 flex items-center justify-between text-xs font-mono text-on-surface-variant">
-              <span>4K Cine &amp; Field Audio</span>
-              <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </div>
-          </div>
+            <div class="capability-card-footer"><span>4K Cine &amp; Field Audio</span><span class="material-symbols-outlined">arrow_outward</span></div>
+          </article>
 
-          <!-- Pillar 3: Publications & Reports -->
-          <div class="p-8 sm:p-10 bg-white border border-outline-variant rounded-lg flex flex-col justify-between transition-all hover:shadow-lg hover:-translate-y-1">
+          <article class="capability-card">
+            <div class="capability-card-top">
+              <span class="capability-number">03</span>
+              <span class="capability-label">Publications</span>
+            </div>
             <div>
-              <p class="text-xs font-mono uppercase tracking-widest text-rust font-semibold mb-6">03 / PUBLICATIONS</p>
-              <h3 class="font-serif text-2xl text-primary-fixed mb-4 font-medium">Annual &amp; Impact Reports</h3>
-              <p class="text-on-surface-variant body-base leading-relaxed">
-                High-density stakeholder publications, policy briefs, and annual reviews structured with narrative clarity for global boards and institutional donors.
-              </p>
+              <h3>Annual &amp; Impact Reports</h3>
+              <p>High-density stakeholder publications, policy briefs, and annual reviews structured with narrative clarity for global boards and institutional donors.</p>
             </div>
-            <div class="mt-8 pt-6 border-t border-outline-variant/40 flex items-center justify-between text-xs font-mono text-on-surface-variant">
-              <span>Editorial &amp; Data Structuring</span>
-              <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </div>
-          </div>
-
+            <div class="capability-card-footer"><span>Editorial &amp; Data Structuring</span><span class="material-symbols-outlined">arrow_outward</span></div>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- 4. SECTION 4: INTERACTIVE DEEP FOREST GREEN FEATURE STAGE -->
-    <section class="py-24 md:py-32 bg-background border-b border-outline-variant/30">
-      <div class="grid-container">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
-          <!-- Left Column: Interactive Tab Workflow -->
-          <div class="lg:col-span-5">
-            <span class="text-xs font-mono uppercase tracking-[0.2em] text-rust mb-3 block font-semibold">
-              FIELD CAPABILITIES
-            </span>
-            <h2 class="font-serif text-3xl sm:text-4xl text-primary-fixed font-normal mb-8 leading-tight">
-              Our specialists can handle any field assignment.
-            </h2>
-
-            <div class="space-y-4" id="forestTabs">
-              
-              <!-- Tab 1 -->
-              <button class="forest-tab-btn active w-full" data-target="0">
-                <p class="phase-tag text-xs font-mono uppercase tracking-wider text-rust font-semibold mb-1">Phase 01</p>
-                <h4 class="font-serif text-xl text-primary-fixed font-medium">Ethical Consent &amp; Briefing</h4>
-                <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">
-                  Community-first protocols, safeguarding agreements, and localized language briefings in Kinyarwanda, Swahili, and English.
-                </p>
-              </button>
-
-              <!-- Tab 2 -->
-              <button class="forest-tab-btn w-full" data-target="1">
-                <p class="phase-tag text-xs font-mono uppercase tracking-wider text-on-surface-variant font-semibold mb-1">Phase 02</p>
-                <h4 class="font-serif text-xl text-primary-fixed font-medium">High-Precision 4K Field Production</h4>
-                <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">
-                  Dual-operator cine rigs, multi-point wireless audio, and natural lighting setups designed for minimal classroom/field disruption.
-                </p>
-              </button>
-
-              <!-- Tab 3 -->
-              <button class="forest-tab-btn w-full" data-target="2">
-                <p class="phase-tag text-xs font-mono uppercase tracking-wider text-on-surface-variant font-semibold mb-1">Phase 03</p>
-                <h4 class="font-serif text-xl text-primary-fixed font-medium">Editorial Post &amp; Sound Mastering</h4>
-                <p class="text-sm text-on-surface-variant mt-1 leading-relaxed">
-                  DaVinci Resolve color grading, custom original score, motion graphics, and multi-format delivery for donor pitches and social campaigns.
-                </p>
-              </button>
-
-            </div>
-          </div>
-
-          <!-- Right Column: Golden Frame Media Stage -->
-          <div class="lg:col-span-7">
-            <div class="forest-stage p-2 sm:p-2.5 shadow-lg">
-              
-              <!-- Media Frame -->
-              <div class="relative w-full aspect-[16/10] bg-black/40 rounded-md overflow-hidden border border-white/20">
-                <!-- Media Slide 0 (Phase 01) -->
-                <div class="stage-slide active absolute inset-0 transition-opacity duration-500" id="stageSlide0">
-                  <img src="photos/hero-1.webp" alt="Ethical Consent and Community Engagement" class="w-full h-full object-cover">
-                </div>
-
-                <!-- Media Slide 1 (Phase 02) -->
-                <div class="stage-slide opacity-0 absolute inset-0 transition-opacity duration-500 pointer-events-none" id="stageSlide1">
-                  <img src="photos/hero-2.webp" alt="High-Precision 4K Field Production" class="w-full h-full object-cover">
-                </div>
-
-                <!-- Media Slide 2 (Phase 03) -->
-                <div class="stage-slide opacity-0 absolute inset-0 transition-opacity duration-500 pointer-events-none" id="stageSlide2">
-                  <img src="photos/hero-3.webp" alt="Editorial Review and Post-Production" class="w-full h-full object-cover">
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-    <!-- 5. SECTION 5: TECH STACK & INTEGRATIONS GRID -->
+    <!-- 4. SECTION 4: TECH STACK & INTEGRATIONS GRID -->
     <section class="py-24 md:py-32 bg-surface-container-low border-b border-outline-variant/30">
       <div class="grid-container">
         
@@ -496,7 +414,7 @@
             <div class="grid grid-cols-2 sm:grid-cols-3 gap-3.5 sm:gap-4">
               
               <div class="integration-tile">
-                <span class="material-symbols-outlined text-rust text-2xl">movie</span>
+                <img class="integration-icon" src="https://cdn.simpleicons.org/davinciresolve/FF6B35" alt="DaVinci Resolve logo" loading="lazy">
                 <div>
                   <h4 class="text-sm font-semibold text-primary-fixed">DaVinci Resolve</h4>
                   <p class="text-[11px] text-on-surface-variant font-mono">Color &amp; Sound</p>
@@ -504,7 +422,7 @@
               </div>
 
               <div class="integration-tile">
-                <span class="material-symbols-outlined text-rust text-2xl">palette</span>
+                <img class="integration-icon integration-icon-monochrome" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/adobe.svg" alt="Adobe logo" loading="lazy">
                 <div>
                   <h4 class="text-sm font-semibold text-primary-fixed">Adobe Suite</h4>
                   <p class="text-[11px] text-on-surface-variant font-mono">Editorial Design</p>
@@ -512,7 +430,7 @@
               </div>
 
               <div class="integration-tile">
-                <span class="material-symbols-outlined text-rust text-2xl">draw</span>
+                <img class="integration-icon" src="https://cdn.simpleicons.org/figma/FF6B35" alt="Figma logo" loading="lazy">
                 <div>
                   <h4 class="text-sm font-semibold text-primary-fixed">Figma</h4>
                   <p class="text-[11px] text-on-surface-variant font-mono">Design Systems</p>
@@ -520,7 +438,7 @@
               </div>
 
               <div class="integration-tile">
-                <span class="material-symbols-outlined text-rust text-2xl">brush</span>
+                <img class="integration-icon integration-icon-monochrome" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/canva.svg" alt="Canva logo" loading="lazy">
                 <div>
                   <h4 class="text-sm font-semibold text-primary-fixed">Canva Teams</h4>
                   <p class="text-[11px] text-on-surface-variant font-mono">Brand Kits</p>
@@ -528,7 +446,7 @@
               </div>
 
               <div class="integration-tile">
-                <span class="material-symbols-outlined text-rust text-2xl">hub</span>
+                <img class="integration-icon" src="https://cdn.simpleicons.org/hubspot/FF6B35" alt="HubSpot logo" loading="lazy">
                 <div>
                   <h4 class="text-sm font-semibold text-primary-fixed">HubSpot</h4>
                   <p class="text-[11px] text-on-surface-variant font-mono">Donor Comms</p>
@@ -536,7 +454,7 @@
               </div>
 
               <div class="integration-tile">
-                <span class="material-symbols-outlined text-rust text-2xl">mail</span>
+                <img class="integration-icon" src="https://cdn.simpleicons.org/mailchimp/FF6B35" alt="Mailchimp logo" loading="lazy">
                 <div>
                   <h4 class="text-sm font-semibold text-primary-fixed">Mailchimp</h4>
                   <p class="text-[11px] text-on-surface-variant font-mono">Newsletters</p>
@@ -544,7 +462,7 @@
               </div>
 
               <div class="integration-tile">
-                <span class="material-symbols-outlined text-rust text-2xl">volunteer_activism</span>
+                <img class="integration-icon" src="https://cdn.simpleicons.org/everydotorg/FF6B35" alt="Every.org logo" loading="lazy">
                 <div>
                   <h4 class="text-sm font-semibold text-primary-fixed">Every.org</h4>
                   <p class="text-[11px] text-on-surface-variant font-mono">Giving Platforms</p>
@@ -552,7 +470,7 @@
               </div>
 
               <div class="integration-tile">
-                <span class="material-symbols-outlined text-rust text-2xl">cloud_sync</span>
+                <img class="integration-icon integration-icon-monochrome" src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/salesforce.svg" alt="Salesforce logo" loading="lazy">
                 <div>
                   <h4 class="text-sm font-semibold text-primary-fixed">Salesforce NPSP</h4>
                   <p class="text-[11px] text-on-surface-variant font-mono">Nonprofit Cloud</p>
@@ -560,7 +478,7 @@
               </div>
 
               <div class="integration-tile">
-                <span class="material-symbols-outlined text-rust text-2xl">query_stats</span>
+                <img class="integration-icon" src="https://cdn.simpleicons.org/googleads/FF6B35" alt="Google Ads logo" loading="lazy">
                 <div>
                   <h4 class="text-sm font-semibold text-primary-fixed">Google Grants</h4>
                   <p class="text-[11px] text-on-surface-variant font-mono">Analytics &amp; Ads</p>
@@ -576,98 +494,90 @@
     </section>
 
     <!-- 6. SECTION 6: SPECIFICATION & COMPARISON MATRIX -->
-    <section class="py-24 md:py-32 bg-background border-b border-outline-variant/30">
-      <div class="grid-container">
-        
-        <div class="mb-16 max-w-3xl">
-          <span class="text-xs font-mono uppercase tracking-[0.2em] text-rust mb-3 block font-semibold">
-            THE QRATE ADVANTAGE
-          </span>
-          <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl text-primary-fixed font-normal leading-tight">
-            Infinite scale, expert validation, proven impact.
-          </h2>
+    <section class="advantage-section" aria-labelledby="advantage-title">
+      <div class="grid-container advantage-layout">
+        <div class="advantage-intro">
+          <div class="advantage-index" aria-hidden="true">06</div>
+          <div>
+            <span class="advantage-kicker">The Qrate advantage</span>
+            <h2 id="advantage-title">Infinite scale,<br><em>expert validation.</em></h2>
+            <p class="advantage-deck">A specialist collective built for the moments when your mission has to hold up under scrutiny.</p>
+          </div>
         </div>
 
-        <!-- Spec Comparison Rows -->
-        <div class="border-t border-outline-variant">
-          
-          <!-- Row 1 -->
-          <div class="spec-matrix-row">
-            <div>
-              <h4 class="font-mono text-xs uppercase tracking-widest text-on-surface-variant mb-2">Traditional Agencies / Freelancers</h4>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
-                Fragmented individual contractors with high turnover, generic stock photography, and lack of deep African development context.
-              </p>
-            </div>
-            <div>
-              <h4 class="font-mono text-xs uppercase tracking-widest text-rust font-semibold mb-2">Qrate Dedicated Impact Team</h4>
-              <p class="text-sm font-medium text-primary-fixed leading-relaxed">
-                A dedicated 10-specialist creative collective under seasoned creative direction. 100% on-location authentic footage with zero generic stock.
-              </p>
-            </div>
+        <div class="advantage-board">
+          <div class="advantage-board-header">
+            <span>What changes</span>
+            <span>With Qrate</span>
           </div>
 
-          <!-- Row 2 -->
-          <div class="spec-matrix-row">
-            <div>
-              <h4 class="font-mono text-xs uppercase tracking-widest text-on-surface-variant mb-2">Traditional Agencies / Freelancers</h4>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
-                Informal safeguarding, questionable consent practices, and risk of donor backlash due to unverified community representation.
-              </p>
+          <article class="advantage-row">
+            <span class="advantage-row-number">01</span>
+            <div class="advantage-column advantage-column-muted">
+              <h3>Fragmented capacity</h3>
+              <p>Individual contractors, high turnover, generic stock photography, and no deep African development context.</p>
             </div>
-            <div>
-              <h4 class="font-mono text-xs uppercase tracking-widest text-rust font-semibold mb-2">Qrate Dedicated Impact Team</h4>
-              <p class="text-sm font-medium text-primary-fixed leading-relaxed">
-                Institutional-grade safeguarding protocols, written multilingual consent for all participants, and dignified, ethical storytelling.
-              </p>
+            <div class="advantage-column advantage-column-qrate">
+              <h3>One accountable team</h3>
+              <p>A dedicated 10-specialist creative collective under seasoned direction, with 100% authentic on-location footage.</p>
             </div>
-          </div>
+          </article>
 
-          <!-- Row 3 -->
-          <div class="spec-matrix-row">
-            <div>
-              <h4 class="font-mono text-xs uppercase tracking-widest text-on-surface-variant mb-2">Traditional Agencies / Freelancers</h4>
-              <p class="text-sm text-on-surface-variant leading-relaxed">
-                Unpredictable hourly billing, hidden markup for equipment, and complex change orders that inflate project budgets.
-              </p>
+          <article class="advantage-row">
+            <span class="advantage-row-number">02</span>
+            <div class="advantage-column advantage-column-muted">
+              <h3>Representation risk</h3>
+              <p>Informal safeguarding and questionable consent can expose your organization to donor backlash.</p>
             </div>
-            <div>
-              <h4 class="font-mono text-xs uppercase tracking-widest text-rust font-semibold mb-2">Qrate Dedicated Impact Team</h4>
-              <p class="text-sm font-medium text-primary-fixed leading-relaxed">
-                Transparent fixed monthly retainers or scoped per-assignment pricing with complete equipment and crew inclusions.
-              </p>
+            <div class="advantage-column advantage-column-qrate">
+              <h3>Dignity by design</h3>
+              <p>Institutional-grade safeguarding, multilingual consent, and ethical storytelling for every participant.</p>
             </div>
-          </div>
+          </article>
 
+          <article class="advantage-row">
+            <span class="advantage-row-number">03</span>
+            <div class="advantage-column advantage-column-muted">
+              <h3>Unclear investment</h3>
+              <p>Hourly billing, equipment markups, and change orders that make project budgets unpredictable.</p>
+            </div>
+            <div class="advantage-column advantage-column-qrate">
+              <h3>Transparent scale</h3>
+              <p>Fixed monthly retainers or scoped assignments, with equipment and crew included from the start.</p>
+            </div>
+          </article>
         </div>
-
       </div>
     </section>
 
     <!-- 7. SECTION 7: EDITORIAL PULL-QUOTE / TESTIMONIAL -->
-    <section class="py-24 md:py-32 bg-surface-container-low border-b border-outline-variant/30">
-      <div class="grid-container max-w-4xl mx-auto">
-        <div class="pull-quote-box">
-          <div class="flex items-center gap-4 mb-8">
-            <span class="text-xs font-mono uppercase tracking-[0.16em] text-rust font-semibold">Institutional Partner Testimony</span>
-            <span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
-            <span class="text-xs font-mono text-on-surface-variant">Hope Haven Rwanda</span>
+    <section class="testimony-section" aria-labelledby="testimony-title">
+      <div class="grid-container testimony-layout">
+        <div class="testimony-index" aria-hidden="true">07<span>/</span></div>
+        <div class="testimony-content">
+          <div class="testimony-meta">
+            <span class="testimony-kicker">Institutional partner testimony</span>
+            <span class="testimony-rule"></span>
+            <span>Hope Haven Rwanda</span>
           </div>
 
-          <blockquote class="font-serif italic text-2xl sm:text-3xl md:text-4xl text-primary-fixed leading-snug font-normal mb-8">
-            "We needed a creative team that truly understood the nuances of institutional funding. Qrate redefined our visual identity and annual report, leading to our most successful fundraising cycle to date."
-          </blockquote>
+          <div class="testimony-quote-wrap">
+            <span class="testimony-mark" aria-hidden="true">“</span>
+            <blockquote id="testimony-title">
+              We needed a creative team that truly understood the nuances of institutional funding. Qrate redefined our visual identity and annual report, leading to our most successful fundraising cycle to date.
+            </blockquote>
+          </div>
 
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-6 border-t border-outline-variant/60">
-            <div>
-              <p class="font-body font-semibold text-sm text-primary-fixed">Executive Leadership</p>
-              <p class="text-xs text-on-surface-variant">Hope Haven Christian School &amp; Community Initiative</p>
+          <div class="testimony-footer">
+            <div class="testimony-author">
+              <span class="testimony-author-label">In their words</span>
+              <strong>Executive Leadership</strong>
+              <span>Hope Haven Christian School &amp; Community Initiative</span>
             </div>
-            <div class="flex items-center gap-2">
-              <a href="case-study.html" class="text-xs font-mono text-rust hover:underline flex items-center gap-1 font-semibold">
-                Read full case study <span class="material-symbols-outlined text-xs">arrow_forward</span>
-              </a>
-            </div>
+            <a href="case-study.html" class="testimony-link">
+              <span>Read full case study</span>
+              <span class="material-symbols-outlined">arrow_outward</span>
+            </a>
           </div>
         </div>
       </div>
