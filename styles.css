@@ -2375,6 +2375,106 @@ html {
   }
 }
 
+/* Hero Section Sliding Client Logos Marquee */
+.hero-logo-marquee-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: calc(100% + 32px);
+  margin-left: -16px;
+  margin-right: -16px;
+  padding: 8px 0 4px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 32px, black calc(100% - 32px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, black 32px, black calc(100% - 32px), transparent 100%);
+}
+
+@media (min-width: 768px) {
+  .hero-logo-marquee-wrapper {
+    width: calc(100% + 128px);
+    margin-left: -64px;
+    margin-right: -64px;
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 36px, black calc(100% - 36px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, black 36px, black calc(100% - 36px), transparent 100%);
+  }
+}
+
+.hero-logo-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+  align-items: center;
+  animation: hero-logo-scroll 30s linear infinite;
+}
+
+.hero-logo-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.hero-logo-marquee-item {
+  flex-shrink: 0;
+  width: 168px;
+  height: 68px;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 14px;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.22);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hero-logo-marquee-item:hover {
+  border-color: var(--brand-orange);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(255, 107, 53, 0.32);
+}
+
+.hero-logo-marquee-img {
+  max-height: 52px;
+  max-width: 92%;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.hero-logo-marquee-item:hover .hero-logo-marquee-img {
+  transform: scale(1.05);
+}
+
+@keyframes hero-logo-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 8px));
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-logo-marquee-item {
+    width: 140px;
+    height: 56px;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+  .hero-logo-marquee-img {
+    max-height: 44px;
+    max-width: 92%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-logo-marquee-track {
+    animation: none;
+    overflow-x: auto;
+  }
+}
+
+
 /* Monogram Avatars */
 .avatar-monogram {
   width: 48px;
