@@ -167,6 +167,7 @@
     <a class="nav-link" href="index.html">Home</a>
     <a class="nav-link" href="work.html">Work</a>
     <a class="nav-link" href="services.html">Services</a>
+    <a class="nav-link text-rust font-semibold" href="education.html">Education &amp; Schools</a>
     <a class="nav-link" href="about.html">About</a>
     <a class="nav-link" href="philosophy.html">Philosophy</a>
     <a class="nav-link" href="plans.html">Plans</a>
@@ -233,6 +234,7 @@
                 <label for="service">Service Interest</label>
                 <select class="input-field" id="service" name="service">
                   <option value="">Select an area</option>
+                  <option value="Education &amp; School Communications">Education &amp; School Communications</option>
                   <option>Brand Strategy</option>
                   <option>Film &amp; Field Storytelling</option>
                   <option>Design &amp; Visual Systems</option>
@@ -347,6 +349,7 @@
         <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
           <li><a class="hover:text-rust transition-colors" href="work.html">Our Work</a></li>
           <li><a class="hover:text-rust transition-colors" href="services.html">Services</a></li>
+          <li><a class="hover:text-rust transition-colors font-semibold text-rust" href="education.html">Education &amp; Schools</a></li>
           <li><a class="hover:text-rust transition-colors" href="about.html">About Us</a></li>
           <li><a class="hover:text-rust transition-colors" href="philosophy.html">Philosophy</a></li>
           <li><a class="hover:text-rust transition-colors" href="plans.html">Engagement Models</a></li>
@@ -391,5 +394,18 @@
     };
   </script>
   <script src="script.js"></script>
+  <script>
+    // Pre-populate service dropdown if query param ?service=education is present
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const serviceParam = urlParams.get('service');
+      const serviceSelect = document.getElementById('service');
+      if (serviceParam && serviceSelect) {
+        if (serviceParam.toLowerCase().includes('edu')) {
+          serviceSelect.value = 'Education & School Communications';
+        }
+      }
+    });
+  </script>
 </body>
 </html>
