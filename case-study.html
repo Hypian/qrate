@@ -17,7 +17,6 @@
   <!-- Preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="preconnect" href="https://cdn.tailwindcss.com"/>
 
   <!-- Open Graph & Twitter -->
   <meta property="og:type" content="article"/>
@@ -36,6 +35,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css?v=ddd8e52959"/>
+  <link rel="stylesheet" href="ui/layout.css?v=72b7a96a9b">
+  <link rel="stylesheet" href="studio.css?v=a1a2ed2c5d">
 
   <!-- Schema.org Case Study / CollectionPage -->
   <script type="application/ld+json">
@@ -47,65 +48,9 @@
   "description": "Documentary films, student photography and a graduation magazine for Hope Haven, with production in Rwanda for its US communications team."
 }
   </script>
-
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "background": "#f7f7f5",
-            "surface": "#f7f7f5",
-            "surface-container-lowest": "#ffffff",
-            "surface-container-low": "#f2f2ef",
-            "surface-container": "#ecece7",
-            "surface-container-high": "#e2e5e1",
-            "surface-container-highest": "#d6d9d4",
-            "surface-variant": "#e9eaeb",
-            "on-surface": "#09131f",
-            "on-surface-variant": "#4b5058",
-            "primary": "#09131f",
-            "primary-fixed": "#09131f",
-            "kraft": "#ff6b35",
-            "kraft-dark": "#e55d2d",
-            "forest": "#09131f",
-            "forest-dark": "#071018",
-            "rust": "#ff6b35",
-            "rust-dark": "#d45426",
-            "rust-hover": "#e85f2e",
-            "secondary": "#ff6b35",
-            "tertiary": "#4b5058",
-            "sage-light": "#6d7681",
-            "ochre-gold": "#ffdc50",
-            "outline": "#a2a9b0",
-            "outline-variant": "#d9dbd7"
-          },
-          fontFamily: {
-            "serif": ["Newsreader", "Georgia", "serif"],
-            "display-xl": ["Newsreader", "Space Grotesk", "serif"],
-            "headline-lg": ["Newsreader", "Space Grotesk", "serif"],
-            "headline-md": ["Space Grotesk", "sans-serif"],
-            "headline-sm": ["Space Grotesk", "sans-serif"],
-            "body-lg": ["Geist", "sans-serif"],
-            "body-base": ["Geist", "sans-serif"],
-            "label-md": ["Geist", "sans-serif"],
-            "label-sm": ["Geist", "sans-serif"],
-            "mono": ["Geist", "monospace"]
-          },
-          spacing: {
-            "gutter-desktop": "64px",
-            "gutter-tablet": "32px",
-            "gutter-mobile": "16px",
-            "container-max": "1440px"
-          }
-        }
-      }
-    }
-  </script>
 </head>
-<body class="bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
+<body class="studio-page page-case-study bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
+  <a class="skip-content" href="#main-content">Skip to content</a>
   <div id="progress"></div>
 
   <!-- TopNavBar (Dynamic Transparent-to-Frosted Header with Centered Links) -->
@@ -125,7 +70,7 @@
     </div>
     <div class="nav-center-links hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8 pointer-events-auto absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="index.html">Home</a>
-      <a class="nav-link active font-label-md text-sm font-semibold transition-colors duration-200" href="work.html">Work</a>
+      <a class="nav-link active font-label-md text-sm font-semibold transition-colors duration-200" aria-current="page" href="work.html">Work</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="services.html">Services</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="education.html">Education</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="about.html">About</a>
@@ -161,7 +106,7 @@
   <!-- Mobile Nav Drawer -->
   <div id="mobile-menu" inert class="mobile-nav-drawer md:hidden">
     <a class="nav-link" href="index.html">Home</a>
-    <a class="nav-link active" href="work.html">Work</a>
+    <a class="nav-link active" aria-current="page" href="work.html">Work</a>
     <a class="nav-link" href="services.html">Services</a>
     <a class="nav-link text-rust font-semibold" href="education.html">Education</a>
     <a class="nav-link" href="about.html">About</a>
@@ -182,7 +127,7 @@
     </a>
   </div>
 
-  <main class="flex-grow -mt-20">
+  <main id="main-content" tabindex="-1" class="flex-grow -mt-20">
 <section class="hero-kraft editorial-hero">
       <div class="editorial-wrap editorial-hero-grid hero-with-art">
         <div>
@@ -206,9 +151,12 @@
       </div>
     </section>
     <section class="editorial-section ">
-      <div class="editorial-wrap">
-        <h2>What Hope Haven needed</h2>
-        <p>The school needed regular coverage of student life in Rwanda and footage its US team could use in its own communications. We planned with the school, interviewed students and staff, and photographed what happened on campus.</p>
+      <div class="editorial-wrap brief-feature">
+        <div class="feature-copy">
+          <h2>What Hope Haven needed</h2>
+          <p>The school needed regular coverage of student life in Rwanda and footage its US team could use in its own communications. We planned with the school, interviewed students and staff, and photographed what happened on campus.</p>
+        </div>
+        <figure class="photo-frame"><img src="photos/hope-haven-hero-2.webp" alt="A student shows a letter from abroad." loading="lazy" decoding="async"></figure>
       </div>
     </section>
     <section class="editorial-section editorial-tint" id="selected-work">
@@ -218,7 +166,12 @@
           <article>
             <h3>Graduation 2025</h3>
             <p>We filmed the celebrations, took graduate portraits and designed the end-of-year magazine.</p>
-            <div class="editorial-player">
+            <details class="editorial-player film-player">
+              <summary>
+                <img src="photos/hope-haven-graduation-film.webp" alt="" loading="lazy" decoding="async">
+                <span class="film-open">Open player for the graduation documentary</span>
+                <span class="film-close">Close player for the graduation documentary</span>
+              </summary>
               <iframe
                   class="w-full h-full"
                   src="https://www.youtube.com/embed/9lcjePonj7o"
@@ -227,7 +180,7 @@
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen></iframe>
-            </div>
+            </details>
             <a class="case-yearbook" href="https://heyzine.com/flip-book/5e792f1985.html#page/2" aria-label="Open the 2026 Hope Haven yearbook">
               <img src="photos/hope-haven-yearbook.webp" alt="Hope Haven Christian School Yearbook 2026" loading="lazy" decoding="async">
             </a>
@@ -250,7 +203,12 @@
           <article>
             <h3>Content for the US team</h3>
             <p>We captured interviews, photographs and footage in Rwanda that Hope Haven’s US team could use in its communications.</p>
-            <div class="editorial-player">
+            <details class="editorial-player film-player">
+              <summary>
+                <img src="photos/hope-haven-flora-film.webp" alt="" loading="lazy" decoding="async">
+                <span class="film-open">Open player for Flora’s Story</span>
+                <span class="film-close">Close player for Flora’s Story</span>
+              </summary>
               <iframe
                   class="w-full h-full"
                   src="https://www.youtube.com/embed/gngeV3EqVh4"
@@ -259,7 +217,7 @@
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen></iframe>
-            </div>
+            </details>
             <div class="editorial-links">
               <a class="editorial-link" href="https://www.youtube.com/watch?v=gngeV3EqVh4">Watch Hope Haven Rwanda | Flora’s Story</a>
             </div>
@@ -268,13 +226,13 @@
       </div>
     </section>
     <section class="editorial-section ">
-      <div class="editorial-wrap">
+      <div class="editorial-wrap credits-line">
         <h2 id="project-credits">Project credits</h2>
         <p>Babu Kamanzi led creative direction and editing. Parfait is credited for photography on the Hope Haven assignment.</p>
       </div>
     </section>
     <section class="editorial-section " id="follow-the-stories">
-      <div class="editorial-wrap">
+      <div class="editorial-wrap channel-index">
         <h2>Find Hope Haven online</h2>
         <div class="editorial-links">
           <a class="editorial-link" href="https://www.instagram.com/hopehavenschool_/">School Instagram</a>
@@ -287,11 +245,7 @@
     </section>
     <section class="editorial-section editorial-cta">
       <div class="editorial-wrap">
-        <div class="cta-starfield" aria-hidden="true">
-          <div id="stars"></div>
-          <div id="stars2"></div>
-          <div id="stars3"></div>
-        </div>
+        <span class="closing-mark" aria-hidden="true"></span>
         <h2 id="talk-to-qrate">Need a team in Rwanda?</h2>
         <p>Tell us what you need to capture for a shoot or a longer assignment.</p>
         <div class="editorial-links">
@@ -412,6 +366,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2d1c5b53d2"></script>
 </body>
 </html>

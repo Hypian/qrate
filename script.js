@@ -51,13 +51,28 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileToggle.focus();
       }
     });
-    window.matchMedia('(max-width: 768px)').addEventListener('change', () => toggleMenu(false));
+    const drawerBreakpoint = document.body.classList.contains('studio-page') ? '(max-width: 65rem)' : '(max-width: 768px)';
+    window.matchMedia(drawerBreakpoint).addEventListener('change', () => toggleMenu(false));
+
+    // Keep keyboard navigation within the open drawer and its toggle.
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Tab' || mobileDrawer.inert) return;
+      const links = mobileDrawer.querySelectorAll('a[href]');
+      const lastLink = links[links.length - 1];
+      if (event.shiftKey && document.activeElement === mobileToggle) {
+        event.preventDefault();
+        lastLink?.focus();
+      } else if (!event.shiftKey && document.activeElement === lastLink) {
+        event.preventDefault();
+        mobileToggle.focus();
+      }
+    });
   }
 
   // 3. Dynamic Header on Scroll (Switches colors once passing hero section)
   const dynamicHeader = document.querySelector('.header-dynamic');
   const heroSection = document.querySelector('.hero-kraft');
-  if (dynamicHeader) {
+  if (dynamicHeader && !document.body.classList.contains('studio-page')) {
     // Past the hero the bar dissipates (logo + Start Project only). Sample the
     // surface beneath the logo and flag `.on-light` so the wordmark switches to
     // Impact Night over light backgrounds (stays white over dark sections).
@@ -149,6 +164,16 @@ document.addEventListener('DOMContentLoaded', () => {
         content.classList.add('open');
         if (icon) icon.style.transform = 'rotate(180deg)';
       }
+    });
+  });
+
+  // Closing a film also stops its soundtrack.
+  document.querySelectorAll('.film-player').forEach(player => {
+    const frame = player.querySelector('iframe');
+    const source = frame.getAttribute('src');
+    player.addEventListener('toggle', () => {
+      const next = player.open ? source : 'about:blank';
+      if (frame.getAttribute('src') !== next) frame.setAttribute('src', next);
     });
   });
 

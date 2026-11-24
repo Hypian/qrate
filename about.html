@@ -36,11 +36,12 @@
   <!-- Preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="preconnect" href="https://cdn.tailwindcss.com"/>
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css?v=ddd8e52959"/>
+  <link rel="stylesheet" href="ui/layout.css?v=72b7a96a9b">
+  <link rel="stylesheet" href="studio.css?v=a1a2ed2c5d">
 
   <!-- Schema.org Breadcrumbs & AboutPage -->
   <script type="application/ld+json">
@@ -52,65 +53,9 @@
   "description": "Qrate is a creative communications agency in Kigali. We work with nonprofits, foundations, schools and social enterprises on film, design, campaigns and reporting."
 }
   </script>
-
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "background": "#f7f7f5",
-            "surface": "#f7f7f5",
-            "surface-container-lowest": "#ffffff",
-            "surface-container-low": "#f2f2ef",
-            "surface-container": "#ecece7",
-            "surface-container-high": "#e2e5e1",
-            "surface-container-highest": "#d6d9d4",
-            "surface-variant": "#e9eaeb",
-            "on-surface": "#09131f",
-            "on-surface-variant": "#4b5058",
-            "primary": "#09131f",
-            "primary-fixed": "#09131f",
-            "kraft": "#ff6b35",
-            "kraft-dark": "#e55d2d",
-            "forest": "#09131f",
-            "forest-dark": "#071018",
-            "rust": "#ff6b35",
-            "rust-dark": "#d45426",
-            "rust-hover": "#e85f2e",
-            "secondary": "#ff6b35",
-            "tertiary": "#4b5058",
-            "sage-light": "#6d7681",
-            "ochre-gold": "#ffdc50",
-            "outline": "#a2a9b0",
-            "outline-variant": "#d9dbd7"
-          },
-          fontFamily: {
-            "serif": ["Newsreader", "Georgia", "serif"],
-            "display-xl": ["Newsreader", "Space Grotesk", "serif"],
-            "headline-lg": ["Newsreader", "Space Grotesk", "serif"],
-            "headline-md": ["Space Grotesk", "sans-serif"],
-            "headline-sm": ["Space Grotesk", "sans-serif"],
-            "body-lg": ["Geist", "sans-serif"],
-            "body-base": ["Geist", "sans-serif"],
-            "label-md": ["Geist", "sans-serif"],
-            "label-sm": ["Geist", "sans-serif"],
-            "mono": ["Geist", "monospace"]
-          },
-          spacing: {
-            "gutter-desktop": "64px",
-            "gutter-tablet": "32px",
-            "gutter-mobile": "16px",
-            "container-max": "1440px"
-          }
-        }
-      }
-    }
-  </script>
 </head>
-<body class="bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
+<body class="studio-page page-about bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
+  <a class="skip-content" href="#main-content">Skip to content</a>
   <div id="progress"></div>
 
   <!-- TopNavBar (Dynamic Transparent-to-Frosted Header with Centered Links) -->
@@ -133,7 +78,7 @@
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="work.html">Work</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="services.html">Services</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="education.html">Education</a>
-      <a class="nav-link active font-label-md text-sm font-semibold transition-colors duration-200" href="about.html">About</a>
+      <a class="nav-link active font-label-md text-sm font-semibold transition-colors duration-200" aria-current="page" href="about.html">About</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="philosophy.html">How we work</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="plans.html">Plans</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="resources.html">Resources</a>
@@ -169,7 +114,7 @@
     <a class="nav-link" href="work.html">Work</a>
     <a class="nav-link" href="services.html">Services</a>
     <a class="nav-link text-rust font-semibold" href="education.html">Education</a>
-    <a class="nav-link active" href="about.html">About</a>
+    <a class="nav-link active" aria-current="page" href="about.html">About</a>
     <a class="nav-link" href="philosophy.html">How we work</a>
     <a class="nav-link" href="plans.html">Plans</a>
     <a class="nav-link" href="resources.html">Resources</a>
@@ -187,7 +132,7 @@
     </a>
   </div>
 
-  <main class="flex-grow -mt-20">
+  <main id="main-content" tabindex="-1" class="flex-grow -mt-20">
 <section class="hero-kraft editorial-hero">
       <div class="editorial-wrap editorial-hero-grid hero-with-art">
         <div>
@@ -223,8 +168,11 @@
         <h2>Organisations we’ve worked with</h2>
         <div class="editorial-grid partner-cards">
           <article>
-            <div class="partner-logo">
+            <div class="partner-image">
+              <img src="photos/hope-haven-hero-1.webp" alt="" loading="lazy" decoding="async">
+              <div class="partner-logo">
               <img src="logos/hope-haven.svg" alt="" loading="lazy">
+            </div>
             </div>
             <h3>Hope Haven Rwanda</h3>
             <p>Graduation coverage, a magazine and production in Rwanda for the US team.</p>
@@ -233,8 +181,11 @@
             </div>
           </article>
           <article>
-            <div class="partner-logo logo-on-paper">
+            <div class="partner-image">
+              <img src="photos/ntare-stem-film.webp" alt="" loading="lazy" decoding="async">
+              <div class="partner-logo logo-on-paper">
               <img src="logos/ntare-louisenlund.svg" alt="" loading="lazy">
+            </div>
             </div>
             <h3>Ntare Louisenlund School</h3>
             <p>A documentary about STEM learning on campus.</p>
@@ -274,11 +225,7 @@
     </section>
     <section class="editorial-section editorial-cta">
       <div class="editorial-wrap">
-        <div class="cta-starfield" aria-hidden="true">
-          <div id="stars"></div>
-          <div id="stars2"></div>
-          <div id="stars3"></div>
-        </div>
+        <span class="closing-mark" aria-hidden="true"></span>
         <h2>Talk to Qrate</h2>
         <p>Tell us what you would like to make.</p>
         <div class="editorial-links">
@@ -399,6 +346,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2d1c5b53d2"></script>
 </body>
 </html>
