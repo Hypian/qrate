@@ -17,7 +17,6 @@
   <!-- Preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="preconnect" href="https://cdn.tailwindcss.com"/>
 
   <!-- Open Graph & Twitter -->
   <meta property="og:type" content="website"/>
@@ -35,6 +34,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css?v=ddd8e52959"/>
+  <link rel="stylesheet" href="ui/layout.css?v=72b7a96a9b">
+  <link rel="stylesheet" href="studio.css?v=a1a2ed2c5d">
 
   <!-- Schema.org Service -->
   <script type="application/ld+json">
@@ -46,65 +47,9 @@
   "description": "Documentary production, campaign communications, visual identity, donor reports and websites for mission-driven organisations."
 }
   </script>
-
-  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "background": "#f7f7f5",
-            "surface": "#f7f7f5",
-            "surface-container-lowest": "#ffffff",
-            "surface-container-low": "#f2f2ef",
-            "surface-container": "#ecece7",
-            "surface-container-high": "#e2e5e1",
-            "surface-container-highest": "#d6d9d4",
-            "surface-variant": "#e9eaeb",
-            "on-surface": "#09131f",
-            "on-surface-variant": "#4b5058",
-            "primary": "#09131f",
-            "primary-fixed": "#09131f",
-            "kraft": "#ff6b35",
-            "kraft-dark": "#e55d2d",
-            "forest": "#09131f",
-            "forest-dark": "#071018",
-            "rust": "#ff6b35",
-            "rust-dark": "#d45426",
-            "rust-hover": "#e85f2e",
-            "secondary": "#ff6b35",
-            "tertiary": "#4b5058",
-            "sage-light": "#6d7681",
-            "ochre-gold": "#ffdc50",
-            "outline": "#a2a9b0",
-            "outline-variant": "#d9dbd7"
-          },
-          fontFamily: {
-            "serif": ["Newsreader", "Georgia", "serif"],
-            "display-xl": ["Newsreader", "Space Grotesk", "serif"],
-            "headline-lg": ["Newsreader", "Space Grotesk", "serif"],
-            "headline-md": ["Space Grotesk", "sans-serif"],
-            "headline-sm": ["Space Grotesk", "sans-serif"],
-            "body-lg": ["Geist", "sans-serif"],
-            "body-base": ["Geist", "sans-serif"],
-            "label-md": ["Geist", "sans-serif"],
-            "label-sm": ["Geist", "sans-serif"],
-            "mono": ["Geist", "monospace"]
-          },
-          spacing: {
-            "gutter-desktop": "64px",
-            "gutter-tablet": "32px",
-            "gutter-mobile": "16px",
-            "container-max": "1440px"
-          }
-        }
-      }
-    }
-  </script>
 </head>
-<body class="bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
+<body class="studio-page page-services bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
+  <a class="skip-content" href="#main-content">Skip to content</a>
   <div id="progress"></div>
 
   <!-- TopNavBar (Dynamic Transparent-to-Frosted Header with Centered Links) -->
@@ -125,7 +70,7 @@
     <div class="nav-center-links hidden md:flex items-center space-x-4 lg:space-x-6 xl:space-x-8 pointer-events-auto absolute left-1/2 -translate-x-1/2 whitespace-nowrap">
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="index.html">Home</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="work.html">Work</a>
-      <a class="nav-link active font-label-md text-sm font-semibold transition-colors duration-200" href="services.html">Services</a>
+      <a class="nav-link active font-label-md text-sm font-semibold transition-colors duration-200" aria-current="page" href="services.html">Services</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="education.html">Education</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="about.html">About</a>
       <a class="nav-link font-label-md text-sm transition-colors duration-200" href="philosophy.html">How we work</a>
@@ -161,7 +106,7 @@
   <div id="mobile-menu" inert class="mobile-nav-drawer md:hidden">
     <a class="nav-link" href="index.html">Home</a>
     <a class="nav-link" href="work.html">Work</a>
-    <a class="nav-link active" href="services.html">Services</a>
+    <a class="nav-link active" aria-current="page" href="services.html">Services</a>
     <a class="nav-link text-rust font-semibold" href="education.html">Education</a>
     <a class="nav-link" href="about.html">About</a>
     <a class="nav-link" href="philosophy.html">How we work</a>
@@ -181,36 +126,66 @@
     </a>
   </div>
 
-  <main class="flex-grow -mt-20">
-<section class="hero-kraft editorial-hero">
-      <div class="editorial-wrap editorial-hero-grid hero-with-art">
-        <div>
+  <main id="main-content" tabindex="-1" class="flex-grow -mt-20">
+<section class="hero-kraft editorial-hero services-hero">
+      <div class="editorial-wrap">
+        <div class="services-lead">
           <h1>Communications services</h1>
-          <p>Get a team to plan the work, document what happens and turn it into material people can use.</p>
-        </div>
-        <div class="hero-art">
-          <div class="print-pair">
-            <figure class="photo-frame">
-              <img src="photos/bts-1.webp" alt="Graduates in black robes and green stoles." loading="eager" decoding="async">
-            </figure>
-            <figure class="yearbook-cover">
-              <img src="photos/hope-haven-yearbook.webp" alt="Cover of the 2026 Hope Haven Christian School yearbook." loading="eager" decoding="async">
-            </figure>
+          <div>
+            <p>Get a team to plan the work, document what happens and turn it into material people can use.</p>
+            <a class="studio-jump" href="#commission">Explore services</a>
           </div>
         </div>
+        <fieldset class="work-viewer">
+          <legend class="visually-hidden">See Qrate’s work by format</legend>
+          <div class="viewer-controls">
+            <label><input type="radio" name="work-format" value="photo" aria-controls="view-photo" checked><span>Photography</span></label>
+            <label><input type="radio" name="work-format" value="film" aria-controls="view-film"><span>Film</span></label>
+            <label><input type="radio" name="work-format" value="print" aria-controls="view-print"><span>Print</span></label>
+          </div>
+          <div class="viewer-screen">
+            <figure id="view-photo" class="viewer-slide slide-photo">
+              <img src="photos/hope-haven-hero-1.webp" alt="A woman holds a smiling child on the path between school buildings at Hope Haven." decoding="async" loading="eager">
+              <figcaption>
+                <strong>On campus at Hope Haven</strong>
+                <a class="editorial-link" href="case-study.html">See the Hope Haven project</a>
+              </figcaption>
+            </figure>
+            <figure id="view-film" class="viewer-slide slide-film">
+              <img src="photos/ntare-stem-film.webp" alt="Students in a Ntare Louisenlund School STEM classroom." decoding="async" loading="lazy">
+              <figcaption>
+                <strong>Ntare Louisenlund School</strong>
+                <a class="editorial-link" href="https://www.youtube.com/watch?v=dKBs8pl5pFM">Watch the STEM film</a>
+              </figcaption>
+            </figure>
+            <figure id="view-print" class="viewer-slide slide-print">
+              <img src="photos/hope-haven-spread.webp" alt="Two yearbook pages show the 2026 graduates in green stoles and class photographs." decoding="async" loading="lazy">
+              <figcaption>
+                <strong>Hope Haven yearbook</strong>
+                <a class="editorial-link" href="https://heyzine.com/flip-book/5e792f1985.html#page/20">Open the yearbook</a>
+              </figcaption>
+            </figure>
+          </div>
+        </fieldset>
       </div>
     </section>
-    <section class="editorial-section ">
+    <section class="editorial-section" id="commission">
       <div class="editorial-wrap">
         <h2>What you can commission</h2>
         <div class="editorial-grid illustrated-cards service-cards">
           <article>
-            <span class="service-symbol" data-symbol="architecture" aria-hidden="true"></span>
+            <div class="sample sample-identity">
+              <img src="photos/ui%20and%20brand/Qrate%20Logo%20Png%20Monogram%20Black%20Color.svg" alt="Qrate wordmark and brand colours." loading="lazy" decoding="async">
+              <span class="ink-swatches"></span>
+            </div>
             <h3>Brand and messaging</h3>
             <p>Visual identities, brand guides and templates for campaigns and partner communications.</p>
           </article>
           <article>
-            <span class="service-symbol" data-symbol="videocam" aria-hidden="true"></span>
+            <div class="sample sample-film">
+              <img src="photos/ntare-stem-film.webp" alt="Frame from the Ntare STEM documentary." loading="lazy" decoding="async">
+              <span class="film-edge"></span>
+            </div>
             <h3>Film and photography</h3>
             <p>Documentary films, interviews, event coverage and photography on location. Before the shoot, agree what can be filmed and shared.</p>
             <div class="editorial-links">
@@ -218,17 +193,24 @@
             </div>
           </article>
           <article>
-            <span class="service-symbol" data-symbol="palette" aria-hidden="true"></span>
+            <div class="sample sample-layout">
+              <img src="photos/hope-haven-spread.webp" alt="Graduation spread from the 2026 Hope Haven yearbook." loading="lazy" decoding="async">
+            </div>
             <h3>Design</h3>
             <p>Campaign artwork, presentations and infographics that make programme information easier to read.</p>
           </article>
           <article>
-            <span class="service-symbol" data-symbol="campaign" aria-hidden="true"></span>
+            <div class="sample sample-social">
+              <img src="photos/hope-haven-hero-1.webp" alt="A student on campus at Hope Haven." loading="lazy" decoding="async">
+              <img src="photos/hope-haven-student-life.webp" alt="A school visit to RwandAir." loading="lazy" decoding="async">
+            </div>
             <h3>Campaigns and social</h3>
             <p>Content planning, email and social assets, with publishing support where included in the scope.</p>
           </article>
           <article>
-            <span class="service-symbol" data-symbol="menu_book" aria-hidden="true"></span>
+            <div class="sample sample-publication">
+              <img src="photos/hope-haven-yearbook.webp" alt="Cover of the Hope Haven yearbook." loading="lazy" decoding="async">
+            </div>
             <h3>Reports and publications</h3>
             <p>Writing, editing and design for annual reports, policy briefs and magazines, using approved records and figures.</p>
             <div class="editorial-links">
@@ -236,7 +218,9 @@
             </div>
           </article>
           <article>
-            <span class="service-symbol" data-symbol="web" aria-hidden="true"></span>
+            <div class="sample sample-web">
+              <img src="photos/qrate-website-preview.webp" alt="Qrate’s homepage with its documentary photo collage." loading="lazy" decoding="async">
+            </div>
             <h3>Websites and landing pages</h3>
             <p>Build or update campaign and programme pages. We agree separately who maintains the site after launch.</p>
           </article>
@@ -244,7 +228,7 @@
       </div>
     </section>
     <section class="editorial-section editorial-tint">
-      <div class="editorial-wrap story-split">
+      <div class="editorial-wrap story-split school-feature">
         <div>
           <h2>Communications for schools</h2>
           <p>Show families a school day through film and photography. Give programme supporters reports and updates they can read and share.</p>
@@ -258,21 +242,23 @@
       </div>
     </section>
     <section class="editorial-section ">
-      <div class="editorial-wrap">
-        <h2>From a graduation to a magazine</h2>
-        <p>Hope Haven needed coverage of graduation for families and supporters. We filmed the ceremony, took portraits and laid out the magazine.</p>
-        <div class="editorial-links">
-          <a class="editorial-link" href="case-study.html">Read the Hope Haven case study</a>
+      <div class="editorial-wrap publication-feature">
+        <div class="feature-copy">
+          <h2>From a graduation to a magazine</h2>
+          <p>Hope Haven needed coverage of graduation for families and supporters. We filmed the ceremony, took portraits and laid out the magazine.</p>
+          <div class="editorial-links">
+            <a class="editorial-link" href="case-study.html">Read the Hope Haven case study</a>
+          </div>
         </div>
+        <a class="print-desk" href="https://heyzine.com/flip-book/5e792f1985.html#page/20" aria-label="Open the Hope Haven yearbook">
+          <img class="desk-spread" src="photos/hope-haven-spread.webp" alt="Inside the Hope Haven yearbook." loading="lazy" decoding="async">
+          <img class="desk-cover" src="photos/hope-haven-yearbook.webp" alt="Cover of the 2026 edition." loading="lazy" decoding="async">
+        </a>
       </div>
     </section>
     <section class="editorial-section editorial-cta">
       <div class="editorial-wrap">
-        <div class="cta-starfield" aria-hidden="true">
-          <div id="stars"></div>
-          <div id="stars2"></div>
-          <div id="stars3"></div>
-        </div>
+        <span class="closing-mark" aria-hidden="true"></span>
         <h2>Have a project in mind?</h2>
         <p>Tell us the audience, outputs and dates.</p>
         <div class="editorial-links">
@@ -394,6 +380,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=2d1c5b53d2"></script>
 </body>
 </html>
