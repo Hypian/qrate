@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleMenu = (forceState) => {
       const isOpen = forceState !== undefined ? forceState : !mobileDrawer.classList.contains('open');
       mobileDrawer.classList.toggle('open', isOpen);
+      mobileDrawer.inert = !isOpen;
       mobileToggle.classList.toggle('open', isOpen);
       mobileToggle.setAttribute('aria-expanded', String(isOpen));
       if (isOpen) {
@@ -47,8 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
         toggleMenu(false);
+        mobileToggle.focus();
       }
     });
+    window.matchMedia('(max-width: 768px)').addEventListener('change', () => toggleMenu(false));
   }
 
   // 3. Dynamic Header on Scroll (Switches colors once passing hero section)
@@ -149,52 +152,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Resource Modals
-  const modalTriggers = document.querySelectorAll('[data-open-modal]');
-  const modalOverlays = document.querySelectorAll('.modal-overlay');
-
-  modalTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      const modalId = trigger.getAttribute('data-open-modal');
-      const targetModal = document.getElementById(modalId);
-      if (targetModal) {
-        targetModal.classList.add('open');
-        targetModal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
+  // Each guide has a bookmarkable URL and a native keyboard-accessible dialog.
+  const guideLinks = [...document.querySelectorAll('[data-guide]')];
+  if (guideLinks.length) {
+    let opener = null;
+    const guideForHash = () => {
+      const id = window.location.hash.slice(1);
+      return guideLinks.some(link => link.dataset.guide === id) ? document.getElementById(id) : null;
+    };
+    const syncGuide = () => {
+      const next = guideForHash();
+      const current = document.querySelector('.guide-dialog[open]');
+      if (current && current !== next) current.close();
+      if (next && !next.open) next.showModal();
+    };
+    guideLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        opener = link;
+        if (link.hash === window.location.hash) syncGuide();
+      });
+      const dialog = document.getElementById(link.dataset.guide);
+      dialog.addEventListener('close', () => {
+        if (guideForHash() === dialog) {
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+        if (!guideForHash()) (opener || link).focus({ preventScroll: true });
+      });
     });
-  });
-
-  const closeModal = (modal) => {
-    if (modal) {
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-  };
-
-  document.querySelectorAll('.modal-close').forEach(closeBtn => {
-    closeBtn.addEventListener('click', () => {
-      const modal = closeBtn.closest('.modal-overlay');
-      closeModal(modal);
-    });
-  });
-
-  modalOverlays.forEach(overlay => {
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) {
-        closeModal(overlay);
-      }
-    });
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      const activeModal = document.querySelector('.modal-overlay.open');
-      if (activeModal) closeModal(activeModal);
-    }
-  });
+    window.addEventListener('hashchange', syncGuide);
+    syncGuide();
+  }
 
   // 5. Contact Form EmailJS Handling
   const contactForm = document.querySelector('[data-contact-form]');
@@ -204,6 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const statusBox = document.getElementById('formStatus');
+      if (submitBtn?.disabled) return;
       const originalMarkup = submitBtn ? submitBtn.innerHTML : '';
       const emailConfig = window.qrateEmailJs || {};
       const publicKey = emailConfig.publicKey || 'YOUR_PUBLIC_KEY';
@@ -250,8 +238,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="material-symbols-outlined">check</span>
               </div>
               <div class="form-status-copy">
-                <strong>Message sent</strong>
-                <p>Thank you. Your inquiry has been received. We will respond within one working day.</p>
+                <strong>Enquiry submitted</strong>
+                <p>Thank you. Our email service accepted your enquiry.</p>
               </div>
             </div>
           `;
@@ -347,50 +335,55 @@ document.addEventListener('DOMContentLoaded', () => {
     startStageTimer();
   }
 
-  // 7. Cookie & Privacy Consent Banner
-  const cookieBanner = document.getElementById('cookie-consent-banner');
-  const btnAcceptCookies = document.getElementById('cookie-accept-all');
-  const btnEssentialCookies = document.getElementById('cookie-essential-only');
-  const btnOpenCookieSettings = document.querySelectorAll('.open-cookie-settings, #open-cookie-settings');
+  // Enable third-party players only after a visitor has chosen them.
+  const preferences = document.getElementById('media-preferences');
+  if (preferences) {
+    const key = 'qrate_media_preference';
+    let choice = 'essential';
+    try {
+      choice = localStorage.getItem(key) === 'allow' ? 'allow' : 'essential';
+      localStorage.removeItem('qrate_cookie_consent');
+    } catch { /* Storage may be unavailable in private browsing. */ }
 
-  const showCookieBanner = () => {
-    if (cookieBanner) {
-      cookieBanner.classList.add('show');
+    function applyChoice() {
+      preferences.querySelector('#media-choice').textContent =
+        choice === 'allow' ? 'Embedded videos are on.' : 'Embedded videos are off.';
+      document.querySelectorAll('[data-video]').forEach(container => {
+        const placeholder = container.querySelector('.player-placeholder');
+        const frame = container.querySelector('iframe');
+        placeholder.hidden = choice === 'allow';
+        if (choice === 'allow' && !frame) {
+          const player = document.createElement('iframe');
+          player.title = container.dataset.title;
+          player.src = 'https://www.youtube-nocookie.com/embed/' + container.dataset.video;
+          player.loading = 'lazy';
+          player.allow = 'encrypted-media; picture-in-picture; fullscreen';
+          player.allowFullscreen = true;
+          container.append(player);
+        } else if (choice !== 'allow' && frame) {
+          frame.remove();
+        }
+      });
     }
-  };
-
-  const hideCookieBanner = () => {
-    if (cookieBanner) {
-      cookieBanner.classList.remove('show');
-    }
-  };
-
-  // Check saved consent
-  const savedConsent = localStorage.getItem('qrate_cookie_consent');
-  if (!savedConsent) {
-    setTimeout(showCookieBanner, 1200);
-  }
-
-  if (btnAcceptCookies) {
-    btnAcceptCookies.addEventListener('click', () => {
-      localStorage.setItem('qrate_cookie_consent', 'all');
-      hideCookieBanner();
+    document.querySelectorAll('.open-cookie-settings').forEach(button => {
+      button.addEventListener('click', () => preferences.showModal());
     });
-  }
-
-  if (btnEssentialCookies) {
-    btnEssentialCookies.addEventListener('click', () => {
-      localStorage.setItem('qrate_cookie_consent', 'essential');
-      hideCookieBanner();
+    preferences.querySelectorAll('[data-media-choice]').forEach(button => {
+      button.addEventListener('click', () => {
+        choice = button.dataset.mediaChoice;
+        try { localStorage.setItem(key, choice); } catch { /* Use this choice for this visit. */ }
+        preferences.close();
+        applyChoice();
+      });
     });
-  }
-
-  btnOpenCookieSettings.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      showCookieBanner();
+    window.addEventListener('storage', event => {
+      if (event.key === key || event.key === null) {
+        choice = event.newValue === 'allow' ? 'allow' : 'essential';
+        applyChoice();
+      }
     });
-  });
+    applyChoice();
+  }
 
   // 8. Skiper27 Rolling Text Animation (Spins once when scrolled into view)
   const rollingTextEls = document.querySelectorAll('[data-rolling-text]');
