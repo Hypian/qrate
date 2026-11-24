@@ -34,7 +34,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css?v=ddd8e52959"/>
 
   <!-- Schema.org Educational Practice Metadata -->
   <script type="application/ld+json">
@@ -183,7 +183,7 @@
 
   <main class="flex-grow -mt-20">
 <section class="hero-kraft editorial-hero">
-      <div class="editorial-wrap editorial-hero-grid">
+      <div class="editorial-wrap editorial-hero-grid hero-with-art">
         <div>
           <h1>Show families what school is like</h1>
           <p>We make school films, prospectuses and programme updates. We can follow a lesson, document an event or help supporters understand what students are learning.</p>
@@ -192,25 +192,40 @@
             <a class="editorial-link" href="#partner-schools">See education work</a>
           </div>
         </div>
-        <figure class="editorial-photo">
-          <img src="photos/hope-haven-hero-2.webp" alt="A student at Hope Haven holds up a letter and photographs." loading="lazy" decoding="async">
-        </figure>
+        <div class="hero-art">
+          <div class="portrait-pair">
+            <figure class="photo-frame">
+              <img src="photos/ntare-stem-film.webp" alt="Students at work in a Ntare Louisenlund science classroom." loading="eager" decoding="async">
+            </figure>
+            <figure class="photo-frame">
+              <img src="photos/hope-haven-hero-2.webp" alt="A Hope Haven student holds up a letter." loading="eager" decoding="async">
+            </figure>
+          </div>
+        </div>
       </div>
     </section>
     <section class="editorial-section ">
-      <div class="editorial-wrap">
-        <h2>Start in the classroom</h2>
-        <p>Plan with teachers so families can see how a lesson works, what students make and how the school supports them.</p>
-        <div class="editorial-links">
-          <a class="editorial-link" href="philosophy.html#filming">How we approach filming and consent</a>
+      <div class="editorial-wrap story-split">
+        <div>
+          <h2>Start in the classroom</h2>
+          <p>Plan with teachers so families can see how a lesson works, what students make and how the school supports them.</p>
+          <div class="editorial-links">
+            <a class="editorial-link" href="philosophy.html#filming">How we approach filming and consent</a>
+          </div>
         </div>
+        <figure class="photo-frame">
+          <img src="photos/bts-3.webp" alt="A teacher works with a group of students at their table." loading="lazy" decoding="async">
+        </figure>
       </div>
     </section>
     <section class="editorial-section editorial-tint" id="partner-schools">
       <div class="editorial-wrap">
         <h2>Selected education work</h2>
-        <div class="editorial-rows">
+        <div class="editorial-rows school-projects">
           <article>
+            <div class="partner-logo logo-on-paper">
+              <img src="logos/ntare-louisenlund.svg" alt="" loading="lazy">
+            </div>
             <h3>Ntare Louisenlund School</h3>
             <p>We filmed student learning and STEM facilities at the boarding school in Bugesera.</p>
             <div class="editorial-links">
@@ -219,6 +234,9 @@
             </div>
           </article>
           <article>
+            <div class="partner-logo">
+              <img src="logos/hope-haven.svg" alt="" loading="lazy">
+            </div>
             <h3>Hope Haven Christian School</h3>
             <p>For the Kigali school and community programme, we filmed graduation, took student portraits and designed the end-of-year magazine. We also produced footage in Rwanda for its US team.</p>
             <div class="editorial-links">
@@ -228,6 +246,9 @@
             </div>
           </article>
           <article>
+            <div class="debate-symbol">
+              <span class="service-symbol" data-symbol="forum" aria-hidden="true"></span>
+            </div>
             <h3>iDebate Rwanda</h3>
             <p>Qrate’s work has included school debate coverage and communications for Dreamers Academy.</p>
             <div class="editorial-links">
@@ -241,20 +262,24 @@
       <div class="editorial-wrap">
         <h2>What we make for schools</h2>
         <p>Start with the admissions, event or reporting dates on your calendar.</p>
-        <div class="editorial-grid">
+        <div class="editorial-grid illustrated-cards principle-cards">
           <article>
+            <span class="service-symbol" data-symbol="movie" aria-hidden="true"></span>
             <h3>Admissions films and campus tours</h3>
             <p>Show a school day through classes, activities and staff interviews. Choose a full film or short edits for an admissions campaign.</p>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="menu_book" aria-hidden="true"></span>
             <h3>Prospectuses and handbooks</h3>
             <p>We design for print and web using course information supplied by the school and photographs from campus where agreed.</p>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="volunteer_activism" aria-hidden="true"></span>
             <h3>Reports for donors and school partners</h3>
             <p>Use approved figures, interviews and programme records to explain what support paid for and what changed.</p>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="event_repeat" aria-hidden="true"></span>
             <h3>Ongoing school communications</h3>
             <p>Agree filming days, formats, focus areas and review dates for the term.</p>
           </article>
@@ -299,6 +324,11 @@
     </section>
     <section class="editorial-section editorial-cta">
       <div class="editorial-wrap">
+        <div class="cta-starfield" aria-hidden="true">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+        </div>
         <h2>What are you planning this term?</h2>
         <p>Tell us the audience, timing and what you need to make.</p>
         <div class="editorial-links">

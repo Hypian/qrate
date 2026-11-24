@@ -34,7 +34,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css?v=ddd8e52959"/>
 
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 
@@ -172,18 +172,32 @@
 
   <main class="flex-grow -mt-20">
 <section class="hero-kraft editorial-hero">
-      <div class="editorial-wrap editorial-hero-grid">
+      <div class="editorial-wrap editorial-hero-grid hero-with-art">
         <div>
           <h1>Ways to work with Qrate</h1>
           <p>Choose one project, a campaign or ongoing support. We agree what’s included before work starts.</p>
+        </div>
+        <div class="hero-art">
+          <div class="photo-strip">
+            <figure class="photo-frame">
+              <img src="photos/bts-6.webp" alt="A graduation portrait." loading="eager" decoding="async">
+            </figure>
+            <figure class="photo-frame">
+              <img src="photos/bts-5.webp" alt="Students working together around a computer." loading="eager" decoding="async">
+            </figure>
+            <figure class="photo-frame">
+              <img src="photos/hope-haven-yearbook.webp" alt="The Hope Haven yearbook cover." loading="eager" decoding="async">
+            </figure>
+          </div>
         </div>
       </div>
     </section>
     <section class="editorial-section ">
       <div class="editorial-wrap">
         <h2>Choose a scope</h2>
-        <div class="editorial-grid">
+        <div class="editorial-grid illustrated-cards scope-cards">
           <article>
+            <span class="service-symbol" data-symbol="movie" aria-hidden="true"></span>
             <h3>One project</h3>
             <p>A documentary, publication or brand assignment with an agreed team, deliverables, schedule and revision rounds.</p>
             <div class="editorial-links">
@@ -191,6 +205,7 @@
             </div>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="campaign" aria-hidden="true"></span>
             <h3>A campaign</h3>
             <p>Planning and production for a launch, fundraising appeal or awareness campaign. Agree channels, content, reviews and what you’ll measure.</p>
             <div class="editorial-links">
@@ -198,6 +213,7 @@
             </div>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="event_repeat" aria-hidden="true"></span>
             <h3>Ongoing support</h3>
             <p>A monthly scope for content planning, filming, design or publishing. Agree deliverables, visits, revisions and response times.</p>
             <div class="editorial-links">
@@ -208,12 +224,17 @@
       </div>
     </section>
     <section class="editorial-section editorial-tint">
-      <div class="editorial-wrap">
-        <h2>Working across locations?</h2>
-        <p>We can coordinate remotely and produce work in Rwanda. Tell us where the work needs to happen.</p>
-        <div class="editorial-links">
-          <a class="editorial-link" href="case-study.html">See the Hope Haven assignment</a>
+      <div class="editorial-wrap story-split">
+        <div>
+          <h2>Working across locations?</h2>
+          <p>We can coordinate remotely and produce work in Rwanda. Tell us where the work needs to happen.</p>
+          <div class="editorial-links">
+            <a class="editorial-link" href="case-study.html">See the Hope Haven assignment</a>
+          </div>
         </div>
+        <figure class="photo-frame">
+          <img src="photos/hope-haven-student-life.webp" alt="Hope Haven students and staff stand beside a RwandAir aircraft." loading="lazy" decoding="async">
+        </figure>
       </div>
     </section>
     <section class="editorial-section ">

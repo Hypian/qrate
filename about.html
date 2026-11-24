@@ -40,7 +40,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css?v=ddd8e52959"/>
 
   <!-- Schema.org Breadcrumbs & AboutPage -->
   <script type="application/ld+json">
@@ -189,22 +189,29 @@
 
   <main class="flex-grow -mt-20">
 <section class="hero-kraft editorial-hero">
-      <div class="editorial-wrap editorial-hero-grid">
+      <div class="editorial-wrap editorial-hero-grid hero-with-art">
         <div>
           <h1>About Qrate</h1>
           <p>We’re a creative communications agency in Kigali. We work with nonprofits, foundations, schools and social enterprises on film, design, campaigns and reporting.</p>
+        </div>
+        <div class="hero-art">
+          <figure class="photo-frame">
+            <img src="photos/hero-5.webp" alt="A group poses together for a studio portrait." loading="eager" decoding="async">
+          </figure>
         </div>
       </div>
     </section>
     <section class="editorial-section ">
       <div class="editorial-wrap">
         <h2>Who you’ll work with</h2>
-        <div class="editorial-rows">
+        <div class="editorial-rows team-intro">
           <article>
+            <span class="team-initials" aria-hidden="true">BK</span>
             <h3>Babu Kamanzi</h3>
             <p>Founder and Creative Director. Babu leads Qrate’s creative direction and works with clients on strategy.</p>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="groups" aria-hidden="true"></span>
             <h3>The project team</h3>
             <p>Creative direction, client coordination and production are planned together. Your proposal identifies who will handle the shoot, design, edit and approvals.</p>
           </article>
@@ -214,8 +221,11 @@
     <section class="editorial-section editorial-tint">
       <div class="editorial-wrap">
         <h2>Organisations we’ve worked with</h2>
-        <div class="editorial-grid">
+        <div class="editorial-grid partner-cards">
           <article>
+            <div class="partner-logo">
+              <img src="logos/hope-haven.svg" alt="" loading="lazy">
+            </div>
             <h3>Hope Haven Rwanda</h3>
             <p>Graduation coverage, a magazine and production in Rwanda for the US team.</p>
             <div class="editorial-links">
@@ -223,6 +233,9 @@
             </div>
           </article>
           <article>
+            <div class="partner-logo logo-on-paper">
+              <img src="logos/ntare-louisenlund.svg" alt="" loading="lazy">
+            </div>
             <h3>Ntare Louisenlund School</h3>
             <p>A documentary about STEM learning on campus.</p>
             <div class="editorial-links">
@@ -235,20 +248,24 @@
     <section class="editorial-section ">
       <div class="editorial-wrap">
         <h2>How we make decisions</h2>
-        <div class="editorial-grid">
+        <div class="editorial-grid illustrated-cards principle-cards">
           <article>
+            <span class="service-symbol" data-symbol="fact_check" aria-hidden="true"></span>
             <h3>Accuracy first</h3>
             <p>Check names, dates and figures with the people who own them.</p>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="forum" aria-hidden="true"></span>
             <h3>Dignity is the brief</h3>
             <p>Let people decide what to share. Agree how their words and images may be used.</p>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="query_stats" aria-hidden="true"></span>
             <h3>Evidence over hype</h3>
             <p>Give the source and period behind a result. Leave out claims you cannot support.</p>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="folder_open" aria-hidden="true"></span>
             <h3>Make work the client can reuse</h3>
             <p>Agree which files, templates and instructions the client needs at handover.</p>
           </article>
@@ -257,6 +274,11 @@
     </section>
     <section class="editorial-section editorial-cta">
       <div class="editorial-wrap">
+        <div class="cta-starfield" aria-hidden="true">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+        </div>
         <h2>Talk to Qrate</h2>
         <p>Tell us what you would like to make.</p>
         <div class="editorial-links">

@@ -38,7 +38,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css?v=ddd8e52959"/>
 
   <!-- Schema.org ContactPage -->
   <script type="application/ld+json">
@@ -187,10 +187,15 @@
 
   <main class="flex-grow -mt-20">
 <section class="hero-kraft editorial-hero">
-      <div class="editorial-wrap editorial-hero-grid">
+      <div class="editorial-wrap editorial-hero-grid hero-with-art">
         <div>
           <h1>Start a project</h1>
           <p>Tell us what you need to make, who it’s for and when you need it.</p>
+        </div>
+        <div class="hero-art">
+          <figure class="photo-frame">
+            <img src="photos/hero-2.webp" alt="A construction worker photographed on site." loading="eager" decoding="async">
+          </figure>
         </div>
       </div>
     </section>
@@ -338,9 +343,10 @@
             <div id="formStatus" role="status" aria-live="polite"></div>
           </form>
         </div>
-        <aside>
+        <aside class="contact-panel">
+          <span class="service-symbol" data-symbol="mail" aria-hidden="true"></span>
           <h2>Contact Qrate</h2>
-          <div class="editorial-links"><a class="editorial-link" href="mailto:comms@qrate.rw">comms@qrate.rw</a></div><p>Based in Kigali, Rwanda.</p><h3>Prefer a call?</h3><p>Choose an available time on our booking calendar.</p><div class="editorial-links"><a class="editorial-link" href="https://calendly.com/qrate-stu/30min">Book a 30-minute call</a></div></aside></div></section>
+          <div class="editorial-links"><a class="editorial-link" href="mailto:comms@qrate.rw">comms@qrate.rw</a></div><p>Based in Kigali, Rwanda.</p><span class="service-symbol" data-symbol="event" aria-hidden="true"></span><h3>Prefer a call?</h3><p>Choose an available time on our booking calendar.</p><div class="editorial-links"><a class="editorial-link" href="https://calendly.com/qrate-stu/30min">Book a 30-minute call</a></div></aside></div></section>
   </main>
 
   <!-- Cookie Consent Banner -->

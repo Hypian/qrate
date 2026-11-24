@@ -54,7 +54,7 @@
     href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap"
     rel="stylesheet" />
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=ddd8e52959" />
 
   <!-- JSON-LD Structured Data for Search Engines -->
   <script type="application/ld+json">
@@ -280,7 +280,7 @@
         </div>
       </div>
 
-      <!-- Bottom Bar: Sliding Client Logos Marquee -->
+      <!-- Featured client logos -->
       <div class="w-full relative z-10 pt-3 pb-2">
         <div class="w-full max-w-container-max mx-auto mb-4 sm:mb-5 flex flex-wrap items-center justify-between gap-2">
           <p class="text-[11px] font-mono uppercase tracking-[0.22em] text-amber-100/90 font-semibold drop-shadow-sm">
@@ -296,8 +296,15 @@
             </svg>
           </a>
         </div>
-        <div class="hero-logo-marquee-wrapper" aria-label="Partner organizations and clients">
-          <div class="editorial-client-logos"><a href="case-study.html"><img src="logos/hope-haven.svg" alt="Hope Haven Rwanda" loading="lazy"></a><a href="https://www.youtube.com/watch?v=dKBs8pl5pFM"><img src="logos/ntare-louisenlund.svg" alt="Ntare Louisenlund School" loading="lazy"></a></div>
+        <div class="w-full max-w-container-max mx-auto">
+          <div class="editorial-client-logos">
+            <a href="case-study.html">
+              <img src="logos/hope-haven.svg" alt="Hope Haven Rwanda" loading="lazy">
+            </a>
+            <a class="logo-on-paper" href="https://www.youtube.com/watch?v=dKBs8pl5pFM">
+              <img src="logos/ntare-louisenlund.svg" alt="Ntare Louisenlund School" loading="lazy">
+            </a>
+          </div>
         </div>
       </div>
 
@@ -342,15 +349,30 @@
         </div>
         <dl class="qrate-service-list">
           <div>
-            <dt>Brand and campaign design</dt>
+            <dt>
+              <span class="service-preview service-preview-brand" aria-hidden="true">
+                <img src="photos/ui%20and%20brand/Qrate%20Logo%20Png%20Monogram%20Black%20Color.svg" alt="" loading="lazy" decoding="async">
+              </span>
+              Brand and campaign design
+            </dt>
             <dd>Visual identities, donor decks and templates your team can use.</dd>
           </div>
           <div>
-            <dt>Film and photography</dt>
+            <dt>
+              <span class="service-preview service-preview-film" aria-hidden="true">
+                <img src="photos/ntare-stem-film.webp" alt="" loading="lazy" decoding="async">
+              </span>
+              Film and photography
+            </dt>
             <dd>Interviews, documentaries and photography on location.</dd>
           </div>
           <div>
-            <dt>Reports and publications</dt>
+            <dt>
+              <span class="service-preview service-preview-print" aria-hidden="true">
+                <img src="photos/hope-haven-yearbook.webp" alt="" loading="lazy" decoding="async">
+              </span>
+              Reports and publications
+            </dt>
             <dd>Annual reports, policy briefs and magazines for print and web.</dd>
           </div>
         </dl>
@@ -361,16 +383,19 @@
       <div class="editorial-wrap">
         <h2>How a project works</h2>
         <p>Agree what the work needs to do, who approves it and where it will be used.</p>
-        <div class="editorial-grid">
+        <div class="editorial-grid process-steps">
           <article>
+            <span class="step-circle" aria-hidden="true"></span>
             <h3>Agree the brief</h3>
             <p>Set the audience, outputs, budget and approval dates before booking a crew.</p>
           </article>
           <article>
+            <span class="step-circle" aria-hidden="true"></span>
             <h3>Make the work</h3>
             <p>We plan the shoot or design, check the facts with your team and share a cut or draft for review.</p>
           </article>
           <article>
+            <span class="step-circle" aria-hidden="true"></span>
             <h3>Hand it over</h3>
             <p>We deliver the files and versions agreed for the channels your team uses.</p>
           </article>
@@ -379,6 +404,11 @@
     </section>
     <section class="editorial-section editorial-cta">
       <div class="editorial-wrap">
+        <div class="cta-starfield" aria-hidden="true">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+        </div>
         <h2>What are you working on?</h2>
         <p>Tell us what you need to make, who it’s for and when you need it.</p>
         <div class="editorial-links">
