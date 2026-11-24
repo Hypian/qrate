@@ -49,7 +49,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css?v=ddd8e52959"/>
 
   <!-- Schema.org Case Study / CollectionPage -->
   <script type="application/ld+json">
@@ -198,12 +198,22 @@
 
   <main class="flex-grow -mt-20">
 <section class="hero-kraft editorial-hero">
-      <div class="editorial-wrap editorial-hero-grid">
+      <div class="editorial-wrap editorial-hero-grid hero-with-art">
         <div>
           <h1>Selected work</h1>
           <p>Films and publications made with schools in Rwanda. Open a finished piece or follow a project from its brief to delivery.</p>
           <div class="editorial-links">
             <a class="editorial-link" href="#selected-work">Browse projects</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <div class="portrait-pair">
+            <figure class="photo-frame">
+              <img src="photos/hope-haven-hero-2.webp" alt="A student at Hope Haven shares a letter." loading="eager" decoding="async">
+            </figure>
+            <figure class="photo-frame">
+              <img src="photos/bts-6.webp" alt="A graduate poses for a portrait." loading="eager" decoding="async">
+            </figure>
           </div>
         </div>
       </div>
@@ -240,6 +250,11 @@
     </section>
     <section class="editorial-section editorial-cta">
       <div class="editorial-wrap">
+        <div class="cta-starfield" aria-hidden="true">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+        </div>
         <h2>What would you like to document?</h2>
         <p>Tell us where the work will happen and who needs to see it.</p>
         <div class="editorial-links">

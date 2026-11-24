@@ -34,7 +34,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css?v=ddd8e52959"/>
 
   <!-- Schema.org Service -->
   <script type="application/ld+json">
@@ -183,22 +183,34 @@
 
   <main class="flex-grow -mt-20">
 <section class="hero-kraft editorial-hero">
-      <div class="editorial-wrap editorial-hero-grid">
+      <div class="editorial-wrap editorial-hero-grid hero-with-art">
         <div>
           <h1>Communications services</h1>
           <p>Get a team to plan the work, document what happens and turn it into material people can use.</p>
+        </div>
+        <div class="hero-art">
+          <div class="print-pair">
+            <figure class="photo-frame">
+              <img src="photos/bts-1.webp" alt="Graduates in black robes and green stoles." loading="eager" decoding="async">
+            </figure>
+            <figure class="yearbook-cover">
+              <img src="photos/hope-haven-yearbook.webp" alt="Cover of the 2026 Hope Haven Christian School yearbook." loading="eager" decoding="async">
+            </figure>
+          </div>
         </div>
       </div>
     </section>
     <section class="editorial-section ">
       <div class="editorial-wrap">
         <h2>What you can commission</h2>
-        <div class="editorial-grid">
+        <div class="editorial-grid illustrated-cards service-cards">
           <article>
+            <span class="service-symbol" data-symbol="architecture" aria-hidden="true"></span>
             <h3>Brand and messaging</h3>
             <p>Visual identities, brand guides and templates for campaigns and partner communications.</p>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="videocam" aria-hidden="true"></span>
             <h3>Film and photography</h3>
             <p>Documentary films, interviews, event coverage and photography on location. Before the shoot, agree what can be filmed and shared.</p>
             <div class="editorial-links">
@@ -206,14 +218,17 @@
             </div>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="palette" aria-hidden="true"></span>
             <h3>Design</h3>
             <p>Campaign artwork, presentations and infographics that make programme information easier to read.</p>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="campaign" aria-hidden="true"></span>
             <h3>Campaigns and social</h3>
             <p>Content planning, email and social assets, with publishing support where included in the scope.</p>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="menu_book" aria-hidden="true"></span>
             <h3>Reports and publications</h3>
             <p>Writing, editing and design for annual reports, policy briefs and magazines, using approved records and figures.</p>
             <div class="editorial-links">
@@ -221,6 +236,7 @@
             </div>
           </article>
           <article>
+            <span class="service-symbol" data-symbol="web" aria-hidden="true"></span>
             <h3>Websites and landing pages</h3>
             <p>Build or update campaign and programme pages. We agree separately who maintains the site after launch.</p>
           </article>
@@ -228,12 +244,17 @@
       </div>
     </section>
     <section class="editorial-section editorial-tint">
-      <div class="editorial-wrap">
-        <h2>Communications for schools</h2>
-        <p>Show families a school day through film and photography. Give programme supporters reports and updates they can read and share.</p>
-        <div class="editorial-links">
-          <a class="editorial-link" href="education.html">Explore education work</a>
+      <div class="editorial-wrap story-split">
+        <div>
+          <h2>Communications for schools</h2>
+          <p>Show families a school day through film and photography. Give programme supporters reports and updates they can read and share.</p>
+          <div class="editorial-links">
+            <a class="editorial-link" href="education.html">Explore education work</a>
+          </div>
         </div>
+        <figure class="photo-frame">
+          <img src="photos/bts-5.webp" alt="Students work together at a classroom computer." loading="lazy" decoding="async">
+        </figure>
       </div>
     </section>
     <section class="editorial-section ">
@@ -247,6 +268,11 @@
     </section>
     <section class="editorial-section editorial-cta">
       <div class="editorial-wrap">
+        <div class="cta-starfield" aria-hidden="true">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+        </div>
         <h2>Have a project in mind?</h2>
         <p>Tell us the audience, outputs and dates.</p>
         <div class="editorial-links">

@@ -35,7 +35,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&amp;family=Space+Grotesk:wght@400;600;700&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css?v=ddd8e52959"/>
 
   <!-- Schema.org Case Study / CollectionPage -->
   <script type="application/ld+json">
@@ -184,7 +184,7 @@
 
   <main class="flex-grow -mt-20">
 <section class="hero-kraft editorial-hero">
-      <div class="editorial-wrap editorial-hero-grid">
+      <div class="editorial-wrap editorial-hero-grid hero-with-art">
         <div>
           <h1>A school year on film and in print</h1>
           <p>Qrate documented school life and graduation for Hope Haven and produced interviews, photography and footage in Rwanda for its US team.</p>
@@ -193,9 +193,16 @@
             <a class="editorial-link" href="#follow-the-stories">See Hope Haven’s channels</a>
           </div>
         </div>
-        <figure class="editorial-photo">
-          <img src="photos/hope-haven-hero-1.webp" alt="A woman holds a young student on a path at Hope Haven." loading="lazy" decoding="async">
-        </figure>
+        <div class="hero-art">
+          <div class="portrait-pair">
+            <figure class="photo-frame">
+              <img src="photos/hope-haven-hero-1.webp" alt="A woman and a young student at Hope Haven." loading="eager" decoding="async">
+            </figure>
+            <figure class="photo-frame">
+              <img src="photos/hope-haven-hero-2.webp" alt="A student holds up a letter and photographs." loading="eager" decoding="async">
+            </figure>
+          </div>
+        </div>
       </div>
     </section>
     <section class="editorial-section ">
@@ -207,7 +214,7 @@
     <section class="editorial-section editorial-tint" id="selected-work">
       <div class="editorial-wrap">
         <h2>What Qrate produced</h2>
-        <div class="editorial-project-list">
+        <div class="editorial-project-list case-gallery">
           <article>
             <h3>Graduation 2025</h3>
             <p>We filmed the celebrations, took graduate portraits and designed the end-of-year magazine.</p>
@@ -221,6 +228,9 @@
                   referrerpolicy="strict-origin-when-cross-origin"
                   allowfullscreen></iframe>
             </div>
+            <a class="case-yearbook" href="https://heyzine.com/flip-book/5e792f1985.html#page/2" aria-label="Open the 2026 Hope Haven yearbook">
+              <img src="photos/hope-haven-yearbook.webp" alt="Hope Haven Christian School Yearbook 2026" loading="lazy" decoding="async">
+            </a>
             <div class="editorial-links">
               <a class="editorial-link" href="https://www.youtube.com/watch?v=9lcjePonj7o">Watch Celebrating the Past and the Future</a>
               <a class="editorial-link" href="https://heyzine.com/flip-book/5e792f1985.html#page/2">Open the Hope Haven magazine</a>
@@ -277,6 +287,11 @@
     </section>
     <section class="editorial-section editorial-cta">
       <div class="editorial-wrap">
+        <div class="cta-starfield" aria-hidden="true">
+          <div id="stars"></div>
+          <div id="stars2"></div>
+          <div id="stars3"></div>
+        </div>
         <h2 id="talk-to-qrate">Need a team in Rwanda?</h2>
         <p>Tell us what you need to capture for a shoot or a longer assignment.</p>
         <div class="editorial-links">
