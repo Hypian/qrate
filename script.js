@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleMenu = (forceState) => {
       const isOpen = forceState !== undefined ? forceState : !mobileDrawer.classList.contains('open');
       mobileDrawer.classList.toggle('open', isOpen);
+      mobileDrawer.inert = !isOpen;
       mobileToggle.classList.toggle('open', isOpen);
       mobileToggle.setAttribute('aria-expanded', String(isOpen));
       if (isOpen) {
@@ -47,8 +48,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && mobileDrawer.classList.contains('open')) {
         toggleMenu(false);
+        mobileToggle.focus();
       }
     });
+    window.matchMedia('(max-width: 768px)').addEventListener('change', () => toggleMenu(false));
   }
 
   // 3. Dynamic Header on Scroll (Switches colors once passing hero section)
@@ -149,52 +152,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 4. Resource Modals
-  const modalTriggers = document.querySelectorAll('[data-open-modal]');
-  const modalOverlays = document.querySelectorAll('.modal-overlay');
-
-  modalTriggers.forEach(trigger => {
-    trigger.addEventListener('click', (e) => {
-      e.preventDefault();
-      const modalId = trigger.getAttribute('data-open-modal');
-      const targetModal = document.getElementById(modalId);
-      if (targetModal) {
-        targetModal.classList.add('open');
-        targetModal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-      }
+  // Each guide has a bookmarkable URL and a native keyboard-accessible dialog.
+  const guideLinks = [...document.querySelectorAll('[data-guide]')];
+  if (guideLinks.length) {
+    let opener = null;
+    const guideForHash = () => {
+      const id = window.location.hash.slice(1);
+      return guideLinks.some(link => link.dataset.guide === id) ? document.getElementById(id) : null;
+    };
+    const syncGuide = () => {
+      const next = guideForHash();
+      const current = document.querySelector('.guide-dialog[open]');
+      if (current && current !== next) current.close();
+      if (next && !next.open) next.showModal();
+    };
+    guideLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        opener = link;
+        if (link.hash === window.location.hash) syncGuide();
+      });
+      const dialog = document.getElementById(link.dataset.guide);
+      dialog.addEventListener('close', () => {
+        if (guideForHash() === dialog) {
+          history.replaceState(null, '', window.location.pathname + window.location.search);
+        }
+        if (!guideForHash()) (opener || link).focus({ preventScroll: true });
+      });
     });
-  });
-
-  const closeModal = (modal) => {
-    if (modal) {
-      modal.classList.remove('open');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.style.overflow = '';
-    }
-  };
-
-  document.querySelectorAll('.modal-close').forEach(closeBtn => {
-    closeBtn.addEventListener('click', () => {
-      const modal = closeBtn.closest('.modal-overlay');
-      closeModal(modal);
-    });
-  });
-
-  modalOverlays.forEach(overlay => {
-    overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) {
-        closeModal(overlay);
-      }
-    });
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      const activeModal = document.querySelector('.modal-overlay.open');
-      if (activeModal) closeModal(activeModal);
-    }
-  });
+    window.addEventListener('hashchange', syncGuide);
+    syncGuide();
+  }
 
   // 5. Contact Form EmailJS Handling
   const contactForm = document.querySelector('[data-contact-form]');
@@ -204,6 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const statusBox = document.getElementById('formStatus');
+      if (submitBtn?.disabled) return;
       const originalMarkup = submitBtn ? submitBtn.innerHTML : '';
       const emailConfig = window.qrateEmailJs || {};
       const publicKey = emailConfig.publicKey || 'YOUR_PUBLIC_KEY';
@@ -250,8 +238,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="material-symbols-outlined">check</span>
               </div>
               <div class="form-status-copy">
-                <strong>Message sent</strong>
-                <p>Thank you. Your inquiry has been received. We will respond within one working day.</p>
+                <strong>Enquiry submitted</strong>
+                <p>Thank you. Our email service accepted your enquiry.</p>
               </div>
             </div>
           `;
