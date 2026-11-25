@@ -291,7 +291,20 @@
         <aside class="contact-panel">
           <span class="service-symbol" data-symbol="mail" aria-hidden="true"></span>
           <h2>Contact Qrate</h2>
-          <div class="editorial-links"><a class="editorial-link" href="mailto:comms@qrate.rw">comms@qrate.rw</a></div><p>Based in Kigali, Rwanda.</p><span class="service-symbol" data-symbol="event" aria-hidden="true"></span><h3>Prefer a call?</h3><p>Choose an available time on our booking calendar.</p><div class="editorial-links"><a class="editorial-link" href="https://calendly.com/qrate-stu/30min">Book a 30-minute call</a></div></aside></div></section>
+          <div class="editorial-links"><a class="editorial-link" href="mailto:comms@qrate.rw">comms@qrate.rw</a></div>
+          <div id="headquarters" style="scroll-margin-top:6rem">
+            <h3>Our headquarters</h3>
+            <p>Gikondo, Kigali, Rwanda</p>
+            <p><a class="editorial-link" href="https://www.google.com/maps/search/?api=1&amp;query=Gikondo%2C%20Kigali%2C%20Rwanda" target="_blank" rel="noopener noreferrer">Open Gikondo in Google Maps</a></p>
+            <details id="hq-neighbourhood-map" style="margin:0 0 1.1rem">
+              <summary style="cursor:pointer;padding:.55rem 0">Show neighbourhood map</summary>
+              <p style="margin:.35rem 0 .75rem">This map shows the Gikondo area, not the office entrance.</p>
+              <template id="hq-map-template">
+                <iframe title="Google Maps: Gikondo neighbourhood, Kigali, Rwanda" src="https://maps.google.com/maps?q=Gikondo%2C%20Kigali%2C%20Rwanda&amp;z=14&amp;output=embed" width="352" height="240" loading="lazy" referrerpolicy="no-referrer" style="display:block;width:100%;border:0;border-radius:.5rem"></iframe>
+              </template>
+            </details>
+          </div>
+          <span class="service-symbol" data-symbol="event" aria-hidden="true"></span><h3>Prefer a call?</h3><p>Choose an available time on our booking calendar.</p><div class="editorial-links"><a class="editorial-link" href="https://calendly.com/qrate-stu/30min">Book a 30-minute call</a></div></aside></div></section>
   </main>
 
   <!-- Cookie Consent Banner -->
@@ -383,7 +396,7 @@
         <ul class="space-y-2.5 body-base text-on-surface-variant text-sm">
           <li><a class="hover:text-rust transition-colors" href="contact.html">Contact</a></li>
           <li><a class="hover:text-rust transition-colors" href="mailto:comms@qrate.rw">comms@qrate.rw</a></li>
-          <li><span>Kigali, Rwanda</span></li>
+          <li><a class="hover:text-rust transition-colors" href="#headquarters">Gikondo, Kigali, Rwanda</a></li>
         </ul>
       </div>
       <div>
@@ -414,5 +427,18 @@
     };
   </script>
   <script src="script.js?v=2d1c5b53d2"></script>
+  <script>
+    (() => {
+      const panel = document.getElementById('hq-neighbourhood-map');
+      const template = document.getElementById('hq-map-template');
+      if (!panel || !template) return;
+      const mountMap = () => {
+        if (!panel.open || panel.querySelector('iframe')) return;
+        panel.appendChild(template.content.cloneNode(true));
+      };
+      panel.addEventListener('toggle', mountMap);
+      mountMap();
+    })();
+  </script>
 </body>
 </html>
