@@ -55,7 +55,7 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=ddd8e52959" />
   <link rel="stylesheet" href="ui/layout.css?v=72b7a96a9b">
-  <link rel="stylesheet" href="studio.css?v=a1a2ed2c5d">
+  <link rel="stylesheet" href="studio.css?v=b8942b436b">
 
   <!-- JSON-LD Structured Data for Search Engines -->
   <script type="application/ld+json">
@@ -222,15 +222,15 @@
         </div>
       </div>
 
-      <!-- Featured client logos -->
+      <!-- Client logo marquee -->
       <div class="w-full relative z-10 pt-3 pb-2">
         <div class="w-full max-w-container-max mx-auto mb-4 sm:mb-5 flex flex-wrap items-center justify-between gap-2">
           <p class="text-[11px] font-mono uppercase tracking-[0.22em] text-amber-100/90 font-semibold drop-shadow-sm">
             Organisations we’ve worked with
           </p>
-          <a href="education.html"
+          <a href="work.html"
             class="text-[11px] font-mono uppercase tracking-[0.16em] text-amber-200 hover:text-white font-semibold flex items-center gap-1 transition-colors drop-shadow-sm">
-            <span>See our work with schools</span>
+            <span>See our work</span>
             <svg class="w-3 h-3 text-amber-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
               stroke-linecap="round" stroke-linejoin="round">
               <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -239,14 +239,35 @@
           </a>
         </div>
         <div class="w-full max-w-container-max mx-auto">
-          <div class="editorial-client-logos">
-            <a href="case-study.html">
-              <img src="logos/hope-haven.svg" alt="Hope Haven Rwanda" loading="lazy">
-            </a>
-            <a class="logo-on-paper" href="https://www.youtube.com/watch?v=dKBs8pl5pFM">
-              <img src="logos/ntare-louisenlund.svg" alt="Ntare Louisenlund School" loading="lazy">
-            </a>
-          </div>
+            <div class="qrate-marquee" data-client-marquee>
+              <div class="qrate-marquee-window" tabindex="0" role="region" aria-label="Client logos">
+                <div class="qrate-logo-track">
+                  <ul class="qrate-logo-group" role="list" aria-label="Clients and projects">
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/hope-haven.svg" alt="Hope Haven Rwanda" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-light"><img src="logos/ntare-louisenlund.svg" alt="Ntare Louisenlund School" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/i-debate.svg" alt="iDebate Rwanda" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/starlight.svg" alt="Starlight Africa" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-light"><img src="logos/new-vision.svg" alt="New Vision Veterinary Hospital" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-light qrate-micon"><img src="logos/micon-real-line.svg" alt="" decoding="async"><span class="qrate-micon-label"><strong>MICON</strong><small>REAL LINE</small></span></li>
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/let-there-be-light.svg" alt="Let There Be Light International" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/shine-on.svg" alt="Shine On Rwanda" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/soma-salama.svg" alt="Soma Salama" decoding="async"></li>
+                  </ul>
+                  <ul class="qrate-logo-group" aria-hidden="true">
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/hope-haven.svg" alt="" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-light"><img src="logos/ntare-louisenlund.svg" alt="" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/i-debate.svg" alt="" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/starlight.svg" alt="" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-light"><img src="logos/new-vision.svg" alt="" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-light qrate-micon"><img src="logos/micon-real-line.svg" alt="" decoding="async"><span class="qrate-micon-label"><strong>MICON</strong><small>REAL LINE</small></span></li>
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/let-there-be-light.svg" alt="" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/shine-on.svg" alt="" decoding="async"></li>
+                    <li class="qrate-logo-tile qrate-logo-dark"><img src="logos/soma-salama.svg" alt="" decoding="async"></li>
+                  </ul>
+                </div>
+              </div>
+              <button class="qrate-marquee-control" type="button" hidden>Pause logos</button>
+            </div>
         </div>
       </div>
 
@@ -477,6 +498,7 @@
   </footer>
 
   <script src="script.js?v=2d1c5b53d2"></script>
+  <script defer src="client-marquee.js"></script>
 </body>
 
 </html>
