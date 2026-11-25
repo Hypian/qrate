@@ -53,6 +53,7 @@
   "description": "Qrate is a creative communications agency in Kigali. We work with nonprofits, foundations, schools and social enterprises on film, design, campaigns and reporting."
 }
   </script>
+  <link rel="stylesheet" href="team-interactive.css?v=39f743c7ead1">
 </head>
 <body class="studio-page page-about bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
   <a class="skip-content" href="#main-content">Skip to content</a>
@@ -146,21 +147,64 @@
         </div>
       </div>
     </section>
-    <section class="editorial-section ">
-      <div class="editorial-wrap">
-        <h2>Who you’ll work with</h2>
-        <div class="editorial-rows team-intro">
-          <article>
-            <span class="team-initials" aria-hidden="true">BK</span>
-            <h3>Babu Kamanzi</h3>
-            <p>Founder and Creative Director. Babu leads Qrate’s creative direction and works with clients on strategy.</p>
-          </article>
-          <article>
-            <span class="service-symbol" data-symbol="groups" aria-hidden="true"></span>
-            <h3>The project team</h3>
-            <p>Creative direction, client coordination and production are planned together. Your proposal identifies who will handle the shoot, design, edit and approvals.</p>
-          </article>
-        </div>
+    <section class="qrate-team" id="team" aria-labelledby="qrate-team-heading">
+      <div class="qrate-team-wrap">
+        <header class="qrate-team-lead">
+          <div><p class="qrate-team-kicker">About Qrate</p><h2 id="qrate-team-heading">Our team</h2><p class="qrate-team-intro">Meet the people who plan the campaign, run the shoot and bring the edit together.</p></div>
+          <img src="assets/team/qrate-gradient-wordmark.svg" width="1002" height="286" alt="" aria-hidden="true">
+        </header>
+        <article class="qrate-team-founder" aria-labelledby="qrate-founder-name">
+          <figure class="qrate-team-portrait"><img src="photos/team/babu.webp" width="800" height="800" alt="" loading="lazy" decoding="async"></figure>
+          <div class="qrate-team-founder-copy">
+            <h3 id="qrate-founder-name">Babu Kamanzi</h3>
+            <p class="qrate-team-role">Founder &amp; Creative Director</p>
+            <p>Babu leads Qrate’s creative direction and works with clients on strategy.</p>
+          </div>
+        </article>
+        <ul class="qrate-team-grid" role="list">
+          <li><details class="qrate-team-card" name="qrate-person">
+            <summary aria-label="Irebe Noella, Communications Manager: profile">
+              <span class="qrate-team-portrait" style="--portrait-left:-7.8%;--portrait-top:-25.1%"><img src="photos/team/irebe.webp" width="768" height="1152" alt="" loading="lazy" decoding="async"></span>
+              <span class="qrate-team-label"><span><strong>Irebe Noella</strong><small class="qrate-team-role">Communications Manager</small></span><span class="qrate-team-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <p class="qrate-team-detail">Leads client communications, content planning and approvals.</p>
+          </details></li>
+          <li><details class="qrate-team-card" name="qrate-person">
+            <summary aria-label="Laura, Junior Comms Executive: profile">
+              <span class="qrate-team-portrait" style="--portrait-left:-4.3%;--portrait-top:-23.9%"><img src="photos/team/laura.webp" width="768" height="1152" alt="" loading="lazy" decoding="async"></span>
+              <span class="qrate-team-label"><span><strong>Laura</strong><small class="qrate-team-role">Junior Comms Executive</small></span><span class="qrate-team-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <p class="qrate-team-detail">Coordinates the publishing calendar and day-to-day social content.</p>
+          </details></li>
+          <li><details class="qrate-team-card" name="qrate-person">
+            <summary aria-label="Brian, Videographer &amp; Editor: profile">
+              <span class="qrate-team-portrait" style="--portrait-left:-10.2%;--portrait-top:-21.6%"><img src="photos/team/brian.webp" width="768" height="1152" alt="" loading="lazy" decoding="async"></span>
+              <span class="qrate-team-label"><span><strong>Brian</strong><small class="qrate-team-role">Videographer &amp; Editor</small></span><span class="qrate-team-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <p class="qrate-team-detail">Films on location and edits footage for client projects.</p>
+          </details></li>
+          <li><details class="qrate-team-card" name="qrate-person">
+            <summary aria-label="Hervé, Videographer: profile">
+              <span class="qrate-team-portrait" style="--portrait-left:-6.6%;--portrait-top:-22.8%"><img src="photos/team/herve.webp" width="768" height="1152" alt="" loading="lazy" decoding="async"></span>
+              <span class="qrate-team-label"><span><strong>Hervé</strong><small class="qrate-team-role">Videographer</small></span><span class="qrate-team-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <p class="qrate-team-detail">Supports field production and camera coverage on shoots.</p>
+          </details></li>
+          <li><details class="qrate-team-card" name="qrate-person">
+            <summary aria-label="Louis Bertrand, Videography Intern: profile">
+              <span class="qrate-team-portrait" style="--portrait-left:-10.2%;--portrait-top:-19.7%"><img src="photos/team/louis.webp" width="768" height="1152" alt="" loading="lazy" decoding="async"></span>
+              <span class="qrate-team-label"><span><strong>Louis Bertrand</strong><small class="qrate-team-role">Videography Intern</small></span><span class="qrate-team-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <p class="qrate-team-detail">Supports the production team on shoots while training in videography.</p>
+          </details></li>
+          <li><details class="qrate-team-card" name="qrate-person">
+            <summary aria-label="Bella, Intern: profile">
+              <span class="qrate-team-portrait" style="--portrait-left:-13.6%;--portrait-top:-25.8%"><img src="photos/team/bella.webp" width="768" height="1152" alt="" loading="lazy" decoding="async"></span>
+              <span class="qrate-team-label"><span><strong>Bella</strong><small class="qrate-team-role">Intern</small></span><span class="qrate-team-toggle" aria-hidden="true"></span></span>
+            </summary>
+            <p class="qrate-team-detail">Supports the Qrate team as part of the internship programme.</p>
+          </details></li>
+        </ul>
       </div>
     </section>
     <section class="editorial-section editorial-tint">
@@ -350,4 +394,5 @@
   <script src="script.js?v=2d1c5b53d2"></script>
 </body>
 </html>
+
 
