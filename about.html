@@ -53,7 +53,7 @@
   "description": "Qrate is a creative communications agency in Kigali. We work with nonprofits, foundations, schools and social enterprises on film, design, campaigns and reporting."
 }
   </script>
-  <link rel="stylesheet" href="team-interactive.css?v=39f743c7ead1">
+  <link rel="stylesheet" href="team-interactive.css?v=f71ecbe24737">
 </head>
 <body class="studio-page page-about bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
   <a class="skip-content" href="#main-content">Skip to content</a>
@@ -134,23 +134,16 @@
   </div>
 
   <main id="main-content" tabindex="-1" class="flex-grow -mt-20">
-<section class="hero-kraft editorial-hero">
-      <div class="editorial-wrap editorial-hero-grid hero-with-art">
-        <div>
-          <h1>About Qrate</h1>
-          <p>We’re a creative communications agency in Kigali. We work with nonprofits, foundations, schools and social enterprises on film, design, campaigns and reporting.</p>
-        </div>
-        <div class="hero-art">
-          <figure class="photo-frame">
-            <img src="photos/hero-5.webp" alt="A group poses together for a studio portrait." loading="eager" decoding="async">
-          </figure>
-        </div>
+<section class="hero-kraft editorial-hero qrate-about-intro" aria-labelledby="about-heading">
+      <div class="qrate-team-wrap">
+        <h1 id="about-heading">About Qrate</h1>
+        <p>We’re a creative communications agency in Kigali. We work with nonprofits, foundations, schools and social enterprises on film, design, campaigns and reporting.</p>
       </div>
     </section>
     <section class="qrate-team" id="team" aria-labelledby="qrate-team-heading">
       <div class="qrate-team-wrap">
         <header class="qrate-team-lead">
-          <div><p class="qrate-team-kicker">About Qrate</p><h2 id="qrate-team-heading">Our team</h2><p class="qrate-team-intro">Meet the people who plan the campaign, run the shoot and bring the edit together.</p></div>
+          <div><h2 id="qrate-team-heading">Our team</h2><p class="qrate-team-intro">Meet the people who plan the campaign, run the shoot and bring the edit together.</p></div>
           <img src="assets/team/qrate-gradient-wordmark.svg" width="1002" height="286" alt="" aria-hidden="true">
         </header>
         <article class="qrate-team-founder" aria-labelledby="qrate-founder-name">
@@ -207,77 +200,11 @@
         </ul>
       </div>
     </section>
-    <section class="editorial-section editorial-tint">
-      <div class="editorial-wrap">
-        <h2>Organisations we’ve worked with</h2>
-        <div class="editorial-links"><a class="editorial-link" href="work.html">See all selected work</a></div>
-        <div class="editorial-grid partner-cards">
-          <article>
-            <div class="partner-image">
-              <img src="photos/hope-haven-hero-1.webp" alt="" loading="lazy" decoding="async">
-              <div class="partner-logo">
-              <img src="logos/hope-haven.svg" alt="" loading="lazy">
-            </div>
-            </div>
-            <h3>Hope Haven Rwanda</h3>
-            <p>Graduation coverage, a magazine and production in Rwanda for the US team.</p>
-            <div class="editorial-links">
-              <a class="editorial-link" href="case-study.html">Read the Hope Haven case study</a>
-            </div>
-          </article>
-          <article>
-            <div class="partner-image">
-              <img src="photos/ntare-stem-film.webp" alt="" loading="lazy" decoding="async">
-              <div class="partner-logo logo-on-paper">
-              <img src="logos/ntare-louisenlund.svg" alt="" loading="lazy">
-            </div>
-            </div>
-            <h3>Ntare Louisenlund School</h3>
-            <p>A documentary about STEM learning on campus.</p>
-            <div class="editorial-links">
-              <a class="editorial-link" href="https://www.youtube.com/watch?v=dKBs8pl5pFM">Watch the STEM film</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="editorial-section ">
-      <div class="editorial-wrap">
-        <h2>How we make decisions</h2>
-        <div class="editorial-grid illustrated-cards principle-cards">
-          <article>
-            <span class="service-symbol" data-symbol="fact_check" aria-hidden="true"></span>
-            <h3>Accuracy first</h3>
-            <p>Check names, dates and figures with the people who own them.</p>
-          </article>
-          <article>
-            <span class="service-symbol" data-symbol="forum" aria-hidden="true"></span>
-            <h3>Dignity is the brief</h3>
-            <p>Let people decide what to share. Agree how their words and images may be used.</p>
-          </article>
-          <article>
-            <span class="service-symbol" data-symbol="query_stats" aria-hidden="true"></span>
-            <h3>Evidence over hype</h3>
-            <p>Give the source and period behind a result. Leave out claims you cannot support.</p>
-          </article>
-          <article>
-            <span class="service-symbol" data-symbol="folder_open" aria-hidden="true"></span>
-            <h3>Make work the client can reuse</h3>
-            <p>Agree which files, templates and instructions the client needs at handover.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-    <section class="editorial-section editorial-cta">
-      <div class="editorial-wrap">
-        <span class="closing-mark" aria-hidden="true"></span>
-        <h2>Talk to Qrate</h2>
-        <p>Tell us what you would like to make.</p>
-        <div class="editorial-links">
-          <a class="editorial-link" href="contact.html">Start a project</a>
-        </div>
-      </div>
-    </section>
+    <nav class="qrate-about-next qrate-team-wrap" aria-label="More about Qrate">
+      <a href="work.html">See our work</a>
+      <a href="philosophy.html">How we work</a>
+      <a href="contact.html" class="qrate-about-cta">Start a project</a>
+    </nav>
   </main>
 
   <!-- Cookie Consent Banner -->
