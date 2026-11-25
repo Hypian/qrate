@@ -5,7 +5,7 @@
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
   function setMotion(on) {
     strip.dataset.motion = on ? 'running' : 'paused';
-    button.textContent = on ? 'Pause logos' : 'Play logos';
+    button.textContent = on ? 'Stop logo animation' : 'Resume logo animation';
   }
   function sync() {
     button.hidden = reduced.matches;
