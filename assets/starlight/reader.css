@@ -1,0 +1,52 @@
+.starlight-hero.hero-kraft { padding-block: clamp(6.2rem, 8vw, 8rem) clamp(2rem, 4vw, 4rem); }
+.starlight-intro { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: clamp(2rem, 5vw, 5rem); }
+.starlight-intro .qrate-feature-label { margin: 0 0 1.2rem; font-size: .9rem; }
+.starlight-intro h1 { font: 500 clamp(3rem, 6vw, 6rem)/.98 var(--font-body); letter-spacing: -.068em; }
+.starlight-intro img { width: 100%; height: auto; border-radius: .45rem; }
+.starlight-intro .qrate-project-link { color: var(--ink); background: var(--yellow); }
+.guide-heading { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: .8rem 2rem; margin-bottom: 1.6rem; }
+.guide-heading h2, .guide-heading p { margin: 0; }
+.guide-heading p { margin-top: .6rem; }
+.starlight-layout { display: grid; grid-template-columns: minmax(0, 2.65fr) minmax(12.5rem, 1fr); gap: clamp(1.5rem, 3vw, 3rem); align-items: start; }
+.brand-reader { min-width: 0; overflow: hidden; border: 1px solid var(--ink); border-radius: .5rem; background: var(--ink); color: var(--paper); }
+.reader-toolbar, .reader-caption, .reader-navigation, .reader-view { display: flex; align-items: center; gap: .4rem; }
+.reader-toolbar { flex-wrap: wrap; justify-content: space-between; padding: .5rem; }
+.reader-toolbar[hidden] { display: none; }
+.reader-toolbar button, .reader-toolbar select {
+  min-height: 2.75rem; padding: .35rem .65rem; border: 1px solid rgb(250 247 245 / 44%); border-radius: .35rem;
+  background: var(--ink); color: var(--paper); font: 500 .9rem/1.15 var(--font-body); cursor: pointer;
+}
+.reader-navigation { max-width: 100%; min-width: 0; }
+.reader-navigation label { min-width: 0; }
+.reader-navigation button { min-width: 2.75rem; font-size: 1.2rem; }
+.reader-toolbar select { max-width: 14rem; width: 100%; appearance: auto; }
+.reader-toolbar button:disabled { opacity: .4; cursor: default; }
+.reader-toolbar button:hover:enabled, .reader-toolbar button[aria-pressed="true"] { color: var(--ink); background: var(--paper); }
+.brand-reader :focus-visible, .guide-pick:focus-visible { outline: 3px solid var(--orange); outline-offset: -3px; }
+.reader-viewport { width: 100%; aspect-ratio: 798.45 / 612; overflow: auto; background: var(--ink); overscroll-behavior-x: contain; touch-action: pan-y pinch-zoom; }
+.reader-paper { display: block; width: 100%; max-width: none; height: auto; margin: 0 auto; }
+.brand-reader.is-zoomed .reader-viewport { touch-action: pan-x pan-y pinch-zoom; }
+.brand-reader.is-zoomed .reader-paper { width: max(155%, 58rem); }
+.reader-caption { justify-content: space-between; min-height: 2.75rem; padding: .3rem .85rem; font-size: .85rem; }
+.reader-caption a { color: var(--paper); text-decoration: underline; text-underline-offset: .2em; }
+.guide-picks h3 { margin: 0 0 .65rem; font: 500 1.6rem/1.15 var(--font-serif); }
+.guide-pick { display: grid; grid-template-columns: minmax(4rem, .85fr) 1fr; gap: .85rem; align-items: center; padding: .8rem 0; border-top: 1px solid rgb(9 19 31 / 24%); color: var(--ink); text-decoration: none; }
+.guide-pick img { width: 100%; height: auto; border: 1px solid rgb(9 19 31 / 12%); border-radius: .2rem; }
+.guide-pick span { line-height: 1.2; font-weight: 600; }
+.guide-pick small { display: block; margin-top: .35rem; font-size: .8rem; font-weight: 400; color: var(--brand-slate, #4b5058); }
+.guide-pick:hover span, .guide-pick[aria-current="page"] span { text-decoration: underline var(--orange) 2px; text-underline-offset: .22em; }
+.reader-dialog { width: min(96vw, 96rem); max-width: none; max-height: 96vh; max-height: 96dvh; margin: auto; padding: 0; border: 0; border-radius: .5rem; background: var(--ink); }
+.reader-dialog::backdrop { background: rgb(9 19 31 / 88%); }
+.reader-dialog .brand-reader { display: flex; flex-direction: column; height: 94vh; height: 94dvh; }
+.reader-dialog .reader-viewport { min-height: 0; flex: 1; aspect-ratio: auto; }
+.reader-dialog .reader-paper { width: min(100%, calc((94dvh - 6.8rem) * 1.30465)); }
+.reader-dialog .is-zoomed .reader-paper { width: max(155%, 58rem); }
+@media (max-width: 760px) {
+  .starlight-intro, .starlight-layout { grid-template-columns: minmax(0, 1fr); }
+  .guide-pick { grid-template-columns: minmax(5rem, 8rem) 1fr; }
+  .reader-toolbar { gap: .5rem; }
+  .reader-dialog { width: 100%; max-height: 100%; border-radius: 0; }
+  .reader-dialog .brand-reader { height: 100vh; height: 100dvh; }
+  .reader-dialog .reader-viewport { align-content: safe center; }
+  .reader-dialog .reader-paper { width: 100%; }
+}
