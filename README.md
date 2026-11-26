@@ -50,8 +50,7 @@ qrate/
 
 ## 🛠️ Maintenance & Local Development
 
-To run locally:
-Simply open `index.html` in any browser or use a local static server:
+To preview the clean page URLs locally, run the static server from the repository root:
 ```bash
 npx serve .
 ```
