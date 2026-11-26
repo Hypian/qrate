@@ -55,7 +55,7 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=ddd8e52959" />
   <link rel="stylesheet" href="ui/layout.css?v=72b7a96a9b">
-  <link rel="stylesheet" href="studio.css?v=3801ffd1bbb8">
+  <link rel="stylesheet" href="studio.css?v=a5e0c3c6fcdd">
 
   <!-- JSON-LD Structured Data for Search Engines -->
   <script type="application/ld+json">
@@ -276,12 +276,10 @@
     <section class="homepage-film" id="featured-film" aria-labelledby="featured-film-title">
       <div class="editorial-wrap">
         <div class="homepage-film-screen">
-          <a class="homepage-film-play" href="https://www.youtube.com/watch?v=aBFEGb-I4Y4"
-            aria-label="Play Qrate’s Who We Are film">
-            <img src="photos/qrate-who-we-are.webp" width="1280" height="720"
-              alt="" loading="lazy" decoding="async">
-            <span class="homepage-film-playmark" aria-hidden="true"></span>
-          </a>
+          <video id="studio-film" aria-labelledby="featured-film-title" width="1280" height="720"
+            controls muted playsinline preload="none" poster="photos/qrate-who-we-are.webp">
+            <source src="assets/film/who-we-are.mp4" type="video/mp4">
+          </video>
         </div>
         <div class="homepage-film-caption">
           <h2 id="featured-film-title">Who we are</h2>
@@ -514,7 +512,7 @@
     </div>
   </footer>
 
-  <script src="script.js?v=21054ca70f48"></script>
+  <script src="script.js?v=d56156cda1c3"></script>
   <script defer src="client-marquee.js?v=a69dd7ae238b"></script>
 </body>
 
