@@ -2051,19 +2051,19 @@ html {
   width: 1.7rem;
   border-top: 2px solid var(--orange);
 }
-.qrate-feature h2, .qrate-services h2, .qrate-service-list dt {
+.qrate-feature .qrate-feature-title, .qrate-services h2, .qrate-service-list dt {
   margin: 0;
   font-family: var(--font-body, 'Helvetica Neue', Arial, sans-serif);
   font-weight: 500;
   text-wrap: balance;
 }
-.qrate-feature h2 {
+.qrate-feature .qrate-feature-title {
   color: inherit;
   font-size: clamp(3.25rem, 6vw, 6rem);
   letter-spacing: -.065em;
   line-height: .99;
 }
-.qrate-feature h2 em {
+.qrate-feature .qrate-feature-title em {
   font-family: var(--font-serif, Georgia, serif);
   color: var(--orange);
   font-weight: 400;
@@ -2180,7 +2180,7 @@ html {
 @media (max-width: 40rem) {
   .qrate-feature-intro, .qrate-service-list { grid-template-columns: 1fr; }
   .qrate-feature-intro { gap: 1.35rem; }
-  .qrate-feature h2 { font-size: clamp(2.6rem, 11.6vw, 4rem); }
+  .qrate-feature .qrate-feature-title { font-size: clamp(2.6rem, 11.6vw, 4rem); }
   .qrate-feature-label { margin-bottom: 1rem; }
   .qrate-feature-photos { grid-template-columns: 1fr 1fr; row-gap: .7rem; }
   .qrate-feature-campus { grid-column: 1 / -1; }
