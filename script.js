@@ -2,6 +2,15 @@
    QRATE. — script.js — Interactive Handlers for Post-Hype UI
    ============================================================ */
 
+// GitHub Pages serves these files at their clean paths. Keep old bookmarks there too.
+if (/^https?:$/.test(location.protocol) && (location.pathname === '/index' || location.pathname.endsWith('.html'))) {
+  const canonical = document.querySelector('link[rel="canonical"]');
+  if (canonical) {
+    const path = new URL(canonical.href).pathname;
+    history.replaceState(history.state, '', path + location.search + location.hash);
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   // 1. Reading Progress Bar (Optimized with requestAnimationFrame)
   const progressBar = document.getElementById('progress');
