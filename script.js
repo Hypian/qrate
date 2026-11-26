@@ -167,6 +167,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  const featuredFilm = document.querySelector('.homepage-film-play');
+  featuredFilm?.addEventListener('click', event => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+    const videoId = new URL(featuredFilm.href).searchParams.get('v');
+    if (!videoId) return;
+    event.preventDefault();
+
+    const player = document.createElement('iframe');
+    player.title = document.getElementById('featured-film-title').textContent;
+    player.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    player.allowFullscreen = true;
+    player.referrerPolicy = 'strict-origin-when-cross-origin';
+    player.src = 'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(videoId) + '?autoplay=1&playsinline=1';
+    featuredFilm.replaceWith(player);
+    player.focus({ preventScroll: true });
+  });
+
   // Closing a film also stops its soundtrack.
   document.querySelectorAll('.film-player').forEach(player => {
     const frame = player.querySelector('iframe');
