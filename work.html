@@ -50,7 +50,7 @@
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="styles.css?v=ddd8e52959"/>
   <link rel="stylesheet" href="ui/layout.css?v=72b7a96a9b">
-  <link rel="stylesheet" href="studio.css?v=b8942b436b">
+  <link rel="stylesheet" href="studio.css?v=48482309c324">
 
   <!-- Schema.org Case Study / CollectionPage -->
   <script type="application/ld+json">
@@ -146,10 +146,12 @@
       <div class="editorial-wrap editorial-hero-grid hero-with-art">
         <div>
           <h1>Selected work</h1>
-          <p>Films, campaigns and design for schools, nonprofits and businesses. Watch a film, open a publication or see what we made.</p>
-          <div class="editorial-links">
-            <a class="editorial-link" href="#selected-work">Browse projects</a>
-          </div>
+          <p>Brand identities, publications, films and campaigns for schools, nonprofits and businesses.</p>
+          <nav class="editorial-links" aria-label="Work categories">
+            <a class="editorial-link" href="#brand-design">Brand identity and design</a>
+            <a class="editorial-link" href="#selected-work">Film and publications</a>
+            <a class="editorial-link" href="#campaigns">Campaigns and social content</a>
+          </nav>
         </div>
         <div class="hero-art">
           <div class="portrait-pair">
@@ -163,9 +165,34 @@
         </div>
       </div>
     </section>
-    <section class="editorial-section " id="selected-work">
+    <section class="editorial-section" id="brand-design" aria-labelledby="design-title">
       <div class="editorial-wrap">
-        <h2>School films and publications</h2>
+        <h2 id="design-title">Brand identity and design</h2>
+        <div class="work-design-projects">
+          <a class="work-design-sample" href="starlight-africa.html" aria-label="View the Starlight Africa brand identity case study">
+            <img src="assets/starlight/pages/08.webp" width="1600" height="1227" alt="Starlight Africa’s logo on light, turquoise and dark backgrounds." loading="lazy" decoding="async">
+          </a>
+          <div class="qrate-work-index">
+            <article id="starlight">
+              <h3>Starlight Africa</h3>
+              <p>Four figures form the star in Starlight Africa’s logo. The brand guide shows how the mark, colours and type work together on banners, stationery and clothing.</p>
+              <div class="editorial-links">
+                <a class="editorial-link" href="starlight-africa.html">View the brand identity case study</a>
+                <a class="editorial-link" href="starlight-africa.html#brand-guide">Browse the brand guide</a>
+              </div>
+            </article>
+            <article id="soma-salama">
+              <p class="qrate-work-type">Presentation design</p>
+              <h3>Soma Salama</h3>
+              <p>Presentation design for Soma Salama’s 2027 programme plans.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="editorial-section editorial-tint" id="selected-work" aria-labelledby="film-title">
+      <div class="editorial-wrap">
+        <h2 id="film-title">Film and publications</h2>
         <div class="portfolio-projects">
           <article id="hope-haven">
             <figure class="editorial-photo">
@@ -195,23 +222,25 @@
             </div>
           </article>
         </div>
+        <div class="qrate-work-index">
+          <article id="shine-on-rwanda">
+            <p class="qrate-work-type">Documentary film</p>
+            <h3>Shine On Rwanda</h3>
+            <p>A short documentary for Let There Be Light International about how families in Rwanda use solar lighting at home.</p>
+            <div class="editorial-links"><a class="editorial-link" href="https://www.youtube.com/watch?v=pVxM2QJ_dHY">Watch the mini-documentary</a></div>
+          </article>
+        </div>
       </div>
     </section>
-    <section class="editorial-section" aria-labelledby="more-work-title">
+    <section class="editorial-section" id="campaigns" aria-labelledby="more-work-title">
       <div class="editorial-wrap">
-        <h2 id="more-work-title">Films, campaigns and design</h2>
+        <h2 id="more-work-title">Campaigns and social content</h2>
         <div class="qrate-work-index">
           <article id="idebate">
             <p class="qrate-work-type">Campaign communications</p>
             <h3>iDebate Rwanda</h3>
             <p>Campaign communications for Dreamers Academy and iDebate’s fundraising work.</p>
             <div class="editorial-links"><a class="editorial-link" href="https://www.every.org/idebate-global-exchange-inc/f/help-more-young-people">View iDebate’s fundraising campaign</a></div>
-          </article>
-          <article id="starlight">
-            <p class="qrate-work-type">Brand and content</p>
-            <h3>Starlight Africa</h3>
-            <p>Rebranding and ongoing content production for Starlight Africa’s STEM education work.</p>
-            <div class="editorial-links"><a class="editorial-link" href="starlight-africa.html">Explore the Starlight brand identity</a></div>
           </article>
           <article id="new-vision">
             <p class="qrate-work-type">Pet-care communications</p>
@@ -223,18 +252,6 @@
             <p class="qrate-work-type">Social content</p>
             <h3>Micon</h3>
             <p>Social media planning and on-location video production.</p>
-            
-          </article>
-          <article id="shine-on-rwanda">
-            <p class="qrate-work-type">Documentary film</p>
-            <h3>Shine On Rwanda</h3>
-            <p>A short documentary for Let There Be Light International about how families in Rwanda use solar lighting at home.</p>
-            <div class="editorial-links"><a class="editorial-link" href="https://www.youtube.com/watch?v=pVxM2QJ_dHY">Watch the mini-documentary</a></div>
-          </article>
-          <article id="soma-salama">
-            <p class="qrate-work-type">Presentation design</p>
-            <h3>Soma Salama</h3>
-            <p>Presentation design for Soma Salama’s 2027 programme plans.</p>
             
           </article>
         </div>
