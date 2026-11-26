@@ -395,7 +395,7 @@
   .qrate-marquee.qrate-motion-enabled .qrate-logo-group[aria-hidden="true"], .qrate-marquee-control { display:none; }
 }
 
-/* A visitor starts the featured film from a local poster. */
+/* Keep the film and its poster in the same frame. */
 .homepage-film { padding-block: clamp(1.4rem, 3.2vw, 3.2rem) 0; }
 .homepage-film-screen {
   position: relative;
@@ -404,30 +404,10 @@
   border-radius: .5rem;
   background: var(--ink);
 }
-.homepage-film-play, .homepage-film-screen iframe {
-  position: absolute;
-  inset: 0;
+.homepage-film-screen video {
+  display: block;
   width: 100%;
   height: 100%;
-  border: 0;
-}
-.homepage-film-play { display: grid; place-items: center; }
-.homepage-film-play img { width: 100%; height: 100%; object-fit: cover; }
-.homepage-film-playmark {
-  position: absolute;
-  display: grid;
-  place-items: center;
-  width: clamp(3.5rem, 6vw, 5rem);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: var(--yellow);
-  color: var(--ink);
-}
-.homepage-film-playmark::after {
-  content: '';
-  margin-left: .22rem;
-  border-block: .55rem solid transparent;
-  border-left: .9rem solid currentColor;
 }
 .homepage-film-screen:focus-within { outline: 3px solid var(--orange); outline-offset: 3px; }
 .homepage-film-caption {
@@ -441,7 +421,3 @@
 }
 .homepage-film-caption h2 { margin: 0; font: 500 clamp(1.7rem, 3.1vw, 3rem)/1.08 var(--font-serif); }
 .homepage-film-caption a { min-height: 2.75rem; display: inline-flex; align-items: center; }
-@media (hover: hover) and (prefers-reduced-motion: no-preference) {
-  .homepage-film-playmark { transition: transform 160ms var(--motion-out); }
-  .homepage-film-play:hover .homepage-film-playmark { transform: scale(1.06); }
-}
