@@ -73,7 +73,7 @@
   }
 }
   </script>
-  <link rel="stylesheet" href="home-redesign.css">
+  <link rel="stylesheet" href="home-redesign.css?v=work-autoplay-1">
 </head>
 
 <body class="studio-page page-index bg-background text-on-surface font-body-base antialiased min-h-screen flex flex-col pt-20">
@@ -310,8 +310,9 @@
       <p>See what each team needed, what Qrate made and where the work lives.</p>
     </header>
     <div class="qr-gallery" data-work-gallery>
-      <div class="qr-controls" aria-label="Project controls" hidden>
-        <span class="qr-position" aria-live="polite">01 / 04</span>
+      <div class="qr-controls" role="group" aria-label="Project controls" hidden>
+        <button type="button" data-autoplay>Pause</button>
+        <span class="qr-position">01 / 04</span>
         <button type="button" data-prev aria-label="Previous project">←</button>
         <button type="button" data-next aria-label="Next project">→</button>
       </div>
@@ -486,7 +487,7 @@
 
   <script src="script.js?v=8213eaafa0c7"></script>
   <script defer src="client-marquee.js?v=a69dd7ae238b"></script>
-  <script defer src="work-gallery.js"></script>
+  <script defer src="work-gallery.js?v=work-autoplay-1"></script>
 </body>
 
 </html>
